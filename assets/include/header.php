@@ -1,0 +1,88 @@
+<header id="header">
+    <div id="loading">
+        <img src="https://tamotech.blog/wp-content/uploads/2020/11/loading.gif" alt="">
+    </div>
+    <div class="logo-area">
+        <a href="<?php echo $conf["url"]; ?>"><img class="logo-img" src="<?php echo $conf["url"]; ?>/assets/img/web/logo.png"></img></a>
+    </div>
+    <div class="menu-btn">
+        <div class="btn-trigger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div class="header-label">
+        <div class="menu">
+            <ul class="nav">
+                <!-- 子要素の文字数は全角で10文字ほど -->
+                <li><a href="<?php echo $conf["url"]; ?>/"><i class="fas fa-home"></i> Home</a></li>
+                <li>
+                    <a class="js-menu__item__link" href="">サーバー</a>
+                    <ul class="submenu">
+                        <li><a href="<?php $conf["url"] ?>/24h/">24H鯖</a></li>
+                        <li><a href="<?php $conf["url"] ?>/servers/lobby">ロビー鯖</a></li>
+                        <li><a href="<?php $conf["url"] ?>/servers/survival">サバイバル鯖</a></li>
+                        <li><a href="<?php $conf["url"] ?>/servers/event">ミニゲーム企画鯖</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="js-menu__item__link" href="">About</a>
+                    <ul class="submenu">
+                        <li><a href="<?php $conf["url"] ?>/about/admins">運営</a></li>
+                        <li><a href="<?php $conf["url"] ?>/terms">利用規約 ガイドライン</a></li>
+                        <li><a href="<?php $conf["url"] ?>/about/donation">寄付について</a></li>
+                        <li><a href="<?php $conf["url"] ?>/news">ニュース</a></li>
+                        <li><a href="<?php $conf["url"] ?>/support">サポート</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="js-menu__item__link" href="">ミニゲーム</a>
+                    <ul class="submenu">
+                        <li><a href="<?php $conf["url"] ?>/game/aooni">青鬼ゲーム</a></li>
+                        <li><a href="<?php $conf["url"] ?>/game/hueoni">増え鬼</a></li>
+                        <li><a href="<?php $conf["url"] ?>/game/online">青鬼ONLINE in MC</a></li>
+                        <li><a href="<?php $conf["url"] ?>/game/cbg">コア破壊ゲーム</a></li>
+                        <li><a href="<?php $conf["url"] ?>/game/toso">逃走中</a></li>
+                        <li><a href="<?php $conf["url"] ?>/game/dbd">DeadbyDaylight</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="js-menu__item__link" href="">Contact</a>
+                    <ul class="submenu">
+                        <li><a href="<?php $conf["url"] ?>/support/faq">よくある質問</a></li>
+                        <li><a href="<?php $conf["url"] ?>/form/">問い合わせ</a></li>
+                        <li><a href="<?php $conf["url"] ?>/form/staff">役職応募</a></li>
+                        <li><a href="https://twitter.com/mlserver2408" class="twitter" target="_blank"><i style="color: #1DA1F2;" class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="https://discord.gg/gaGB6Mm" class="discord" target="_blank"><i style="font-weight: 100;color: #7289da;" class="fab fa-discord"></i> Discord</a></li>
+                        <li><a href="https://www.youtube.com/channel/UCWSz32UUYgAzs_hVqKeqq-Q" class="youtube" target="_blank"><i style="font-weight: 100;color: #c4302b;" class="fab fa-youtube"></i>YouTube</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="hamburger-ad">
+                <a href="https://px.a8.net/svt/ejp?a8mat=35JY3D+CJW1P6+0K+10YDIP" rel="nofollow">
+                <img border="0" width="99%" alt="" src="https://www25.a8.net/svt/bgt?aid=190727257759&wid=002&eno=01&mid=s00000000002006207000&mc=1"></a>
+                <img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=35JY3D+CJW1P6+0K+10YDIP" alt="">
+            </div>
+        </div>
+    </div>
+</header>
+<ul class="label">
+    <?php 
+        $month = date('m') . '月';
+        if (strpos($month, "4月")) {
+            $i = "5";
+        } else {
+            $i = "2";
+        }
+    ?>
+    <li><a href="https://minecraft.jp/servers/5d51f624a9b0bd7e0e00834e" target="_blank"><img src="https://minecraft.jp/servers/5d51f624a9b0bd7e0e00834e/banner/<?php echo $i; ?>/560x95.png"/></a></li>
+    <li><a href="https://monocraft.net/servers/4o9NgWsXjtrIVtds0Igw/vote" target="_blank"><img src="https://minecraft.jp/servers/5d51f624a9b0bd7e0e00834e/banner/3/560x95.png"/></a></li>
+</ul>
+<div class="overlay"></div>
+<!-- 以下、緊急お知らせ用BOX -->
+<!--
+<div class="sorry">
+    <p>現在、ホームページのクリックできる場所がクリックできない不具合が発生しております。原因をしばらくの間ご不便おかけしますがご了承ください。</p>
+</div>
+-->

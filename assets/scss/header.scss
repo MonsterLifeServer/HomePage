@@ -1,0 +1,416 @@
+
+$labelColor: #4f4f4f;
+.logo-area {
+    max-width: 320px;
+    img.logo-img {
+        width: 100%;
+    }
+}
+.overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99;
+    background-color: #000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .6s;
+    cursor: pointer;
+}
+.sorry {
+    background: #fff;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: rgb(255, 0, 0);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+header {
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    top: 0;
+}
+.header-label {
+    background: $labelColor;
+    width: 100%;
+    height: 40px;
+    .hamburger-ad {
+        display: none;
+    }
+    .submenu i {
+        background-color: #fff;
+        font-size: 15px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 22px;
+        margin: 10px 5px 10px -5px;
+        vertical-align: middle;
+    }
+    ul.nav {
+        overflow: hidden;
+        max-width: 750px;
+        margin: 0 auto;
+        padding: 0;
+        display: flex;
+        z-index: 100;
+        li {
+            width: 100%;
+            list-style: none;
+            a {
+                display: block;
+                width: 100%;
+                height: 40px;
+                text-align: center;
+                color: #fff;
+                font-size: 14px;
+                line-height: 2.8;
+                background: $labelColor;
+                text-decoration: none;
+                border-right: 0.5px solid #eee;
+                border-left: 0.5px solid #eee;
+                box-sizing: border-box;
+                &.js-menu__item__link::before {
+                    content: '\f078';
+                    font-weight: 700;
+                    font-family: "Font Awesome 5 Free";
+                    position: relative;
+                    right: 10px;
+                }
+            }
+            ul {
+                width: 100%;
+                display: none;
+                padding: 0;
+                li a {
+                    border-top: 1px solid #eee;
+                    background: #7b7b7b;
+                }
+            }
+        }
+    }
+    .nav > li:hover > a {/*layer-1*/
+        color: orange;
+        background: $labelColor;
+        font-weight: bold;
+        &.js-menu__item__link::before {
+            content: '\f077';
+            font-weight: 700;
+            font-family: "Font Awesome 5 Free";
+            position: relative;
+            right: 10px;
+        }
+    }
+    .nav > li li:hover > a {/*layer-2*/
+        color: rgb(255, 255, 0);
+        background: $labelColor;
+        font-weight: bold;
+        &.youtube {
+            color: #c4302b;
+        }
+        &.twitter {
+            color: #1DA1F2;
+        }
+        &.discord {
+            color: #7289da;
+        }
+    }
+}
+.menu-btn {
+    display: none;
+}
+.label {
+	display: flex;
+    flex-wrap:wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+    li {
+        width: 50%;
+        padding:0 2.5px;
+        box-sizing:border-box;
+        list-style: none;
+        img {
+            max-width:100%; /*画像のはみだしを防ぐ*/
+            width: 100%;
+            height: auto; /*画像の縦横比を維持 */
+            border:solid 1px #ccc; /*←画像を1pxのグレーの枠線で囲む指定の場合*/
+        }
+    }
+}
+
+/*********************************
+*
+*  ローディング画面
+*
+*********************************/
+#loading {
+    /* 画面一杯にローディング画面を広げる */
+    height: 100%;
+    width: 100%;
+    background: #262626;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 110;
+    /* flexboxを使ってローディングアイコンを画面の中央に寄せる */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    /* ローディングアイコン */
+    img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .label {
+        width: 100%;
+        display:flex;
+        flex-wrap:wrap;
+        margin: 0 auto;
+        li {
+            width: 50%;
+            padding:0 2.5px;
+            box-sizing:border-box;
+            list-style: none;
+            img {
+                max-width:100%; /*画像のはみだしを防ぐ*/
+                width: 100%;
+                height: auto; /*画像の縦横比を維持 */
+                border:solid 1px #ccc; /*←画像を1pxのグレーの枠線で囲む指定の場合*/
+            }
+        }
+    }
+}
+
+@media screen and (max-width:750px){
+    /*----------------------------
+    * メニュー開閉ボタン
+    *----------------------------*/
+    .menu-btn{
+        position: fixed;
+        z-index: 900;
+        width: 38px;
+        height: 36px;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        display: inline-block;
+        transition: all .5s;
+        box-sizing: border-box;
+        background-color: rgba(97, 97, 97, 0.7);
+        border-radius: 5px;
+        border: none;
+        &.is-active {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+            span {
+                &:nth-of-type(1) {
+                    transform: rotate(45deg);
+                }
+                &:nth-of-type(2) {
+                    opacity: 0;
+                }
+                &:nth-of-type(3) {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+        span {
+            display: block;
+            width: 80%;
+            margin: auto;
+            height: 4px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 3px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: calc((100% - 4px)/2);
+            &:nth-of-type(1) {
+                transform: translateY(-10px);
+            }
+            &:nth-of-type(2) {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+            &:nth-of-type(3) {
+                transform: translateY(10px);
+            }
+        }
+    }
+
+    /* アニメーション前のメニューの状態 */
+    .menu{
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        overflow-x: hidden;
+        text-align: center;
+        width: 0; /* ←100%から 0 に変更 */
+        height: 0;
+        height: 100vh;
+        background: #fff;
+        transition: .5s; /* ← 追加 */
+        display: block;
+        &.is-active{
+            background: #fff;
+            width: 300px;
+            height: 100vh;
+            display: block;
+            .hamburger-ad {
+                display: block;
+                margin-top: 30px;
+                margin-bottom: 40px;
+            }
+            ul.nav {
+                width: 300px;
+                display: block;
+                right: 0;
+                li {
+                    width: 100%;
+                    list-style: none;
+                    border-bottom: 0.2px solid #eee ;
+                    a {
+                        display: block;
+                        width: 100%;
+                        height: 50px;
+                        padding-left: 20px;
+                        text-align: left;
+                        color: #fff;
+                        font-size: 20px;
+                        line-height: 2.8;
+                        background: $labelColor;
+                        text-decoration: none;
+                        box-sizing: border-box;
+                        &.js-menu__item__link.on::before {
+                            content: '\f077';
+                            right: 10px;
+                        }
+                        &.js-menu__item__link::before {
+                            right: 10px;
+                            content: '\f078';
+                        }
+                    }
+                    ul {
+                        width: 100%;
+                        display: none;
+                        padding: 0;
+                        li a {
+                            border-top: 1px solid #eee;
+                            background: #7b7b7b;
+                            &.youtube i {
+                                background-color: #fff;
+                                font-size: 23px;
+                                width: 30px;
+                                height: 30px;
+                                border-radius: 50%;
+                                text-align: center;
+                                line-height: 32px;
+                                margin: 10px 15px;
+                                vertical-align: middle;
+                                color: #c4302b;
+                            }
+                            &.twitter i {
+                                background-color: #fff;
+                                font-size: 23px;
+                                width: 30px;
+                                height: 30px;
+                                border-radius: 50%;
+                                text-align: center;
+                                line-height: 32px;
+                                margin: 10px 15px;
+                                vertical-align: middle;
+                                color: #1DA1F2;
+                            }
+                            &.discord i {
+                                background-color: #fff;
+                                font-size: 23px;
+                                width: 30px;
+                                height: 30px;
+                                border-radius: 50%;
+                                text-align: center;
+                                line-height: 32px;
+                                margin: 10px 15px;
+                                vertical-align: middle;
+                                color: #7289da;
+                            }
+                        }
+                    }
+                }
+            }
+            .nav > li:hover > a {/*layer-1*/
+                color: orange;
+                background: $labelColor;
+                font-weight: bold;
+                &.js-menu__item__link::before {
+                    content: '\f078';
+                    font-weight: 700;
+                    font-family: "Font Awesome 5 Free";
+                    position: relative;
+                    right: 10px;
+                }
+            }
+            .nav > li li:hover > a {/*layer-2*/
+                color: rgb(255, 255, 0);
+                background: $labelColor;
+                font-weight: bold;
+                &.youtube {
+                    color: #c4302b;
+                }
+                &.twitter {
+                    color: #1DA1F2;
+                }
+                &.discord {
+                    color: #7289da;
+                }
+            }
+        }
+    }
+    body.is-fixed .overlay {
+        opacity: .8;
+        visibility: visible;
+    }
+    body.is-fixed {
+        height: 100%;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 525px) {
+    .label {
+        width: 100%;
+        display:inline-block;
+        li {
+            width: 100%;
+            img {
+                max-width:100%; /*画像のはみだしを防ぐ*/
+                height: auto; /*画像の縦横比を維持 */
+                border:solid 1px #ccc; /*←画像を1pxのグレーの枠線で囲む指定の場合*/
+            }
+        }
+    }
+}
+
+@media screen and (max-width:400px){
+    .logo-area {
+        max-width: 80%;
+    }
+}

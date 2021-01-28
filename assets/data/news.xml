@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 最新記事を一番上に書こう -->
+<rss>
+    <blog>
+        <!--
+        <item>
+            <title>タイトル</title>
+            <link>#</link>
+            <date>2020/5/1</date>
+            <category>null</category>
+            <img>null</img>
+        </item>
+        -->
+
+        <item>
+            <title>ホームページにてクリックできない場所が発生していましたが修正されました。</title>
+            <link>http://mlserver.php.xdomain.jp/</link>
+            <date>2021/01/13</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>ホームページにてクリックできない場所が発生中</title>
+            <link>http://mlserver.php.xdomain.jp/</link>
+            <date>2021/01/11</date>
+            <category>不具合</category>
+        </item>
+
+        <item>
+            <title>利用規約ページとガイドラインページが同じページに掲載されるようになりました。また、利用規約が大きく策定されたました。</title>
+            <link>http://mlserver.php.xdomain.jp/terms</link>
+            <date>2020/10/19</date>
+            <category>利用規約・ガイドライン</category>
+        </item>
+
+        <item>
+            <title>各役職持ちの方が自分のタスク管理に便利なページを公開しました。こちらには当鯖から依頼したものの依頼日と簡単な内容を掲載しています。</title>
+            <link>https://docs.google.com/spreadsheets/d/1HdJ3J4yPMvSs_mY_40gjvWaVuYtmJl-FU_BmCQ3M6DE/edit?usp=sharing</link>
+            <date>2020/09/21</date>
+            <category>各役職用</category>
+        </item>
+
+        <item>
+            <title>役職応募フォームをホームページ上に作成しました。</title>
+            <link>http://mlserver.php.xdomain.jp/staff</link>
+            <date>2020/09/12</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>お問い合わせページを作成し、フッターからお問い合わせフォームを削除しました</title>
+            <link>http://mlserver.php.xdomain.jp/</link>
+            <date>2020/09/12</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>新着情報のカテゴリーボックスの色がカテゴリーによって色が変わるようになりました。</title>
+            <link>http://mlserver.php.xdomain.jp/</link>
+            <date>2020/08/30</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>DeadbyDaylight in MCの新バージョン1.4.0 βに関する情報に更新しましった</title>
+            <link>http://mlserver.php.xdomain.jp/game/dbd</link>
+            <date>2020/08/30</date>
+            <category>【企画】DbD in MC</category>
+        </item>
+
+        <item>
+            <title>トップページでのみJMSのサーバーステータスバナーを表示するようにし、バグの修正をいたしました。</title>
+            <link>http://mlserver.php.xdomain.jp/</link>
+            <date>2020/08/18</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>テクスチャダウンロードできない問題を解決しました。</title>
+            <link>http://mlserver.php.xdomain.jp/game</link>
+            <date>2020/08/13</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>新バージョン 1.3.0 の情報を掲載しました。</title>
+            <link>http://mlserver.php.xdomain.jp/game/aooni</link>
+            <date>2020/08/08</date>
+            <category>【企画】青鬼ゲーム6.23</category>
+        </item>
+
+        <item>
+            <title>新ドメイン discord.com に対応しました</title>
+            <link>http://monsterlifeserver.blog.jp/archives/6530729.html</link>
+            <date>2020/07/28</date>
+            <category>MonsterBOT</category>
+        </item>
+
+        <item>
+            <title>アップデート内容の掲載 1.3.0-beta</title>
+            <link>http://mlserver.php.xdomain.jp/game/dbd</link>
+            <date>2020/07/24</date>
+            <category>【企画】DbD in MC</category>
+        </item>
+
+        <item>
+            <title>フッター部にお問い合わせフォームを設置しました。</title>
+            <link>http://mlserver.php.xdomain.jp/</link>
+            <date>2020/07/23</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>embedアイコンがスマホ版Discordだと正しく表示されないバグを修正しました。</title>
+            <link>http://mlserver.php.xdomain.jp/monsterbox/bot</link>
+            <date>2020/07/18</date>
+            <category>MonsterBOT</category>
+        </item>
+
+        <item>
+            <title>FAQの位置が /faq から /faq/index に変更されました。従来のURLからもアクセス可能です。また、MCIDについて記述したページを作成しました。</title>
+            <link>http://mlserver.php.xdomain.jp/faq/</link>
+            <date>2020/07/16</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>広告ブロックシステムが起動するとminecraft.jpのサーバーステータスが表示されない問題を解決しました。また、実際の広告が消えないのは私の意図ではない！！ｗ</title>
+            <link>http://mlserver.php.xdomain.jp/</link>
+            <date>2020/07/08</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>アップデート内容の掲載 1.2.0-beta</title>
+            <link>http://mlserver.php.xdomain.jp/game/dbd</link>
+            <date>2020/07/04</date>
+            <category>【企画】DbD in MC</category>
+        </item>
+
+        <item>
+            <title>リプライ機能の説明を追加</title>
+            <link>http://mlserver.php.xdomain.jp/monsterbox/bot</link>
+            <date>2020/06/27</date>
+            <category>MonsterBOT</category>
+        </item>
+
+        <item>
+            <title>同サイトへのリンクをクリックすると別タブを開く問題を解決しました。</title>
+            <link>http://mlserver.php.xdomain.jp/news/</link>
+            <date>2020/06/27</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>MODの使用について掲載しました。</title>
+            <link>http://mlserver.php.xdomain.jp/24h/</link>
+            <date>2020/06/27</date>
+            <category>24H鯖</category>
+        </item>
+
+        <item>
+            <title>『DeadbyDaylight in MC』の企画バージョンが1.1.0にアップデートされました。</title>
+            <link>http://mlserver.php.xdomain.jp/game/dbd</link>
+            <date>2020/06/03</date>
+            <category>【企画】DbD in MC</category>
+        </item>
+
+        <item>
+            <title>新着情報のデザインが変更されました。</title>
+            <link>http://mlserver.php.xdomain.jp/news/</link>
+            <date>2020/06/02</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>運営が１名辞めました。また、開発者をホームページに掲載することになりました。</title>
+            <link>http://mlserver.php.xdomain.jp/admin</link>
+            <date>2020/05/29</date>
+            <category>役職関連</category>
+        </item>
+
+        <item>
+            <title>ガイドラインが策定されました。</title>
+            <link>http://mlserver.php.xdomain.jp/guildline</link>
+            <date>2020/05/29</date>
+            <category>重要</category>
+        </item>
+
+        <item>
+            <title>利用規約が策定されました。</title>
+            <link>http://mlserver.php.xdomain.jp/terms</link>
+            <date>2020/05/20</date>
+            <category>重要</category>
+        </item>
+
+        <item>
+            <title>DbD in MCの新ルールが追加されました。</title>
+            <link>http://mlserver.php.xdomain.jp/game/dbd</link>
+            <date>2020/05/19</date>
+            <category>【企画】DbD in MC</category>
+        </item>
+
+        <item>
+            <title>DbD in MCの新ルールが追加されました。</title>
+            <link>http://mlserver.php.xdomain.jp/game/dbd</link>
+            <date>2020/05/13</date>
+            <category>【企画】DbD in MC</category>
+        </item>
+
+        <item>
+            <title>トップページにMLS稼働時間が再度掲載されました。</title>
+            <link>http://mlserver.php.xdomain.jp/</link>
+            <date>2020/05/10</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>DbD in MCの基本ルールに追加仕様を書き入れました。</title>
+            <link>http://mlserver.php.xdomain.jp/game/dbd</link>
+            <date>2020/05/09</date>
+            <category>【企画】DbD in MC</category>
+        </item>
+
+        <item>
+            <title>デザインとエラーページの追加の話（そして、不具合について）</title>
+            <link>http://monsterlifeserver.blog.jp/archives/6030993.html</link>
+            <date>2020/05/09</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>デザインの一部変更と削除されたMonsterEconomyPlusというプラグインをプラグイン一覧から削除しました。</title>
+            <link>http://mlserver.php.xdomain.jp/24h/</link>
+            <date>2020/05/09</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>コマンド一覧が見づらくなるのを解消しました。</title>
+            <link>http://mlserver.php.xdomain.jp/24h/</link>
+            <date>2020/05/07</date>
+            <category>24H鯖</category>
+        </item>
+
+        <item>
+            <title>MonsterBOTが小アップデートされました。</title>
+            <link>http://monsterlifeserver.blog.jp/archives/6021055.html</link>
+            <date>2020/05/07</date>
+            <category>Discord</category>
+        </item>
+
+        <item>
+            <title>『DeadByDaylight in MC』のルールページが公開されました。</title>
+            <link>http://mlserver.php.xdomain.jp/game/dbd</link>
+            <date>2020/05/05</date>
+            <category>【企画】DbD in MC</category>
+        </item>
+
+        <item>
+            <title>24H鯖のロビーアスレについて掲載しました。</title>
+            <link>http://monsterlifeserver.blog.jp/archives/5994395.html</link>
+            <date>2020/05/04</date>
+            <category>24H鯖</category>
+        </item>
+
+
+        <item>
+            <title>寄付についての最新情報をブログにて掲載しました。</title>
+            <link>http://monsterlifeserver.blog.jp/archives/5994376.html</link>
+            <date>2020/05/04</date>
+            <category>24H鯖</category>
+        </item>
+
+        <item>
+            <title>新着情報専用ページができました。</title>
+            <link>http://mlserver.php.xdomain.jp/news/</link>
+            <date>2020/05/02</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>Monster2408が作った作品一覧ページができました。BETA版としてページの英語版切替機能を公開しました。</title>
+            <link>http://mlserver.php.xdomain.jp/monsterbox/</link>
+            <date>2020/04/30</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>外部リンクがわかりやすくなり、BANユーザー一覧のMCBansのリストが表示できない場合がございます。ご了承ください。</title>
+            <link>#</link>
+            <date>2020/04/24</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>一部画像をクリックしたときにポップアップ形式で拡大化する機能のバグを修正しました。</title>
+            <link>http://mlserver.php.xdomain.jp/24h/</link>
+            <date>2020/04/23</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>よくある質問などで使用されているアコーディオンメニューのデザインが少し変更されました。</title>
+            <link>http://mlserver.php.xdomain.jp/faq</link>
+            <date>2020/04/21</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>専用テクスチャパック存在する企画の企画ページにてダウンロードすることができるようになりました。</title>
+            <link>http://mlserver.php.xdomain.jp/game/aooni</link>
+            <date>2020/04/20</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>追加を忘れていた高鬼ごっこをホームページに追加しました。</title>
+            <link>http://mlserver.php.xdomain.jp/game/takaoni</link>
+            <date>2020/04/13</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>ホームページにアクセスする際CloudFlareを一度通るようになりました。</title>
+            <link>#</link>
+            <date>2020/03/27</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>トップページにおいてフッターが正しく表示されない問題が修正されました。</title>
+            <link>http://mlserver.php.xdomain.jp/</link>
+            <date>2020/03/25</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>トップページに企画画像スライダーが登場！！</title>
+            <link>http://mlserver.php.xdomain.jp/</link>
+            <date>2020/03/19</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>ミニゲーム企画関連のページURLが http://mlserver.php.xdomain.jp/event/ページ名 → http://mlserver.php.xdomain.jp/game/ページ名 に変更され、企画一覧のページURLが http://mlserver.php.xdomain.jp/game/ になりました。</title>
+            <link>http://mlserver.php.xdomain.jp/game/</link>
+            <date>2020/03/16</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>24H鯖に荒らし・不正対策にMODブロックPluginを導入しました。InventoryTweaksとOptifine以外のMODを入れてはいるとキックされます。</title>
+            <link>#</link>
+            <date>2020/03/14</date>
+            <category>24H鯖</category>
+        </item>
+
+        <item>
+            <title>ページ上部にパンくずリストを追加し、ミニゲーム企画一覧ページを作成しました。</title>
+            <link>#</link>
+            <date>2020/03/14</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>フッター部分にトップへ戻るボタンが重なったときに情報が見づらいという意見があったため、フッター手前でボタンが止まるように変更</title>
+            <link>#</link>
+            <date>2020/03/14</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>スマホで見たときの新着情報部分、広告削除（サーバーが勝手に貼る広告です。）と全デバイスでのデザイン変更、変更当日日に閲覧すれば New と末尾に表示される機能の追加</title>
+            <link>#</link>
+            <date>2020/03/14</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>MonsterLifeServerのホームページが移動した。</title>
+            <link>#</link>
+            <date>2020/03/12</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>問題解決・解消・改善というページを作りました。改善依頼等がある際は一度一読ください。</title>
+            <link>#</link>
+            <date>2020/02/16</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>運営陣一覧ページのデザインを変更しました。</title>
+            <link>#</link>
+            <date>2020/01/14</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>すべてのページURLの拡張子(.html)が非表示かされ、Q&amp;AのURLがq&amp;aからfaqになりました。</title>
+            <link>#</link>
+            <date>2020/01/05</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>ホームページのURLがhttp://mls-2020.me/になりました。</title>
+            <link>#</link>
+            <date>2020/01/04</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>オープンサーバーページのプラグイン情報をリニューアル後のものに更新しました。</title>
+            <link>#</link>
+            <date>2019/12/15</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>各企画ページに製作者情報が追記されました。</title>
+            <link>#</link>
+            <date>2019/12/15</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>フッターデザインが変更されました。それによりサイドバーの項目が減少しました。</title>
+            <link>#</link>
+            <date>2019/11/12</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>トップページにMonsterLifeServerのブログへのURLを掲載しました</title>
+            <link>#</link>
+            <date>2019/11/10</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>役職募集についてと会員（スポンサー）制についてにて応募フォームに簡単にアクセスできるようになりました。</title>
+            <link>#</link>
+            <date>2019/10/20</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>ホームページにてよくある質問ページを公開しました。</title>
+            <link>#</link>
+            <date>2019/10/18</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>オープンサーバーページを更新しました。</title>
+            <link>#</link>
+            <date>2019/09/30</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>BANユーザー一覧を更新、運営一覧を更新しました。</title>
+            <link>#</link>
+            <date>2019/09/19</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>ホームページのヘッダーの右上にクリック(タップ)するとメニューが開くハンバーガーメニューを設置しました。これによりスマホ対応のページとなりました。</title>
+            <link>#</link>
+            <date>2019/08/29</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>ホームページのデザインを変更しました。</title>
+            <link>#</link>
+            <date>2019/08/26</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>サイドバーにMLSを宣伝しているサーバー一覧を表示しています。</title>
+            <link>#</link>
+            <date>2019/08/19</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>ヘッダーのデザインを変更しました。また、利用規約が改定されました。</title>
+            <link>#</link>
+            <date>2019/08/08</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>MonsterLifeServerにようこそのページの新着のお知らせをメイン画面に移動。その下にMonsterLifeServerのツイートを設置しました。これにより最新情報をホームページで確認できるようになりました。</title>
+            <link>#</link>
+            <date>2019/08/07</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>全ページの上部に設置していたメニューとMonsterLifeServerにようこそのページの新着お知らせを排除し、サイドバーに設置しました。</title>
+            <link>#</link>
+            <date>2019/08/02</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>ガイドラインが改定されました。</title>
+            <link>#</link>
+            <date>2019/08/02</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>全ページの下部に設置していたメニューを排除し、ヘッダーに設置しました。</title>
+            <link>#</link>
+            <date>2019/07/30</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>ホームページのファビコンを設定しました。</title>
+            <link>#</link>
+            <date>2019/07/29</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>不具合を修正しました。</title>
+            <link>#</link>
+            <date>2019/07/29</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>ファイル内に不具合が起き、正常に接続できない箇所が発生しています。</title>
+            <link>#</link>
+            <date>2019/07/29</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>各ミニゲームページのファイルの位置を変更、管理しやすくしました。</title>
+            <link>#</link>
+            <date>2019/07/29</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>MonsterLifeServerにようこそのページ、新着情報の上部に新しい情報、下部に古い情報を記載するようになりました。</title>
+            <link>#</link>
+            <date>2019/07/28</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>MonsterLifeServerにようこそのページに新着情報を掲載するようになりました。</title>
+            <link>#</link>
+            <date>2019/07/28</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>Monsterが作った緊急地震速報DiscordBOT解説・招待ページが作成されました。</title>
+            <link>http://mlserver.php.xdomain.jp/monsterbox/bot</link>
+            <date>2019/07/27</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>サイト内のページの共通部分（ヘッダー・フッター・メニュー）を共有することにより更新ミスの原因を減らしました。</title>
+            <link>#</link>
+            <date>2019/07/27</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>MonsterLifeServerにようこそのページにMonsterLifeServerが稼働してからの時間を表示するようになりました。</title>
+            <link>#</link>
+            <date>2019/07/26</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>多くのページを作成・修正しました</title>
+            <link>#</link>
+            <date>2019/07/26</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>新ホームページ案が提案されました。</title>
+            <link>#</link>
+            <date>2019/07/24</date>
+            <category>ホームページ</category>
+        </item>
+    </blog>
+</rss>
