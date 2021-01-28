@@ -62,7 +62,7 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
     </head>
     <body>
 		<?php
-			$month = date('m') . '月'; // strpos($month, "4月")
+			$month = date('m') . '月'; // strpos($month, "4月") 
 			if (strpos($month, "11月") or strpos($month, "12月")) {
 				echo '<script type="text/javascript" src="'.$conf["url"].'/assets/js/winter.js"></script>';
 			} elseif (strpos($month, "4月")) {
