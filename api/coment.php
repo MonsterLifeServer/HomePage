@@ -13,6 +13,7 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
             iframe {
                 width: 100%;
                 height: 700px;
+                background: #fff;
             }
         </style>
 	</head>
