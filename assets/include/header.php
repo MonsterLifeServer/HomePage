@@ -3,7 +3,7 @@
         <img src="https://tamotech.blog/wp-content/uploads/2020/11/loading.gif" alt="">
     </div>
     <div class="logo-area">
-        <a href="<?php echo $conf["url"]; ?>"><img class="logo-img" src="<?php echo $conf["url"]; ?>/assets/img/web/logo.png"></img></a>
+        <a href="<?php echo $conf["url"]; ?>"><img class="logo-img" src="<?php echo $conf["url"]; ?>/assets/img/web/logo.png" /></a>
     </div>
     <div class="menu-btn">
         <div class="btn-trigger">

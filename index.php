@@ -1,6 +1,7 @@
 <?php
 
 $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
+echo include($_SERVER["DOCUMENT_ROOT"];
 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
@@ -16,7 +17,7 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
 				$i = 0
 				$.ajax({
 				type: "get",
-				url: "http://www.mlserver.xyz/blog/?feed=rss2"
+				url: "<?php echo $conf["url"]; ?>/blog/?feed=rss2"
 				}).done(function(result) {
 					$(result).find("item").each(function() {
 						if ($i >= 3) {

@@ -2,6 +2,7 @@
 $labelColor: #4f4f4f;
 .logo-area {
     max-width: 320px;
+    max-height: 64px;
     img.logo-img {
         width: 100%;
     }
@@ -29,8 +30,7 @@ $labelColor: #4f4f4f;
     margin-bottom: 10px;
     font-weight: bold;
     color: rgb(255, 0, 0);
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px;
 }
 header {
     z-index: 100;

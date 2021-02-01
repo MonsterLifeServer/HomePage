@@ -1,6 +1,5 @@
 <?php
-$url = empty($_SERVER["HTTPS"]) ? "http://" : "https://";
-$url .= $_SERVER["HTTP_HOST"];
+$url = "https://www.mlserver.xyz";
 
 function isNearDate($text){
     $date = new DateTime();
