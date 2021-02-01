@@ -2,16 +2,14 @@
 	//処理内容を定義
 
     $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
+    $private = include($_SERVER["DOCUMENT_ROOT"] . '/assets/privateKey.php');
     //処理内容を定義
     
     function send_to_discord($message, $ip) {
-        if (in_array($ip, (array)$conf['blocks'], true)) {
+        if (in_array($ip, (array)$privateKey['blocks'], true)) {
             return TRUE;
         }
-        $webhook_url = 'https://discordapp.com/api/webhooks/754263398656507946/Dm-JXavOHrMIRHWjIRDYud80k9WPz2btsSl57F_Rj4E5y8W3ALn-47Wt2Eeq70Zs4m5F';
-        if ((string)$ip !== "::1") {
-            $webhook_url = 'https://discordapp.com/api/webhooks/755392232437317692/Ivh9aMeeP7AoOgJ7oaOJiE2Q5xlkpKQuEyM39LBOnO5aoYCiTfjoxaqCEsRhV25ZI-Yp';
-        }
+        $webhook_url = $privateKey["staff-webhook"];
         $hookObject = json_encode($message);
         $ch = curl_init();
         curl_setopt_array( $ch, [
@@ -341,10 +339,10 @@
                     var selectCount;
                     
                     //何番目のoptionが選択されたか調べる
-                    num = document.input.age.selectedIndex;
+                    num = document.input.genre.selectedIndex;
                     tag = $('#mennseki');
 
-                    selectCount = $('select[name="age"]').children().length - 1;
+                    selectCount = $('select[name="genre"]').children().length - 1;
                     
                     if (num != 0) {
                         if (num == selectCount) {

@@ -28,9 +28,17 @@ $labelColor: #4f4f4f;
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
-    font-weight: bold;
-    color: rgb(255, 0, 0);
     padding: 10px;
+    .contents {
+        max-width: 1000px;
+        width: 100%;
+        p {
+            margin: 10px;
+            color: rgb(255, 0, 0);
+            text-align: left;
+            font-weight: bold;
+        }
+    }
 }
 header {
     z-index: 100;

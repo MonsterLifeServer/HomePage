@@ -1,5 +1,6 @@
 <?php
-$url = "https://www.mlserver.xyz";
+$url = empty($_SERVER["HTTPS"]) ? "http://" : "https://";
+$url .= $_SERVER["HTTP_HOST"];
 
 function isNearDate($text){
     $date = new DateTime();
@@ -41,11 +42,7 @@ $conf = [
     ],
     "url" => $url,
     "description" => "ミニゲーム企画鯖『MonsterLifeServer』のホームページです。",
-    "keywords" => "minecraft,ミニゲーム,企画,青鬼,増え鬼,青鬼ONLINE,マルチ,サーバー",
-    "blocks" => [
-        "5.188.211.10",
-        "5.188.211.9"
-    ]
+    "keywords" => "minecraft,ミニゲーム,企画,青鬼,増え鬼,青鬼ONLINE,マルチ,サーバー"
 ];
 
 $html["common_head"] = <<<__EOM__

@@ -2,13 +2,14 @@
 	//処理内容を定義
 
     $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
+    $private = include($_SERVER["DOCUMENT_ROOT"] . '/assets/privateKey.php');
     //処理内容を定義
 
     function send_to_discord($message, $ip) {
-        if (in_array($ip, (array)$conf['blocks'], true)) {
+        if (in_array($ip, (array)$privateKey['blocks'], true)) {
             return TRUE;
         }
-        $webhook_url = 'https://discord.com/api/webhooks/735374816751648850/4nDy1AzfN1tINghoW-goQRQZT-lb0Hnmx8UmmMDFbik9CYD6a0DoxNDiOvOahqZ9Nuwl';
+        $webhook_url = $privateKey["contact-webhook"];
         $hookObject = json_encode($message);
         $ch = curl_init();
         curl_setopt_array( $ch, [
