@@ -2,40 +2,7 @@
 	//処理内容を定義
 
     $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
-    $private = include($_SERVER["DOCUMENT_ROOT"] . '/assets/privateKey.php');
     //処理内容を定義
-    
-    function send_to_discord($message, $ip) {
-        if (in_array($ip, (array)$privateKey['blocks'], true)) {
-            return TRUE;
-        }
-        $webhook_url = $privateKey["staff-webhook"];
-        $hookObject = json_encode($message);
-        $ch = curl_init();
-        curl_setopt_array( $ch, [
-            CURLOPT_URL => $webhook_url,
-            CURLOPT_POST => true,
-            CURLOPT_POSTFIELDS => $hookObject,
-            CURLOPT_HTTPHEADER => [
-                "Length" => strlen($hookObject),
-                "Content-Type" => "application/json"
-            ]
-        ]);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_VERBOSE, 1);
-        curl_setopt($ch, CURLOPT_HEADER, 1);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array(                                                                          
-            'Content-Type: application/json'
-        ));
-        $response = curl_exec( $ch );
-        $header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
-        $header = substr($response, 0, $header_size);
-        $body = substr($response, $header_size);
-        curl_close($ch);
-        return TRUE; //$responseの値がokならtrueを返す
-    }
 
     // 変数の初期化
     $page_flag = 0;
@@ -86,7 +53,7 @@
 			'username' => 'スタッフ応募フォーム', 
 			'content' => $text, 
 		);
-		send_to_discord($message, $ip); //処理を実行
+		$sendOk = send_to_discord($message, $ip, 1); //処理を実行
     }
 
     ?>
@@ -262,7 +229,7 @@
 
                         <?php elseif( $page_flag === 2 ): ?>
                         <div class="element_wrap">
-                            <p>送信が完了しました。</p>
+                            <p><?php if ($sendOk === TRUE) {echo "送信が完了しました。";} else {echo "送信に失敗しました。";}?></p>
                         </div>
                         <a href="<?php echo $conf["url"]; ?>/form/staff" class="form">はじめに戻る</a>
 

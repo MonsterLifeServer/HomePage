@@ -1,10 +1,11 @@
 <header id="header">
-    <div id="loading">
-        <img src="https://tamotech.blog/wp-content/uploads/2020/11/loading.gif" alt="">
-    </div>
-    <div class="logo-area">
-        <a href="<?php echo $conf["url"]; ?>"><img class="logo-img" src="<?php echo $conf["url"]; ?>/assets/img/web/logo.png" /></a>
-    </div>
+    <div  id="loading"><div class="spinner"><div></div><div></div><div></div><div></div></div></div>
+    <?php
+        $url = $conf["url"].'/assets/img/web/logo.png';
+        $response = @file_get_contents($url);
+        if ($response !== false) echo '<div class="logo-area"><a href="'.$conf["url"].'"><img class="logo-img" src="'.$conf["url"].'/assets/img/web/logo.png" /></a></div>';
+        else echo '<div class="logo-area"><a href="'.$conf["url"].'">MLServer</a></div>';
+    ?>
     <div class="menu-btn">
         <div class="btn-trigger">
             <span></span>
@@ -20,39 +21,39 @@
                 <li>
                     <a class="js-menu__item__link" href="">サーバー</a>
                     <ul class="submenu">
-                        <li><a href="<?php $conf["url"] ?>/24h/">24H鯖</a></li>
-                        <li><a href="<?php $conf["url"] ?>/servers/lobby">ロビー鯖</a></li>
-                        <li><a href="<?php $conf["url"] ?>/servers/survival">サバイバル鯖</a></li>
-                        <li><a href="<?php $conf["url"] ?>/servers/event">ミニゲーム企画鯖</a></li>
+                        <li><a href="<?php echo $conf["url"]; ?>/24h/">24H鯖</a></li>
+                        <li><a href="<?php echo $conf["url"]; ?>/servers/lobby">ロビー鯖</a></li>
+                        <li><a href="<?php echo $conf["url"]; ?>/servers/survival">サバイバル鯖</a></li>
+                        <li><a href="<?php echo $conf["url"]; ?>/servers/event">ミニゲーム企画鯖</a></li>
                     </ul>
                 </li>
                 <li>
                     <a class="js-menu__item__link" href="">About</a>
                     <ul class="submenu">
-                        <li><a href="<?php $conf["url"] ?>/about/admins">運営</a></li>
-                        <li><a href="<?php $conf["url"] ?>/terms">利用規約 ガイドライン</a></li>
-                        <li><a href="<?php $conf["url"] ?>/about/donation">寄付について</a></li>
-                        <li><a href="<?php $conf["url"] ?>/news">ニュース</a></li>
-                        <li><a href="<?php $conf["url"] ?>/support">サポート</a></li>
+                        <li><a href="<?php echo $conf["url"]; ?>/about/admins">運営</a></li>
+                        <li><a href="<?php echo $conf["url"]; ?>/terms">利用規約 ガイドライン</a></li>
+                        <li><a href="<?php echo $conf["url"]; ?>/about/donation">寄付について</a></li>
+                        <li><a href="<?php echo $conf["url"]; ?>/news">ニュース</a></li>
+                        <li><a href="<?php echo $conf["url"]; ?>/support">サポート</a></li>
                     </ul>
                 </li>
                 <li>
                     <a class="js-menu__item__link" href="">ミニゲーム</a>
                     <ul class="submenu">
-                        <li><a href="<?php $conf["url"] ?>/game/aooni">青鬼ゲーム</a></li>
-                        <li><a href="<?php $conf["url"] ?>/game/hueoni">増え鬼</a></li>
-                        <li><a href="<?php $conf["url"] ?>/game/online">青鬼ONLINE in MC</a></li>
-                        <li><a href="<?php $conf["url"] ?>/game/cbg">コア破壊ゲーム</a></li>
-                        <li><a href="<?php $conf["url"] ?>/game/toso">逃走中</a></li>
-                        <li><a href="<?php $conf["url"] ?>/game/dbd">DeadbyDaylight</a></li>
+                        <li><a href="<?php echo $conf["url"]; ?>/game/aooni">青鬼ゲーム</a></li>
+                        <li><a href="<?php echo $conf["url"]; ?>/game/hueoni">増え鬼</a></li>
+                        <li><a href="<?php echo $conf["url"]; ?>/game/online">青鬼ONLINE in MC</a></li>
+                        <li><a href="<?php echo $conf["url"]; ?>/game/cbg">コア破壊ゲーム</a></li>
+                        <li><a href="<?php echo $conf["url"]; ?>/game/toso">逃走中</a></li>
+                        <li><a href="<?php echo $conf["url"]; ?>/game/dbd">DeadbyDaylight</a></li>
                     </ul>
                 </li>
                 <li>
                     <a class="js-menu__item__link" href="">Contact</a>
                     <ul class="submenu">
-                        <li><a href="<?php $conf["url"] ?>/support/faq">よくある質問</a></li>
-                        <li><a href="<?php $conf["url"] ?>/form/">問い合わせ</a></li>
-                        <li><a href="<?php $conf["url"] ?>/form/staff">役職応募</a></li>
+                        <li><a href="<?php echo $conf["url"]; ?>/support/faq">よくある質問</a></li>
+                        <li><a href="<?php echo $conf["url"]; ?>/form/">問い合わせ</a></li>
+                        <li><a href="<?php echo $conf["url"]; ?>/form/staff">役職応募</a></li>
                         <li><a href="https://twitter.com/mlserver2408" class="twitter" target="_blank"><i style="color: #1DA1F2;" class="fab fa-twitter"></i> Twitter</a></li>
                         <li><a href="https://discord.gg/gaGB6Mm" class="discord" target="_blank"><i style="font-weight: 100;color: #7289da;" class="fab fa-discord"></i> Discord</a></li>
                         <li><a href="https://www.youtube.com/channel/UCWSz32UUYgAzs_hVqKeqq-Q" class="youtube" target="_blank"><i style="font-weight: 100;color: #c4302b;" class="fab fa-youtube"></i>YouTube</a></li>
@@ -67,22 +68,34 @@
         </div>
     </div>
 </header>
-<ul class="label">
-    <?php 
-        $month = date('m') . '月';
-        if (strpos($month, "4月")) {
-            $i = "5";
-        } else {
-            $i = "2";
-        }
-    ?>
-    <li><a href="https://minecraft.jp/servers/5d51f624a9b0bd7e0e00834e" target="_blank"><img src="https://minecraft.jp/servers/5d51f624a9b0bd7e0e00834e/banner/<?php echo $i; ?>/560x95.png"/></a></li>
-    <li><a href="https://monocraft.net/servers/4o9NgWsXjtrIVtds0Igw/vote" target="_blank"><img src="https://minecraft.jp/servers/5d51f624a9b0bd7e0e00834e/banner/3/560x95.png"/></a></li>
-</ul>
+<?php 
+    $month = date('m') . '月';
+    if (strpos($month, "4月")) {
+        $i = "5";
+    } else {
+        $i = "2";
+    }
+    $url = 'https://minecraft.jp/servers/5d51f624a9b0bd7e0e00834e/banner/3/560x95.png';
+    $response = @file_get_contents($url, NULL, NULL, 0, 1);
+    if ($response !== false) {
+        echo '<ul class="label"><li><a href="https://minecraft.jp/servers/5d51f624a9b0bd7e0e00834e" target="_blank"><img src="https://minecraft.jp/servers/5d51f624a9b0bd7e0e00834e/banner/<?php echo $i; ?>/560x95.png"/></a></li>';
+        echo '<li><a href="https://monocraft.net/servers/4o9NgWsXjtrIVtds0Igw/vote" target="_blank"><img src="https://minecraft.jp/servers/5d51f624a9b0bd7e0e00834e/banner/3/560x95.png"/></a></li></ul>';
+    } else {
+        echo '<ul class="label"><li><a href="https://minecraft.jp/servers/5d51f624a9b0bd7e0e00834e" target="_blank">JapanMinecraftServers</li>';
+        echo '<li><a href="https://monocraft.net/servers/4o9NgWsXjtrIVtds0Igw/vote" target="_blank">Monocraft</a></li></ul>';
+    }
+    //echo '<img src="https://minecraft.jp/servers/5d51f624a9b0bd7e0e00834e/banner/3/560x95.png"/>';
+?>
 <div class="overlay"></div>
 <!-- 以下、緊急お知らせ用BOX -->
+<?php 
+$sorryMessageVisible = FALSE;
+$sorryMessage = '現在、お問い合わせページ・役職応募ページが正しく機能しておらず、運営にメッセージが届きません。何かお問い合わせのあるかたは Monster2408#8936 に連絡するか<a href="https://discord.gg/gaGB6Mm">公式Discordグループ</a>にてお問い合わせください。';
+if ($sorryMessageVisible === FALSE) echo "<!--";
+?>
 <div class="sorry">
     <div class="contents">
-        <p>現在、お問い合わせページ・役職応募ページが正しく機能しておらず、運営にメッセージが届きません。何かお問い合わせのあるかたは Monster2408#8936 に連絡するか<a href="https://discord.gg/gaGB6Mm">公式Discordグループ</a>にてお問い合わせください。</p>    
+        <p><?php echo $sorryMessage; ?></p>    
     </div>
 </div>
+<?php if ($sorryMessageVisible === FALSE) echo "-->"; ?>

@@ -65,7 +65,7 @@ $bgi = [
                     </div>
 
                     <div class="mask-style">
-                        <img src="<?php $conf["url"] ?>/assets/img/web/nagisa.png" />
+                        <img src="<?php echo $conf["url"]; ?>/assets/img/web/nagisa.png" />
                         <div class="mask1"></div>
                         <div class="mask2"></div>
                         <div class="caption">

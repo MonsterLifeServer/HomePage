@@ -87,4 +87,46 @@ $html["common_foot"] = <<<__EOM__
     <script src="{$conf["url"]}/assets/js/main-bottom.js"></script>
 __EOM__;
 
+function send_to_discord($message, $ip, $num) {
+    $contentsBlocker = [
+        "5.188.211.10",
+        "5.188.211.9"
+    ];
+    if (in_array($ip, (array)$contentsBlocker, true)) {
+        return FALSE;
+    }
+    if ($num === 0) {
+        $webhook_url = "https://discord.com/api/webhooks/805732141215252520/wrClKQ_amp1g7Y0Ww7h_kluHM2qrqHs0wwbF5as9kQIoSDga-F40ZUD2viTktjrQ7Lm6";
+    } elseif ($num === 1) {
+        $webhook_url = "https://discord.com/api/webhooks/805732030188617759/VWP01kdihnQBK3vQm1RPwOmqIgx3OvNMH-rJ9osjl73ZbWXyhoWmJus9qG_U6SXKbiYq";
+    } else {
+        return FALSE;
+    }
+    $hookObject = json_encode($message);
+    $ch = curl_init();
+    curl_setopt_array( $ch, [
+        CURLOPT_URL => $webhook_url,
+        CURLOPT_POST => true,
+        CURLOPT_POSTFIELDS => $hookObject,
+        CURLOPT_HTTPHEADER => [
+            "Length" => strlen($hookObject),
+            "Content-Type" => "application/json"
+        ]
+    ]);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_VERBOSE, 1);
+    curl_setopt($ch, CURLOPT_HEADER, 1);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array(                                                                          
+        'Content-Type: application/json'
+    ));
+    $response = curl_exec( $ch );
+    $header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
+    $header = substr($response, 0, $header_size);
+    $body = substr($response, $header_size);
+    curl_close($ch);
+    return TRUE; //$responseの値がokならtrueを返す
+}
+
 ?>

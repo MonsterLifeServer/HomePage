@@ -7,11 +7,11 @@
             <a href="https://discord.gg/gaGB6Mm" target="_blank"><i class="fab fa-discord" style="color: #7289da;"></i></a>
         </div>
         <p class="foot-menu">
-            <a href="<?php $conf["url"] ?>/"> ホーム</a> |
-            <a href="<?php $conf["url"] ?>/"> About</a> |
-            <a href="<?php $conf["url"] ?>/terms"> 利用規約・ガイドライン</a> |
-            <a href="<?php $conf["url"] ?>/about/news"> ニュース</a> |
-            <a href="<?php $conf["url"] ?>/form/"> お問い合わせ窓口</a>
+            <a href="<?php echo $conf["url"]; ?>/"> ホーム</a> |
+            <a href="<?php echo $conf["url"]; ?>/"> About</a> |
+            <a href="<?php echo $conf["url"]; ?>/terms"> 利用規約・ガイドライン</a> |
+            <a href="<?php echo $conf["url"]; ?>/about/news"> ニュース</a> |
+            <a href="<?php echo $conf["url"]; ?>/form/"> お問い合わせ窓口</a>
         </p><br/>
     </div>
     <div class="footer-center" style="border-top: 1px solid #000; margin-top: 10px; padding-top: 20px;">

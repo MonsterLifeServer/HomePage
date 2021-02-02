@@ -8,6 +8,47 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
 	<head>
         <?php echo $html["common_head"]; ?>
         <title>テスト | MonsterLifeServer</title>
+        <style>
+        .spinner {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          width: 32px;
+          height: 32px;
+          margin-top: -16px;
+          margin-left: -16px;
+        }
+        .spinner div {
+          box-sizing: border-box;
+          display: block;
+          position: absolute;
+          width: 32px;
+          height: 32px;
+          margin: 8px;
+          border-width: 3px;
+          border-style: solid;
+          border-radius: 100%;
+          animation: spinner 2.5s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+          border-color: #92979b transparent transparent transparent;
+        }
+        .spinner div:nth-child(1) {
+          animation-delay: -0.45s;
+        }
+        .spinner div:nth-child(2) {
+          animation-delay: -0.3s;
+        }
+        .spinner div:nth-child(3) {
+          animation-delay: -0.15s;
+        }
+        @keyframes spinner {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+        </style>
     </head>
     <body>
         <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/header.php"); ?>
@@ -42,37 +83,10 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
                         data-strip-group="shared-options">has shared options</a>
 
                     <p>ここからしたキャンバス</p>
-
-                    <a href="#"><canvas id="board" width="560" height="95"></canvas></a>
-                    <div id="imageFrame"></div>
+                    <div class="spinner"><div></div><div></div><div></div><div></div></div>
                 </div>
             </div>
         </div>
-
-        <script>
-            window.onload = ()=>{
-                // canvas準備
-                const board = document.querySelector("#board");  //getElementById()等でも可。オブジェクトが取れれば良い。
-                const ctx = board.getContext("2d");
-
-                // 画像読み込み
-                const chara = new Image();
-                chara.src = "https://minecraft.jp/servers/5d51f624a9b0bd7e0e00834e/banner/3/560x95.png";  // 画像のURLを指定
-                chara.onload = () => {
-                    ctx.drawImage(chara, 0, 0);
-                };
-                var data = board.toDataURL();
-                console.log(data);
-                
-                var img_element = document.createElement('img');
-                img_element.src = data; 
-                img_element.width = 560; 
-                img_element.height = 95; 
-                var frame = document.getElementById("imageFrame");
-                frame.appendChild(img_element);
-                console.log("完了");
-            };
-        </script>
         <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/footer.php"); ?>
     </body>
     <?php echo $html["common_foot"]; ?>
