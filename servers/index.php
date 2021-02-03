@@ -10,7 +10,7 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
         <title>サーバー | MonsterLifeServer</title>
         <link rel="stylesheet" type="text/css" href="<?php echo $conf["url"]; ?>/assets/css/status.min.css">
     </head>
-    <body onload="load()">
+    <body onload="timer()">
         <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/header.php"); ?>
         <div class="wrapper">
             
@@ -35,31 +35,32 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
                         </li>
                     </ol>
                     <!-- パンくずリスト -->
+                    <p>最終アップデート:<span id="elapsedTime"></span></p>
                     <div class="status-box">
                         <div class="status first" id="bungee">
                             <div class="left">
-                                <p class="server-name"><a href="<?php echo $conf["url"]; ?>/servers/">中継サーバー (BungeeCord)</a></p>
+                                <p class="server-name"><a href="<?php echo $conf["url"]; ?>/servers/">中継サーバー (BungeeCord)</a><span></span></p>
                                 <p class="description">このサーバーが落ちているときはサーバーにアクセスできません。</p>
                             </div>
                             <div class="right"><img src="<?php echo $conf["url"]; ?>/assets/img/web/loading.gif" width="24px"></div>
                         </div>
                         <div class="status" id="lobby">
                             <div class="left">
-                                <p class="server-name"><a href="<?php echo $conf["url"]; ?>/servers/lobby">ロビーサーバー</a></p>
+                                <p class="server-name"><a href="<?php echo $conf["url"]; ?>/servers/lobby">ロビーサーバー</a><span></span></p>
                                 <p class="description">ロビーサーバーです。いろいろなサーバーにアクセスしたりミニゲームをしたりできます。</p>
                             </div>
                             <div class="right"><img src="<?php echo $conf["url"]; ?>/assets/img/web/loading.gif" width="24px"></div>
                         </div>
                         <div class="status" id="survival">
                             <div class="left">
-                                <p class="server-name"><a href="<?php echo $conf["url"]; ?>/servers/survival">サバイバルサーバー</a></p>
+                                <p class="server-name"><a href="<?php echo $conf["url"]; ?>/servers/survival">サバイバルサーバー</a><span></span></p>
                                 <p class="description">オリジナルシステムを駆使したサバイバルサーバーです。</p>
                             </div>
                             <div class="right"><img src="<?php echo $conf["url"]; ?>/assets/img/web/loading.gif" width="24px"></div>
                         </div>
                         <div class="status" id="minigame">
                             <div class="left">
-                                <p class="server-name"><a href="<?php echo $conf["url"]; ?>/servers/minigame">ミニゲームサーバー</a></p>
+                                <p class="server-name"><a href="<?php echo $conf["url"]; ?>/servers/minigame">ミニゲームサーバー</a><span></span></p>
                                 <p class="description">あらゆるミニゲーム企画を開催するときに利用しているサーバーです。</p>
                             </div>
                             <div class="right"><img src="<?php echo $conf["url"]; ?>/assets/img/web/loading.gif" width="24px"></div>
@@ -84,28 +85,48 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
         function updateStatus(ip, id) {
             setTimeout(function() {
                 if (id != "web") {
-                    var request = new XMLHttpRequest();
-                    request.open("GET", "https://mcstatus.snowdev.com.br/api/query/" + ip);
-                    request.onload = function() {
-                        var json = JSON.parse(this.response);
-                        var isOnline = json.Online
-                        if (isOnline) {
-                            document.querySelector("#" + id + " .right img").setAttribute("src", "<?php echo $conf["url"]; ?>/assets/img/web/check.png");
+                    $.ajax({
+                        type: 'GET',
+                        url: "https://mcstatus.snowdev.com.br/api/query/" + ip,
+                    }).done(function(response){
+                        var online = response.Online;
+                        var onlinePlayers = response.PlayersOnline;
+                        var maxPlayers = response.MaxPlayers;
+                        if (online) {
+                            document.querySelector("#" + id + " .right img").setAttribute("src", "<?php echo $conf["url"]; ?>/assets/img/web/online.png");
+                            document.querySelector("#" + id + " .server-name span").textContent = onlinePlayers + "/" + maxPlayers;
                         } else {
-                            document.querySelector("#" + id + " .right img").setAttribute("src", "<?php echo $conf["url"]; ?>/assets/img/web/x.png");
-                        } 
-                    };
-                    request.send();
-                } else { document.querySelector("#" + id + " .right img").setAttribute("src", "<?php echo $conf["url"]; ?>/assets/img/web/check.png"); }
+                            document.querySelector("#" + id + " .right img").setAttribute("src", "<?php echo $conf["url"]; ?>/assets/img/web/offline.png");
+                            document.querySelector("#" + id + " .server-name span").textContent = "";
+                        }
+                    });
+                } else { document.querySelector("#" + id + " .right img").setAttribute("src", "<?php echo $conf["url"]; ?>/assets/img/web/online.png"); }
             }, 1000);
         }
 
-        function load() {
-            updateStatus("mc.mlserver.xyz", "bungee");
-            updateStatus("mc.mlserver.xyz:25566", "lobby");
-            updateStatus("mc.mlserver.xyz:25567", "survival");
-            updateStatus("mc.mlserver.xyz:25568", "minigame");
-            updateStatus("www.mlserver.xyz", "web")
+		var elapsedTime = document.getElementById("elapsedTime");
+
+		function Time_exchange() {
+            now_time = new Date();
+            s = 60 - now_time.getSeconds();
+            time = s + "秒";
+            elapsedTime.innerHTML = time;
+            if (now_time.getSeconds() == 0) {
+                updateAllStatus(time);
+            }
+		};
+
+		function timer() {
+            updateAllStatus()
+			setInterval(Time_exchange,1000);
+		}
+
+        function updateAllStatus() {
+            updateStatus("jp.mlserver.xyz", "bungee");
+            updateStatus("jp.mlserver.xyz:25566", "lobby");
+            updateStatus("jp.mlserver.xyz:25566", "survival");
+            updateStatus("jp.mlserver.xyz:25564", "minigame");
+            updateStatus("www.mlserver.xyz", "web");
         }
     </script>
 </html>
