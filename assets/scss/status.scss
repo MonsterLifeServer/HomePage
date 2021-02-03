@@ -1,0 +1,81 @@
+.status-box {
+    display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	max-width: 780px;
+	padding: 20px;
+	margin: auto auto 30px;
+	background-color: #fff;
+	border-radius: 3px;
+	box-shadow: 0 0 0 1px rgba(63, 63, 68, .05), 0 1px 3px 0 rgba(63, 63, 68, .15);
+
+    padding: 0;
+    .status {
+        border-bottom: 1px solid #efefef;
+        display: flex;
+        width: 100%;
+        padding: 10px 20px;
+        font-weight: 500;
+        &.first {
+            border-top-right-radius: 5px;
+            border-top-left-radius: 5px;
+        }
+        &.last {
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-bottom: 0;
+        }
+        .left {
+            width: 85%;
+            line-height: 29px;
+            .description {
+                color: rgb(121, 121, 121);
+                max-width: 400px;
+                width: 95%;
+                margin-top: 3px;
+            }
+            .server-name {
+                font-weight: bold;
+                max-width: 400px;
+                width: 95%;
+                a {
+                    color: rgb(0, 0, 0);
+                    text-decoration: none;
+                    display: inline-block;
+                    position: relative;
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        bottom: 0;
+                        left: 0;
+                        width: 0;
+                        height: 1px;
+                        background: rgb(0, 0, 0);
+                        transition: all 0.3s ease 0s;
+                    }
+                    &:hover {
+                        cursor: pointer;
+                        &::after {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        .right {
+            width: 15%;
+            text-align: right;
+        }
+        img {
+            vertical-align: middle;
+            margin-bottom: -.35em;
+        }
+    } 
+}
+
+@media screen and (max-width:810px) {
+	.status-box {
+		margin-right: 10px;
+		margin-left: 10px;
+	}
+}

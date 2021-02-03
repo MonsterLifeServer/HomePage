@@ -12,7 +12,6 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
 
 			$(document).ready(function () {
 
-
 				$i = 0
 				$.ajax({
 				type: "get",
@@ -58,9 +57,12 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
 			.slick-next:before {
 				color: #000;
 			}
+			#elapsedTime {
+				font-weight: bold;
+			}
 		</style>
     </head>
-    <body>
+    <body onload="timer()">
 		<?php
 			$month = date('m') . '月'; // strpos($month, "4月") 
 			if (strpos($month, "11月") or strpos($month, "12月")) {
@@ -90,7 +92,7 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
 						<li><a href="<?php echo $conf["url"]; ?>/24h/"><img src="https://i.gyazo.com/419a033caf3d2fa57c0dc1558a57e54c.png" alt="image03"></a></li>
 					</ul>
 
-					<h1 class="design">MonsterLifeServer</h1>
+					<h1 class="design" id="about">MonsterLifeServer</h1>
 					<table class="simple">
 						<tr class="title">
 							<td colspan="3">サービス</td>
@@ -100,13 +102,14 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
 						</tr>
 						<tr>
 							<td>
-								週に一度以上のペースで鬼ごっこやPvPなどの企画を開催しています。最近は企画がバグっちゃって減っていますが、現在も新企画を開発中です！！
+								<p>週に一度以上のペースで鬼ごっこやPvPなどの企画を開催しています。最近は企画がバグっちゃって減っていますが、現在も新企画を開発中です！！</p>
 							</td>
 							<td>
-								365日24時間開放されているサーバーがあります。そこではミニゲームやサバイバル、建築、アスレチックなどいろいろなことができます。
+								365日24時間開放されているサーバーがあります。そこではミニゲームやサバイバル、建築、アスレチックなどいろいろなことができます。</p>
+								<p>MLSが始動してから <span id="elapsedTime"></span> 経過(2018/9/10)</p>
 							</td>
 							<td>
-								サーバーの多くのシステムが当鯖の開発者が作り、所有権は当鯖に帰属しております。企画を参考にしたい場合は事前にご連絡をいただいたうえでこのシステム参考にしたいなどあればしっかりとご連絡ください。無断の利用は固く禁止しております。
+								<p>サーバーの多くのシステムが当鯖の開発者が作り、所有権は当鯖に帰属しております。企画を参考にしたい場合は事前にご連絡をいただいたうえでこのシステム参考にしたいなどあればしっかりとご連絡ください。無断の利用は固く禁止しております。</p>
 							</td>
 						</tr>
 					</table>
@@ -166,6 +169,31 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
 			pauseOnHover: true,
 			variableWidth: true, // 追加
 		});
+
+		var elapsedTime = document.getElementById("elapsedTime");
+
+
+		function Time_exchange() {
+			now_time = new Date();
+			sec_present = (now_time.getTime()/1000).toFixed(0);
+			sec_start = (Date.parse("2018/9/10")/1000).toFixed(0);
+			sec_time = sec_present - sec_start;
+
+			sec = sec_time % 60;
+			time = (sec_time - sec)/60;
+			min = time % 60;
+			time = (time - min)/60;
+			hour = time % 24;
+			time = (time - hour)/24;
+			days = time % 365;
+			time = (time - days)/365;
+			years = time;
+			elapsedTime.innerHTML = years + " 年 " + days + " 日 " + hour + " 時間 " + min + " 分 " + sec + " 秒 " ;
+		};
+
+		function timer(){
+			setInterval(Time_exchange,1000);
+		}
 
     </script>
     <?php echo $html["common_foot"]; ?>
