@@ -35,42 +35,42 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
                         </li>
                     </ol>
                     <!-- パンくずリスト -->
-                    <p>最終アップデート:<span id="elapsedTime"></span></p>
+                    <p>更新まで:<span id="elapsedTime"></span></p>
                     <div class="status-box">
                         <div class="status first" id="bungee">
                             <div class="left">
                                 <p class="server-name"><a href="<?php echo $conf["url"]; ?>/servers/">中継サーバー (BungeeCord)</a><span></span></p>
                                 <p class="description">このサーバーが落ちているときはサーバーにアクセスできません。</p>
                             </div>
-                            <div class="right"><img src="<?php echo $conf["url"]; ?>/assets/img/web/loading.gif" width="24px"></div>
+                            <div class="right"><img src="https://i.gyazo.com/b25eb582f5dd767853c60103201b8f63.gif" width="24px"></div>
                         </div>
                         <div class="status" id="lobby">
                             <div class="left">
                                 <p class="server-name"><a href="<?php echo $conf["url"]; ?>/servers/lobby">ロビーサーバー</a><span></span></p>
                                 <p class="description">ロビーサーバーです。いろいろなサーバーにアクセスしたりミニゲームをしたりできます。</p>
                             </div>
-                            <div class="right"><img src="<?php echo $conf["url"]; ?>/assets/img/web/loading.gif" width="24px"></div>
+                            <div class="right"><img src="https://i.gyazo.com/b25eb582f5dd767853c60103201b8f63.gif" width="24px"></div>
                         </div>
                         <div class="status" id="survival">
                             <div class="left">
                                 <p class="server-name"><a href="<?php echo $conf["url"]; ?>/servers/survival">サバイバルサーバー</a><span></span></p>
                                 <p class="description">オリジナルシステムを駆使したサバイバルサーバーです。</p>
                             </div>
-                            <div class="right"><img src="<?php echo $conf["url"]; ?>/assets/img/web/loading.gif" width="24px"></div>
+                            <div class="right"><img src="https://i.gyazo.com/b25eb582f5dd767853c60103201b8f63.gif" width="24px"></div>
                         </div>
                         <div class="status" id="minigame">
                             <div class="left">
                                 <p class="server-name"><a href="<?php echo $conf["url"]; ?>/servers/minigame">ミニゲームサーバー</a><span></span></p>
                                 <p class="description">あらゆるミニゲーム企画を開催するときに利用しているサーバーです。</p>
                             </div>
-                            <div class="right"><img src="<?php echo $conf["url"]; ?>/assets/img/web/loading.gif" width="24px"></div>
+                            <div class="right"><img src="https://i.gyazo.com/b25eb582f5dd767853c60103201b8f63.gif" width="24px"></div>
                         </div>
                         <div class="status last" id="web">
                             <div class="left">
                                 <p class="server-name"><a href="<?php echo $conf["url"]; ?>/">ウェブサーバー</a></p>
                                 <p class="description">もしここが✕だった場合あなたが見ているページはなんなのでしょう...</p>
                             </div>
-                            <div class="right"><img src="<?php echo $conf["url"]; ?>/assets/img/web/loading.gif" width="24px"></div>
+                            <div class="right"><img src="https://i.gyazo.com/b25eb582f5dd767853c60103201b8f63.gif" width="24px"></div>
                         </div>
                     </div>
                     
@@ -93,14 +93,14 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
                         var onlinePlayers = response.PlayersOnline;
                         var maxPlayers = response.MaxPlayers;
                         if (online) {
-                            document.querySelector("#" + id + " .right img").setAttribute("src", "<?php echo $conf["url"]; ?>/assets/img/web/online.png");
+                            document.querySelector("#" + id + " .right img").setAttribute("src", "https://i.gyazo.com/95a3478acc1b549e90f664ff9dad0927.png");
                             document.querySelector("#" + id + " .server-name span").textContent = onlinePlayers + "/" + maxPlayers;
                         } else {
-                            document.querySelector("#" + id + " .right img").setAttribute("src", "<?php echo $conf["url"]; ?>/assets/img/web/offline.png");
+                            document.querySelector("#" + id + " .right img").setAttribute("src", "https://i.gyazo.com/673453bc3f73389e0205afbfa79fc4a6.png");
                             document.querySelector("#" + id + " .server-name span").textContent = "";
                         }
                     });
-                } else { document.querySelector("#" + id + " .right img").setAttribute("src", "<?php echo $conf["url"]; ?>/assets/img/web/online.png"); }
+                } else { document.querySelector("#" + id + " .right img").setAttribute("src", "https://i.gyazo.com/95a3478acc1b549e90f664ff9dad0927.png"); }
             }, 1000);
         }
 
