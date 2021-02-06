@@ -35,7 +35,7 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
                         </li>
                     </ol>
                     <!-- パンくずリスト -->
-                    <p>更新まで:<span id="elapsedTime"></span></p>
+                    <p>次のアップデートまで:<span id="elapsedTime"></span></p>
                     <div class="status-box">
                         <div class="status first" id="bungee">
                             <div class="left">
@@ -122,7 +122,7 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
 		}
 
         function updateAllStatus() {
-            updateStatus("jp.mlserver.xyz", "bungee");
+            updateStatus("play.mlserver.xyz", "bungee");
             updateStatus("jp.mlserver.xyz:25566", "lobby");
             updateStatus("jp.mlserver.xyz:25566", "survival");
             updateStatus("jp.mlserver.xyz:25564", "minigame");
