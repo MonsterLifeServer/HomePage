@@ -13,6 +13,13 @@
         -->
 
         <item>
+            <title>ヘッダー部分に検索ボックスを設置しました。画面が小さい場合メニュー下部にあります。</title>
+            <link>https://www.mlserver.xyz/</link>
+            <date>2021/02/11</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
             <title>ホームページにてクリックできない場所が発生していましたが修正されました。</title>
             <link>https://www.mlserver.xyz/</link>
             <date>2021/01/13</date>
