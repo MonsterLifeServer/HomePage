@@ -10,40 +10,50 @@ body.error_403 {
     background: #1b1b1b;
     margin-top: 50px;
     text-align: center;
-    h1, h2 {
-        color: white;
-        font-family: "Bungee", cursive;
-    }
-    a {
-        color: #2aa7cc;
-        text-decoration: none;
-    }
-    a:hover {
-        color: white;
-    }
-    svg {
-        width: 50vw;
-    }
-    .lightblue {
-        fill: #444;
-    }
-    .eye {
-        cx: calc(115px + 30px * var(--mouse-x));
-        cy: calc(50px + 30px * var(--mouse-y));
-    }
-    #eye-wrap {
-        overflow: hidden;
-    }
-    .error-text {
-        font-size: 120px;
-    }
-    .alarm {
-        animation: alarmOn 0.5s infinite;
-    }
-    
-    @keyframes alarmOn {
-        to {
-            fill: darkred;
+    .mainBox {
+        visibility: hidden;
+        text-align: center;
+        * {
+            visibility: visible;
+        }
+        h1, h2 {
+            color: white;
+            font-family: "Bungee", cursive;
+        }
+        a {
+            color: #2aa7cc;
+            text-decoration: none;
+        }
+        a:hover {
+            color: white;
+        }
+        .breadcrumb a {
+            color: #888;
+        }
+        svg {
+            width: 50vw;
+        }
+        .lightblue {
+            fill: #444;
+        }
+        .eye {
+            cx: calc(115px + 30px * var(--mouse-x));
+            cy: calc(50px + 30px * var(--mouse-y));
+        }
+        #eye-wrap {
+            overflow: hidden;
+        }
+        .error-text {
+            font-size: 120px;
+        }
+        .alarm {
+            animation: alarmOn 0.5s infinite;
+        }
+        
+        @keyframes alarmOn {
+            to {
+                fill: darkred;
+            }
         }
     }
 }
@@ -93,7 +103,7 @@ body.error_404 {
 
 body.error_500 {
     background: rgb(51, 51, 51);
-    
+
     .full-screen {
         width: 100vw;
         height: 100vh;
@@ -149,5 +159,47 @@ body.error_500 {
 
     a:hover {
         color: lightgray;
+    }
+
+    .mainBox {
+        visibility: hidden;
+        text-align: center;
+        height:50px;
+        min-height: 50px;
+        * {
+            visibility: visible;
+        }
+        .breadcrumb a {
+            color: #888;
+        }
+    }
+}
+
+
+/*======================
+    503 page
+=======================*/
+
+body.error_503 {
+    .mainBox {
+        text-align: center;
+        h1, h2 {
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+    }
+}
+
+/*======================
+    510 page
+=======================*/
+
+body.error_510 {
+    .mainBox {
+        text-align: center;
+        h1, h2 {
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
     }
 }

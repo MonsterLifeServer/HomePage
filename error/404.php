@@ -7,37 +7,66 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
 <html lang="ja">
 	<head>
         <?php echo $html["common_head"]; ?>
-        <title>404エラー | MonsterLifeServer</title>
+        <title>404 Not Found | MonsterLifeServer</title>
         <link rel="stylesheet" type="text/css" href="<?php echo $conf["url"]; ?>/assets/css/error.min.css">
     </head>
     <body class="error_404">
         <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/header.php"); ?>
         <div class="wrapper">
             <div class="mainBox">
-                <section class="page_404">
-                    <div class="container">
-                        <div class="row"> 
-                            <div class="col-sm-12 ">
-                                <div class="col-sm-10 col-sm-offset-1  text-center">
-                                    <div class="four_zero_four_bg">
-                                        <h1 class="text-center ">404</h1>    
-                                    </div>
-                                    <img src="https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif" />
-                                    <div class="contant_box_404">
-                                        <h3 class="h2">
-                                            ありゃ？そんなページがないような...
-                                        </h3>
-                                        
-                                        <p>あなたが求めているページは見つかりませんでした...</p>
-                                        <p>URL: <span><?php #echo get_pagenum_link(); ?></span></p>
-                                        
-                                        <a href="<?php echo $conf["url"]; ?>" class="link_404">ここから戻れます</a>
+                <div class="contents">
+                    <div class="text-left">
+                        <!-- パンくずリスト始 -->
+                        <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+                            <li itemprop="itemListElement" itemscope
+                                itemtype="https://schema.org/ListItem">
+                                <a itemprop="item" href="<?php echo $conf["url"]; ?>/">
+                                    <span itemprop="name">ホーム</span>
+                                </a>
+                                <meta itemprop="position" content="1" />
+                            </li>
+
+                            <li itemprop="itemListElement" itemscope
+                                itemtype="https://schema.org/ListItem">
+                                <a itemprop="item" href="#">
+                                    <span itemprop="name">404 Not Found</span>
+                                </a>
+                                <meta itemprop="position" content="2" />
+                            </li>
+                        </ol>
+                        <!-- パンくずリスト終 -->
+                    </div>
+                    <section class="page_404">
+                        <div class="container">
+                            <div class="row"> 
+                                <div class="col-sm-12 ">
+                                    <div class="col-sm-10 col-sm-offset-1  text-center">
+                                        <div class="four_zero_four_bg">
+                                            <h1 class="text-center ">404 Not Found</h1>    
+                                        </div>
+                                        <img src="https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif" />
+                                        <div class="contant_box_404">
+                                            <h3 class="h2">
+                                                ありゃ？そんなページがないような...
+                                            </h3>
+                                            
+                                            <p>あなたが求めているページは見つかりませんでした...</p>
+                                            <?php
+                                                if (!empty($_GET["url"])) {
+                                                    $url = (string)$_GET["url"];
+                                                    if (strpos($url, "REQUEST_URI") === false) {
+                                                        echo "<p>URL: <span>" . $conf["url"] . $_GET["url"] . "</span></p>";
+                                                    }
+                                                }
+                                            ?>
+                                            <a href="<?php echo $conf["url"]; ?>" class="link_404">ここから戻れます</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </section>
+                    </section>
+                </div>
             </div>
         </div>
         <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/footer.php"); ?>

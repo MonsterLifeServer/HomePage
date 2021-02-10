@@ -102,7 +102,7 @@ $blog_rss = false;
 
 					?>
 					<a href="<?php echo $data->link; ?>" <?php  
-						if (strpos($data->link,'mlserver.php.xdomain.jp') === false) {
+						if (strpos($data->link,'mlserver.php.xdomain.jp') === false || strpos($data->link,'www.mlserver.xyz') === false) {
 							echo 'target="_blank"';
 						}
 					?> class="news-ca">

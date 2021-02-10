@@ -102,7 +102,7 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
                             foreach ($xmlData->blog->item as $data) { 
                         ?>
                         <a href="<?php echo $data->link; ?>" <?php  
-                            if (strpos($data->link,'mlserver.php.xdomain.jp') === false) {
+                            if (!(strpos($data->link,'mlserver.php.xdomain.jp') === true || strpos($data->link,'www.mlserver.xyz') === true)) {
                                 echo 'target="_blank"';
                             }
                         ?> class="news-ca">
