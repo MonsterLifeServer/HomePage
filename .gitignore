@@ -1,2 +1,4 @@
 .htaccess
 # .htaccessを隠す
+blog/
+# blogディレクトリを隠す

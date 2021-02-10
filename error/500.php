@@ -8,74 +8,9 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
 	<head>
         <?php echo $html["common_head"]; ?>
         <title>500エラー | MonsterLifeServer</title>
-        <style>
-            body {
-                background: rgb(51, 51, 51);
-            }
-
-            .full-screen {
-                width: 100vw;
-                height: 100vh;
-                color: white;
-                font-family: 'Arial Black';
-                text-align: center;
-            }
-
-            #page_top {
-                display: none;
-            }
-
-            .container {
-                padding-top: 4em;
-                width: 50%;
-                display: block;
-                margin: 0 auto;
-            }
-
-            .error-num {
-                font-size: 8em;
-            }
-
-            .eye {
-                background: #fff;
-                border-radius: 50%;
-                display: inline-block;
-                height: 100px;
-                position: relative;
-                width: 100px;
-            }
-
-            .eye::after {
-                background: #000;
-                border-radius: 50%;
-                bottom: 56.1px;
-                content: ' ';
-                height: 33px;
-                position: absolute;
-                right: 33px;
-                width: 33px;
-            }
-
-            .italic {
-                font-style: italic;
-            }
-
-            p {
-                margin-bottom: 4em;
-            }
-
-            a {
-                color: white;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            a:hover {
-                color: lightgray;
-            }
-        </style>
+        <link rel="stylesheet" type="text/css" href="<?php echo $conf["url"]; ?>/assets/css/error.min.css">
     </head>
-    <body>
+    <body class="error_500">
         <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/header.php"); ?>
         <div class="wrapper">
             <div class="full-screen">

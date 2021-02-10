@@ -94,7 +94,7 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
                     <div class="faq">
                         <p class="question">サーバーに入ろうとすると画像のような表示が出て入れない。</p>
                         <p class="answer"><a href="https://discord.gg/gaGB6Mm" target="_blank">Discordグループ</a>に参加してい場合や認証していない場合にはサーバーに接続できなくなります。<br>
-                                        また、誤認証（MCIDが間違っているなど）でもサーバーに接続ができなくなっています。その場合に関する対応は<a href="<?php echo $conf["url"]; ?>/support/faq/mcid">コチラ</a>をご覧ください。<img src="<?php echo $conf["url"]; ?>/assets/img/dis_kick.png" width="100%"></img></p>
+                                        また、誤認証（MCIDが間違っているなど）でもサーバーに接続ができなくなっています。その場合に関する対応は<a href="<?php echo $conf["url"]; ?>/support/faq/mcid">コチラ</a>をご覧ください。<img src="<?php echo $conf["url"]; ?>/assets/img/dis_kick.png" width="100%" alt="サーバーにアクセスできないときに表示される画面"></img></p>
                     </div>
 
                     <div class="faq">

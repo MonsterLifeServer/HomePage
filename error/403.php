@@ -8,56 +8,9 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
 	<head>
         <?php echo $html["common_head"]; ?>
         <title>403エラー | MonsterLifeServer</title>
-        <style>
-            @import url("https://fonts.googleapis.com/css?family=Bungee");
-
-            body {
-                background: #1b1b1b;
-                margin-top: 50px;
-                text-align: center;
-            }
-            h1, h2 {
-                color: white;
-                font-family: "Bungee", cursive;
-            }
-            #page_top {
-                display: none;
-            }
-            a {
-                color: #2aa7cc;
-                text-decoration: none;
-            }
-            a:hover {
-                color: white;
-            }
-            svg {
-                width: 50vw;
-            }
-            .lightblue {
-                fill: #444;
-            }
-            .eye {
-                cx: calc(115px + 30px * var(--mouse-x));
-                cy: calc(50px + 30px * var(--mouse-y));
-            }
-            #eye-wrap {
-                overflow: hidden;
-            }
-            .error-text {
-                font-size: 120px;
-            }
-            .alarm {
-                animation: alarmOn 0.5s infinite;
-            }
-
-            @keyframes alarmOn {
-                to {
-                    fill: darkred;
-                }
-            }
-        </style>
+        <link rel="stylesheet" type="text/css" href="<?php echo $conf["url"]; ?>/assets/css/error.min.css">
     </head>
-    <body class="404">
+    <body class="error_403">
         <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/header.php"); ?>
         <div class="wrapper">
             <svg xmlns="http://www.w3.org/2000/svg" id="robot-error" viewBox="0 0 260 118.9">

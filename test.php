@@ -82,8 +82,7 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
                         class="strip"
                         data-strip-group="shared-options">has shared options</a>
 
-                    <p>ここからしたキャンバス</p>
-                    <div class="spinner"><div></div><div></div><div></div><div></div></div>
+                    <img src="https://www.mlserver.xyz/assets/img/web/logo.png" />
                 </div>
             </div>
         </div>

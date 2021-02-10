@@ -2,44 +2,19 @@
 
 $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
 
+$blog_rss = false;
+
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
 	<head>
         <?php echo $html["common_head"]; ?>
 		<title>MonsterLifeServer</title>
-		<script>
-
-			$(document).ready(function () {
-
-				$i = 0
-				$.ajax({
-				type: "get",
-				url: "https://www.mlserver.xyz/blog/?feed=rss2"
-				}).done(function(result) {
-					$(result).find("item").each(function() {
-						if ($i >= 3) {
-							return
-						}
-						$title = $(this).find('title').text()
-						$link = $(this).find('link').text()
-						$date = $(this).find('pubDate').text()
-						$content = $(this).find('description').text()
-                        $encoded = $(this).find('content\\:encoded').text()
-                        //$startUrl = 'https://livedoor.blogimg.jp/meoto2408/imgs/';
-                        //$url = 'https://www.coraf.org/wp-content/themes/consultix/images/no-image-found-360x250.png';
-                        //if (~$encoded.indexOf($startUrl)) {
-                        //    $splits = $encoded.split($startUrl);
-                        //    $split = $splits[1].split('"')[0];
-                        //    $url = $startUrl + $split;
-                        //} 
-						$("#blogs").append('<a href="' + $link + '" target="_blank" class="ca"><div class="card"><div class="imgframe"></div><div class="textbox"><div class="title">' + $title + '</div><div class="text">' + $content + '</div></div></div></a>');
-						$i++
-					});
-				});
-			});
-
-		</script>
+		<?php 
+			if ($blog_rss === true) {
+				echo '<script type="text/javascript" src="{$conf["url"]}/assets/js/rss_reader.js"></script>';
+			}
+		?>
 		<style>
 			.slider{
 				margin: 0 auto;
@@ -93,26 +68,23 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
 					</ul>
 
 					<h1 class="design" id="about">MonsterLifeServer</h1>
-					<table class="simple">
-						<tr class="title">
-							<td colspan="3">サービス</td>
-						</tr>
-						<tr class="subtitle">
-							<td>ミニゲーム企画</td><td>サーバー</td><td>システム</td>
-						</tr>
-						<tr>
-							<td>
-								<p>週に一度以上のペースで鬼ごっこやPvPなどの企画を開催しています。最近は企画がバグっちゃって減っていますが、現在も新企画を開発中です！！</p>
-							</td>
-							<td>
-								365日24時間開放されているサーバーがあります。そこではミニゲームやサバイバル、建築、アスレチックなどいろいろなことができます。</p>
-								<p>MLSが始動してから <span id="elapsedTime"></span> 経過(2018/9/10)</p>
-							</td>
-							<td>
-								<p>サーバーの多くのシステムが当鯖の開発者が作り、所有権は当鯖に帰属しております。企画を参考にしたい場合は事前にご連絡をいただいたうえでこのシステム参考にしたいなどあればしっかりとご連絡ください。無断の利用は固く禁止しております。</p>
-							</td>
-						</tr>
-					</table>
+					<h2>サービス</h2>
+					<div class="server-about-box">
+
+						<div class="server-about first">
+							<h3>ミニゲーム企画</h3>
+							<p>週に一度以上のペースで鬼ごっこやPvPなどの企画を開催しています。最近は企画がバグっちゃって減っていますが、現在も新企画を開発中です！！</p>
+						</div>
+						<div class="server-about">
+							<h3>サーバー</h3>
+							<p>365日24時間開放されているサーバーがあります。そこではミニゲームやサバイバル、建築、アスレチックなどいろいろなことができます。</p>
+							<p>MLSが始動してから <span id="elapsedTime"></span> 経過(2018/9/10)</p>					</div>
+						<div class="server-about last">
+							<h3>システム</h3>
+							<p>サーバーの多くのシステムが当鯖の開発者が作り、所有権は当鯖に帰属しております。企画を参考にしたい場合は事前にご連絡をいただいたうえでこのシステム参考にしたいなどあればしっかりとご連絡ください。無断の利用は固く禁止しております。</p>
+						</div>
+
+					</div>
                 
 					<h2>新着情報</h2>
 					<div class="read-more"><a href="<?php echo $conf["url"]; ?>/about/news">すべて見る</a></div>
@@ -151,10 +123,13 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
 						</div>
 					</a>
 					<?php } ?>
-					<h2>ブログ最新記事</h2>
-					<div class="read-more"><a href="http://www.mlserver.xyz/blog/">すべて見る</a></div>
-					<div class="card-box" id="blogs"></div>
-					
+					<?php
+						if ($blog_rss === true) {
+							echo '<h2>ブログ最新記事</h2>';
+							echo '<div class="read-more"><a href="http://www.mlserver.xyz/blog/">すべて見る</a></div>';
+							echo '<div class="card-box" id="blogs"></div>';
+						}
+					?>
 				</div>
             </div>
             <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/footer.php"); ?>

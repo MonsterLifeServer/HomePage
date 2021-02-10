@@ -27,7 +27,7 @@ $labelColor: #4f4f4f;
     top: 0;
     width: 100vw;
     height: 100vh;
-    z-index: 99;
+    z-index: 1000;
     background-color: #000;
     opacity: 0;
     visibility: hidden;
@@ -192,7 +192,7 @@ header {
     position: fixed;
     top: 0px;
     left: 0px;
-    z-index: 110;
+    z-index: 1100;
     /* flexboxを使ってローディングアイコンを画面の中央に寄せる */
     display: -webkit-box;
     display: -ms-flexbox;

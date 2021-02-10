@@ -1,0 +1,153 @@
+#page_top {
+    display: none;
+}
+/*======================
+    403 page
+=======================*/
+@import url("https://fonts.googleapis.com/css?family=Bungee");
+
+body.error_403 {
+    background: #1b1b1b;
+    margin-top: 50px;
+    text-align: center;
+    h1, h2 {
+        color: white;
+        font-family: "Bungee", cursive;
+    }
+    a {
+        color: #2aa7cc;
+        text-decoration: none;
+    }
+    a:hover {
+        color: white;
+    }
+    svg {
+        width: 50vw;
+    }
+    .lightblue {
+        fill: #444;
+    }
+    .eye {
+        cx: calc(115px + 30px * var(--mouse-x));
+        cy: calc(50px + 30px * var(--mouse-y));
+    }
+    #eye-wrap {
+        overflow: hidden;
+    }
+    .error-text {
+        font-size: 120px;
+    }
+    .alarm {
+        animation: alarmOn 0.5s infinite;
+    }
+    
+    @keyframes alarmOn {
+        to {
+            fill: darkred;
+        }
+    }
+}
+
+/*======================
+    404 page
+=======================*/
+
+body.error_404 {
+    .page_404{ 
+        padding:40px 0; 
+        background:#fff; 
+        font-family: 'Arvo', serif;
+    }
+    
+    .page_404  img{ width:100%;}
+    
+    .four_zero_four_bg h1{
+        font-size:80px;
+    }
+    
+    .four_zero_four_bg h3{
+        font-size:80px;
+    }
+        
+    .link_404{      
+        color: #fff!important;
+        padding: 10px 20px;
+        background: #39ac31;
+        margin: 20px 0;
+        display: inline-block;
+    }
+    .contant_box_404 { 
+        margin-top:-50px;
+    }
+    .text-center {
+        text-align: center;
+    }
+    .mainBox {
+        background: #fff;
+    }
+}
+
+/*======================
+    500 page
+=======================*/
+
+body.error_500 {
+    background: rgb(51, 51, 51);
+    
+    .full-screen {
+        width: 100vw;
+        height: 100vh;
+        color: white;
+        font-family: 'Arial Black';
+        text-align: center;
+    }
+
+    .container {
+        padding-top: 4em;
+        width: 50%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .error-num {
+        font-size: 8em;
+    }
+
+    .eye {
+        background: #fff;
+        border-radius: 50%;
+        display: inline-block;
+        height: 100px;
+        position: relative;
+        width: 100px;
+    }
+
+    .eye::after {
+        background: #000;
+        border-radius: 50%;
+        bottom: 56.1px;
+        content: ' ';
+        height: 33px;
+        position: absolute;
+        right: 33px;
+        width: 33px;
+    }
+
+    .italic {
+        font-style: italic;
+    }
+
+    p {
+        margin-bottom: 4em;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    a:hover {
+        color: lightgray;
+    }
+}

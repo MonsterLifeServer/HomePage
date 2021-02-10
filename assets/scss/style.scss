@@ -500,6 +500,39 @@ span.category {
     }
 }
 
+.server-about-box {
+    display:flex;
+    .server-about {
+        background: #fff;
+        width: 31%;
+        margin: 1%;
+        h3 {
+            margin: 10px;
+        }
+        p {
+            margin: 10px;
+        }
+        &.first {
+
+        }
+        &.last {
+
+        }
+    }
+}
+
+@media screen and (max-width:800px) {
+    .server-about-box {
+        display: block;
+        .server-about {
+            background: #fff;
+            width: 100%;
+            max-width: 770px;
+            margin: 5px 0;
+        }
+    }
+}
+
 @media screen and (max-width:1000px) {
     .mainBox {
         max-width: 100%;

@@ -1,7 +1,4 @@
 $labelColor: #4f4f4f;
-.ad-space {
-    display: none;
-}
 .footer {
     background-color: #414141;
     width: 100%;
@@ -105,8 +102,7 @@ $labelColor: #4f4f4f;
 }
 
 @media screen and (max-width:700px) {
-    .ad-space {
-        display: block;
-        width: 100%;
+    .footer-center .name {
+        margin-bottom: 40px;
     }
 }

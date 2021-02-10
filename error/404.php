@@ -8,46 +8,9 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
 	<head>
         <?php echo $html["common_head"]; ?>
         <title>404エラー | MonsterLifeServer</title>
-        <style>
-            /*======================
-                404 page
-            =======================*/
-
-            body {
-                background:#fff; 
-            }
-
-            .page_404{ 
-                padding:40px 0; 
-                background:#fff; 
-                font-family: 'Arvo', serif;
-            }
-
-            .page_404  img{ width:100%;}
-
-            #page_top {
-                display: none;
-            }
-            
-            .four_zero_four_bg h1{
-                font-size:80px;
-            }
-            
-            .four_zero_four_bg h3{
-                font-size:80px;
-            }
-                
-            .link_404{      
-                color: #fff!important;
-                padding: 10px 20px;
-                background: #39ac31;
-                margin: 20px 0;
-                display: inline-block;
-            }
-            .contant_box_404{ margin-top:-50px;}
-        </style>
+        <link rel="stylesheet" type="text/css" href="<?php echo $conf["url"]; ?>/assets/css/error.min.css">
     </head>
-    <body class="404">
+    <body class="error_404">
         <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/header.php"); ?>
         <div class="wrapper">
             <div class="mainBox">
@@ -66,6 +29,7 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
                                         </h3>
                                         
                                         <p>あなたが求めているページは見つかりませんでした...</p>
+                                        <p>URL: <span><?php #echo get_pagenum_link(); ?></span></p>
                                         
                                         <a href="<?php echo $conf["url"]; ?>" class="link_404">ここから戻れます</a>
                                     </div>
