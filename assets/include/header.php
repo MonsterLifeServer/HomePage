@@ -1,12 +1,20 @@
 <header id="header">
     <div  id="loading"><div class="spinner"><div></div><div></div><div></div><div></div></div></div>
-    <div class="logo-area"><a href="<?php echo $conf["url"]; ?>"><img class="logo-img" src="https://i.gyazo.com/032b17ab7a102b35553a0342887a752c.png" /></a></div>
+    <div class="logo-area"><a href="<?php echo $conf["url"]; ?>"><img class="logo-img" src="https://i.gyazo.com/032b17ab7a102b35553a0342887a752c.png"/></a></div>
     <div class="menu-btn">
         <div class="btn-trigger">
             <span></span>
             <span></span>
             <span></span>
         </div>
+    </div>
+    <div class="wide-google-serch">
+        <form class="serch-area" method="get" action="http://www.google.co.jp/search" target="_blank">
+            <input class="text-area" type="text" name="q" size="31" maxlength="255" value="" placeholder="MLServerについて検索する"/>
+            <input class="serch-button fas" type="submit" name="btng" value="&#xf002;"/>
+            <input type="hidden" name="hl" value="ja"/>
+            <input type="hidden" name="sitesearch" value="mlserver.xyz"/>
+        </form>
     </div>
     <div class="header-label">
         <div class="menu">
@@ -54,11 +62,19 @@
                         <li><a href="https://www.youtube.com/channel/UCWSz32UUYgAzs_hVqKeqq-Q" class="youtube" target="_blank"><i style="font-weight: 100;color: #c4302b;" class="fab fa-youtube"></i>YouTube</a></li>
                     </ul>
                 </li>
+                <div class="hamburger-ad">
+                    <a href="https://px.a8.net/svt/ejp?a8mat=35JY3D+CJW1P6+0K+10YDIP" rel="nofollow">
+                    <img border="0" width="99%" alt="" src="https://www25.a8.net/svt/bgt?aid=190727257759&wid=002&eno=01&mid=s00000000002006207000&mc=1"></a>
+                    <img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=35JY3D+CJW1P6+0K+10YDIP" alt="">
+                </div>
             </ul>
-            <div class="hamburger-ad">
-                <a href="https://px.a8.net/svt/ejp?a8mat=35JY3D+CJW1P6+0K+10YDIP" rel="nofollow">
-                <img border="0" width="99%" alt="" src="https://www25.a8.net/svt/bgt?aid=190727257759&wid=002&eno=01&mid=s00000000002006207000&mc=1"></a>
-                <img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=35JY3D+CJW1P6+0K+10YDIP" alt="">
+            <div class="narrow-google-serch">
+                <form class="serch-area" method="get" action="http://www.google.co.jp/search" target="_blank">
+                    <input class="text-area" type="text" name="q" size="31" maxlength="255" value="" placeholder="MLServerについて検索する"/>
+                    <input class="serch-button fas" type="submit" name="btng" value="&#xf002;"/>
+                    <input type="hidden" name="hl" value="ja"/>
+                    <input type="hidden" name="sitesearch" value="mlserver.xyz"/>
+                </form>
             </div>
         </div>
     </div>

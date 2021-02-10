@@ -74,15 +74,12 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
                         </li>
                     </ol>
                     <!-- パンくずリスト -->
-                    <a href="http://www.stripjs.com/images/default/index/dorhoutmees/dm1.jpg"
-                        class="strip"
-                        data-strip-group="shared-options"
-                        data-strip-group-options="loop: false, maxWidth: 500">This group</a>
-                    <a href="http://www.stripjs.com/images/default/index/dorhoutmees/dm2.jpg"
-                        class="strip"
-                        data-strip-group="shared-options">has shared options</a>
-
-                    <img src="https://www.mlserver.xyz/assets/img/web/logo.png" />
+                    <form id="cse-search-box" action="https://google.com/cse">
+                        <input type="hidden" name="cx" value="1ee453cc6abdb1323" />
+                        <input type="hidden" name="ie" value="UTF-8" />
+                        <input type="text" name="q" size="31" placeholder="Googleカスタム検索" />
+                        <input type="submit" name="sa" value=" ">
+                    </form>
                 </div>
             </div>
         </div>
