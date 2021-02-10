@@ -52,11 +52,8 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
                                             
                                             <p>あなたが求めているページは見つかりませんでした...</p>
                                             <?php
-                                                if (!empty($_GET["url"])) {
-                                                    $url = (string)$_GET["url"];
-                                                    if (strpos($url, "REQUEST_URI") === false) {
-                                                        echo "<p>URL: <span>" . $conf["url"] . $_GET["url"] . "</span></p>";
-                                                    }
+                                                if (!empty($_SERVER['REQUEST_URI'])) {
+                                                    echo "<p>URL: <span>" . $conf["url"] . $_SERVER['REQUEST_URI'] . "</span></p>";
                                                 }
                                             ?>
                                             <a href="<?php echo $conf["url"]; ?>" class="link_404">ここから戻れます</a>
