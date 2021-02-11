@@ -7,7 +7,7 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
 <html lang="ja">
 	<head>
         <?php echo $html["common_head"]; ?>
-        <title>タイトル | MonsterLifeServer</title>
+        <title>新着情報 | MonsterLifeServer</title>
         <script>
             $(function(){
                 
