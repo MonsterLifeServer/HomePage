@@ -17,6 +17,7 @@
         if (!empty($_POST['contact'])) $contact = $_POST['contact'];
 
         $genre = 'その他';
+        $hook_id = 0;
         if( !empty($_POST['genre']) && $_POST['genre'] === "1" ){ $genre = 'Discordグループ'; } 
         if( !empty($_POST['genre']) && $_POST['genre'] === "2" ){ $genre = 'Minecraft鯖（24H）'; } 
         if( !empty($_POST['genre']) && $_POST['genre'] === "3" ){ $genre = 'Minecraft鯖（企画）'; } 
@@ -24,7 +25,10 @@
         if( !empty($_POST['genre']) && $_POST['genre'] === "5" ){ $genre = 'ホームページ'; } 
         if( !empty($_POST['genre']) && $_POST['genre'] === "6" ){ $genre = 'ブログ'; } 
         if( !empty($_POST['genre']) && $_POST['genre'] === "7" ){ $genre = '非公式Wiki'; } 
-        if( !empty($_POST['genre']) && $_POST['genre'] === "8" ){ $genre = 'お便り'; }
+        if( !empty($_POST['genre']) && $_POST['genre'] === "8" ){ 
+            $genre = 'お便り'; 
+            $hook_id = 2;
+        }
         if( !empty($_POST['genre']) && $_POST['genre'] === "9" ){ $genre = 'その他'; }
 
         if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
@@ -53,7 +57,7 @@
 			'username' => '総合お問い合わせ', 
 			'content' => $text, 
 		);
-		$sendOk = send_to_discord($message, $ip, 0); //処理を実行
+		$sendOk = send_to_discord($message, $ip, $hook_id); //処理を実行
     }
 
     ?>

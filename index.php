@@ -78,7 +78,8 @@ $blog_rss = false;
 						<div class="server-about">
 							<h3>サーバー</h3>
 							<p>365日24時間開放されているサーバーがあります。そこではミニゲームやサバイバル、建築、アスレチックなどいろいろなことができます。</p>
-							<p>MLSが始動してから <span id="elapsedTime"></span> 経過(2018/9/10)</p>					</div>
+							<p><div class="text-center">MLSが始動してから</div><div class="text-center"><span id="elapsedTime"></span></div><div class="text-center">経過(2018/9/10)</div></p>
+						</div>
 						<div class="server-about last">
 							<h3>システム</h3>
 							<p>サーバーの多くのシステムが当鯖の開発者が作り、所有権は当鯖に帰属しております。企画を参考にしたい場合は事前にご連絡をいただいたうえでこのシステム参考にしたいなどあればしっかりとご連絡ください。無断の利用は固く禁止しております。</p>
