@@ -43,8 +43,13 @@
         if (!empty($ip)) $text = $text . '```' . $ip . '```';
         else $text = $text . '```IDK```';
 
-        if (!empty($email)) $text = $text . '**__連絡先__** ```' . $email . '```';
-        else $text = $text . '**__連絡先__** ```無記入```';
+        if ($hook_id == 2) {
+            if (!empty($email)) $text = $text . '**__ラジオネーム__** ```' . $email . '```';
+            else $text = $text . '**__ラジオネーム__** ```名無しさん```';
+        } else {
+            if (!empty($email)) $text = $text . '**__連絡先__** ```' . $email . '```';
+            else $text = $text . '**__連絡先__** ```無記入```';
+        }
 
         if (!empty($genre)) $text = $text . '**__ジャンル__** ```' . $genre . '```';
         else $text = $text . '**__ジャンル__** ```' . $genre . '```';
@@ -100,7 +105,13 @@
 
                         <form method="post" action="">
                             <div class="element_wrap">
-                                <label>連絡先</label>
+                                <?php 
+                                    if( !empty($_POST['genre']) && $_POST['genre'] === "8" ) {
+                                        echo "<label>ラジオネーム</label>";
+                                    } else {
+                                        echo "<label>連絡先</label>";
+                                    }
+                                ?>
                                 <p><?php echo $_POST['email']; ?></p>
                             </div>
                             <?php 
@@ -140,8 +151,15 @@
 
                         <form method="post" action="">
                             <div class="element_wrap">
-                                <label>連絡先<p class="optional">- 任意</p></label>
-                                <p class="help">返信が必須の方はTwitterかDiscordのIDを記述してください。</p>
+                                <?php 
+                                    if( !empty($_POST['genre']) && $_POST['genre'] === "8" ) {
+                                        echo '<label>ラジオネーム<p class="optional">- 任意</p></label>';
+                                        echo '<p class="help">記入がないと「名無しさん」として読まれます。</p>';
+                                    } else {
+                                        echo '<label>連絡先<p class="optional">- 任意</p></label>';
+                                        echo '<p class="help">返信が必須の方はTwitterかDiscordのIDを記述してください。</p>';
+                                    }
+                                ?>
                                 <input name="email" type="text" value="<?php if( !empty($_POST['email']) ){ echo $_POST['email']; } ?>">
                             </div>
 
