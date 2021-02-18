@@ -36,7 +36,7 @@
                         <li><a href="<?php echo $conf["url"]; ?>/about/admins">運営</a></li>
                         <li><a href="<?php echo $conf["url"]; ?>/terms">利用規約 ガイドライン</a></li>
                         <li><a href="<?php echo $conf["url"]; ?>/about/donation">寄付について</a></li>
-                        <li><a href="<?php echo $conf["url"]; ?>/news">ニュース</a></li>
+                        <li><a href="<?php echo $conf["url"]; ?>/about/news">ニュース</a></li>
                         <li><a href="<?php echo $conf["url"]; ?>/support">サポート</a></li>
                     </ul>
                 </li>
@@ -63,9 +63,16 @@
                     </ul>
                 </li>
                 <div class="hamburger-ad">
-                    <a href="https://px.a8.net/svt/ejp?a8mat=35JY3D+CJW1P6+0K+10YDIP" rel="nofollow">
-                    <img border="0" width="99%" alt="" src="https://www25.a8.net/svt/bgt?aid=190727257759&wid=002&eno=01&mid=s00000000002006207000&mc=1"></a>
-                    <img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=35JY3D+CJW1P6+0K+10YDIP" alt="">
+                    <ins class="adsbygoogle"
+                        style="display:block"
+                        data-ad-client="ca-pub-1928305720436804"
+                        data-ad-slot="1516696223"
+                        data-ad-format="auto"
+                        data-full-width-responsive="true">
+                    </ins>
+					<script> 
+						(adsbygoogle = window.adsbygoogle || []).push({}); 
+					</script>
                 </div>
             </ul>
             <div class="narrow-google-serch">
@@ -120,3 +127,22 @@ if ($sorryMessageVisible === FALSE) echo "<!--";
     </div>
 </div>
 <?php if ($sorryMessageVisible === FALSE) echo "-->"; ?>
+<!-- ホームページトップ -->
+<?php 
+if (empty($_GET['debug'])) echo "<!--";
+?>
+<div class="header-ad-label">
+    <ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-1928305720436804"
+     data-ad-slot="8813759985">
+    </ins>
+    <script> 
+        (adsbygoogle = window.adsbygoogle || []).push({}); 
+    </script>
+</div>
+<?php 
+if (empty($_GET['debug'])) echo "-->";
+?>

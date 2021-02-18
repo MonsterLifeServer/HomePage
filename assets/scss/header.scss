@@ -183,6 +183,14 @@ header {
 .menu-btn {
     display: none;
 }
+.header-ad-label {
+    max-width: 1000px;
+    width: 100%;
+    margin: 10px auto;
+    .adsbygoogle {
+        width: 100%
+    }
+}
 .label {
 	display: flex;
     flex-wrap:wrap;

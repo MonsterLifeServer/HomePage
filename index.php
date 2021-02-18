@@ -65,6 +65,7 @@ $blog_rss = false;
 						<li><a href="<?php echo $conf["url"]; ?>/"><img src="https://i.gyazo.com/d5e3fe57a5718d72f538e2e9690a1abe.png" alt="image01"></a></li>
 						<li><a href="<?php echo $conf["url"]; ?>/game/aooni"><img src="https://i.gyazo.com/2575a25f1ccfbd4c37a0d517e0d211b3.png" alt="image02"></a></li>
 						<li><a href="<?php echo $conf["url"]; ?>/24h/"><img src="https://i.gyazo.com/419a033caf3d2fa57c0dc1558a57e54c.png" alt="image03"></a></li>
+						<li><a href="<?php echo $conf["url"]; ?>/game/online"><img src="https://i.gyazo.com/b34e6f3356881fc2a3e9a4606c8c0039.png" alt="image04"></a></li>
 					</ul>
 
 					<h1 class="design" id="about">MonsterLifeServer</h1>
@@ -94,36 +95,39 @@ $blog_rss = false;
 						$xmlData = simplexml_load_file($xml);
 						$_i = 0;
 						foreach ($xmlData->blog->item as $data) { 
-					?>
-					<?php
-
-						if ($_i === 3) {
-							break;
-						}
-
+							if ($_i === 3) { break; }
 					?>
 					<a href="<?php echo $data->link; ?>" <?php  
-						if (strpos($data->link,'mlserver.php.xdomain.jp') === false || strpos($data->link,'www.mlserver.xyz') === false) {
-							echo 'target="_blank"';
-						}
-					?> class="news-ca">
-						<div class="card">
-							<div class="textbox">
-								<div class="date">
-									<?php 
-										$_i++;
-										$text = (string)$data->date;
-										if (isNearDate($text)) {
-											$text = "<span class='blinking'><span style='color: red;'>New</span></span>" . $text;
-										}
-										echo $text; 
-									?>
-								</div>
-								<div class="text"><?php echo $data->title;?></div>
-							</div>
-						</div>
-					</a>
-					<?php } ?>
+							if (strpos($data->link,'mlserver.php.xdomain.jp') === false || strpos($data->link,'www.mlserver.xyz') === false) {
+								echo 'target="_blank"';
+							}
+					?> class="news-ca"><div class="card"><div class="textbox"><div class="date">
+						<?php 
+							$_i++;
+							$text = (string)$data->date;
+							if (isNearDate($text)) {
+								$text = "<span class='blinking'><span style='color: red;'>New</span></span>" . $text;
+							}
+							echo $text; 
+						?>
+						</div><div class="text"><?php echo $data->title;?></div></div></div></a>
+					<?php 
+						} 
+						if (empty($_GET['debug'])) echo "<!--";
+					?>
+					<ins class="adsbygoogle"
+						style="display:block; text-align:center;"
+						data-ad-layout="in-article"
+						data-ad-format="fluid"
+						data-ad-client="ca-pub-1928305720436804"
+						data-ad-slot="8813759985">
+					</ins>
+					<script> 
+						(adsbygoogle = window.adsbygoogle || []).push({}); 
+					</script>
+					<?php 
+						if (empty($_GET['debug'])) echo "-->";
+					?>
 					<?php
 						if ($blog_rss === true) {
 							echo '<h2>ブログ最新記事</h2>';
@@ -170,7 +174,6 @@ $blog_rss = false;
 		function timer(){
 			setInterval(Time_exchange,1000);
 		}
-
-    </script>
+	</script>
     <?php echo $html["common_foot"]; ?>
 </html>
