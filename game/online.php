@@ -77,8 +77,10 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
                         <h3>カテゴリ</h3>
                         <span class="category">鬼ごっこ</span><span class="category">PVE</span>
                         <hr />
-                        <h3>テクスチャ</h3>
+                        <h3>テクスチャ(低スペック向け)</h3>
                         <p><a href="<?php echo $conf['tex']['aooni']; ?>" download>ダウンロード</a></p>
+                        <h3>3Dテクスチャ</h3>
+                        <p><a href="<?php echo $conf['tex']['aooni3d']; ?>" download>ダウンロード</a></p>
 
                     </div>
 
