@@ -85,49 +85,32 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
                     <table class="pdf" border="1">
 					
                     <?php
-
                         $xml = $_SERVER["DOCUMENT_ROOT"] . "/assets/data/pdf.xml";//ファイルを指定
                         $xmlData = simplexml_load_file($xml);
 
                         $i = 0;
 
                         foreach ($xmlData->items->item as $data) {
-                            
-                            $n = 1;
-                            $ys = 0;
 
-                            $x = array();
 
-                            $x["date"] = (string)$data->date;
-                            $x["urls"] = (array)$data->urls;
-
-                            echo '<tr><th>'.$x["date"].'</th><td>';
+                            echo '<tr><th>'.(string)$data->date.'</th><td>';
 
                             //print_r($x);
                             $str = '';
                             $i = 0;
-                            if (is_array($x["urls"]["value"])) {
-                                foreach ($x["urls"]["value"] as $y) {
-                                    if ($i < 2) {
-                                        $i++;
-                                        $str = $str . "<a href='".$y."' target='_blank'>"."FILE.".$n."</a> ";
-                                    } else {
-                                        $i = 0;
-                                        $str = $str . "<a href='".$y."' target='_blank'>"."FILE.".$n."</a><br>";
-                                    }
-                                    $n++;
-                                    $ys++;
+                            foreach ($data->values->group as $y) {
+                                if ($i < 2) {
+                                    $i++;
+                                    $str = $str . "<a href='".(string)$y->url."' target='_blank'>".(string)$y->title."</a> ";
+                                } else {
+                                    $i = 0;
+                                    $str = $str . "<a href='".(string)$y->url."' target='_blank'>".(string)$y->title."</a><br>";
                                 }
-                            } else {
-                                $str = "<a href='".$x["urls"]["value"]."' target='_blank'>"."FILE.1</a>";
                             }
-
-                            print_r($str.'</td></th>');
-                            $n++;
+                            echo $str.'</td></th>';
                         }
-                        echo '</tr>';
                     ?>
-                    </table>
+                    </tr></table>
 				</div>
 			</div>
 			<?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/footer.php"); ?>

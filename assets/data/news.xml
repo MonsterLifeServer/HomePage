@@ -13,6 +13,13 @@
         -->
 
         <item>
+            <title>サーバー資料ページで資料タイトルが表示されるようになりました。</title>
+            <link>https://www.mlserver.xyz/api/pdf</link>
+            <date>2021/02/27</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
             <title>ヘッダー部分に検索ボックスを設置しました。画面が小さい場合メニュー下部にあります。</title>
             <link>https://www.mlserver.xyz/</link>
             <date>2021/02/11</date>
