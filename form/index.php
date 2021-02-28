@@ -64,13 +64,19 @@
 		);
 		$sendOk = send_to_discord($message, $ip, $hook_id); //処理を実行
     }
-
+    $TITLE = "お問い合わせ";
+    $URL = $conf["url"] . '/form/';
+    $DESCRIPTION = "MonsterLifeServerへのお問い合わせはこちらから";
+    
     ?>
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
     <html lang="ja">
         <head>
-            <title>お問い合わせ | MonsterLifeServer</title>
             <?php echo $html["common_head"]; ?>
+            <title><?php echo $TITLE; ?> | MonsterLifeServer</title>
+            <meta property="og:url" content="<?php echo $URL; ?>/" />
+            <meta property="og:title" content="<?php echo $TITLE; ?> | MonsterLifeServer" />
+            <meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
             <link rel="stylesheet" type="text/css" href="<?php echo $conf["url"]; ?>/assets/css/form.min.css">
         </head>
         <body class="form_page">
@@ -91,7 +97,7 @@
                             <li itemprop="itemListElement" itemscope
                                 itemtype="https://schema.org/ListItem">
                                 <a itemprop="item" href="<?php echo $conf["url"]; ?>/form">
-                                    <span itemprop="name">お問い合わせ</span>
+                                    <span itemprop="name"><?php echo $TITLE; ?></span>
                                 </a>
                                 <meta itemprop="position" content="2" />
                             </li>

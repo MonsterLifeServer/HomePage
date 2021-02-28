@@ -1,13 +1,19 @@
 <?php
 
 $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
+$TITLE = "ミニゲーム企画一覧";
+$URL = $conf["url"] . '/game/';
+$DESCRIPTION = "MonsterLifeServerの企画一覧ページです。";
 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
 	<head>
-        <?php echo $html["common_head"]; ?>
-        <title>ミニゲーム企画 | MonsterLifeServer</title>
+		<?php echo $html["common_head"]; ?>
+		<title><?php echo $TITLE; ?> | MonsterLifeServer</title>
+		<meta property="og:url" content="<?php echo $URL; ?>/" />
+		<meta property="og:title" content="<?php echo $TITLE; ?> | MonsterLifeServer" />
+		<meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
     </head>
     <body>
         <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/header.php"); ?>
@@ -27,7 +33,7 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
                         <li itemprop="itemListElement" itemscope
                             itemtype="https://schema.org/ListItem">
                             <a itemprop="item" href="<?php echo $conf["url"]; ?>/game/">
-                                <span itemprop="name">ミニゲーム企画</span>
+                                <span itemprop="name"><?php echo $TITLE; ?></span>
                             </a>
                             <meta itemprop="position" content="2" />
                         </li>

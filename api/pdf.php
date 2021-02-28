@@ -1,14 +1,19 @@
 <?php
 
-
 $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
+$TITLE = "サーバー資料";
+$URL = $conf["url"] . '/about/donation';
+$DESCRIPTION = "過去の運営会議やその他資料を公開しています。";
 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
 	<head>
-		<title>サーバー資料 | MonsterLifeServer</title>
 		<?php echo $html["common_head"]; ?>
+		<title><?php echo $TITLE; ?> | MonsterLifeServer</title>
+		<meta property="og:url" content="<?php echo $URL; ?>/" />
+		<meta property="og:title" content="<?php echo $TITLE; ?> | MonsterLifeServer" />
+		<meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
 		<style>
             table.pdf {
                 width: 100%;
@@ -71,7 +76,7 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
                         <li itemprop="itemListElement" itemscope
 							itemtype="https://schema.org/ListItem">
 							<a itemprop="item" href="<?php echo $conf["url"]; ?>/api/pdf">
-								<span itemprop="name">サーバー資料</span>
+								<span itemprop="name"><?php echo $TITLE; ?></span>
 							</a>
 							<meta itemprop="position" content="3" />
 						</li>

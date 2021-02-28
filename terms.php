@@ -1,13 +1,19 @@
 <?php
 
 $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
+$TITLE = "利用規約・ガイドライン";
+$URL = $conf["url"] . '/terms';
+$DESCRIPTION = "ルールとマナーを守って遊びましょう！！";
 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
 	<head>
-        <?php echo $html["common_head"]; ?>
-        <title>利用規約・ガイドライン | MonsterLifeServer</title>
+		<?php echo $html["common_head"]; ?>
+		<title><?php echo $TITLE; ?> | MonsterLifeServer</title>
+		<meta property="og:url" content="<?php echo $URL; ?>/" />
+		<meta property="og:title" content="<?php echo $TITLE; ?>" />
+		<meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
     </head>
     <body>
         <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/header.php"); ?>

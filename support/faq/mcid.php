@@ -1,17 +1,19 @@
 <?php
 
-
 $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
+$TITLE = "MCIDについて";
+$URL = $conf["url"] . '/surpport/faq/mcid';
+$DESCRIPTION = "MonsterLifeServerではマイクラのプレイヤー名のことをMCID（エムシーアイディー）と言います。";
 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
 	<head>
-		<title>MCIDについて | MonsterLifeServer</title>
 		<?php echo $html["common_head"]; ?>
-		<style>
-
-		</style>
+		<title><?php echo $TITLE; ?> | MonsterLifeServer</title>
+		<meta property="og:url" content="<?php echo $URL; ?>/" />
+		<meta property="og:title" content="<?php echo $TITLE; ?> | MonsterLifeServer" />
+		<meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
 	</head>
 	<body>
 		<?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/header.php"); ?>
@@ -38,7 +40,7 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
 						<li itemprop="itemListElement" itemscope
 							itemtype="https://schema.org/ListItem">
 							<a itemprop="item" href="<?php echo $conf["url"]; ?>/support/faq/mcid">
-								<span itemprop="name">MCIDについて</span>
+								<span itemprop="name"><?php echo $TITLE; ?></span>
 							</a>
 							<meta itemprop="position" content="3" />
 						</li>

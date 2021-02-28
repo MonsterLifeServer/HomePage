@@ -1,13 +1,19 @@
 <?php
 
-
 $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
+$TITLE = "24H鯖";
+$URL = $conf["url"] . '/24h/';
+$DESCRIPTION = "24H鯖の紹介ページです。";
 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
 	<head>
 		<?php echo $html["common_head"]; ?>
+		<title><?php echo $TITLE; ?> | MonsterLifeServer</title>
+		<meta property="og:url" content="<?php echo $URL; ?>/" />
+		<meta property="og:title" content="<?php echo $TITLE; ?> | MonsterLifeServer" />
+		<meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
 		<style>
 			div.text_box table{
 				width: 100%;
@@ -46,7 +52,6 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
 				padding: 5px;
 			}
 		</style>
-		<title>24H鯖 | MonsterLifeServer</title>
 	</head>
 
 	<body>
@@ -66,7 +71,7 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
 						<li itemprop="itemListElement" itemscope
 							itemtype="https://schema.org/ListItem">
 							<a itemprop="item" href="<?php echo $conf["url"]; ?>/24h">
-								<span itemprop="name">24H鯖</span>
+								<span itemprop="name"><?php echo $TITLE; ?></span>
 							</a>
 							<meta itemprop="position" content="2" />
 						</li>

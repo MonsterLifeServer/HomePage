@@ -1,14 +1,19 @@
 <?php
 
-
 $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
+$TITLE = "配信コメント";
+$URL = $conf["url"] . '/api/comment';
+$DESCRIPTION = "MonsterLifeServerのライブ配信のコメントを見れるページ";
 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
 	<head>
-		<title>配信コメント | MonsterLifeServer</title>
 		<?php echo $html["common_head"]; ?>
+		<title><?php echo $TITLE; ?> | MonsterLifeServer</title>
+		<meta property="og:url" content="<?php echo $URL; ?>/" />
+		<meta property="og:title" content="<?php echo $TITLE; ?> | MonsterLifeServer" />
+		<meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
         <style>
             iframe {
                 width: 100%;
@@ -43,7 +48,7 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
                         <li itemprop="itemListElement" itemscope
 							itemtype="https://schema.org/ListItem">
 							<a itemprop="item" href="<?php echo $conf["url"]; ?>/api/coment">
-								<span itemprop="name">配信コメント</span>
+								<span itemprop="name"><?php echo $TITLE; ?></span>
 							</a>
 							<meta itemprop="position" content="3" />
 						</li>

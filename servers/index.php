@@ -1,13 +1,19 @@
 <?php
 
 $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
+$TITLE = "サーバー";
+$URL = $conf["url"] . '/servers/';
+$DESCRIPTION = " ";
 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
 	<head>
-        <?php echo $html["common_head"]; ?>
-        <title>サーバー | MonsterLifeServer</title>
+		<?php echo $html["common_head"]; ?>
+		<title><?php echo $TITLE; ?> | MonsterLifeServer</title>
+		<meta property="og:url" content="<?php echo $URL; ?>/" />
+		<meta property="og:title" content="<?php echo $TITLE; ?> | MonsterLifeServer" />
+		<meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
         <link rel="stylesheet" type="text/css" href="<?php echo $conf["url"]; ?>/assets/css/status.min.css">
     </head>
     <body onload="timer()">
@@ -29,7 +35,7 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
                         <li itemprop="itemListElement" itemscope
                             itemtype="https://schema.org/ListItem">
                             <a itemprop="item" href="<?php echo $conf["url"]; ?>/servers/">
-                                <span itemprop="name">サーバー</span>
+                                <span itemprop="name"><?php echo $TITLE; ?></span>
                             </a>
                             <meta itemprop="position" content="2" />
                         </li>

@@ -1,14 +1,20 @@
 <?php
 
 $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
+$TITLE = "テスト";
+$URL = $conf["url"] . '/test';
+$DESCRIPTION = "　";
 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
 	<head>
-        <?php echo $html["common_head"]; ?>
-        <title>テスト | MonsterLifeServer</title>
-        <style>
+		<?php echo $html["common_head"]; ?>
+		<title><?php echo $TITLE; ?> | MonsterLifeServer</title>
+		<meta property="og:url" content="<?php echo $URL; ?>/" />
+		<meta property="og:title" content="<?php echo $TITLE; ?> | MonsterLifeServer" />
+		<meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
+      <style>
         .spinner {
           position: absolute;
           left: 50%;
@@ -48,7 +54,7 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
             transform: rotate(360deg);
           }
         }
-        </style>
+      </style>
     </head>
     <body>
         <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/header.php"); ?>
@@ -68,7 +74,7 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
                         <li itemprop="itemListElement" itemscope
                             itemtype="https://schema.org/ListItem">
                             <a itemprop="item" href="<?php echo $conf["url"]; ?>/test">
-                                <span itemprop="name">tesuto</span> 
+                                <span itemprop="name"><?php echo $TITLE; ?></span> 
                             </a>
                             <meta itemprop="position" content="2" />
                         </li>

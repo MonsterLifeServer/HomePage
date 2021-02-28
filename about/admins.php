@@ -1,7 +1,5 @@
 <?php
 
-$config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
-
 $bgi = [
     "https://cdn.pixabay.com/photo/2017/01/11/04/57/minecraft-1970876_960_720.jpg",
     "https://cdn.pixabay.com/photo/2017/02/10/00/03/minecraft-2053882_1280.jpg",
@@ -11,12 +9,20 @@ $bgi = [
     "https://cdn.pixabay.com/photo/2014/11/13/15/23/minecraft-529459_960_720.jpg"
 ]
 
+$config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
+$TITLE = "運営一覧";
+$URL = $conf["url"] . '/about/admins';
+$DESCRIPTION = "運営一覧ページです。";
+
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
 	<head>
-        <?php echo $html["common_head"]; ?>
-        <title>運営一覧 | MonsterLifeServer</title>
+		<?php echo $html["common_head"]; ?>
+		<title><?php echo $TITLE; ?> | MonsterLifeServer</title>
+		<meta property="og:url" content="<?php echo $URL; ?>/" />
+		<meta property="og:title" content="<?php echo $TITLE; ?> | MonsterLifeServer" />
+		<meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
         <style>
             <?php $rand_keys = array_rand($bgi, 1); ?>
             .mask-style {
@@ -43,7 +49,7 @@ $bgi = [
                     <li itemprop="itemListElement" itemscope
                         itemtype="https://schema.org/ListItem">
                         <a itemprop="item" href="<?php echo $conf["url"]; ?>/about/admins">
-                            <span itemprop="name">運営一覧</span>
+                            <span itemprop="name"><?php echo $TITLE; ?></span>
                         </a>
                         <meta itemprop="position" content="2" />
                     </li>

@@ -1,13 +1,19 @@
 <?php
 
 $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
+$TITLE = "青鬼ONLINE in MC";
+$URL = $conf["url"] . '/game/online';
+$DESCRIPTION = "スマホゲーム「青鬼ONLINE」をマイクラで遊べるようにした企画「青鬼ONLINE in MC」のルール紹介ページです。";
 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
 	<head>
-        <?php echo $html["common_head"]; ?>
-        <title>青鬼ONLINE in MC | MonsterLifeServer</title>
+		<?php echo $html["common_head"]; ?>
+		<title><?php echo $TITLE; ?> | MonsterLifeServer</title>
+		<meta property="og:url" content="<?php echo $URL; ?>/" />
+		<meta property="og:title" content="<?php echo $TITLE; ?> | MonsterLifeServer" />
+		<meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
     </head>
     <body>
         <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/header.php"); ?>
@@ -35,7 +41,7 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
                     <li itemprop="itemListElement" itemscope
                         itemtype="https://schema.org/ListItem">
                         <a itemprop="item" href="<?php echo $conf["url"]; ?>/game/online">
-                            <span itemprop="name">青鬼ONLINE in MC</span>
+                            <span itemprop="name"><?php echo $TITLE; ?></span>
                         </a>
                         <meta itemprop="position" content="3" />
                     </li>

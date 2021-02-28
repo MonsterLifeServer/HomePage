@@ -3,13 +3,19 @@
 $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
 
 $blog_rss = false;
+$TITLE = "MonsterLifeServer";
+$URL = $conf["url"] . '/';
+$DESCRIPTION = "ミニゲーム企画鯖『MonsterLifeServer』のホームページです。";
 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
 	<head>
-        <?php echo $html["common_head"]; ?>
-		<title>MonsterLifeServer</title>
+		<?php echo $html["common_head"]; ?>
+		<title><?php echo $TITLE; ?></title>
+		<meta property="og:url" content="<?php echo $URL; ?>/" />
+		<meta property="og:title" content="<?php echo $TITLE; ?>" />
+		<meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
 		<?php 
 			if ($blog_rss === true) {
 				echo '<script type="text/javascript" src="{$conf["url"]}/assets/js/rss_reader.js"></script>';

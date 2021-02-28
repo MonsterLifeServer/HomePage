@@ -1,13 +1,19 @@
 <?php
 
 $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
+$TITLE = "新着情報";
+$URL = $conf["url"] . '/about/news';
+$DESCRIPTION = "新着情報が見れます。";
 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
 	<head>
-        <?php echo $html["common_head"]; ?>
-        <title>新着情報 | MonsterLifeServer</title>
+		<?php echo $html["common_head"]; ?>
+		<title><?php echo $TITLE; ?> | MonsterLifeServer</title>
+		<meta property="og:url" content="<?php echo $URL; ?>/" />
+		<meta property="og:title" content="<?php echo $TITLE; ?> | MonsterLifeServer" />
+		<meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
         <script>
             $(function(){
                 
@@ -86,7 +92,7 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
                         <li itemprop="itemListElement" itemscope
                             itemtype="https://schema.org/ListItem">
                             <a itemprop="item" href="<?php echo $conf["url"]; ?>/about/news">
-                                <span itemprop="name">新着情報</span>
+                                <span itemprop="name"><?php echo $TITLE; ?></span>
                             </a>
                             <meta itemprop="position" content="2" />
                         </li>
