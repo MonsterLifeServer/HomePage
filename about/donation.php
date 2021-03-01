@@ -14,6 +14,11 @@ $DESCRIPTION = "MonsterLifeServerの寄付について";
 		<meta property="og:url" content="<?php echo $URL; ?>/" />
 		<meta property="og:title" content="<?php echo $TITLE; ?> | MonsterLifeServer" />
 		<meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
+        <style>
+        iframe {
+            height:500px;
+        }
+        </style>
     </head>
     <body>
         <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/header.php"); ?>
@@ -38,7 +43,7 @@ $DESCRIPTION = "MonsterLifeServerの寄付について";
                         <meta itemprop="position" content="2" />
                     </li>
                 </ol>
-                <iframe width="100%" height="500px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTxtRyHPWH3r8O3ER-L6pkZHPNfmksUkmzklCqEsJFbgMgTDhgxERrgebofefJvq0rmsngQsSnvltGV/pubhtml?gid=2062672440&range=A1:F1000&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTxtRyHPWH3r8O3ER-L6pkZHPNfmksUkmzklCqEsJFbgMgTDhgxERrgebofefJvq0rmsngQsSnvltGV/pubhtml?gid=2062672440&range=A1:F1000&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
                 <!-- パンくずリスト -->
             </div></div>
 
