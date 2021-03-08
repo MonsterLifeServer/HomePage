@@ -13,6 +13,13 @@
         -->
 
         <item>
+            <title>スマホ用のカルーセルが非常に面倒なのでスマホでは非表示</title>
+            <link>https://www.mlserver.xyz/</link>
+            <date>2021/03/02</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
             <title>サーバー資料ページで資料タイトルが表示されるようになりました。</title>
             <link>https://www.mlserver.xyz/api/pdf</link>
             <date>2021/02/27</date>

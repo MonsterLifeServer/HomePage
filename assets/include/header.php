@@ -44,11 +44,13 @@
                     <a class="js-menu__item__link" href="<?php echo $conf["url"]; ?>/game/">ミニゲーム</a>
                     <ul class="submenu">
                         <li><a href="<?php echo $conf["url"]; ?>/game/aooni">青鬼ゲーム</a></li>
-                        <li><a href="<?php echo $conf["url"]; ?>/game/hueoni">増え鬼</a></li>
                         <li><a href="<?php echo $conf["url"]; ?>/game/online">青鬼ONLINE in MC</a></li>
+                        <li><a href="<?php echo $conf["url"]; ?>/game/hueoni">増え鬼</a></li>
+                        <!--
                         <li><a href="<?php echo $conf["url"]; ?>/game/cbg">コア破壊ゲーム</a></li>
                         <li><a href="<?php echo $conf["url"]; ?>/game/toso">逃走中</a></li>
                         <li><a href="<?php echo $conf["url"]; ?>/game/dbd">DeadbyDaylight</a></li>
+                        -->
                     </ul>
                 </li>
                 <li>

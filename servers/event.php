@@ -1,7 +1,7 @@
 <?php
 
 $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
-$TITLE = "ミニゲーム企画一覧";
+$TITLE = "ミニゲーム企画鯖";
 $URL = $conf["url"] . '/servers/event';
 $DESCRIPTION = "ミニゲーム企画を開催するサーバーについて";
 
@@ -49,7 +49,7 @@ $DESCRIPTION = "ミニゲーム企画を開催するサーバーについて";
                     </ol>
                     <!-- パンくずリスト -->
 
-					<h1 class="design">イベント鯖</h1>
+					<h1 class="design">ミニゲーム企画鯖</h1>
 					<h2 class="design">できること</h2>
                     <div class="box">
 						<ul>
@@ -63,6 +63,7 @@ $DESCRIPTION = "ミニゲーム企画を開催するサーバーについて";
 							<li><a href="<?php echo $conf["url"]; ?>/terms">利用規約</a>に反すること。</li>
 							<li>故意に負荷を鯖にかける行為は禁止です。</li>
 							<li>不具合を利用する行為は禁止です。見つけ次第ご報告をお願いします。</li>
+                            <li>企画ごとに細かいルールが存在します。詳細は<a href="<?php echo $conf["url"]; ?>/game/">ミニゲーム企画一覧</a>からご確認ください。</li>
 						</ul>
 					</div>
 

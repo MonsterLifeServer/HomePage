@@ -40,6 +40,10 @@ $DESCRIPTION = "MonsterLifeServerの企画一覧ページです。";
                     </ol>
                     <!-- パンくずリスト -->
 
+                    <a href="<?php echo $conf["url"]; ?>/game/aooni">青鬼ゲーム</a>
+                    <a href="<?php echo $conf["url"]; ?>/game/online">青鬼ONLINE in MC</a>
+                    <a href="<?php echo $conf["url"]; ?>/game/hueoni">増え鬼</a>
+
                 </div>
             </div>
         </div>

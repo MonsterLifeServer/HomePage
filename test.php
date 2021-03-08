@@ -14,48 +14,25 @@ $DESCRIPTION = "　";
 		<meta property="og:url" content="<?php echo $URL; ?>/" />
 		<meta property="og:title" content="<?php echo $TITLE; ?> | MonsterLifeServer" />
 		<meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
-      <style>
-        .spinner {
-          position: absolute;
-          left: 50%;
-          top: 50%;
-          width: 32px;
-          height: 32px;
-          margin-top: -16px;
-          margin-left: -16px;
-        }
-        .spinner div {
-          box-sizing: border-box;
-          display: block;
-          position: absolute;
-          width: 32px;
-          height: 32px;
-          margin: 8px;
-          border-width: 3px;
-          border-style: solid;
-          border-radius: 100%;
-          animation: spinner 2.5s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-          border-color: #92979b transparent transparent transparent;
-        }
-        .spinner div:nth-child(1) {
-          animation-delay: -0.45s;
-        }
-        .spinner div:nth-child(2) {
-          animation-delay: -0.3s;
-        }
-        .spinner div:nth-child(3) {
-          animation-delay: -0.15s;
-        }
-        @keyframes spinner {
-          0% {
-            transform: rotate(0deg);
-          }
-          100% {
-            transform: rotate(360deg);
-          }
-        }
-      </style>
-    </head>
+		<style>
+			.slider{
+				margin: 0 auto;
+				width: 80%;
+				height: auto;
+				background: #000;
+			}
+			.slider img{
+				height: 30vw; 
+				max-height: 400px; 
+				min-height: 247.22px; 
+			}
+			/*slick setting*/
+			.slick-prev:before,
+			.slick-next:before {
+				color: #000;
+			}
+		</style>
+	</head>
     <body>
         <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/header.php"); ?>
         <div class="wrapper">
@@ -80,12 +57,13 @@ $DESCRIPTION = "　";
                         </li>
                     </ol>
                     <!-- パンくずリスト -->
-                    <form id="cse-search-box" action="https://google.com/cse">
-                        <input type="hidden" name="cx" value="1ee453cc6abdb1323" />
-                        <input type="hidden" name="ie" value="UTF-8" />
-                        <input type="text" name="q" size="31" placeholder="Googleカスタム検索" />
-                        <input type="submit" name="sa" value=" ">
-                    </form>
+
+					<ul class="slider">
+						<li><a href="<?php echo $conf["url"]; ?>/"><img src="https://i.gyazo.com/d5e3fe57a5718d72f538e2e9690a1abe.png" alt="image01"></a></li>
+						<li><a href="<?php echo $conf["url"]; ?>/game/aooni"><img src="https://i.gyazo.com/2575a25f1ccfbd4c37a0d517e0d211b3.png" alt="image02"></a></li>
+						<li><a href="<?php echo $conf["url"]; ?>/24h/"><img src="https://i.gyazo.com/419a033caf3d2fa57c0dc1558a57e54c.png" alt="image03"></a></li>
+						<li><a href="<?php echo $conf["url"]; ?>/game/online"><img src="https://i.gyazo.com/b34e6f3356881fc2a3e9a4606c8c0039.png" alt="image04"></a></li>
+					</ul>
                 </div>
             </div>
         </div>

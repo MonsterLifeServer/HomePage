@@ -16,28 +16,14 @@ $DESCRIPTION = "ミニゲーム企画鯖『MonsterLifeServer』のホームペ�
 		<meta property="og:url" content="<?php echo $URL; ?>/" />
 		<meta property="og:title" content="<?php echo $TITLE; ?>" />
 		<meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
+		<link rel="stylesheet" href="<?php echo $conf["url"]; ?>/assets/css/carousel.min.css" media="print" type="text/css" onload="this.media='all'">
 		<?php 
 			if ($blog_rss === true) {
 				echo '<script type="text/javascript" src="{$conf["url"]}/assets/js/rss_reader.js"></script>';
 			}
 		?>
 		<style>
-			.slider{
-				margin: 0 auto;
-				width: 80%;
-				height: auto;
-				background: #000;
-			}
-			.slider img{
-				height: 30vw; 
-				max-height: 400px; 
-				min-height: 247.22px; 
-			}
-			/*slick setting*/
-			.slick-prev:before,
-			.slick-next:before {
-				color: #000;
-			}
+
 			#elapsedTime {
 				font-weight: bold;
 			}
@@ -67,12 +53,10 @@ $DESCRIPTION = "ミニゲーム企画鯖『MonsterLifeServer』のホームペ�
 							<meta itemprop="position" content="1" />
 						</li>
 					</ol>
-					<ul class="slider">
-						<li><a href="<?php echo $conf["url"]; ?>/"><img src="https://i.gyazo.com/d5e3fe57a5718d72f538e2e9690a1abe.png" alt="image01"></a></li>
-						<li><a href="<?php echo $conf["url"]; ?>/game/aooni"><img src="https://i.gyazo.com/2575a25f1ccfbd4c37a0d517e0d211b3.png" alt="image02"></a></li>
-						<li><a href="<?php echo $conf["url"]; ?>/24h/"><img src="https://i.gyazo.com/419a033caf3d2fa57c0dc1558a57e54c.png" alt="image03"></a></li>
-						<li><a href="<?php echo $conf["url"]; ?>/game/online"><img src="https://i.gyazo.com/b34e6f3356881fc2a3e9a4606c8c0039.png" alt="image04"></a></li>
-					</ul>
+
+					<?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/carousel.php"); ?>
+
+					<script src="<?php echo $conf["url"]; ?>/assets/js/carousel.js"></script>
 
 					<h1 class="design" id="about">MonsterLifeServer</h1>
 					<h2>サービス</h2>
