@@ -94,7 +94,7 @@ $DESCRIPTION = "24H鯖の紹介ページです。";
 						</ul>
 					<!-- 目次 -->
 					<h2 class="design" id="24h_1">24H鯖でできること。</h2>
-					<div class="or_box">
+					<div class="box text-left">
 						<ul>
 							<li>サバイバルワールドに行ける</li>
 							<li>ロビーにアスレがある</li>
@@ -104,7 +104,7 @@ $DESCRIPTION = "24H鯖の紹介ページです。";
 					</div>
 
 					<h2 class="design" id="rule">24H鯖基本ルール</h2>
-					<div class="or_box">
+					<div class="box text-left">
 						<ul>
 							<li>故意に負荷を鯖にかける行為は禁止です。</li>
 							<li>不具合を利用する行為は禁止です。見つけ次第ご報告をお願いします。</li>
@@ -117,7 +117,7 @@ $DESCRIPTION = "24H鯖の紹介ページです。";
 
 					<h2 class="design" id="mods">MODに関して...</h2>
 					<p>24H鯖ではMODの使用が禁止されています。ですが、以下のMODは使用許可が出ています。また、これらのMODを使用する前提では鯖は開発されていません。これらに関するバグはサポート外です。</p>
-					<div class="or_box">
+					<div class="box text-left">
 						<ul>
 							<li>Optifine</li>
 							<li>InventoryTweaks</li>
@@ -125,7 +125,7 @@ $DESCRIPTION = "24H鯖の紹介ページです。";
 					</div>
 
 					<h2 class="design" id="24h_2">サバイバルワールドでのルールや説明</h2>
-					<div class="or_box">
+					<div class="box text-left">
 						<ul>
 							<li>スポーンポイント周辺（半径２０ブロック程度）は建築禁止です。</li>
 							<li>採掘や伐採は好き放題にしてもらって構いません。</li>
@@ -142,7 +142,7 @@ $DESCRIPTION = "24H鯖の紹介ページです。";
 					</div>
 						
 					<h2 class="design" id="24h_3">通報方法</h2>
-					<div class="or_box">
+					<div class="box text-left">
 						建築物を壊されたときは、(扉が片方壊されたとする。)<br>
 						<a href="<?php echo $conf["url"]; ?>/assets/img/coreprotect/1.png" data-lightbox="demo"><img src="<?php echo $conf["url"]; ?>/assets/img/coreprotect/1.png" width="100%"></img></a><br>
 						<a href="<?php echo $conf["url"]; ?>/assets/img/coreprotect/2.png" data-lightbox="demo"><img src="<?php echo $conf["url"]; ?>/assets/img/coreprotect/2.png" width="100%"></img></a><br>
@@ -160,7 +160,7 @@ $DESCRIPTION = "24H鯖の紹介ページです。";
 					<a href="<?php echo $conf["url"]; ?>/assets/img/lockette.png" data-lightbox="1"><img src="<?php echo $conf["url"]; ?>/assets/img/lockette.png" width="100%"></img></a>
 						
 					<h2 class="design" id="24h_5">ショップ使用方法（QuickShopPlugin）</h2>
-					<div class="or_box">
+					<div class="box text-left">
 						<a href="https://image02.seesaawiki.jp/m/r/monsterlifeserver/SSp6jNRj68.png" data-lightbox="shop"><img src="https://image02.seesaawiki.jp/m/r/monsterlifeserver/SSp6jNRj68.png" width="100%"></img></a><br>
 						<a href="https://image01.seesaawiki.jp/m/r/monsterlifeserver/LyHbpS5iIP.png" data-lightbox="shop"><img src="https://image01.seesaawiki.jp/m/r/monsterlifeserver/LyHbpS5iIP.png" width="100%"></img></a><br>
 						<a href="https://image02.seesaawiki.jp/m/r/monsterlifeserver/6CxI4IWUHb.png" data-lightbox="shop"><img src="https://image02.seesaawiki.jp/m/r/monsterlifeserver/6CxI4IWUHb.png" width="100%"></img></a><br>
@@ -173,7 +173,7 @@ $DESCRIPTION = "24H鯖の紹介ページです。";
 					</div>
 						
 					<h2 class="design" id="gatya">ガチャガチャの遊び方</h2>
-					<div class="or_box">
+					<div class="box text-left">
 						<a href="https://cdn.discordapp.com/attachments/672017404863315969/676809032014757918/unknown.png" data-lightbox="gatya"><img src="https://cdn.discordapp.com/attachments/672017404863315969/676809032014757918/unknown.png" width="100%"></img></a><br>
 						<a href="https://cdn.discordapp.com/attachments/672017404863315969/676810251885871144/unknown.png" data-lightbox="gatya"><img src="https://cdn.discordapp.com/attachments/672017404863315969/676810251885871144/unknown.png" width="100%"></img></a><br>
 						<a href="https://cdn.discordapp.com/attachments/672017404863315969/676809186977251356/unknown.png" data-lightbox="gatya"><img src="https://cdn.discordapp.com/attachments/672017404863315969/676809186977251356/unknown.png" width="100%"></img></a><br>

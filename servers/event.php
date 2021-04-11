@@ -51,14 +51,14 @@ $DESCRIPTION = "ミニゲーム企画を開催するサーバーについて";
 
 					<h1 class="design">ミニゲーム企画鯖</h1>
 					<h2 class="design">できること</h2>
-                    <div class="box">
+                    <div class="box text-left">
 						<ul>
 							<li>1.12.2でミニゲームが遊ぶことができる。</li>
 						</ul>
 					</div>
 
 					<h2 class="design">禁止事項</h2>
-					<div class="box">
+					<div class="box text-left">
 						<ul>
 							<li><a href="<?php echo $conf["url"]; ?>/terms">利用規約</a>に反すること。</li>
 							<li>故意に負荷を鯖にかける行為は禁止です。</li>

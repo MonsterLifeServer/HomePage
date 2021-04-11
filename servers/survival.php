@@ -50,7 +50,7 @@ $DESCRIPTION = "サバイバルサーバーについて";
 					<!-- パンくずリスト -->
 					<h1 class="design">サバイバル鯖</h1>
 					<h2 class="design">できること</h2>
-					<div class="box">
+					<div class="box text-left">
 						<ul>
 							<li>1.16.2のサバイバルが楽しめる</li>
 							<li>独自経済システム等で買い物や土地の保護などができる</li>
@@ -58,7 +58,7 @@ $DESCRIPTION = "サバイバルサーバーについて";
 						</ul>
 					</div>
 					<h2 class="design">禁止事項</h2>
-					<div class="box">
+					<div class="box text-left">
 						<ul>
 							<li><a href="<?php echo $conf["url"]; ?>/terms">利用規約</a>に反すること。</li>
 							<li>故意に負荷を鯖にかける行為は禁止です。</li>
@@ -71,14 +71,14 @@ $DESCRIPTION = "サバイバルサーバーについて";
 					</div>
 					<h2 class="design">その他、ルールや特徴</h2>
 					<p>24H鯖ではMODの使用が禁止されています。ですが、以下のMODは使用許可が出ています。また、これらのMODを使用する前提では鯖は開発されていません。これらに関するバグはサポート外です。</p>
-					<div class="box">
+					<div class="box text-left">
 						<ul>
 							<li>Optifine</li>
 							<li>InventoryTweaks</li>
 						</ul>
 					</div>
 					<h2 class="design">サバイバルワールドでのルールや説明</h2>
-					<div class="box">
+					<div class="box text-left">
 						<ul>
 							<li>採掘や伐採は好き放題にしてもらって構いません。</li>
 							<li>人の建築物やチェストを勝手に壊したり開けたりしないでください。</li>

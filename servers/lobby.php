@@ -51,7 +51,7 @@ $DESCRIPTION = "ロビーサーバーについて";
 
 					<h1 class="design">ロビー鯖</h1>
 					<h2 class="design">できること</h2>
-                    <div class="box">
+                    <div class="box text-left">
 						<ul>
 							<li>1.8-1.16.3でサーバーにアクセスできる。</li>
 							<li>MLSのいろいろの鯖に移動できる。</li>
@@ -61,7 +61,7 @@ $DESCRIPTION = "ロビーサーバーについて";
 					</div>
 
 					<h2 class="design">禁止事項</h2>
-					<div class="box">
+					<div class="box text-left">
 						<ul>
 							<li><a href="<?php echo $conf["url"]; ?>/terms">利用規約</a>に反すること。</li>
 							<li>故意に負荷を鯖にかける行為は禁止です。</li>
