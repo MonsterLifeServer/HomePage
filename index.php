@@ -7,6 +7,13 @@ $TITLE = "MonsterLifeServer";
 $URL = $conf["url"] . '/';
 $DESCRIPTION = "ミニゲーム企画鯖『MonsterLifeServer』のホームページです。";
 
+$images = [
+	"https://i.gyazo.com/d5e3fe57a5718d72f538e2e9690a1abe.png",
+	"https://i.gyazo.com/419a033caf3d2fa57c0dc1558a57e54c.png",
+	"https://i.gyazo.com/2575a25f1ccfbd4c37a0d517e0d211b3.png",
+	"https://i.gyazo.com/b34e6f3356881fc2a3e9a4606c8c0039.png"
+];
+
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
@@ -16,14 +23,13 @@ $DESCRIPTION = "ミニゲーム企画鯖『MonsterLifeServer』のホームペ�
 		<meta property="og:url" content="<?php echo $URL; ?>/" />
 		<meta property="og:title" content="<?php echo $TITLE; ?>" />
 		<meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
-		<link rel="stylesheet" href="<?php echo $conf["url"]; ?>/assets/css/carousel.min.css" media="print" type="text/css" onload="this.media='all'">
+		<link rel="stylesheet" href="<?php echo $conf["url"]; ?>/assets/css/carousel.min.css" type="text/css">
 		<?php 
 			if ($blog_rss === true) {
 				echo '<script type="text/javascript" src="{$conf["url"]}/assets/js/rss_reader.js"></script>';
 			}
 		?>
 		<style>
-
 			#elapsedTime {
 				font-weight: bold;
 			}
@@ -56,8 +62,6 @@ $DESCRIPTION = "ミニゲーム企画鯖『MonsterLifeServer』のホームペ�
 
 					<?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/carousel.php"); ?>
 
-					<script src="<?php echo $conf["url"]; ?>/assets/js/carousel.js"></script>
-
 					<h1 class="design" id="about">MonsterLifeServer</h1>
 					<h2>サービス</h2>
 					<div class="server-about-box">
@@ -76,6 +80,16 @@ $DESCRIPTION = "ミニゲーム企画鯖『MonsterLifeServer』のホームペ�
 							<p>サーバーの多くのシステムが当鯖の開発者が作り、所有権は当鯖に帰属しております。企画を参考にしたい場合は事前にご連絡をいただいたうえでこのシステム参考にしたいなどあればしっかりとご連絡ください。無断の利用は固く禁止しております。</p>
 						</div>
 
+					</div>
+
+					<h2>IP公開に向けて</h2>
+					<div class="no-border-box">
+						<p>現在MonsterLifeServerでは，IPを公開することを禁止としていますが，今年度それを公開できるようにする予定です。(現在は禁止です)</p>
+						<p>それにおいてなぜ今まで公開が禁止だったのか，そしてなぜ公開できるようになるのかという話ですが，前者に関しては単純にDDOS対策並びにDOS対策が不完全だったからです。</p>
+						<p>DDOS/DOSというのはサイバー攻撃の一種で攻撃されるとサービスの提供が難しくなるといった問題が発生します。</p>
+						<p>それを解決するのが<a href="https://my.ddps.jp/aff.php?aff=26" target="_blank">DDPS.jpさんのDDOS対策サービス</a>です。</p>
+						<p>DDOS/DOS攻撃を防ぐサービスとして前々から検討していてこの度導入が決定しました。</p>
+						<p>導入したら再度ご連絡いたします。</p>
 					</div>
                 
 					<h2>新着情報</h2>
@@ -131,15 +145,6 @@ $DESCRIPTION = "ミニゲーム企画鯖『MonsterLifeServer』のホームペ�
         </div>
 	</body>
     <script>
-        $('.slider').slick({
-            autoplay:true,
-            autoplaySpeed:3000,
-			dots:true,
-			centerMode: true,
-			pauseOnHover: true,
-			variableWidth: true, // 追加
-		});
-
 		var elapsedTime = document.getElementById("elapsedTime");
 
 

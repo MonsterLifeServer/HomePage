@@ -5,6 +5,13 @@ $TITLE = "テスト";
 $URL = $conf["url"] . '/test';
 $DESCRIPTION = "　";
 
+$images = [
+	"https://i.gyazo.com/d5e3fe57a5718d72f538e2e9690a1abe.png",
+	"https://i.gyazo.com/419a033caf3d2fa57c0dc1558a57e54c.png",
+	"https://i.gyazo.com/2575a25f1ccfbd4c37a0d517e0d211b3.png",
+	"https://i.gyazo.com/b34e6f3356881fc2a3e9a4606c8c0039.png"
+];
+
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
@@ -15,21 +22,68 @@ $DESCRIPTION = "　";
 		<meta property="og:title" content="<?php echo $TITLE; ?> | MonsterLifeServer" />
 		<meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
 		<style>
-			.slider{
+			.slider-wrapper {
+				width: calc(100%-100px);
+			}
+			.slider {
+				width: calc(100%-100px);
+				border: 1px solid #000;
+			}
+
+			.slider img {
+				max-width: 100%;
+				max-height: 100%;
+				width: auto; /* ie8 */
 				margin: 0 auto;
-				width: 80%;
-				height: auto;
+			}
+
+			.slick-arrow {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+			}
+			.prev-arrow {
+				left: 0;
+				z-index: 10;
+			}
+			.next-arrow {
+				right: 0;
+			}
+
+			.slide {
+				width: calc(100%-100px);
+				background: #ccc;
+			}
+			#slick-1 .slick-dots li {
+				width: 40px;
+				height: 5px;
+				background: #ccc;
+			}
+			#slick-1 .slick-dots li button {
+				width: 40px;
+				height: 5px;
+			}
+			#slick-1 .slick-dots li.slick-active,
+			#slick-1 .slick-dots li:hover {
+				background: #777;
+			}
+			#slick-1 .slick-dots li button, 
+			#slick-1 .slick-dots li button:before {
+				color: transparent;
+				opacity: 0;
+			}
+
+			/* progress bar */
+			.slider-progress {
+				width: 100%;
+				height: 3px;
+				background: #eee;
+			}
+			.slider-progress .progress {
+				width: 0%;
+				height: 3px;
 				background: #000;
-			}
-			.slider img{
-				height: 30vw; 
-				max-height: 400px; 
-				min-height: 247.22px; 
-			}
-			/*slick setting*/
-			.slick-prev:before,
-			.slick-next:before {
-				color: #000;
 			}
 		</style>
 	</head>
@@ -57,13 +111,7 @@ $DESCRIPTION = "　";
                         </li>
                     </ol>
                     <!-- パンくずリスト -->
-
-					<ul class="slider">
-						<li><a href="<?php echo $conf["url"]; ?>/"><img src="https://i.gyazo.com/d5e3fe57a5718d72f538e2e9690a1abe.png" alt="image01"></a></li>
-						<li><a href="<?php echo $conf["url"]; ?>/game/aooni"><img src="https://i.gyazo.com/2575a25f1ccfbd4c37a0d517e0d211b3.png" alt="image02"></a></li>
-						<li><a href="<?php echo $conf["url"]; ?>/24h/"><img src="https://i.gyazo.com/419a033caf3d2fa57c0dc1558a57e54c.png" alt="image03"></a></li>
-						<li><a href="<?php echo $conf["url"]; ?>/game/online"><img src="https://i.gyazo.com/b34e6f3356881fc2a3e9a4606c8c0039.png" alt="image04"></a></li>
-					</ul>
+					<?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/carousel.php"); ?>
                 </div>
             </div>
         </div>

@@ -206,6 +206,11 @@ h2.design {
     } 
 }
 
+.no-border-box {
+    width: 100%;
+    padding: 20px;
+}
+
 /* 画像にカーソルを合わせると画像をマスクして文字が出す */
 .mask-style {
 	width: 280px;
@@ -518,12 +523,6 @@ span.category {
         }
         p {
             margin: 10px;
-        }
-        &.first {
-
-        }
-        &.last {
-
         }
     }
 }
