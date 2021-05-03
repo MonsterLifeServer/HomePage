@@ -7,6 +7,7 @@ $TITLE = "MonsterLifeServer";
 $URL = $conf["url"] . '/';
 $DESCRIPTION = "ミニゲーム企画鯖『MonsterLifeServer』のホームページです。";
 
+// カルーセルに使用する画像一覧(推奨サイズ: 1920×1080)
 $images = [
 	"https://i.gyazo.com/d5e3fe57a5718d72f538e2e9690a1abe.png",
 	"https://i.gyazo.com/419a033caf3d2fa57c0dc1558a57e54c.png",

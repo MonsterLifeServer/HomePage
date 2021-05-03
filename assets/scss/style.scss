@@ -207,8 +207,10 @@ h2.design {
 }
 
 .no-border-box {
-    width: 100%;
-    padding: 20px;
+    width: calc(100% - 20px);
+    p {
+        padding-left: 10px;
+    }
 }
 
 /* 画像にカーソルを合わせると画像をマスクして文字が出す */
