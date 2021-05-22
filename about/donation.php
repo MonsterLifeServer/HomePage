@@ -17,6 +17,7 @@ $DESCRIPTION = "MonsterLifeServerの寄付について";
         <style>
         iframe {
             height:500px;
+            width:100%;
         }
         </style>
     </head>
@@ -43,6 +44,21 @@ $DESCRIPTION = "MonsterLifeServerの寄付について";
                         <meta itemprop="position" content="2" />
                     </li>
                 </ol>
+                <h1 class="design">寄付について</h1>
+                <p>
+                    当サーバーでは寄付をしてくれた方に金額に合わせた特典を与えるようにしています。
+
+                </p>
+                <h2 class="design">特典</h2>
+                <div class="plancards">
+                    <h3>VIP</h3>
+                    <h4>400</h4>
+                    <div>yen/月</div>
+                    <h4>4000</h4>
+                    <div>yen/年</div>
+                    <p>ロビーなどで空を飛べたり，表示色を変更できたりします。</p>
+                </div>
+                <h2 class="design">通帳</h2>
                 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTxtRyHPWH3r8O3ER-L6pkZHPNfmksUkmzklCqEsJFbgMgTDhgxERrgebofefJvq0rmsngQsSnvltGV/pubhtml?gid=2062672440&range=A1:F1000&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
                 <!-- パンくずリスト -->
             </div></div>

@@ -97,6 +97,15 @@ $DESCRIPTION = "サバイバルサーバーについて";
 							<li>建築や作物の栽培をしても定期的にワールドがリセットされます。チェストなどを設置してアイテムを保管していてもアイテムの保証はできませんのでお気を付けください。</li>
 						</ul>
 					</div>
+					<h2 class="design">コマンド</h2>
+                    <table class="cmd">
+                        <tr><th>/discordlink</th><td>マインクラフトアカウントをDiscordアカウントと連携ができる。</td></tr>
+                        <tr><th>/sponsor</th><td>自分がスポンサーかどうかを確認できる。また、スポンサーなら失効期限がわかる。</td></tr>
+                        <tr><th>*/displaycolor</th><td>スポンサー限定コマンド。自分の表示カラーを変更できる。</td></tr>
+                        <tr><th>/jp on</th><td>ローマ字変換機能をONにする。</td></tr>
+                        <tr><th>/jp off</th><td>ローマ字変換機能をOFFにする。</td></tr>
+                        <tr><th>/jp toggle</th><td>ローマ字変換機能を切り替える。</td></tr>
+                    </table>
 					<h2 class="design">通報方法</h2>
 					<p>/co inspect（または/co i）と入力し、インスペクターモードを有効にします。</p>
 					<a href="https://i.gyazo.com/9254dc4261cbe436a8c2e8afde0f6948.png"

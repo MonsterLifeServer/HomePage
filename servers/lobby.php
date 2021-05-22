@@ -69,6 +69,16 @@ $DESCRIPTION = "ロビーサーバーについて";
 						</ul>
 					</div>
 
+                    <h2 class="design">コマンド</h2>
+                    <table class="cmd">
+                        <tr><th>/discordlink</th><td>マインクラフトアカウントをDiscordアカウントと連携ができる。</td></tr>
+                        <tr><th>/sponsor</th><td>自分がスポンサーかどうかを確認できる。また、スポンサーなら失効期限がわかる。</td></tr>
+                        <tr><th>*/displaycolor</th><td>スポンサー限定コマンド。自分の表示カラーを変更できる。</td></tr>
+                        <tr><th>/jp on</th><td>ローマ字変換機能をONにする。</td></tr>
+                        <tr><th>/jp off</th><td>ローマ字変換機能をOFFにする。</td></tr>
+                        <tr><th>/jp toggle</th><td>ローマ字変換機能を切り替える。</td></tr>
+                    </table>
+
                 </div>
             </div>
 
