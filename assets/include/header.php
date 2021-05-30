@@ -38,6 +38,7 @@
                         <li><a href="<?php echo $conf["url"]; ?>/about/donation">寄付について</a></li>
                         <li><a href="<?php echo $conf["url"]; ?>/about/news">ニュース</a></li>
                         <li><a href="<?php echo $conf["url"]; ?>/support">サポート</a></li>
+                        <li><a href="<?php echo $conf["url"]; ?>/blog/">ブログ</a></li>
                     </ul>
                 </li>
                 <li>

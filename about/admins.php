@@ -1,5 +1,7 @@
 <?php
 
+$config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
+
 $bgi = [
     "https://cdn.pixabay.com/photo/2017/01/11/04/57/minecraft-1970876_960_720.jpg",
     "https://cdn.pixabay.com/photo/2017/02/10/00/03/minecraft-2053882_1280.jpg",
@@ -8,8 +10,6 @@ $bgi = [
     "https://cdn.pixabay.com/photo/2014/05/26/12/05/minecraft-354458_960_720.png",
     "https://cdn.pixabay.com/photo/2014/11/13/15/23/minecraft-529459_960_720.jpg"
 ]
-
-$config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
 $TITLE = "運営一覧";
 $URL = $conf["url"] . '/about/admins';
 $DESCRIPTION = "運営一覧ページです。";
@@ -71,7 +71,7 @@ $DESCRIPTION = "運営一覧ページです。";
                     </div>
 
                     <div class="mask-style">
-                        <img src="<?php echo $conf["url"]; ?>/assets/img/web/nagisa.png" />
+                        <img src="https://i.gyazo.com/565a67fabae9185c08115aa37526ea9d.png" />
                         <div class="mask1"></div>
                         <div class="mask2"></div>
                         <div class="caption">
