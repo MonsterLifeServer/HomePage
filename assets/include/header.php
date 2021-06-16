@@ -1,5 +1,5 @@
 <header id="header">
-    <div  id="loading"><div class="spinner"><div></div><div></div><div></div><div></div></div></div>
+    <div  id="loading"><img src="https://i.gyazo.com/81483a7a8fc62d20e6ceae534eb5a15d.gif" width="80px" height="80px"/></div>
     <div class="logo-area"><a href="<?php echo $conf["url"]; ?>"><img class="logo-img" src="https://i.gyazo.com/032b17ab7a102b35553a0342887a752c.png"/></a></div>
     <div class="menu-btn">
         <div class="btn-trigger">
