@@ -9,7 +9,7 @@ $bgi = [
     "https://cdn.pixabay.com/photo/2015/03/01/19/32/minecraft-655163_960_720.jpg",
     "https://cdn.pixabay.com/photo/2014/05/26/12/05/minecraft-354458_960_720.png",
     "https://cdn.pixabay.com/photo/2014/11/13/15/23/minecraft-529459_960_720.jpg"
-]
+];
 $TITLE = "運営一覧";
 $URL = $conf["url"] . '/about/admins';
 $DESCRIPTION = "運営一覧ページです。";
@@ -63,7 +63,7 @@ $DESCRIPTION = "運営一覧ページです。";
                         <div class="mask2"></div>
                         <div class="caption">
                             <span class="name">もんすたぁ</span>
-                            <p class="explanation">オーナーの一人。サーバーの多くのシステムを開発している。よく企画で叫び苦情が出ている。</p>
+                            <p class="explanation">運営の一人。サーバーの多くのシステムを開発している。よく企画で叫び苦情が出ている。</p>
                         </div>
                         <div class="sns">
                             <a href="https://twitter.com/meoto2408"><i class="fab fa-twitter" style="color: #1DA1F2;"></i></a>
@@ -76,7 +76,7 @@ $DESCRIPTION = "運営一覧ページです。";
                         <div class="mask2"></div>
                         <div class="caption">
                             <span class="name">なぎさ</span>
-                            <p class="explanation">オーナーの一人。運営陣で唯一Minecraftをやっていない人。主に鯖のお金管理をしている。</p>
+                            <p class="explanation">運営の一人。運営陣で唯一Minecraftをやっていない人。主に鯖のお金管理をしている。</p>
                         </div>
                         <div class="sns">
                             <a href="https://twitter.com/nagisa2408"><i class="fab fa-twitter" style="color: #1DA1F2;"></i></a>
@@ -89,7 +89,7 @@ $DESCRIPTION = "運営一覧ページです。";
                         <div class="mask2"></div>
                         <div class="caption">
                             <span class="name">ぎんあれ</span>
-                            <p class="explanation">MonsterLifeServerの鯖主。動画編集の長。</p>
+                            <p class="explanation">運営の一人。MonsterLifeServerの鯖主。動画編集の長。</p>
                         </div>
                         <div class="sns">
                             <a href="https://www.youtube.com/channel/UCfXYSFo-unvTihFOjRiADgA" style="color: #c4302b;"><i class="fab fa-youtube"></i></a>
