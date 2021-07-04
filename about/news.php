@@ -104,6 +104,7 @@ $DESCRIPTION = "新着情報が見れます。";
                     <div id="news-list">
                         <?php
                             $xml = $_SERVER["DOCUMENT_ROOT"] . "/assets/data/news.xml";//ファイルを指定
+                            //$xml = "https://raw.githubusercontent.com/MonsterLifeServer/HomePage/master/assets/data/news.xml";//ファイルを指定
                             $xmlData = simplexml_load_file($xml);
                             foreach ($xmlData->blog->item as $data) { 
                         ?>

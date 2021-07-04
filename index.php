@@ -82,7 +82,8 @@ $images = [
 						</div>
 
 					</div>
-
+					
+					<!--
 					<h2>IP公開に向けて</h2>
 					<div class="no-border-box">
 						<p>現在MonsterLifeServerでは，IPを公開することを禁止としていますが，今年度それを公開できるようにする予定です。(現在は禁止です)</p>
@@ -92,11 +93,13 @@ $images = [
 						<p>DDOS/DOS攻撃を防ぐサービスとして前々から検討していてこの度導入が決定しました。</p>
 						<p>導入したら再度ご連絡いたします。</p>
 					</div>
+					-->
                 
 					<h2>新着情報</h2>
 					<div class="read-more"><a href="<?php echo $conf["url"]; ?>/about/news">すべて見る</a></div>
 					<?php
 						$xml = $_SERVER["DOCUMENT_ROOT"] . "/assets/data/news.xml";//ファイルを指定
+						//$xml = "https://raw.githubusercontent.com/MonsterLifeServer/HomePage/master/assets/data/news.xml";//ファイルを指定
 						$xmlData = simplexml_load_file($xml);
 						$_i = 0;
 						foreach ($xmlData->blog->item as $data) { 
