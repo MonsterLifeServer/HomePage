@@ -2,7 +2,7 @@ $(document).ready(function () {
     $i = 0
     $.ajax({
     type: "get",
-    url: "https://www.mlserver.xyz/blog/?feed=rss2"
+    url: "https://www.mlserver.xyz/blog/feed/"
     }).done(function(result) {
         $(result).find("item").each(function() {
             if ($i >= 3) {

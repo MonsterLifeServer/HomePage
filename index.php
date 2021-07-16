@@ -2,7 +2,6 @@
 
 $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
 
-$blog_rss = false;
 $TITLE = "MonsterLifeServer";
 $URL = $conf["url"] . '/';
 $DESCRIPTION = "ミニゲーム企画鯖『MonsterLifeServer』のホームページです。";
@@ -25,11 +24,7 @@ $images = [
 		<meta property="og:title" content="<?php echo $TITLE; ?>" />
 		<meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
 		<link rel="stylesheet" href="<?php echo $conf["url"]; ?>/assets/css/carousel.min.css" type="text/css">
-		<?php 
-			if ($blog_rss === true) {
-				echo '<script type="text/javascript" src="{$conf["url"]}/assets/js/rss_reader.js"></script>';
-			}
-		?>
+		<script type="text/javascript" src="<?php echo $conf["url"]; ?>/assets/js/rss_reader.js"></script>
 		<style>
 			#elapsedTime {
 				font-weight: bold;
@@ -136,13 +131,9 @@ $images = [
 					<?php 
 						if (empty($_GET['debug'])) echo "-->";
 					?>
-					<?php
-						if ($blog_rss === true) {
-							echo '<h2>ブログ最新記事</h2>';
-							echo '<div class="read-more"><a href="http://www.mlserver.xyz/blog/">すべて見る</a></div>';
-							echo '<div class="card-box" id="blogs"></div>';
-						}
-					?>
+					<h2>ブログ最新記事</h2>';
+					<div class="read-more"><a href="<?php echo $conf["url"]; ?>/blog/">すべて見る</a></div>
+					<div class="card-box" id="blogs"></div>
 				</div>
             </div>
             <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/footer.php"); ?>
