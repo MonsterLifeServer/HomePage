@@ -8,14 +8,6 @@
             <span></span>
         </div>
     </div>
-    <div class="wide-google-serch">
-        <form class="serch-area" method="get" action="http://www.google.co.jp/search" target="_blank">
-            <input class="text-area" type="text" name="q" size="31" maxlength="255" value="" placeholder="MLServerについて検索する"/>
-            <input class="serch-button fas" type="submit" name="btng" value="&#xf002;"/>
-            <input type="hidden" name="hl" value="ja"/>
-            <input type="hidden" name="sitesearch" value="mlserver.xyz"/>
-        </form>
-    </div>
     <div class="header-label">
         <div class="menu">
             <ul class="nav">
@@ -78,14 +70,6 @@
 					</script>
                 </div>
             </ul>
-            <div class="narrow-google-serch">
-                <form class="serch-area" method="get" action="http://www.google.co.jp/search" target="_blank">
-                    <input class="text-area" type="text" name="q" size="31" maxlength="255" value="" placeholder="MLServerについて検索する"/>
-                    <input class="serch-button fas" type="submit" name="btng" value="&#xf002;"/>
-                    <input type="hidden" name="hl" value="ja"/>
-                    <input type="hidden" name="sitesearch" value="mlserver.xyz"/>
-                </form>
-            </div>
         </div>
     </div>
 </header>

@@ -2,12 +2,21 @@
 
 $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
 
+$TITLE = "テンプレート | MonsterLifeServer";
+$URL = $conf["url"] . '/';
+$DESCRIPTION = "テンプレート。テンプレート。テンプレート。";
+
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
 	<head>
         <?php echo $html["common_head"]; ?>
-        <title>タイトル | MonsterLifeServer</title>
+		<title><?php echo $TITLE; ?></title>
+		<meta property="og:url" content="<?php echo $URL; ?>/" />
+		<meta property="og:title" content="<?php echo $TITLE; ?>" />
+		<meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
+		<link rel="stylesheet" href="<?php echo $conf["url"]; ?>/assets/css/carousel.min.css" type="text/css">
+		<script type="text/javascript" src="<?php echo $conf["url"]; ?>/assets/js/rss_reader.js"></script>
     </head>
     <body>
         <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/header.php"); ?>

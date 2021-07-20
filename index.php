@@ -131,7 +131,7 @@ $images = [
 					<?php 
 						if (empty($_GET['debug'])) echo "-->";
 					?>
-					<h2>ブログ最新記事</h2>';
+					<h2>ブログ最新記事</h2>
 					<div class="read-more"><a href="<?php echo $conf["url"]; ?>/blog/">すべて見る</a></div>
 					<div class="card-box" id="blogs"></div>
 				</div>
