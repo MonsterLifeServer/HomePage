@@ -82,6 +82,8 @@
     }
 
     $url = "https://minecraft.jp/servers/5d51f624a9b0bd7e0e00834e";
+
+    /*
     $ch = curl_init($url);
     curl_setopt_array($ch, [
         CURLOPT_RETURNTRANSFER => true,
@@ -94,6 +96,15 @@
     $error = curl_error($ch);
     curl_close($ch);
     if (CURLE_OK == $errno) {
+        echo '<ul class="label"><li><a href="https://minecraft.jp/servers/5d51f624a9b0bd7e0e00834e" target="_blank"><img src="https://minecraft.jp/servers/5d51f624a9b0bd7e0e00834e/banner/'.$i.'/560x95.png" alt="JapanMinecraftServersにアクセスできるバナー"/></a></li>';
+        echo '<li><a href="https://monocraft.net/servers/4o9NgWsXjtrIVtds0Igw/vote" target="_blank"><img src="https://minecraft.jp/servers/5d51f624a9b0bd7e0e00834e/banner/3/560x95.png" alt="Monocraftにアクセスできるバナー"/></a></li></ul>';
+    } else {
+        echo '<ul class="label"><li class="back-white"><a href="https://minecraft.jp/servers/5d51f624a9b0bd7e0e00834e" target="_blank">JapanMinecraftServers</li>';
+        echo '<li class="back-white"><a href="https://monocraft.net/servers/4o9NgWsXjtrIVtds0Igw/vote" target="_blank">Monocraft</a></li></ul>';
+    }
+    */
+
+    if (file_get_contents($url)) {
         echo '<ul class="label"><li><a href="https://minecraft.jp/servers/5d51f624a9b0bd7e0e00834e" target="_blank"><img src="https://minecraft.jp/servers/5d51f624a9b0bd7e0e00834e/banner/'.$i.'/560x95.png" alt="JapanMinecraftServersにアクセスできるバナー"/></a></li>';
         echo '<li><a href="https://monocraft.net/servers/4o9NgWsXjtrIVtds0Igw/vote" target="_blank"><img src="https://minecraft.jp/servers/5d51f624a9b0bd7e0e00834e/banner/3/560x95.png" alt="Monocraftにアクセスできるバナー"/></a></li></ul>';
     } else {
