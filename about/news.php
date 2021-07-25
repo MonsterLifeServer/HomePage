@@ -29,7 +29,7 @@ $DESCRIPTION = "新着情報が見れます。";
                     $('#news-list .news-ca').eq(division*i-1)
                             .after('<span class="morelink link'+i+'">もっと読む</span>');
                 }
-                //最初のli（分割数）と、morelinkを残して他を非表示
+                //最初のli（分割数）と，morelinkを残して他を非表示
                 $('#news-list .news-ca,.morelink').hide();
                 for(j=0;j<division;j++){
                     $('#news-list .news-ca').eq(j).show();
@@ -80,6 +80,8 @@ $DESCRIPTION = "新着情報が見れます。";
         <div class="wrapper">
             <div class="mainBox">
                 <div class="contents">
+                    <p class="fileupdate right">最終更新日時:<?php echo date('Y/m/d H時i分', filemtime(basename(__FILE__))); ?></p>
+                    <!-- パンくずリスト -->
                     <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
                         <li itemprop="itemListElement" itemscope
                             itemtype="https://schema.org/ListItem">
