@@ -55,7 +55,8 @@ $DESCRIPTION = "過去の運営会議やその他資料を公開しています�
 		<div class="wrapper">
 			<div class="mainBox">
 				<div class="contents">
-					<!-- パンくずリスト始 -->
+                    <p class="fileupdate right">最終更新日時:<?php echo date('Y/m/d H時i分', filemtime(basename(__FILE__))); ?></p>
+                    <!-- パンくずリスト -->
 					<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
                     <li itemprop="itemListElement" itemscope
 							itemtype="https://schema.org/ListItem">

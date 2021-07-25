@@ -46,6 +46,8 @@ $images = [
         <div class="wrapper">
             <div class="mainBox">
 				<div class="contents">
+                    <p class="fileupdate right">最終更新日時:<?php echo date('Y/m/d H時i分', filemtime(basename(__FILE__))); ?></p>
+                    <!-- パンくずリスト -->
 					<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
 						<li itemprop="itemListElement" itemscope
 							itemtype="https://schema.org/ListItem">
@@ -64,16 +66,16 @@ $images = [
 
 						<div class="server-about first">
 							<h3>ミニゲーム企画</h3>
-							<p>週に一度以上のペースで鬼ごっこやPvPなどの企画を開催しています。最近は企画がバグっちゃって減っていますが、現在も新企画を開発中です！！</p>
+							<p>週に一度以上のペースで鬼ごっこやPvPなどの企画を開催しています。最近は企画がバグっちゃって減っていますが，現在も新企画を開発中です！！</p>
 						</div>
 						<div class="server-about">
 							<h3>サーバー</h3>
-							<p>365日24時間開放されているサーバーがあります。そこではミニゲームやサバイバル、建築、アスレチックなどいろいろなことができます。</p>
+							<p>365日24時間開放されているサーバーがあります。そこではミニゲームやサバイバル，建築，アスレチックなどいろいろなことができます。</p>
 							<p><div class="text-center">MLSが始動してから</div><div class="text-center"><span id="elapsedTime"></span></div><div class="text-center">経過(2018/9/10)</div></p>
 						</div>
 						<div class="server-about last">
 							<h3>システム</h3>
-							<p>サーバーの多くのシステムが当鯖の開発者が作り、所有権は当鯖に帰属しております。企画を参考にしたい場合は事前にご連絡をいただいたうえでこのシステム参考にしたいなどあればしっかりとご連絡ください。無断の利用は固く禁止しております。</p>
+							<p>サーバーの多くのシステムが当鯖の開発者が作り，所有権は当鯖に帰属しております。企画を参考にしたい場合は事前にご連絡をいただいたうえでこのシステム参考にしたいなどあればしっかりとご連絡ください。無断の利用は固く禁止しております。</p>
 						</div>
 
 					</div>

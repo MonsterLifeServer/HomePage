@@ -22,6 +22,7 @@ $DESCRIPTION = " ";
             
             <div class="mainBox">
                 <div class="contents">
+                    <p class="fileupdate right">最終更新日時:<?php echo date('Y/m/d H時i分', filemtime(basename(__FILE__))); ?></p>
                     <!-- パンくずリスト -->
                     <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
                         <li itemprop="itemListElement" itemscope

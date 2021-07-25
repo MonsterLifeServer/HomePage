@@ -59,6 +59,8 @@ $DESCRIPTION = "24H鯖の紹介ページです。";
 		<div class="wrapper">
 			<div class="mainBox">
 				<div class="contents">
+                    <p class="fileupdate right">最終更新日時:<?php echo date('Y/m/d H時i分', filemtime(basename(__FILE__))); ?></p>
+                    <!-- パンくずリスト -->
 					<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
 						<li itemprop="itemListElement" itemscope
 							itemtype="https://schema.org/ListItem">
@@ -116,7 +118,7 @@ $DESCRIPTION = "24H鯖の紹介ページです。";
 					</div>
 
 					<h2 class="design" id="mods">MODに関して...</h2>
-					<p>24H鯖ではMODの使用が禁止されています。ですが、以下のMODは使用許可が出ています。また、これらのMODを使用する前提では鯖は開発されていません。これらに関するバグはサポート外です。</p>
+					<p>24H鯖ではMODの使用が禁止されています。ですが，以下のMODは使用許可が出ています。また，これらのMODを使用する前提では鯖は開発されていません。これらに関するバグはサポート外です。</p>
 					<div class="box text-left">
 						<ul>
 							<li>Optifine</li>
@@ -137,13 +139,13 @@ $DESCRIPTION = "24H鯖の紹介ページです。";
 							<li>ガチャチケットを持ってスニークするとガチャを引けます。</li>
 							<li>ロックしたいものやその上などに看板を設置するとそれを自分のものにできます。<br>
 								※自分のものでもないのにロックしたりする行為は荒らしとして対応します。</li>
-							<li>BANされた人、鯖から抜けて戻ってこないと判断された方のロックされたチェストなどはロックを解除します。</li>
+							<li>BANされた人，鯖から抜けて戻ってこないと判断された方のロックされたチェストなどはロックを解除します。</li>
 						</ul>
 					</div>
 						
 					<h2 class="design" id="24h_3">通報方法</h2>
 					<div class="box text-left">
-						建築物を壊されたときは、(扉が片方壊されたとする。)<br>
+						建築物を壊されたときは，(扉が片方壊されたとする。)<br>
 						<a href="<?php echo $conf["url"]; ?>/assets/img/coreprotect/1.png" data-lightbox="demo"><img src="<?php echo $conf["url"]; ?>/assets/img/coreprotect/1.png" width="100%"></img></a><br>
 						<a href="<?php echo $conf["url"]; ?>/assets/img/coreprotect/2.png" data-lightbox="demo"><img src="<?php echo $conf["url"]; ?>/assets/img/coreprotect/2.png" width="100%"></img></a><br>
 						<code>/co i</code>と実行する。<br>
@@ -228,7 +230,7 @@ $DESCRIPTION = "24H鯖の紹介ページです。";
 							</tr>
 							<tr>
 								<td>/mls afk</td>
-								<td>放置中であれば解除を、そうでなければ放置モードにします。</td>
+								<td>放置中であれば解除を，そうでなければ放置モードにします。</td>
 							</tr>
 							<tr>
 								<td>/mls gatya ticket</td>

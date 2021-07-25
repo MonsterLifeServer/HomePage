@@ -21,7 +21,8 @@ $DESCRIPTION = "サバイバルサーバーについて";
             
             <div class="mainBox">
 				<div class="contents">
-					<!-- パンくずリスト -->
+                    <p class="fileupdate right">最終更新日時:<?php echo date('Y/m/d H時i分', filemtime(basename(__FILE__))); ?></p>
+                    <!-- パンくずリスト -->
 					<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
 						<li itemprop="itemListElement" itemscope
 							itemtype="https://schema.org/ListItem">
@@ -69,8 +70,8 @@ $DESCRIPTION = "サバイバルサーバーについて";
 								建築物やチェスト等は荒らされないように保護することをおススメします。</li>
 						</ul>
 					</div>
-					<h2 class="design">その他、ルールや特徴</h2>
-					<p>24H鯖ではMODの使用が禁止されています。ですが、以下のMODは使用許可が出ています。また、これらのMODを使用する前提では鯖は開発されていません。これらに関するバグはサポート外です。</p>
+					<h2 class="design">その他，ルールや特徴</h2>
+					<p>24H鯖ではMODの使用が禁止されています。ですが，以下のMODは使用許可が出ています。また，これらのMODを使用する前提では鯖は開発されていません。これらに関するバグはサポート外です。</p>
 					<div class="box text-left">
 						<ul>
 							<li>Optifine</li>
@@ -87,7 +88,7 @@ $DESCRIPTION = "サバイバルサーバーについて";
 							<li>ドット絵や文字などの建物でない建築物の建設は禁止です</li>
 							<li>ロックしたいものやその上などに看板を設置するとそれを自分のものにできます。<br>
 								※自分のものでもないのにロックしたりする行為は荒らしとして対応します。</li>
-							<li>BANされた人、鯖から抜けて戻ってこないと判断された方のロックされたチェストなどはロックを解除します。</li>
+							<li>BANされた人，鯖から抜けて戻ってこないと判断された方のロックされたチェストなどはロックを解除します。</li>
 						</ul>
 					</div>
 					<h2 class="design">資源ワールドでのルールや説明</h2>
@@ -100,23 +101,23 @@ $DESCRIPTION = "サバイバルサーバーについて";
 					<h2 class="design">コマンド</h2>
                     <table class="cmd">
                         <tr><th>/discordlink</th><td>マインクラフトアカウントをDiscordアカウントと連携ができる。</td></tr>
-                        <tr><th>/sponsor</th><td>自分がスポンサーかどうかを確認できる。また、スポンサーなら失効期限がわかる。</td></tr>
+                        <tr><th>/sponsor</th><td>自分がスポンサーかどうかを確認できる。また，スポンサーなら失効期限がわかる。</td></tr>
                         <tr><th>*/displaycolor</th><td>スポンサー限定コマンド。自分の表示カラーを変更できる。</td></tr>
                         <tr><th>/jp on</th><td>ローマ字変換機能をONにする。</td></tr>
                         <tr><th>/jp off</th><td>ローマ字変換機能をOFFにする。</td></tr>
                         <tr><th>/jp toggle</th><td>ローマ字変換機能を切り替える。</td></tr>
                     </table>
 					<h2 class="design">通報方法</h2>
-					<p>/co inspect（または/co i）と入力し、インスペクターモードを有効にします。</p>
+					<p>/co inspect（または/co i）と入力し，インスペクターモードを有効にします。</p>
 					<a href="https://i.gyazo.com/9254dc4261cbe436a8c2e8afde0f6948.png"
                         class="strip"
                         data-strip-group="coreprotect"
                         data-strip-group-options="loop: false, maxWidth: 500">
 						<img src="https://i.gyazo.com/9254dc4261cbe436a8c2e8afde0f6948.png">
 					</a>
-					<p>そして、ログを確認したいブロックを右クリックするか、確認したい空間に手持ちのブロックを設置します（インスペクターモードが有効の状態ではブロックを設置、破壊はできません。）</p>
-					<p>しばらくすると、ログが表示されます。<br>
-						（荒らしのログなどを発見した場合、スクリーンショットを撮影し管理者へ報告してください。）</p>
+					<p>そして，ログを確認したいブロックを右クリックするか，確認したい空間に手持ちのブロックを設置します（インスペクターモードが有効の状態ではブロックを設置，破壊はできません。）</p>
+					<p>しばらくすると，ログが表示されます。<br>
+						（荒らしのログなどを発見した場合，スクリーンショットを撮影し管理者へ報告してください。）</p>
 					<a href="https://i.gyazo.com/e48a4d4bdf911b2b62459658f4372b19.png"
                         class="strip"
                         data-strip-group="coreprotect"
@@ -124,7 +125,7 @@ $DESCRIPTION = "サバイバルサーバーについて";
 						<img src="https://i.gyazo.com/e48a4d4bdf911b2b62459658f4372b19.png">
 					</a>
 					<p>ログが複数ページにわたる場合/co l <ページ番号>で指定したページに移動することができます。</p>
-					<p>/co inspect（または/co i）を再び入力し、インスペクターモードを解除します。</p>
+					<p>/co inspect（または/co i）を再び入力し，インスペクターモードを解除します。</p>
 					<a href="https://i.gyazo.com/b400179dbaf242c8a4934cd500f09be6.png"
                         class="strip"
                         data-strip-group="coreprotect"
@@ -140,7 +141,7 @@ $DESCRIPTION = "サバイバルサーバーについて";
 						<img src="https://i.gyazo.com/6fc5de6e4fd637ca243680ceb4e69f6f.png">
 					</a>
 					<h2 class="design">ロックの使用例</h2>
-					<p>チェストや扉に看板をつけるとロックすることができます。また、扉においては真上のブロックに設置することでもロックできます。</p>
+					<p>チェストや扉に看板をつけるとロックすることができます。また，扉においては真上のブロックに設置することでもロックできます。</p>
 					<a href="https://i.gyazo.com/e998cc16b8c8d1f4e5f9cc664f3f6bbe.png"
 						class="strip"
                         data-strip-group-options="loop: false, maxWidth: 500">
@@ -227,7 +228,7 @@ $DESCRIPTION = "サバイバルサーバーについて";
 						<img src="https://i.gyazo.com/620f28f3ffd55b2c74ece3f970b21522.png">
 					</a>
 					<h2 class="design">保護フラグ一覧</h2>
-					<p>/hogo create <土地の名前>で土地を保護することができます。その後、/hogo flag <FLAG> <土地の名前>で土地の設定をすることができます。</p>
+					<p>/hogo create <土地の名前>で土地を保護することができます。その後，/hogo flag <FLAG> <土地の名前>で土地の設定をすることができます。</p>
 					<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTxtRyHPWH3r8O3ER-L6pkZHPNfmksUkmzklCqEsJFbgMgTDhgxERrgebofefJvq0rmsngQsSnvltGV/pubhtml?gid=1770321307&range=A1:B12&amp;single=true&amp;widget=true&amp;headers=false" height="370px"></iframe>
 				</div>
 			</div>

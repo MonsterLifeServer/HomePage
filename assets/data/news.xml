@@ -27,7 +27,7 @@
         </item>
 
         <item>
-            <title>利用規約を改訂しました。前提を追加し、元々あった部分を禁止事項としました。</title>
+            <title>利用規約を改訂しました。前提を追加し，元々あった部分を禁止事項としました。</title>
             <link>https://www.mlserver.xyz/terms</link>
             <date>2021/04/11</date>
             <category>利用規約・ガイドライン</category>
@@ -69,7 +69,7 @@
         </item>
 
         <item>
-            <title>利用規約ページとガイドラインページが同じページに掲載されるようになりました。また、利用規約が大きく策定されたました。</title>
+            <title>利用規約ページとガイドラインページが同じページに掲載されるようになりました。また，利用規約が大きく策定されたました。</title>
             <link>https://www.mlserver.xyz/terms</link>
             <date>2020/10/19</date>
             <category>利用規約・ガイドライン</category>
@@ -90,7 +90,7 @@
         </item>
 
         <item>
-            <title>お問い合わせページを作成し、フッターからお問い合わせフォームを削除しました</title>
+            <title>お問い合わせページを作成し，フッターからお問い合わせフォームを削除しました</title>
             <link>https://www.mlserver.xyz/</link>
             <date>2020/09/12</date>
             <category>ホームページ</category>
@@ -111,7 +111,7 @@
         </item>
 
         <item>
-            <title>トップページでのみJMSのサーバーステータスバナーを表示するようにし、バグの修正をいたしました。</title>
+            <title>トップページでのみJMSのサーバーステータスバナーを表示するようにし，バグの修正をいたしました。</title>
             <link>https://www.mlserver.xyz/</link>
             <date>2020/08/18</date>
             <category>ホームページ</category>
@@ -160,14 +160,14 @@
         </item>
 
         <item>
-            <title>FAQの位置が /faq から /faq/index に変更されました。従来のURLからもアクセス可能です。また、MCIDについて記述したページを作成しました。</title>
+            <title>FAQの位置が /faq から /faq/index に変更されました。従来のURLからもアクセス可能です。また，MCIDについて記述したページを作成しました。</title>
             <link>https://www.mlserver.xyz/faq/</link>
             <date>2020/07/16</date>
             <category>ホームページ</category>
         </item>
 
         <item>
-            <title>広告ブロックシステムが起動するとminecraft.jpのサーバーステータスが表示されない問題を解決しました。また、実際の広告が消えないのは私の意図ではない！！ｗ</title>
+            <title>広告ブロックシステムが起動するとminecraft.jpのサーバーステータスが表示されない問題を解決しました。また，実際の広告が消えないのは私の意図ではない！！ｗ</title>
             <link>https://www.mlserver.xyz/</link>
             <date>2020/07/08</date>
             <category>ホームページ</category>
@@ -216,7 +216,7 @@
         </item>
 
         <item>
-            <title>運営が１名辞めました。また、開発者をホームページに掲載することになりました。</title>
+            <title>運営が１名辞めました。また，開発者をホームページに掲載することになりました。</title>
             <link>https://www.mlserver.xyz/admin</link>
             <date>2020/05/29</date>
             <category>役職関連</category>
@@ -265,7 +265,7 @@
         </item>
 
         <item>
-            <title>デザインとエラーページの追加の話（そして、不具合について）</title>
+            <title>デザインとエラーページの追加の話（そして，不具合について）</title>
             <link>http://monsterlifeserver.blog.jp/archives/6030993.html</link>
             <date>2020/05/09</date>
             <category>ホームページ</category>
@@ -329,7 +329,7 @@
         </item>
 
         <item>
-            <title>外部リンクがわかりやすくなり、BANユーザー一覧のMCBansのリストが表示できない場合がございます。ご了承ください。</title>
+            <title>外部リンクがわかりやすくなり，BANユーザー一覧のMCBansのリストが表示できない場合がございます。ご了承ください。</title>
             <link>#</link>
             <date>2020/04/24</date>
             <category>ホームページ</category>
@@ -385,7 +385,7 @@
         </item>
 
         <item>
-            <title>ミニゲーム企画関連のページURLが https://www.mlserver.xyz/event/ページ名 → https://www.mlserver.xyz/game/ページ名 に変更され、企画一覧のページURLが https://www.mlserver.xyz/game/ になりました。</title>
+            <title>ミニゲーム企画関連のページURLが https://www.mlserver.xyz/event/ページ名 → https://www.mlserver.xyz/game/ページ名 に変更され，企画一覧のページURLが https://www.mlserver.xyz/game/ になりました。</title>
             <link>https://www.mlserver.xyz/game/</link>
             <date>2020/03/16</date>
             <category>ホームページ</category>
@@ -399,21 +399,21 @@
         </item>
 
         <item>
-            <title>ページ上部にパンくずリストを追加し、ミニゲーム企画一覧ページを作成しました。</title>
+            <title>ページ上部にパンくずリストを追加し，ミニゲーム企画一覧ページを作成しました。</title>
             <link>#</link>
             <date>2020/03/14</date>
             <category>ホームページ</category>
         </item>
 
         <item>
-            <title>フッター部分にトップへ戻るボタンが重なったときに情報が見づらいという意見があったため、フッター手前でボタンが止まるように変更</title>
+            <title>フッター部分にトップへ戻るボタンが重なったときに情報が見づらいという意見があったため，フッター手前でボタンが止まるように変更</title>
             <link>#</link>
             <date>2020/03/14</date>
             <category>ホームページ</category>
         </item>
 
         <item>
-            <title>スマホで見たときの新着情報部分、広告削除（サーバーが勝手に貼る広告です。）と全デバイスでのデザイン変更、変更当日日に閲覧すれば New と末尾に表示される機能の追加</title>
+            <title>スマホで見たときの新着情報部分，広告削除（サーバーが勝手に貼る広告です。）と全デバイスでのデザイン変更，変更当日日に閲覧すれば New と末尾に表示される機能の追加</title>
             <link>#</link>
             <date>2020/03/14</date>
             <category>ホームページ</category>
@@ -441,7 +441,7 @@
         </item>
 
         <item>
-            <title>すべてのページURLの拡張子(.html)が非表示かされ、Q&amp;AのURLがq&amp;aからfaqになりました。</title>
+            <title>すべてのページURLの拡張子(.html)が非表示かされ，Q&amp;AのURLがq&amp;aからfaqになりました。</title>
             <link>#</link>
             <date>2020/01/05</date>
             <category>ホームページ</category>
@@ -504,7 +504,7 @@
         </item>
 
         <item>
-            <title>BANユーザー一覧を更新、運営一覧を更新しました。</title>
+            <title>BANユーザー一覧を更新，運営一覧を更新しました。</title>
             <link>#</link>
             <date>2019/09/19</date>
             <category>ホームページ</category>
@@ -532,7 +532,7 @@
         </item>
 
         <item>
-            <title>ヘッダーのデザインを変更しました。また、利用規約が改定されました。</title>
+            <title>ヘッダーのデザインを変更しました。また，利用規約が改定されました。</title>
             <link>#</link>
             <date>2019/08/08</date>
             <category>ホームページ</category>
@@ -546,7 +546,7 @@
         </item>
 
         <item>
-            <title>全ページの上部に設置していたメニューとMonsterLifeServerにようこそのページの新着お知らせを排除し、サイドバーに設置しました。</title>
+            <title>全ページの上部に設置していたメニューとMonsterLifeServerにようこそのページの新着お知らせを排除し，サイドバーに設置しました。</title>
             <link>#</link>
             <date>2019/08/02</date>
             <category>ホームページ</category>
@@ -560,7 +560,7 @@
         </item>
 
         <item>
-            <title>全ページの下部に設置していたメニューを排除し、ヘッダーに設置しました。</title>
+            <title>全ページの下部に設置していたメニューを排除し，ヘッダーに設置しました。</title>
             <link>#</link>
             <date>2019/07/30</date>
             <category>ホームページ</category>
@@ -581,21 +581,21 @@
         </item>
 
         <item>
-            <title>ファイル内に不具合が起き、正常に接続できない箇所が発生しています。</title>
+            <title>ファイル内に不具合が起き，正常に接続できない箇所が発生しています。</title>
             <link>#</link>
             <date>2019/07/29</date>
             <category>ホームページ</category>
         </item>
 
         <item>
-            <title>各ミニゲームページのファイルの位置を変更、管理しやすくしました。</title>
+            <title>各ミニゲームページのファイルの位置を変更，管理しやすくしました。</title>
             <link>#</link>
             <date>2019/07/29</date>
             <category>ホームページ</category>
         </item>
 
         <item>
-            <title>MonsterLifeServerにようこそのページ、新着情報の上部に新しい情報、下部に古い情報を記載するようになりました。</title>
+            <title>MonsterLifeServerにようこそのページ，新着情報の上部に新しい情報，下部に古い情報を記載するようになりました。</title>
             <link>#</link>
             <date>2019/07/28</date>
             <category>ホームページ</category>

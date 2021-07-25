@@ -19,66 +19,69 @@ $DESCRIPTION = "企画「増え鬼」のルール紹介ページです。";
         <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/header.php"); ?>
         <div class="wrapper">
             
-            <div class="mainBox"><div class="contents">
-                <!-- パンくずリスト -->
-                <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-                    <li itemprop="itemListElement" itemscope
-                        itemtype="https://schema.org/ListItem">
-                        <a itemprop="item" href="<?php echo $conf["url"]; ?>/">
-                            <span itemprop="name">ホーム</span>
-                        </a>
-                        <meta itemprop="position" content="1" />
-                    </li>
+            <div class="mainBox">
+                <div class="contents">
+                    <p class="fileupdate right">最終更新日時:<?php echo date('Y/m/d H時i分', filemtime(basename(__FILE__))); ?></p>
+                    <!-- パンくずリスト -->
+                    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                            <a itemprop="item" href="<?php echo $conf["url"]; ?>/">
+                                <span itemprop="name">ホーム</span>
+                            </a>
+                            <meta itemprop="position" content="1" />
+                        </li>
 
-                    <li itemprop="itemListElement" itemscope
-                        itemtype="https://schema.org/ListItem">
-                        <a itemprop="item" href="<?php echo $conf["url"]; ?>/game/">
-                            <span itemprop="name">ミニゲーム企画</span>
-                        </a>
-                        <meta itemprop="position" content="2" />
-                    </li>
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                            <a itemprop="item" href="<?php echo $conf["url"]; ?>/game/">
+                                <span itemprop="name">ミニゲーム企画</span>
+                            </a>
+                            <meta itemprop="position" content="2" />
+                        </li>
 
-                    <li itemprop="itemListElement" itemscope
-                        itemtype="https://schema.org/ListItem">
-                        <a itemprop="item" href="<?php echo $conf["url"]; ?>/game/hueoni">
-                            <span itemprop="name"><?php echo $TITLE; ?></span>
-                        </a>
-                        <meta itemprop="position" content="3" />
-                    </li>
-                </ol>
-                <!-- パンくずリスト -->
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                            <a itemprop="item" href="<?php echo $conf["url"]; ?>/game/hueoni">
+                                <span itemprop="name"><?php echo $TITLE; ?></span>
+                            </a>
+                            <meta itemprop="position" content="3" />
+                        </li>
+                    </ol>
+                    <!-- パンくずリスト -->
 
-                <h1 class="design">増え鬼</h1>
+                    <h1 class="design">増え鬼</h1>
 
-                <div class="flex-box2">
+                    <div class="flex-box2">
 
-                    <div class="sub-box">
-                        <h2>ルール</h2>
-                        <p>色々なマップで増え鬼ができます。</p>
-                        <p>鬼は配布される本を右クリックで初期地点にTPできます。</p>
-                        <p></code>/report ＜テキスト＞</code>で運営にメッセージを送信。</code>/oni</code>で鬼抽選期間中なら鬼抽選に参加/離脱。</p>
-                    </div>
+                        <div class="sub-box">
+                            <h2>ルール</h2>
+                            <p>色々なマップで増え鬼ができます。</p>
+                            <p>鬼は配布される本を右クリックで初期地点にTPできます。</p>
+                            <p></code>/report ＜テキスト＞</code>で運営にメッセージを送信。</code>/oni</code>で鬼抽選期間中なら鬼抽選に参加/離脱。</p>
+                        </div>
 
-                    <div class="radius-box">
-                        <h2>企画詳細</h2>
+                        <div class="radius-box">
+                            <h2>企画詳細</h2>
 
-                        <h3>ゲーム時間</h3>
-                        <p>10分</p><hr />
-                        <h3>最低参加人数</h3>
-                        <p>4人</p><hr />
-                        <h3>バージョン</h3>
-                        <p>1.12.2</p><hr />
-                        <h3>カテゴリ</h3>
-                        <span class="category">鬼ごっこ</span>
-                        <hr />
-                        <h3>テクスチャ</h3>
-                        <p><a href="<?php echo $conf['tex']['toso']; ?>" download>ダウンロード</a></p>
+                            <h3>ゲーム時間</h3>
+                            <p>10分</p><hr />
+                            <h3>最低参加人数</h3>
+                            <p>4人</p><hr />
+                            <h3>バージョン</h3>
+                            <p>1.12.2</p><hr />
+                            <h3>カテゴリ</h3>
+                            <span class="category">鬼ごっこ</span>
+                            <hr />
+                            <h3>テクスチャ</h3>
+                            <p><a href="<?php echo $conf['tex']['toso']; ?>" download>ダウンロード</a></p>
+
+                        </div>
 
                     </div>
 
                 </div>
-
-            </div></div>
+            </div>
 
             <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/footer.php"); ?>
         </div>

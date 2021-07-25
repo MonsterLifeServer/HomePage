@@ -60,6 +60,7 @@ $DESCRIPTION = "よく受け付ける質問に対する回答です。";
         <div class="wrapper">
             <div class="mainBox">
                 <div class="contents">
+                    <p class="fileupdate right">最終更新日時:<?php echo date('Y/m/d H時i分', filemtime(basename(__FILE__))); ?></p>
                     <!-- パンくずリスト -->
                     <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
                         <li itemprop="itemListElement" itemscope
@@ -89,7 +90,7 @@ $DESCRIPTION = "よく受け付ける質問に対する回答です。";
                     <!-- パンくずリスト -->
                     <div class="faq">
                         <p class="question">処罰基準は何ですか？</p>
-                        <p class="answer">処罰の基準は「これ！！」というものはすべてにはございません。その人の日ごろの行動(小さな違反など)の積み重ねにより、処罰される場合もございます。</p>
+                        <p class="answer">処罰の基準は「これ！！」というものはすべてにはございません。その人の日ごろの行動(小さな違反など)の積み重ねにより，処罰される場合もございます。</p>
                     </div>  
                     
                     <div class="faq">
@@ -100,7 +101,7 @@ $DESCRIPTION = "よく受け付ける質問に対する回答です。";
                     <div class="faq">
                         <p class="question">サーバーに入ろうとすると画像のような表示が出て入れない。</p>
                         <p class="answer"><a href="https://discord.gg/gaGB6Mm" target="_blank">Discordグループ</a>に参加してい場合や認証していない場合にはサーバーに接続できなくなります。<br>
-                                        また、誤認証（MCIDが間違っているなど）でもサーバーに接続ができなくなっています。その場合に関する対応は<a href="<?php echo $conf["url"]; ?>/support/faq/mcid">コチラ</a>をご覧ください。<img src="<?php echo $conf["url"]; ?>/assets/img/dis_kick.png" width="100%" alt="サーバーにアクセスできないときに表示される画面"></img></p>
+                                        また，誤認証（MCIDが間違っているなど）でもサーバーに接続ができなくなっています。その場合に関する対応は<a href="<?php echo $conf["url"]; ?>/support/faq/mcid">コチラ</a>をご覧ください。<img src="<?php echo $conf["url"]; ?>/assets/img/dis_kick.png" width="100%" alt="サーバーにアクセスできないときに表示される画面"></img></p>
                     </div>
 
                     <div class="faq">
@@ -121,19 +122,19 @@ $DESCRIPTION = "よく受け付ける質問に対する回答です。";
 
                     <div class="faq">
                         <p class="question">サーバーバージョンを教えてください</p>
-                        <p class="answer">あらゆる場所に書いていますが、基本は<u>1.12.2</u>です。<br>
+                        <p class="answer">あらゆる場所に書いていますが，基本は<u>1.12.2</u>です。<br>
                                         ※それ以外の場合はそのたびに通知します。</p>
                     </div>
 
                     <div class="faq">
                         <p class="question">作ったものがなくなりました</p>
-                        <p class="answer">サーバールールなどに従い、撤去・移動されたかと思われます。荒らしの可能性もあるかもしれませんので<a href="<?php echo $conf["url"]; ?>/24h">オープンサーバー</a>ページを使用してご確認ください。<br>
+                        <p class="answer">サーバールールなどに従い，撤去・移動されたかと思われます。荒らしの可能性もあるかもしれませんので<a href="<?php echo $conf["url"]; ?>/24h">オープンサーバー</a>ページを使用してご確認ください。<br>
                                         ※移動の場合はできるだけ伝えるようにします。</p>
                     </div>
 
                     <div class="faq">
                         <p class="question">迷子になった場合どうしたらいいですか？</p>
-                        <p class="answer">オープンサーバーではサイドバーに座標を表示しています。そちらで座標を保存しておくか、<code>/mls home set</code>で保存した座標に<code>/mls home tp</code>でテレポートすることが可能です。</p>
+                        <p class="answer">オープンサーバーではサイドバーに座標を表示しています。そちらで座標を保存しておくか，<code>/mls home set</code>で保存した座標に<code>/mls home tp</code>でテレポートすることが可能です。</p>
                     </div>
 
                     <div class="faq">
@@ -148,7 +149,7 @@ $DESCRIPTION = "よく受け付ける質問に対する回答です。";
 
                     <div class="faq">
                         <p class="question">お問い合わせはどのような方法がありますか？</p>
-                        <p class="answer">ホームページ下部のお問い合わせフォームや公式Twitter（@MLServer2408）、<a href="<?php echo $conf["url"]; ?>/monsterbox/bot">MonsterBOT</a>のDM、Discordグループから可能です。</p>
+                        <p class="answer">ホームページ下部のお問い合わせフォームや公式Twitter（@MLServer2408），<a href="<?php echo $conf["url"]; ?>/monsterbox/bot">MonsterBOT</a>のDM，Discordグループから可能です。</p>
                     </div>
 
                 </div>

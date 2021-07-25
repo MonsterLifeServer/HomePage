@@ -35,71 +35,75 @@ $DESCRIPTION = "運営一覧ページです。";
         <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/header.php"); ?>
         <div class="wrapper">
             
-            <div class="mainBox"><div class="contents">
+            <div class="mainBox">
+                <div class="contents">
+                    <p class="fileupdate right">最終更新日時:<?php echo date('Y/m/d H時i分', filemtime(basename(__FILE__))); ?></p>
+                    <!-- パンくずリスト -->
 
-                <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-                    <li itemprop="itemListElement" itemscope
-                        itemtype="https://schema.org/ListItem">
-                        <a itemprop="item" href="<?php echo $conf["url"]; ?>/">
-                            <span itemprop="name">ホーム</span>
-                        </a>
-                        <meta itemprop="position" content="1" />
-                    </li>
+                    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                            <a itemprop="item" href="<?php echo $conf["url"]; ?>/">
+                                <span itemprop="name">ホーム</span>
+                            </a>
+                            <meta itemprop="position" content="1" />
+                        </li>
 
-                    <li itemprop="itemListElement" itemscope
-                        itemtype="https://schema.org/ListItem">
-                        <a itemprop="item" href="<?php echo $conf["url"]; ?>/about/admins">
-                            <span itemprop="name"><?php echo $TITLE; ?></span>
-                        </a>
-                        <meta itemprop="position" content="2" />
-                    </li>
-                </ol>
+                        <li itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                            <a itemprop="item" href="<?php echo $conf["url"]; ?>/about/admins">
+                                <span itemprop="name"><?php echo $TITLE; ?></span>
+                            </a>
+                            <meta itemprop="position" content="2" />
+                        </li>
+                    </ol>
 
-                <div class="flex-box1">
+                    <div class="flex-box1">
 
-                    <div class="mask-style">
-                        <img src="https://minotar.net/armor/body/1c2b6991e8ce4e5db4d8ec3f0cdc5f8e" />
-                        <div class="mask1"></div>
-                        <div class="mask2"></div>
-                        <div class="caption">
-                            <span class="name">もんすたぁ</span>
-                            <p class="explanation">運営の一人。サーバーの多くのシステムを開発している。よく企画で叫び苦情が出ている。</p>
+                        <div class="mask-style">
+                            <img src="https://minotar.net/armor/body/1c2b6991e8ce4e5db4d8ec3f0cdc5f8e" />
+                            <div class="mask1"></div>
+                            <div class="mask2"></div>
+                            <div class="caption">
+                                <span class="name">もんすたぁ</span>
+                                <p class="explanation">運営の一人。サーバーの多くのシステムを開発している。よく企画で叫び苦情が出ている。</p>
+                            </div>
+                            <div class="sns">
+                                <a href="https://twitter.com/meoto2408"><i class="fab fa-twitter" style="color: #1DA1F2;"></i></a>
+                            </div>
                         </div>
-                        <div class="sns">
-                            <a href="https://twitter.com/meoto2408"><i class="fab fa-twitter" style="color: #1DA1F2;"></i></a>
-                        </div>
-                    </div>
 
-                    <div class="mask-style">
-                        <img src="https://i.gyazo.com/565a67fabae9185c08115aa37526ea9d.png" />
-                        <div class="mask1"></div>
-                        <div class="mask2"></div>
-                        <div class="caption">
-                            <span class="name">なぎさ</span>
-                            <p class="explanation">運営の一人。運営陣で唯一Minecraftをやっていない人。主に鯖のお金管理をしている。</p>
+                        <div class="mask-style">
+                            <img src="https://i.gyazo.com/565a67fabae9185c08115aa37526ea9d.png" />
+                            <div class="mask1"></div>
+                            <div class="mask2"></div>
+                            <div class="caption">
+                                <span class="name">なぎさ</span>
+                                <p class="explanation">運営の一人。運営陣で唯一Minecraftをやっていない人。主に鯖のお金管理をしている。</p>
+                            </div>
+                            <div class="sns">
+                                <a href="https://twitter.com/nagisa2408"><i class="fab fa-twitter" style="color: #1DA1F2;"></i></a>
+                            </div>
                         </div>
-                        <div class="sns">
-                            <a href="https://twitter.com/nagisa2408"><i class="fab fa-twitter" style="color: #1DA1F2;"></i></a>
-                        </div>
-                    </div>
 
-                    <div class="mask-style">
-                        <img src="https://minotar.net/armor/body/95593263edef4f07a6bbefd7a05e2652" />
-                        <div class="mask1"></div>
-                        <div class="mask2"></div>
-                        <div class="caption">
-                            <span class="name">ぎんあれ</span>
-                            <p class="explanation">運営の一人。MonsterLifeServerの鯖主。動画編集の長。</p>
+                        <div class="mask-style">
+                            <img src="https://minotar.net/armor/body/95593263edef4f07a6bbefd7a05e2652" />
+                            <div class="mask1"></div>
+                            <div class="mask2"></div>
+                            <div class="caption">
+                                <span class="name">ぎんあれ</span>
+                                <p class="explanation">運営の一人。MonsterLifeServerの鯖主。動画編集の長。</p>
+                            </div>
+                            <div class="sns">
+                                <a href="https://www.youtube.com/channel/UCfXYSFo-unvTihFOjRiADgA" style="color: #c4302b;"><i class="fab fa-youtube"></i></a>
+                                <a href="https://twitter.com/gingerale10_YT"><i class="fab fa-twitter" style="color: #1DA1F2;"></i></a>
+                            </div>
                         </div>
-                        <div class="sns">
-                            <a href="https://www.youtube.com/channel/UCfXYSFo-unvTihFOjRiADgA" style="color: #c4302b;"><i class="fab fa-youtube"></i></a>
-                            <a href="https://twitter.com/gingerale10_YT"><i class="fab fa-twitter" style="color: #1DA1F2;"></i></a>
-                        </div>
+
                     </div>
 
                 </div>
-
-            </div></div>
+            </div>
 
             <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/footer.php"); ?>
         </div>

@@ -56,7 +56,7 @@
 
         if (!empty($contact)) $text = $text . '**__内容__** ```' . $contact . '```';
         else $text = $text . '**__内容__** ```無記入```';
-							 
+
 		//メッセージの内容を定義
 		$message = array(
 			'username' => '総合お問い合わせ', 
@@ -84,7 +84,8 @@
             <div class="wrapper">
                 <div class="mainBox">
                     <div class="contents">
-                        <!-- パンくずリスト始 -->
+                        <p class="fileupdate right">最終更新日時:<?php echo date('Y/m/d H時i分', filemtime(basename(__FILE__))); ?></p>
+                        <!-- パンくずリスト -->
                         <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
                             <li itemprop="itemListElement" itemscope
                                 itemtype="https://schema.org/ListItem">

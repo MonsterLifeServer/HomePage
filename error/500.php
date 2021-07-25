@@ -15,6 +15,7 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
         <div class="wrapper">
             <div class="mainBox">
                 <div class="contents">
+                    <p class="fileupdate right">最終更新日時:<?php echo date('Y/m/d H時i分', filemtime(basename(__FILE__))); ?></p>
                     <div class="text-left">
                         <!-- パンくずリスト始 -->
                         <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
@@ -45,7 +46,7 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
                     <div class='eye'></div>
 
                     <p class="sub-text">あら？なにかがうまく動かなかったみたい...現在<span class="italic">調査中</span>だからちょっと待ってね...</p>
-                    <a href="<?php echo $conf["url"]; ?>">あ、ここから戻れるよ...</a>
+                    <a href="<?php echo $conf["url"]; ?>">あ，ここから戻れるよ...</a>
                 </div>
             </div>
         </div>

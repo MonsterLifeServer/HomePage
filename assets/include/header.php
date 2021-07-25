@@ -113,10 +113,10 @@
     }
 ?>
 <div class="overlay"></div>
-<!-- 以下、緊急お知らせ用BOX -->
+<!-- 以下，緊急お知らせ用BOX -->
 <?php 
 $sorryMessageVisible = FALSE;
-$sorryMessage = '現在、お問い合わせページ・役職応募ページが正しく機能しておらず、運営にメッセージが届きません。何かお問い合わせのあるかたは Monster2408#8936 に連絡するか<a href="https://discord.gg/gaGB6Mm">公式Discordグループ</a>にてお問い合わせください。';
+$sorryMessage = '現在，お問い合わせページ・役職応募ページが正しく機能しておらず，運営にメッセージが届きません。何かお問い合わせのあるかたは Monster2408#8936 に連絡するか<a href="https://discord.gg/gaGB6Mm">公式Discordグループ</a>にてお問い合わせください。';
 if ($sorryMessageVisible === FALSE) echo "<!--";
 ?>
 <div class="sorry">

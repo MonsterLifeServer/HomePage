@@ -21,6 +21,7 @@ $DESCRIPTION = "ロビーサーバーについて";
             
             <div class="mainBox">
                 <div class="contents">
+                    <p class="fileupdate right">最終更新日時:<?php echo date('Y/m/d H時i分', filemtime(basename(__FILE__))); ?></p>
                     <!-- パンくずリスト -->
                     <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
                         <li itemprop="itemListElement" itemscope
@@ -72,7 +73,7 @@ $DESCRIPTION = "ロビーサーバーについて";
                     <h2 class="design">コマンド</h2>
                     <table class="cmd">
                         <tr><th>/discordlink</th><td>マインクラフトアカウントをDiscordアカウントと連携ができる。</td></tr>
-                        <tr><th>/sponsor</th><td>自分がスポンサーかどうかを確認できる。また、スポンサーなら失効期限がわかる。</td></tr>
+                        <tr><th>/sponsor</th><td>自分がスポンサーかどうかを確認できる。また，スポンサーなら失効期限がわかる。</td></tr>
                         <tr><th>*/displaycolor</th><td>スポンサー限定コマンド。自分の表示カラーを変更できる。</td></tr>
                         <tr><th>/jp on</th><td>ローマ字変換機能をONにする。</td></tr>
                         <tr><th>/jp off</th><td>ローマ字変換機能をOFFにする。</td></tr>

@@ -15,6 +15,7 @@ $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
         <div class="wrapper">
             <div class="mainBox">
                 <div class="contents">
+                    <p class="fileupdate right">最終更新日時:<?php echo date('Y/m/d H時i分', filemtime(basename(__FILE__))); ?></p>
                     <div class="text-left">
                         <!-- パンくずリスト始 -->
                         <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
