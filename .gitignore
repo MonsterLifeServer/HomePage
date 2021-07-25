@@ -1,7 +1,9 @@
 .htaccess
 # .htaccessを隠す
-blog/
-# blogディレクトリを隠す
 ads.txt
 
-sub-domain/
+blog/
+sub-join/
+!sub-domain/blog/
+
+.vs/
