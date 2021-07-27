@@ -29,7 +29,7 @@ $images = [
 			#elapsedTime {
 				font-weight: bold;
 			}
-			
+
 			#blogs img {
 				width: 250px;
 				height: 250px;
@@ -101,8 +101,7 @@ $images = [
 					<h2>新着情報</h2>
 					<div class="read-more"><a href="<?php echo $conf["url"]; ?>/about/news">すべて見る</a></div>
 					<?php
-						$xml = $_SERVER["DOCUMENT_ROOT"] . "/assets/data/news.xml";//ファイルを指定
-						//$xml = "https://raw.githubusercontent.com/MonsterLifeServer/HomePage/master/assets/data/news.xml";//ファイルを指定
+						$xml = "https://raw.githubusercontent.com/MonsterLifeServer/HomePage/master/assets/data/news.xml";//ファイルを指定
 						$xmlData = simplexml_load_file($xml);
 						$_i = 0;
 						foreach ($xmlData->blog->item as $data) { 
