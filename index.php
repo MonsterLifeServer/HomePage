@@ -29,6 +29,12 @@ $images = [
 			#elapsedTime {
 				font-weight: bold;
 			}
+			
+			#blogs img {
+				width: 250px;
+				height: 250px;
+				object-fit: cover; /* この一行を追加するだけ！ */
+			}
 		</style>
     </head>
     <body onload="timer()">
