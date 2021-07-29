@@ -16,7 +16,6 @@
                 <li>
                     <a class="js-menu__item__link" href="<?php echo $conf["url"]; ?>/servers/">サーバー</a>
                     <ul class="submenu">
-                        <li><a href="<?php echo $conf["url"]; ?>/24h/">24H鯖</a></li>
                         <li><a href="<?php echo $conf["url"]; ?>/servers/lobby">ロビー鯖</a></li>
                         <li><a href="<?php echo $conf["url"]; ?>/servers/survival">サバイバル鯖</a></li>
                         <li><a href="<?php echo $conf["url"]; ?>/servers/event">ミニゲーム企画鯖</a></li>
@@ -39,7 +38,8 @@
                         <li><a href="<?php echo $conf["url"]; ?>/game/aooni">青鬼ゲーム</a></li>
                         <li><a href="<?php echo $conf["url"]; ?>/game/online">青鬼ONLINE in MC</a></li>
                         <li><a href="<?php echo $conf["url"]; ?>/game/hueoni">増え鬼</a></li>
-                        <!--
+                        <!-- 将来 -->
+                        <!-- 
                         <li><a href="<?php echo $conf["url"]; ?>/game/cbg">コア破壊ゲーム</a></li>
                         <li><a href="<?php echo $conf["url"]; ?>/game/toso">逃走中</a></li>
                         <li><a href="<?php echo $conf["url"]; ?>/game/dbd">DeadbyDaylight</a></li>
@@ -85,27 +85,6 @@
         $url = "https://minecraft.jp/servers/5d51f624a9b0bd7e0e00834e";
         $imageJMS = 'https://minecraft.jp/servers/5d51f624a9b0bd7e0e00834e/banner/'.$i.'/560x95.png';
         $imageMono = "https://minecraft.jp/servers/5d51f624a9b0bd7e0e00834e/banner/3/560x95.png";
-    
-        /*
-        $ch = curl_init($url);
-        curl_setopt_array($ch, [
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_FAILONERROR => true,
-        ]);
-        $body = curl_exec($ch);
-        $info = curl_getinfo($ch);
-    
-        $errno = curl_errno($ch);
-        $error = curl_error($ch);
-        curl_close($ch);
-        if (CURLE_OK == $errno) {
-            echo '<ul class="label"><li><a href="https://minecraft.jp/servers/5d51f624a9b0bd7e0e00834e" target="_blank"><img src="https://minecraft.jp/servers/5d51f624a9b0bd7e0e00834e/banner/'.$i.'/560x95.png" alt="JapanMinecraftServersにアクセスできるバナー"/></a></li>';
-            echo '<li><a href="https://monocraft.net/servers/4o9NgWsXjtrIVtds0Igw/vote" target="_blank"><img src="https://minecraft.jp/servers/5d51f624a9b0bd7e0e00834e/banner/3/560x95.png" alt="Monocraftにアクセスできるバナー"/></a></li></ul>';
-        } else {
-            echo '<ul class="label"><li class="back-white"><a href="https://minecraft.jp/servers/5d51f624a9b0bd7e0e00834e" target="_blank">JapanMinecraftServers</li>';
-            echo '<li class="back-white"><a href="https://monocraft.net/servers/4o9NgWsXjtrIVtds0Igw/vote" target="_blank">Monocraft</a></li></ul>';
-        }
-        */
     
         if (file_get_contents($imageJMS) || file_get_contents($imageMono)) {
             echo '<ul class="label"><li><a href="https://minecraft.jp/servers/5d51f624a9b0bd7e0e00834e" target="_blank"><img src="https://minecraft.jp/servers/5d51f624a9b0bd7e0e00834e/banner/'.$i.'/560x95.png" alt="JapanMinecraftServersにアクセスできるバナー"/></a></li>';

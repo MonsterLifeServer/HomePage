@@ -80,26 +80,37 @@ $DESCRIPTION = "新着情報が見れます。";
         <div class="wrapper">
             <div class="mainBox">
                 <div class="contents">
-                    <p class="fileupdate right">最終更新日時:<?php echo date('Y/m/d H時i分', filemtime(basename(__FILE__))); ?></p>
-                    <!-- パンくずリスト -->
-                    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-                        <li itemprop="itemListElement" itemscope
-                            itemtype="https://schema.org/ListItem">
-                            <a itemprop="item" href="<?php echo $conf["url"]; ?>/">
-                                <span itemprop="name">ホーム</span>
-                            </a>
-                            <meta itemprop="position" content="1" />
-                        </li>
+                    <!-- パンくずリスト&最終更新日 -->
+                    <div class="top-label">
+                        <div class="item-left">
+                            <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+                                <li itemprop="itemListElement" itemscope
+                                    itemtype="https://schema.org/ListItem">
+                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/">
+                                        <span itemprop="name">ホーム</span>
+                                    </a>
+                                    <meta itemprop="position" content="1" />
+                                </li>
 
-                        <li itemprop="itemListElement" itemscope
-                            itemtype="https://schema.org/ListItem">
-                            <a itemprop="item" href="<?php echo $conf["url"]; ?>/about/news">
-                                <span itemprop="name"><?php echo $TITLE; ?></span>
-                            </a>
-                            <meta itemprop="position" content="2" />
-                        </li>
-                    </ol>
-                    <!-- パンくずリスト終 -->
+                                <li itemprop="itemListElement" itemscope
+                                    itemtype="https://schema.org/ListItem">
+                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/about/news">
+                                        <span itemprop="name"><?php echo $TITLE; ?></span>
+                                    </a>
+                                    <meta itemprop="position" content="2" />
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="item-right">
+                            <p class="fileupdate right"><span class="title">最終更新日時: </span>
+                            <?php
+                                $filetime = filemtime(basename(__FILE__));
+                                echo '<span class="date">'.date('Y/m/d ', $filetime).'</span>';
+                                echo '<span class="time">'.date('H時i分', $filetime).'</span>'; 
+                            ?></p>
+                        </div>
+                    </div>
+                    <!-- パンくずリスト&最終更新日 -->
 
                     <!-- ↓↓↓↓↓ ここから本文 ↓↓↓↓↓ -->
                     <h1 class="design">新着情報</h1>
@@ -111,7 +122,7 @@ $DESCRIPTION = "新着情報が見れます。";
                             foreach ($xmlData->blog->item as $data) { 
                         ?>
                         <a href="<?php echo $data->link; ?>" <?php  
-                            if (!(strpos($data->link,'mlserver.php.xdomain.jp') === true || strpos($data->link,'www.mlserver.xyz') === true)) {
+                            if (!(strpos($data->link,'mlserver.jp.net') === true || strpos($data->link,'www.mlserver.xyz') === true)) {
                                 echo 'target="_blank"';
                             }
                         ?> class="news-ca">

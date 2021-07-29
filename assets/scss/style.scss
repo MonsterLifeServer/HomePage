@@ -11,6 +11,30 @@ body {
     background-image: url(https://i.imgur.com/Pjc7Lir.png);
 }
 
+div.top-label {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    border-top: 3px double red;
+    border-bottom: 3px double red;
+    padding: 10px;
+    div.item-right {
+        margin: 10px;
+        padding: 0;
+        text-align: right;
+    }
+    div {
+        width: calc(50%-20px);
+    }
+}
+
+iframe.fullframe {
+    width: 100%;
+    height: 100;
+    text-align: left;
+    margin-right:1em;
+}
+
 body.aooni {
     background: #06177A;
     .tab-wrap {
@@ -695,5 +719,25 @@ table.cmd {
 @media screen and (max-width:300px) {
     .mask-style {
         width: 95%;
+    }
+
+    .fileupdate {
+        span {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width:500px) {
+    div.top-label {
+        display: block;
+        div.item-right {
+            margin: 10px;
+            padding: 0;
+            text-align: right;
+        }
+        div {
+            width: 100%;
+        }
     }
 }

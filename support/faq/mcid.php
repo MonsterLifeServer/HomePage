@@ -8,47 +8,57 @@ $DESCRIPTION = "MonsterLifeServerではマイクラのプレイヤー名のこ�
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
-	<head>
-		<?php echo $html["common_head"]; ?>
+<head>
+        <?php echo $html["common_head"]; ?>
 		<title><?php echo $TITLE; ?> | MonsterLifeServer</title>
 		<meta property="og:url" content="<?php echo $URL; ?>/" />
-		<meta property="og:title" content="<?php echo $TITLE; ?> | MonsterLifeServer" />
+		<meta property="og:title" content="<?php echo $TITLE; ?>" />
 		<meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
-	</head>
-	<body>
-		<?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/header.php"); ?>
-		<div class="wrapper">
-			<div class="mainBox">
-				<div class="contents">
-                    <p class="fileupdate right">最終更新日時:<?php echo date('Y/m/d H時i分', filemtime(basename(__FILE__))); ?></p>
-                    <!-- パンくずリスト -->
-					<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-						<li itemprop="itemListElement" itemscope
-							itemtype="https://schema.org/ListItem">
-							<a itemprop="item" href="<?php echo $conf["url"]; ?>/">
-								<span itemprop="name">ホーム</span>
-							</a>
-							<meta itemprop="position" content="1" />
-						</li>
+    </head>
+    <body>
+        <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/header.php"); ?>
+        <div class="wrapper">
+            <div class="mainBox">
+                <div class="contents">
+                    <!-- パンくずリスト&最終更新日 -->
+                    <div class="top-label">
+                        <div class="item-left">
+                            <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+                                <li itemprop="itemListElement" itemscope
+                                    itemtype="https://schema.org/ListItem">
+                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/">
+                                        <span itemprop="name">ホーム</span>
+                                    </a>
+                                    <meta itemprop="position" content="1" />
+                                </li>
 
-						<li itemprop="itemListElement" itemscope
-							itemtype="https://schema.org/ListItem">
-							<a itemprop="item" href="<?php echo $conf["url"]; ?>/support/faq/">
-								<span itemprop="name">よくある質問</span>
-							</a>
-							<meta itemprop="position" content="2" />
-						</li>
-						<li itemprop="itemListElement" itemscope
-							itemtype="https://schema.org/ListItem">
-							<a itemprop="item" href="<?php echo $conf["url"]; ?>/support/faq/mcid">
-								<span itemprop="name"><?php echo $TITLE; ?></span>
-							</a>
-							<meta itemprop="position" content="3" />
-						</li>
-					</ol>
-					<!-- パンくずリスト終 -->
+								<li itemprop="itemListElement" itemscope
+									itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="<?php echo $conf["url"]; ?>/support/faq/">
+										<span itemprop="name">よくある質問</span>
+									</a>
+									<meta itemprop="position" content="2" />
+								</li>
+								<li itemprop="itemListElement" itemscope
+									itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="<?php echo $conf["url"]; ?>/support/faq/mcid">
+										<span itemprop="name"><?php echo $TITLE; ?></span>
+									</a>
+									<meta itemprop="position" content="3" />
+								</li>
+                            </ol>
+                        </div>
+                        <div class="item-right">
+                            <p class="fileupdate right"><span class="title">最終更新日時: </span>
+                            <?php
+                                $filetime = filemtime(basename(__FILE__));
+                                echo '<span class="date">'.date('Y/m/d ', $filetime).'</span>';
+                                echo '<span class="time">'.date('H時i分', $filetime).'</span>'; 
+                            ?></p>
+                        </div>
+                    </div>
+                    <!-- パンくずリスト&最終更新日 -->
 
-					<!-- ↓↓↓↓↓ ここから本文 ↓↓↓↓↓ -->
 					<h1 class="design">MCIDについて</h1>
 					<h2 class="design">MCIDとは...</h2>
 					<p>当鯖ではMinecraft内で表示されるプレイヤー名をMCIDと記述しています。確認方法はランチャーで確認することが可能です。</p>

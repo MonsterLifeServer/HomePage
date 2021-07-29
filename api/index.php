@@ -86,26 +86,38 @@ $DESCRIPTION = " ";
 		<div class="wrapper">
 			<div class="mainBox">
 				<div class="contents">
-                    <p class="fileupdate right">最終更新日時:<?php echo date('Y/m/d H時i分', filemtime(basename(__FILE__))); ?></p>
-                    <!-- パンくずリスト -->
-					<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-						<li itemprop="itemListElement" itemscope
-							itemtype="https://schema.org/ListItem">
-							<a itemprop="item" href="<?php echo $conf["url"]; ?>/">
-								<span itemprop="name">ホーム</span>
-							</a>
-							<meta itemprop="position" content="1" />
-						</li>
+                    <!-- パンくずリスト&最終更新日 -->
+                    <div class="top-label">
+                        <div class="item-left">
+                            <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+                                <li itemprop="itemListElement" itemscope
+                                    itemtype="https://schema.org/ListItem">
+                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/">
+                                        <span itemprop="name">ホーム</span>
+                                    </a>
+                                    <meta itemprop="position" content="1" />
+                                </li>
 
-						<li itemprop="itemListElement" itemscope
-							itemtype="https://schema.org/ListItem">
-							<a itemprop="item" href="<?php echo $conf["url"]; ?>/api/">
-								<span itemprop="name"><?php echo $TITLE; ?></span>
-							</a>
-							<meta itemprop="position" content="2" />
-                        </li>
-					</ol>
-					<!-- パンくずリスト終 -->
+
+                                <li itemprop="itemListElement" itemscope
+                                    itemtype="https://schema.org/ListItem">
+                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/api/">
+                                        <span itemprop="name"><?php echo $TITLE; ?></span>
+                                    </a>
+                                    <meta itemprop="position" content="2" />
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="item-right">
+                            <p class="fileupdate right"><span class="title">最終更新日時: </span>
+                            <?php
+                                $filetime = filemtime(basename(__FILE__));
+                                echo '<span class="date">'.date('Y/m/d ', $filetime).'</span>';
+                                echo '<span class="time">'.date('H時i分', $filetime).'</span>'; 
+                            ?></p>
+                        </div>
+                    </div>
+                    <!-- パンくずリスト&最終更新日 -->
 
 					<!-- ↓↓↓↓↓ ここから本文 ↓↓↓↓↓ -->
 					<h1 class="design">API一覧</h1>
@@ -141,7 +153,7 @@ $DESCRIPTION = " ";
 									<p class="card__text">配信時のコメントを表示します。</p>
 								</div>
 								<div class="card__footer">
-									<p class="card__text"><a href="<?php echo $conf["url"]; ?>/api/coment" class="button -primary">ページを見る</a></p>
+									<p class="card__text"><a href="<?php echo $conf["url"]; ?>/api/comment" class="button -primary">ページを見る</a></p>
 								</div>
 							</article>
 						</div>

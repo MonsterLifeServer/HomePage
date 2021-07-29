@@ -1,9 +1,9 @@
 <?php
 
 $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
-$TITLE = "DeadByDaylight in MC";
-$URL = $conf["url"] . '/game/dbd';
-$DESCRIPTION = "DeadByDaylightをマイクラで遊べるようにした企画「DeadByDaylight in MC」のルール紹介ページです。";
+$TITLE = "配信コメント";
+$URL = $conf["url"] . '/api/comment';
+$DESCRIPTION = "MonsterLifeServerのライブ配信のコメントを見れるページ";
 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
@@ -14,13 +14,19 @@ $DESCRIPTION = "DeadByDaylightをマイクラで遊べるようにした企画�
 		<meta property="og:url" content="<?php echo $URL; ?>/" />
 		<meta property="og:title" content="<?php echo $TITLE; ?> | MonsterLifeServer" />
 		<meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
-    </head>
-    <body>
-        <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/header.php"); ?>
-        <div class="wrapper">
-            
-            <div class="mainBox">
-                <div class="contents">
+        <style>
+            iframe {
+                width: 100%;
+                height: 700px;
+                background: #000;
+            }
+        </style>
+	</head>
+	<body>
+		<?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/header.php"); ?>
+		<div class="wrapper">
+			<div class="mainBox">
+				<div class="contents">
                     <!-- パンくずリスト&最終更新日 -->
                     <div class="top-label">
                         <div class="item-left">
@@ -33,17 +39,18 @@ $DESCRIPTION = "DeadByDaylightをマイクラで遊べるようにした企画�
                                     <meta itemprop="position" content="1" />
                                 </li>
 
-                                <li itemprop="itemListElement" itemscope
-                                    itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/game/">
-                                        <span itemprop="name">ミニゲーム企画</span>
-                                    </a>
-                                    <meta itemprop="position" content="2" />
-                                </li>
 
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/game/dbd">
+                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/api/">
+                                        <span itemprop="name">API</span>
+                                    </a>
+                                    <meta itemprop="position" content="2" />
+                                </li>
+                                
+                                <li itemprop="itemListElement" itemscope
+                                    itemtype="https://schema.org/ListItem">
+                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/api/comment">
                                         <span itemprop="name"><?php echo $TITLE; ?></span>
                                     </a>
                                     <meta itemprop="position" content="3" />
@@ -61,42 +68,13 @@ $DESCRIPTION = "DeadByDaylightをマイクラで遊べるようにした企画�
                     </div>
                     <!-- パンくずリスト&最終更新日 -->
 
-                    <h1 class="design">DeadbyDaylight in MC</h1>
-
-                    <div class="flex-box2">
-
-                        <div class="sub-box">
-                            <h2>ルール</h2>
-                            <p>DeadbyDaylightがマイクラで遊べるミニゲーム企画。</p>
-                            <p></code>/report ＜テキスト＞</code>で運営にメッセージを送信。</code>/global ＜テキスト＞</code>でチーム関係なくメッセージを送信。</code>/oni</code>で青鬼抽選期間中なら青鬼抽選に参加/離脱。</p>
-                        </div>
-
-                        <div class="radius-box">
-                            <h2>企画詳細</h2>
-
-                            <h3>現在中止中</h3>
-                            <p>バグ発生のため</p><hr />
-                            <h3>ゲーム時間</h3>
-                            <p>10分</p><hr />
-                            <h3>最低参加人数</h3>
-                            <p>4人</p><hr />
-                            <h3>バージョン</h3>
-                            <p>1.12.2</p><hr />
-                            <h3>カテゴリ</h3>
-                            <span class="category">鬼ごっこ</span>
-                            <hr />
-                            <h3>テクスチャ</h3>
-                            <p><a href="<?php echo $conf['tex']['dbd']; ?>" download>ダウンロード</a></p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-
-            <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/footer.php"); ?>
-        </div>
-    </body>
-    <?php echo $html["common_foot"]; ?>
+					<!-- ↓↓↓↓↓ ここから本文 ↓↓↓↓↓ -->
+					<h1 class="design">配信コメント</h1>
+                    <iframe src="https://chat.restream.io/embed?token=1079227b-6d9b-4563-a39f-2a79f4d9ad0b" scrolling="no" frameborder="no" width="100%" height="600px"></iframe>
+				</div>
+			</div>
+			<?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/footer.php"); ?>
+		</div>
+		<?php echo $html["common_foot"]; ?>
+	</body>
 </html>

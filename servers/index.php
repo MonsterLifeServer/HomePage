@@ -22,35 +22,46 @@ $DESCRIPTION = " ";
             
             <div class="mainBox">
                 <div class="contents">
-                    <p class="fileupdate right">最終更新日時:<?php echo date('Y/m/d H時i分', filemtime(basename(__FILE__))); ?></p>
-                    <!-- パンくずリスト -->
-                    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-                        <li itemprop="itemListElement" itemscope
-                            itemtype="https://schema.org/ListItem">
-                            <a itemprop="item" href="<?php echo $conf["url"]; ?>/">
-                                <span itemprop="name">ホーム</span>
-                            </a>
-                            <meta itemprop="position" content="1" />
-                        </li>
+                    <!-- パンくずリスト&最終更新日 -->
+                    <div class="top-label">
+                        <div class="item-left">
+                            <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+                                <li itemprop="itemListElement" itemscope
+                                    itemtype="https://schema.org/ListItem">
+                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/">
+                                        <span itemprop="name">ホーム</span>
+                                    </a>
+                                    <meta itemprop="position" content="1" />
+                                </li>
 
-                        <li itemprop="itemListElement" itemscope
-                            itemtype="https://schema.org/ListItem">
-                            <a itemprop="item" href="<?php echo $conf["url"]; ?>/servers/">
-                                <span itemprop="name"><?php echo $TITLE; ?></span>
-                            </a>
-                            <meta itemprop="position" content="2" />
-                        </li>
-                    </ol>
-                    <!-- パンくずリスト -->
+                                <li itemprop="itemListElement" itemscope
+                                    itemtype="https://schema.org/ListItem">
+                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/servers/">
+                                        <span itemprop="name"><?php echo $TITLE; ?></span>
+                                    </a>
+                                    <meta itemprop="position" content="2" />
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="item-right">
+                            <p class="fileupdate right"><span class="title">最終更新日時: </span>
+                            <?php
+                                $filetime = filemtime(basename(__FILE__));
+                                echo '<span class="date">'.date('Y/m/d ', $filetime).'</span>';
+                                echo '<span class="time">'.date('H時i分', $filetime).'</span>'; 
+                            ?></p>
+                        </div>
+                    </div>
+                    <!-- パンくずリスト&最終更新日 -->
                     <p>次のアップデートまで:<span id="elapsedTime"></span></p>
                     <div class="status-box">
                         <div class="status first" id="bungee">
                             <div class="left">
-                                <p class="server-name"><a href="<?php echo $conf["url"]; ?>/servers/">中継サーバー (BungeeCord)</a><span></span></p>
+                                <p class="server-name"><a href="<?php echo $conf["url"]; ?>/servers/">入口サーバー (BungeeCord)</a><span></span></p>
                                 <p class="description">このサーバーが落ちているときはサーバーにアクセスできません。</p>
                             </div>
                             <div class="right"><img src="https://i.gyazo.com/b25eb582f5dd767853c60103201b8f63.gif" width="24px"></div>
-                        </div>
+                        </div><!--
                         <div class="status" id="lobby">
                             <div class="left">
                                 <p class="server-name"><a href="<?php echo $conf["url"]; ?>/servers/lobby">ロビーサーバー</a><span></span></p>
@@ -71,7 +82,7 @@ $DESCRIPTION = " ";
                                 <p class="description">あらゆるミニゲーム企画を開催するときに利用しているサーバーです。</p>
                             </div>
                             <div class="right"><img src="https://i.gyazo.com/b25eb582f5dd767853c60103201b8f63.gif" width="24px"></div>
-                        </div>
+                        </div>-->
                         <div class="status last" id="web">
                             <div class="left">
                                 <p class="server-name"><a href="<?php echo $conf["url"]; ?>/">ウェブサーバー</a></p>
@@ -129,10 +140,10 @@ $DESCRIPTION = " ";
 		}
 
         function updateAllStatus() {
-            updateStatus("play.mlserver.xyz", "bungee");
-            updateStatus("jp.mlserver.xyz:25566", "lobby");
-            updateStatus("jp.mlserver.xyz:25566", "survival");
-            updateStatus("jp.mlserver.xyz:25564", "minigame");
+            updateStatus("play.mlserver.xyz:2408", "bungee");
+            //updateStatus("jp.mlserver.xyz:25566", "lobby");
+            //updateStatus("jp.mlserver.xyz:25566", "survival");
+            //updateStatus("jp.mlserver.xyz:25564", "minigame");
             updateStatus("www.mlserver.xyz", "web");
         }
     </script>

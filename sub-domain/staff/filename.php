@@ -2,7 +2,7 @@
 
 $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
 
-$TITLE = "動画ファイル雛形 | MonsterLifeServer";
+$TITLE = "動画ファイル雛形";
 $URL = $conf["url"] . '/';
 $DESCRIPTION = "テンプレート。テンプレート。テンプレート。";
 
@@ -13,7 +13,7 @@ $DESCRIPTION = "テンプレート。テンプレート。テンプレート。"
         <?php echo $html["common_head"]; ?>
 		<title><?php echo $TITLE; ?></title>
 		<meta property="og:url" content="<?php echo $URL; ?>/" />
-		<meta property="og:title" content="<?php echo $TITLE; ?>" />
+		<meta property="og:title" content="<?php echo $TITLE; ?> | MonsterLifeServer" />
 		<meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
 		<link rel="stylesheet" href="<?php echo $conf["url"]; ?>/assets/css/carousel.min.css" type="text/css">
 		<script type="text/javascript" src="<?php echo $conf["url"]; ?>/assets/js/rss_reader.js"></script>
@@ -36,7 +36,7 @@ $DESCRIPTION = "テンプレート。テンプレート。テンプレート。"
                         <li itemprop="itemListElement" itemscope
                             itemtype="https://schema.org/ListItem">
                             <a itemprop="item" href="https://staff.mlserver.xyz/filename">
-                                <span itemprop="name">動画ファイル雛形</span>
+                                <span itemprop="name"><?php echo $TITLE; ?></span>
                             </a>
                             <meta itemprop="position" content="2" />
                         </li>

@@ -2,7 +2,7 @@
 
 $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
 
-$TITLE = "コロナウイルスの県ごとの情報 | MonsterLifeServer";
+$TITLE = "コロナウイルスの県ごとの情報";
 $URL = $conf["url"] . '/api/covid';
 $DESCRIPTION = "コロナウイルスの県ごとの情報";
 
@@ -13,7 +13,7 @@ $DESCRIPTION = "コロナウイルスの県ごとの情報";
         <?php echo $html["common_head"]; ?>
 		<title><?php echo $TITLE; ?></title>
 		<meta property="og:url" content="<?php echo $URL; ?>/" />
-		<meta property="og:title" content="<?php echo $TITLE; ?>" />
+		<meta property="og:title" content="<?php echo $TITLE; ?> | MonsterLifeServer" />
 		<meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
         <style>
             table.covid {
@@ -30,34 +30,46 @@ $DESCRIPTION = "コロナウイルスの県ごとの情報";
         <div class="wrapper">
             <div class="mainBox">
                 <div class="contents">
-                <p class="fileupdate right">最終更新日時:<?php echo date('Y/m/d H:i:s', filemtime(basename(__FILE__))); ?></p>
-                    <!-- パンくずリスト -->
-                    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-                        <li itemprop="itemListElement" itemscope
-                            itemtype="https://schema.org/ListItem">
-                            <a itemprop="item" href="<?php echo $conf["url"]; ?>/">
-                                <span itemprop="name">ホーム</span>
-                            </a>
-                            <meta itemprop="position" content="1" />
-                        </li>
+                    <!-- パンくずリスト&最終更新日 -->
+                    <div class="top-label">
+                        <div class="item-left">
+                            <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+                                <li itemprop="itemListElement" itemscope
+                                    itemtype="https://schema.org/ListItem">
+                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/">
+                                        <span itemprop="name">ホーム</span>
+                                    </a>
+                                    <meta itemprop="position" content="1" />
+                                </li>
 
-						<li itemprop="itemListElement" itemscope
-							itemtype="https://schema.org/ListItem">
-							<a itemprop="item" href="<?php echo $conf["url"]; ?>/api/">
-								<span itemprop="name">API</span>
-							</a>
-							<meta itemprop="position" content="2" />
-                        </li>
 
-                        <li itemprop="itemListElement" itemscope
-                            itemtype="https://schema.org/ListItem">
-                            <a itemprop="item" href="<?php echo $conf["url"]; ?>/api/covid">
-                                <span itemprop="name">コロナウイルスの県ごとの情報</span>
-                            </a>
-                            <meta itemprop="position" content="3" />
-                        </li>
-                    </ol>
-                    <!-- パンくずリスト -->
+                                <li itemprop="itemListElement" itemscope
+                                    itemtype="https://schema.org/ListItem">
+                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/api/">
+                                        <span itemprop="name">API</span>
+                                    </a>
+                                    <meta itemprop="position" content="2" />
+                                </li>
+                                
+                                <li itemprop="itemListElement" itemscope
+                                    itemtype="https://schema.org/ListItem">
+                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/api/covid">
+                                        <span itemprop="name"><?php echo $TITLE; ?></span>
+                                    </a>
+                                    <meta itemprop="position" content="3" />
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="item-right">
+                            <p class="fileupdate right"><span class="title">最終更新日時: </span>
+                            <?php
+                                $filetime = filemtime(basename(__FILE__));
+                                echo '<span class="date">'.date('Y/m/d ', $filetime).'</span>';
+                                echo '<span class="time">'.date('H時i分', $filetime).'</span>'; 
+                            ?></p>
+                        </div>
+                    </div>
+                    <!-- パンくずリスト&最終更新日 -->
                     <table class="covid">
                         <tr><th>都道府県</th><th>発生件数</th><th>死者数</th><th>PCR件数</th></tr>
                         <?php
