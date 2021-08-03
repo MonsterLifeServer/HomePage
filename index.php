@@ -120,7 +120,7 @@ $images = [
 							if ($_i === 3) { break; }
 					?>
 					<a href="<?php echo $data->link; ?>" <?php  
-							if (strpos($data->link,'mlserver.php.xdomain.jp') === false || strpos($data->link,'www.mlserver.xyz') === false) {
+							if (strpos($data->link,'www.mlserver.xyz') === false) {
 								echo 'target="_blank"';
 							}
 					?> class="news-ca"><div class="card"><div class="textbox"><div class="date">

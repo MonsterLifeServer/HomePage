@@ -73,6 +73,8 @@
         </div>
     </div>
 </header>
+<!-- 将来 -->
+<!-- 
 <?php 
     if (strpos($_SERVER["HTTP_HOST"], "sub-join") === false) {
         $month = date('m') . '月';
@@ -95,6 +97,7 @@
         }
     }
 ?>
+ -->
 <div class="overlay"></div>
 <!-- 以下，緊急お知らせ用BOX -->
 <?php 
