@@ -10,8 +10,8 @@ $DESCRIPTION = "テンプレート。テンプレート。テンプレート。"
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
 	<head>
+        <title><?php echo $TITLE; ?> | MonsterLifeServer</title>
         <?php echo $html["common_head"]; ?>
-		<title><?php echo $TITLE; ?> | MonsterLifeServer</title>
 		<meta property="og:url" content="<?php echo $URL; ?>/" />
 		<meta property="og:title" content="<?php echo $TITLE; ?>" />
 		<meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />

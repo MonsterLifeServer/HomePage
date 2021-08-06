@@ -1,0 +1,30 @@
+body {
+    background-color: #757575;
+}
+
+.box {
+    width: 100%;
+    height: 600px;
+    background-color: #79BD9A;
+    margin-bottom: 50px;
+}
+
+.top {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: url("https://media.discordapp.net/attachments/558249058897231872/723153391353593947/2020-06-18_21.32.15.png") center / cover;
+}
+
+.top h1 {
+    margin: 0;
+    position: absolute;
+    top: calc(50% - 0.5em);
+    width: 100%;
+    text-align: center;
+    line-height: 1;
+    font-size: 8vw;
+    font-family: "Montserrat", sans-serif;
+    text-shadow: 10px 10px 0 rgb(255, 177, 177);
+    color: rgb(255, 0, 0);
+}
