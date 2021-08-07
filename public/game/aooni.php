@@ -76,7 +76,17 @@ $DESCRIPTION = "フリーゲーム「青鬼」をマイクラで遊べるよう�
 									<p>青鬼側と逃側のチャットは分かれているため，敵チーム所属プレイヤーにどうしても伝えたいことがある場合はコマンドを利用する必要があります。</p>
 									<p></code>/report ＜テキスト＞</code>で運営にメッセージを送信。</code>/global ＜テキスト＞</code>でチーム関係なくメッセージを送信。</code>/oni</code>で青鬼抽選期間中なら青鬼抽選に参加/離脱。</p>
 									<p>逃側には役職があり，それぞれの役職によって脱出の力になる能力があります。</p>
-									<iframe width="100%" height="150px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTxtRyHPWH3r8O3ER-L6pkZHPNfmksUkmzklCqEsJFbgMgTDhgxERrgebofefJvq0rmsngQsSnvltGV/pubhtml?gid=304694679&range=A1:F7&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+									<iframe 
+										name="ifrm6" 
+										src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTxtRyHPWH3r8O3ER-L6pkZHPNfmksUkmzklCqEsJFbgMgTDhgxERrgebofefJvq0rmsngQsSnvltGV/pubhtml?gid=304694679&range=A1:F7&amp;single=true&amp;widget=true&amp;headers=false" 
+										width="100" height="100" 
+										scrolling="no" frameborder="0"
+										align="left"
+										marginwidth="10"
+										marginheight="10"
+										style='margin-right:1em;'
+										class='fullframe'>表示されない方は<a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTxtRyHPWH3r8O3ER-L6pkZHPNfmksUkmzklCqEsJFbgMgTDhgxERrgebofefJvq0rmsngQsSnvltGV/pubhtml?gid=304694679&range=A1:F7&amp;single=true&amp;widget=true&amp;headers=false" target="_blank">コチラ</a>
+									</iframe>
 								</div>
 
 								<div class="radius-box">
@@ -116,7 +126,17 @@ $DESCRIPTION = "フリーゲーム「青鬼」をマイクラで遊べるよう�
 									<p>青鬼側と逃側のチャットは分かれているため，敵チーム所属プレイヤーにどうしても伝えたいことがある場合はコマンドを利用する必要があります。</p>
 									<p></code>/report ＜テキスト＞</code>で運営にメッセージを送信。</code>/global ＜テキスト＞</code>でチーム関係なくメッセージを送信。</code>/oni</code>で青鬼抽選期間中なら青鬼抽選に参加/離脱。</p>
 									<p>逃側には役職があり，それぞれの役職によって脱出の力になる能力があります。</p>
-									<iframe width="100%" height="150px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTxtRyHPWH3r8O3ER-L6pkZHPNfmksUkmzklCqEsJFbgMgTDhgxERrgebofefJvq0rmsngQsSnvltGV/pubhtml?gid=304694679&range=A1:F7&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+									<iframe 
+										name="ifrm6" 
+										src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTxtRyHPWH3r8O3ER-L6pkZHPNfmksUkmzklCqEsJFbgMgTDhgxERrgebofefJvq0rmsngQsSnvltGV/pubhtml?gid=304694679&range=A1:F7&amp;single=true&amp;widget=true&amp;headers=false" 
+										width="100" height="100" 
+										scrolling="no" frameborder="0"
+										align="left"
+										marginwidth="10"
+										marginheight="10"
+										style='margin-right:1em;'
+										class='fullframe'>表示されない方は<a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTxtRyHPWH3r8O3ER-L6pkZHPNfmksUkmzklCqEsJFbgMgTDhgxERrgebofefJvq0rmsngQsSnvltGV/pubhtml?gid=304694679&range=A1:F7&amp;single=true&amp;widget=true&amp;headers=false" target="_blank">コチラ</a>
+									</iframe>
 								</div>
 
 								<div class="radius-box">
