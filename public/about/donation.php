@@ -59,8 +59,13 @@ $DESCRIPTION = "MonsterLifeServerの寄付について";
                     <!-- パンくずリスト&最終更新日 -->
                     <h1 class="design">寄付について</h1>
                     <p>
-                        当サーバーでは寄付をしてくれた方に金額に合わせた特典を与えるようにしています。
-
+                        当サーバーは、管理人が個人でありサーバー維持研究のため運営している非営利団体です。そのため、運営のための負担が非常に大きく、金銭面からサーバーが継続が困難になる可能性があります。大変心苦しいのですが、皆様のご協力をよろしくお願い申し上げます。
+                    </p>
+                    <p>
+                        当サーバーでは寄付をしてくれた方に金額に合わせた期間特典を与えるようにしています。
+                    </p>
+                    <p>
+                        特典の内容については、<a href="https://account.mojang.com/terms" target="_blank">Minecraft Terms and Conditions</a>、<a href="https://account.mojang.com/terms#commercial" target="_blank">Commercial usage guidelines</a>に基づき提供されます。
                     </p>
                     <h2 class="design">特典</h2>
                     <div class="plancards">
@@ -72,7 +77,7 @@ $DESCRIPTION = "MonsterLifeServerの寄付について";
                         <p>ロビーなどで空を飛べたり，表示色を変更できたりします。</p>
                     </div>
                     <h2 class="design">通帳</h2>
-                    <p>通帳は<a href="<?php echo $conf["url"]; ?>/about/passbook">コチラ</a>にて確認可能です。</p>
+                    <p>寄付された金額などは当鯖の通帳より確認できます。通帳は<a href="<?php echo $conf["url"]; ?>/about/passbook">コチラ</a>です。</p>
                     <!-- パンくずリスト -->
                 </div>
             </div>
