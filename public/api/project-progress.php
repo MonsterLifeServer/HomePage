@@ -42,7 +42,7 @@ $DESCRIPTION = "作業状況を確認できます。";
                             
                             <li itemprop="itemListElement" itemscope
                                 itemtype="https://schema.org/ListItem">
-                                <a itemprop="item" href="<?php echo $conf["url"]; ?>/api/project">
+                                <a itemprop="item" href="<?php echo $conf["url"]; ?>/api/project-progress">
                                     <span itemprop="name"><?php echo $TITLE; ?></span>
                                 </a>
                                 <meta itemprop="position" content="3" />

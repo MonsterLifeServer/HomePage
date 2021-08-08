@@ -668,30 +668,52 @@ table.cmd {
     }
 }
 
-@media screen and (max-width:750px) {
-    table.cmd {
-        width: 100%;
-        th {
-            width:100%;
-            display:block;
-            background-color: #eee;
+.passbook {
+    width: 100%;
+    background-color: #fff;
+    border: solid 1px #000;
+    border-collapse:collapse;
+    table-layout: fixed;
+    tr {
+        border-bottom: solid 1px #000;
+    }
+    .passbook-total {
+        background: #f4f4f4;
+        font-weight: bold;
+        .title {
+            text-align: left;
+            width: 40px;
         }
-        td {
-            width:100%;
-            display:block;
-            background-color: #fff;
+        .money {
+            text-align: right;
         }
     }
-}
-
-@media screen and (max-width:800px) {
-    .server-about-box {
-        display: block;
-        .server-about {
-            background: #fff;
-            width: 100%;
-            max-width: 770px;
-            margin: 5px 0;
+    .year {
+        border-top: solid 1px #000;
+        font-size: 10px;
+        height: 16px;
+        background: #e8e8e8;
+    }
+    .passbook-label {
+        border-top: solid 1px #000;
+        .date {
+            font-size: 10px;
+            text-align: left;
+            width: 40px;
+        }
+        .description {
+            font-size: 12px;
+            text-align: left;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .money {
+            margin-right: 0;
+            &.minus {
+                color: red;
+            }
+            text-align: right;
         }
     }
 }
@@ -716,14 +738,30 @@ table.cmd {
     }
 }
 
-@media screen and (max-width:300px) {
-    .mask-style {
-        width: 95%;
-    }
-
-    .fileupdate {
-        span {
+@media screen and (max-width:800px) {
+    .server-about-box {
+        display: block;
+        .server-about {
+            background: #fff;
             width: 100%;
+            max-width: 770px;
+            margin: 5px 0;
+        }
+    }
+}
+
+@media screen and (max-width:750px) {
+    table.cmd {
+        width: 100%;
+        th {
+            width:100%;
+            display:block;
+            background-color: #eee;
+        }
+        td {
+            width:100%;
+            display:block;
+            background-color: #fff;
         }
     }
 }
@@ -738,6 +776,39 @@ table.cmd {
         }
         div {
             width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width:300px) {
+    .mask-style {
+        width: 95%;
+    }
+
+    .fileupdate {
+        span {
+            width: 100%;
+        }
+    }
+
+    .passbook .money {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:200px) {
+    .passbook {
+        .title {
+            font-size: 6px;
+        }
+        .money {
+            font-size: 6px;
+        }
+        .date {
+            font-size: 6px;
+        }
+        .description {
+            font-size: 6px;
         }
     }
 }
