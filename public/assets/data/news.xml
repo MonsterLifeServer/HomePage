@@ -13,6 +13,13 @@
         -->
 
         <item>
+            <title>フッターとヘッダーにTwitchのリンクを掲載しました。また、一部のリンクを整理しました。</title>
+            <link>https://www.mlserver.xyz/</link>
+            <date>2021/08/10</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
             <title>トップページの最下部に設置されているブログカードにサムネイルが表示されるようになりました。</title>
             <link>https://www.mlserver.xyz/</link>
             <date>2021/07/28</date>

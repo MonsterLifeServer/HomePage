@@ -55,6 +55,7 @@
                         <li><a href="https://twitter.com/mlserver2408" class="twitter" target="_blank"><i style="color: #1DA1F2;" class="fab fa-twitter"></i> Twitter</a></li>
                         <li><a href="https://discord.gg/gaGB6Mm" class="discord" target="_blank"><i style="font-weight: 100;color: #7289da;" class="fab fa-discord"></i> Discord</a></li>
                         <li><a href="https://www.youtube.com/channel/UCWSz32UUYgAzs_hVqKeqq-Q" class="youtube" target="_blank"><i style="font-weight: 100;color: #c4302b;" class="fab fa-youtube"></i>YouTube</a></li>
+                        <li><a href="https://twitch.mlserver.xyz" class="twitch" target="_blank"><i class="fab fa-twitch" style="font-weight: 100;color: #9d4bff;"></i>Twitch</a></li>
                     </ul>
                 </li>
                 <div class="hamburger-ad">

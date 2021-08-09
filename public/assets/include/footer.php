@@ -5,6 +5,7 @@
             <a href="https://twitter.com/mlserver2408" target="_blank"><i class="fab fa-twitter" style="color: #1DA1F2;"></i></a>
             <a href="https://www.youtube.com/channel/UCWSz32UUYgAzs_hVqKeqq-Q" target="_blank"><i class="fab fa-youtube" style="color: #c4302b;"></i></a>
             <a href="https://discord.gg/gaGB6Mm" target="_blank"><i class="fab fa-discord" style="color: #7289da;"></i></a>
+            <a href="https://twitch.mlserver.xyz" target="_blank"><i class="fab fa-twitch" style="color: #9d4bff;"></i></a>
         </div>
         <p class="foot-menu">
             <a href="<?php echo $conf["url"]; ?>/"> ホーム</a> |

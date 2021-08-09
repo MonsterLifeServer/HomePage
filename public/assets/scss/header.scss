@@ -178,6 +178,9 @@ header {
         &.discord {
             color: #7289da;
         }
+        &.twitch {
+            color: #9d4bff;
+        }
     }
 }
 .menu-btn {
@@ -453,6 +456,18 @@ header {
                             vertical-align: middle;
                             color: #7289da;
                         }
+                        &.twitch i {
+                            background-color: #fff;
+                            font-size: 23px;
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 50%;
+                            text-align: center;
+                            line-height: 32px;
+                            margin: 10px 15px;
+                            vertical-align: middle;
+                            color: #9d4bff;
+                        }
                     }
                 }
             }
@@ -481,6 +496,9 @@ header {
             }
             &.discord {
                 color: #7289da;
+            }
+            &.twitch {
+                color: #9d4bff;
             }
         }
         &.is-active{
