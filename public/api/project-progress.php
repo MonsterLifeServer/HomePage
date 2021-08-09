@@ -1,6 +1,6 @@
 <?php
 
-$config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
+$config = include('./../assets/config.php');
 $TITLE = "作業状況";
 $URL = $conf["url"] . '/api/project-progress';
 $DESCRIPTION = "作業状況を確認できます。";

@@ -8,12 +8,6 @@ $DESCRIPTION = "MonsterLifeServerの通帳";
 
 setlocale(LC_MONETARY, 'ja_JP');
 
-function console_log( $data ){
-    echo '<script>';
-    echo 'console.log('. json_encode( $data ) .')';
-    echo '</script>';
-}
-
 function sortByKey($key_name, $sort_order, $array_temp) {
     foreach ($array_temp as $key => $value) {
         $standard_key_array[$key] = $value[$key_name];

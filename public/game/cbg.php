@@ -1,6 +1,6 @@
 <?php
 
-$config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
+$config = include('./../assets/config.php');
 $TITLE = "コア破壊ゲーム";
 $URL = $conf["url"] . '/game/cbg';
 $DESCRIPTION = "コアを守り抜け！！「コア破壊ゲーム」のルール紹介ページです";

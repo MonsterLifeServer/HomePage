@@ -1,6 +1,6 @@
 <?php
 
-$config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
+$config = include('./../assets/config.php');
 $TITLE = "DeadByDaylight in MC";
 $URL = $conf["url"] . '/game/dbd';
 $DESCRIPTION = "DeadByDaylightをマイクラで遊べるようにした企画「DeadByDaylight in MC」のルール紹介ページです。";

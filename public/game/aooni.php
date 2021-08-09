@@ -1,6 +1,6 @@
 <?php
 
-$config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
+$config = include('./../assets/config.php');
 $TITLE = "青鬼ゲーム";
 $URL = $conf["url"] . '/game/aooni';
 $DESCRIPTION = "フリーゲーム「青鬼」をマイクラで遊べるようにした企画「青鬼ゲーム」のルール紹介ページです。";

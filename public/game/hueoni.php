@@ -1,6 +1,6 @@
 <?php
 
-$config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
+$config = include('./../assets/config.php');
 $TITLE = "増え鬼";
 $URL = $conf["url"] . '/game/hueoni';
 $DESCRIPTION = "企画「増え鬼」のルール紹介ページです。";

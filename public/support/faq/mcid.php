@@ -1,6 +1,6 @@
 <?php
 
-$config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
+$config = include('./../../assets/config.php');
 $TITLE = "MCIDについて";
 $URL = $conf["url"] . '/surpport/faq/mcid';
 $DESCRIPTION = "MonsterLifeServerではマイクラのプレイヤー名のことをMCID（エムシーアイディー）と言います。";

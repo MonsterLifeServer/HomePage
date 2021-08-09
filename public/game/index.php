@@ -1,6 +1,6 @@
 <?php
 
-$config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
+$config = include('./../assets/config.php');
 $TITLE = "ミニゲーム企画一覧";
 $URL = $conf["url"] . '/game/';
 $DESCRIPTION = "MonsterLifeServerの企画一覧ページです。";

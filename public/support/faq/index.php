@@ -1,6 +1,6 @@
 <?php
 
-$config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
+$config = include('./../../assets/config.php');
 $TITLE = "よくある質問";
 $URL = $conf["url"] . '/surpport/faq/';
 $DESCRIPTION = "よく受け付ける質問に対する回答です。";

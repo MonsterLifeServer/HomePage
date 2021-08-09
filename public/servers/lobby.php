@@ -1,6 +1,6 @@
 <?php
 
-$config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
+$config = include('./../assets/config.php');
 $TITLE = "ロビー鯖";
 $URL = $conf["url"] . '/servers/lobby';
 $DESCRIPTION = "ロビーサーバーについて";

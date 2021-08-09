@@ -1,6 +1,6 @@
 <?php
 
-$config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
+$config = include('./../assets/config.php');
 $TITLE = "API一覧";
 $URL = $conf["url"] . '/api/';
 $DESCRIPTION = " ";

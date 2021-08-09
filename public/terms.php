@@ -1,6 +1,6 @@
 <?php
 
-$config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
+$config = include('./assets/config.php');
 $TITLE = "利用規約・ガイドライン";
 $URL = $conf["url"] . '/terms';
 $DESCRIPTION = "ルールとマナーを守って遊びましょう！！";

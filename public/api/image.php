@@ -1,6 +1,6 @@
 <?php
 
-$config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
+$config = include('./../assets/config.php');
 $TITLE = "ImageAPI";
 $URL = $conf["url"] . '/api/image';
 $DESCRIPTION = "Gyazoの画像を表示します";

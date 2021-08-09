@@ -1,6 +1,6 @@
 <?php
 
-$config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
+$config = include('./../assets/config.php');
 $TITLE = "新着情報";
 $URL = $conf["url"] . '/about/news';
 $DESCRIPTION = "新着情報が見れます。";

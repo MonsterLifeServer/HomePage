@@ -1,6 +1,6 @@
 <?php
 
-$config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
+$config = include('./../assets/config.php');
 $TITLE = "逃走中";
 $URL = $conf["url"] . '/game/toso';
 $DESCRIPTION = "逃走中をマイクラで遊べるようにした企画「逃走中」のルール紹介ページです。";

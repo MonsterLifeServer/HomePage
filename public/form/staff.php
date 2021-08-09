@@ -1,7 +1,7 @@
 <?php
 	//処理内容を定義
 
-    $config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
+    $config = include('./../assets/config.php');
     //処理内容を定義
 
     // 変数の初期化

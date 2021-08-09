@@ -1,6 +1,6 @@
 <?php
 
-$config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
+$config = include('./../assets/config.php');
 $TITLE = "寄付について";
 $URL = $conf["url"] . '/about/donation';
 $DESCRIPTION = "MonsterLifeServerの寄付について";

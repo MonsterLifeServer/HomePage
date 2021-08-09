@@ -1,6 +1,6 @@
 <?php
 
-$config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
+$config = include('./../assets/config.php');
 $TITLE = "サーバー資料";
 $URL = $conf["url"] . '/api/pdf';
 $DESCRIPTION = "過去の運営会議やその他資料を公開しています。";

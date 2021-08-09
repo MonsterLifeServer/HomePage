@@ -1,6 +1,6 @@
 <?php
 
-$config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
+$config = include('./../assets/config.php');
 $TITLE = "ミニゲーム企画鯖";
 $URL = $conf["url"] . '/servers/event';
 $DESCRIPTION = "ミニゲーム企画を開催するサーバーについて";

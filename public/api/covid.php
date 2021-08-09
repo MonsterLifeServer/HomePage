@@ -1,6 +1,6 @@
 <?php
 
-$config = include($_SERVER["DOCUMENT_ROOT"] . '/assets/config.php');
+$config = include('./../assets/config.php');
 
 $TITLE = "コロナウイルスの県ごとの情報";
 $URL = $conf["url"] . '/api/covid';
