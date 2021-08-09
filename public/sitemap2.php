@@ -31,6 +31,7 @@ $DESCRIPTION = "MonsterLifeServerのあらゆるリンクを確認できます�
                             <li><a href="<?php echo $conf["url"]; ?>/about/donation">寄付について</a></li>
                             <li><a href="<?php echo $conf["url"]; ?>/about/passbook">通帳</a></li>
                             <li><a href="<?php echo $conf["url"]; ?>/about/news">ニュース</a></li>
+                            <li><a href="<?php echo $conf["url"]; ?>/blog/">ブログ</a></li>
                         </ul>
                     </li>
                     <li><a href="<?php echo $conf["url"]; ?>/game/">ミニゲーム企画</a>
