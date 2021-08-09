@@ -91,7 +91,10 @@ if (isset($_GET["sort"]) && intval($_GET["sort"])) {
                                     if ($temp == 0) {
                                         $total = $item["5"];
                                     } else if ($temp > 1) {
-                                        array_push($array, $item);
+                                        $size = strlen($item[0]) + strlen($item[1]) + strlen($item[2])+strlen($item[3])+strlen($item[4])+strlen($item[5]);
+                                        if ($size > 0) {
+                                            array_push($array, $item);
+                                        }
                                     }
                                     $temp .= 1;
                                 }

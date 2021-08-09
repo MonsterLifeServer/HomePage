@@ -12,10 +12,7 @@
             <a href="<?php echo $conf["url"]; ?>/terms"> 利用規約・ガイドライン</a> |
             <a href="<?php 
                 echo (empty($_SERVER["HTTPS"]) ? "http://" : "https://") . $_SERVER["HTTP_HOST"] . "/privacy_policy";
-            ?>"> プライバシーポリシー</a> |
-            <a href="<?php echo $conf["url"]; ?>/form/"> お問い合わせ窓口</a> |
-            <a href="<?php echo $conf["url"]; ?>/blog/"> ブログ</a> |
-            <a href="<?php echo $conf["url"]; ?>/about/news"> ニュース</a> 
+            ?>"> プライバシーポリシー</a>
         </p><br/>
     </div>
     <div class="footer-center" style="border-top: 1px solid #000; margin-top: 10px; padding-top: 20px;">

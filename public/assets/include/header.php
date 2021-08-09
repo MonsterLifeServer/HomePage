@@ -25,7 +25,6 @@
                     <a class="js-menu__item__link" href="<?php echo $conf["url"]; ?>/#about">About</a>
                     <ul class="submenu">
                         <li><a href="<?php echo $conf["url"]; ?>/about/admins">運営</a></li>
-                        <li><a href="<?php echo $conf["url"]; ?>/terms">利用規約 ガイドライン</a></li>
                         <li><a href="<?php echo $conf["url"]; ?>/about/donation">寄付について</a></li>
                         <li><a href="<?php echo $conf["url"]; ?>/about/news">ニュース</a></li>
                         <li><a href="<?php echo $conf["url"]; ?>/api/project-progress">プロジェクト進捗</a></li>
