@@ -14,12 +14,6 @@ $DESCRIPTION = "MonsterLifeServerの寄付について";
 		<meta property="og:url" content="<?php echo $URL; ?>/" />
 		<meta property="og:title" content="<?php echo $TITLE; ?> | MonsterLifeServer" />
 		<meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
-        <style>
-        iframe {
-            height:500px;
-            width:100%;
-        }
-        </style>
     </head>
     <body>
         <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/header.php"); ?>
@@ -66,6 +60,27 @@ $DESCRIPTION = "MonsterLifeServerの寄付について";
                     </p>
                     <p>
                         特典の内容については、<a href="https://account.mojang.com/terms" target="_blank">Minecraft Terms and Conditions</a>、<a href="https://account.mojang.com/terms#commercial" target="_blank">Commercial usage guidelines</a>に基づき提供されます。
+                    </p>
+                    <h2 class="design">方法</h2>
+                    <h3>Kyash</h3>
+                    <p>
+                        以下のQRコードあてに送金してください。送金時にメッセージなどでMinecraftIDを記入していると迅速に対応可能です。
+                    </p>
+                    <img width="90px" src="<?php echo $conf["url"]; ?>/assets/img/web/kyash.png"></img>
+                    <h3>Amazonギフト券</h3>
+                    <p>
+                        DiscordのDMで運営である Monster2408#8936 にコードを送ってください。その際にMinecraftIDを記入していると迅速に対応可能です。
+                    </p>
+                    <h3>口座振り込み</h3>
+                    <p>銀行名：ゆうちょ銀行</p>
+                    <p>金融機関コード：9900</p>
+                    <p>店番：328</p>
+                    <p>預金種目：普通(または貯蓄)</p>
+                    <p>店名：四三八店(ヨンサンハチ店)</p>
+                    <p>口座番号：8956513</p>
+                    <h3>クレジットカード決済</h3>
+                    <p>
+                        現在準備中です。
                     </p>
                     <h2 class="design">特典</h2>
                     <div class="plancards">
