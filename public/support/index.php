@@ -2,7 +2,7 @@
 
 $config = include('./../assets/config.php');
 $TITLE = "サポート";
-$URL = $conf["url"] . '/surpport/';
+$URL = $conf["url"] . '/support/';
 $DESCRIPTION = " ";
 
 ?>
@@ -55,7 +55,7 @@ $DESCRIPTION = " ";
                     <h2 class="design">FAQ</h2>
                     <p>よくある質問を掲載しています。アクセスは<a href="<?php echo $conf["url"]; ?>/support/faq">コチラ</a>からどうぞ。</p>
                     <h2 class="design">お問い合わせ</h2>
-                    <p>バグ報告やサポートを受けたい方は<a href="<?php echo $conf["url"]; ?>/form">コチラ</a>から受けることができます。また，<a href="https://discord.gg/gaGB6Mm">Discordグループ</a>からもお問い合わせすることができ，返信が早い場合がございます。</p>
+                    <p>バグ報告やサポートを受けたい方は<a href="<?php echo $conf["url"]; ?>/support/form">コチラ</a>から受けることができます。また，<a href="https://discord.gg/gaGB6Mm">Discordグループ</a>からもお問い合わせすることができ，返信が早い場合がございます。</p>
                 </div>
             </div>
         </div>

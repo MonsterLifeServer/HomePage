@@ -1,5 +1,11 @@
 .sitemap ul {
     list-style: none;
+    a {
+        color: #4f4f4f;
+    }
+    span {
+        color: #4f4f4f;
+    }
     li ul {
         margin-top: .5em;
         margin-bottom: .75em;
@@ -14,7 +20,7 @@
                 left: -16px;
                 width: 10px;
                 height: calc(100% + .75em);
-                border-left: 1px solid #3972b2;
+                border-left: 1px solid #8d8d8d;
             }
             &:last-child::before {
                 height: calc(1em + .25em);
@@ -25,7 +31,7 @@
                 top: .75em;
                 left: -16px;
                 width: 10px;
-                border-bottom: 1px solid #3972b2;
+                border-bottom: 1px solid #8d8d8d;
             }
         }
     }

@@ -98,10 +98,18 @@
 
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/form">
-                                        <span itemprop="name"><?php echo $TITLE; ?></span>
+                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/support/">
+                                        <span itemprop="name">サポート</span>
                                     </a>
                                     <meta itemprop="position" content="2" />
+                                </li>
+
+                                <li itemprop="itemListElement" itemscope
+                                    itemtype="https://schema.org/ListItem">
+                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/support/form">
+                                        <span itemprop="name"><?php echo $TITLE; ?></span>
+                                    </a>
+                                    <meta itemprop="position" content="3" />
                                 </li>
                             </ol>
                         </div>

@@ -56,22 +56,16 @@ $DESCRIPTION = "MonsterLifeServerのあらゆるリンクを確認できます�
                     
                     <div class="sitemap">
                         <ul>
-                        <li><a href="<?php echo $conf["url"]; ?>">ホーム</a>
+                            <li><a href="<?php echo $conf["url"]; ?>">ホーム</a>
                                 <ul>
                                     <li><a href="<?php echo $conf["url"]; ?>/terms">利用規約・ガイドライン</a></li>
                                     <li><a href="<?php echo $conf["url"]; ?>/terms">プライバシーポリシー</a></li>
-                                    <li>About
+                                    <li><a href="<?php echo $conf["url"]; ?>/#about">About</a>
                                         <ul>
-                                            <li><a href="<?php echo $conf["url"]; ?>/about/asmins">運営一覧</a></li>
+                                            <li><a href="<?php echo $conf["url"]; ?>/about/admins">運営一覧</a></li>
                                             <li><a href="<?php echo $conf["url"]; ?>/about/donation">寄付について</a></li>
                                             <li><a href="<?php echo $conf["url"]; ?>/about/passbook">通帳</a></li>
                                             <li><a href="<?php echo $conf["url"]; ?>/about/news">ニュース</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">○○○○○</a>
-                                        <ul>
-                                            <li><a href="#">○○○○○</a></li>
-                                            <li><a href="#">○○○○○</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="<?php echo $conf["url"]; ?>/game/">ミニゲーム企画</a>
@@ -88,10 +82,30 @@ $DESCRIPTION = "MonsterLifeServerのあらゆるリンクを確認できます�
                                             <li><a href="<?php echo $conf["url"]; ?>/game/hueoni">増え鬼ごっこ</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="<?php echo $conf["url"]; ?>/surpport">○○○○○</a>
+                                    <li><a href="<?php echo $conf["url"]; ?>/support/">サポート</a>
                                         <ul>
-                                            <li><a href="#">○○○○○</a></li>
-                                            <li><a href="#">○○○○○</a></li>
+                                            <li><a href="<?php echo $conf["url"]; ?>/support/faq/">よくある質問</a>
+                                                <ul>
+                                                    <li><a href="<?php echo $conf["url"]; ?>/support/faq/mcid">MCIDについて</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><span>Contact</span>
+                                        <ul>
+                                            <li><a href="<?php echo $conf["url"]; ?>/support/form/">問い合わせフォーム</a></li>
+                                            <li><a href="<?php echo $conf["url"]; ?>/support/form/staff">スタッフ応募フォーム</a></li>
+                                            <li><a href="twitter.mlserver.xyz">Twitter</a></li>
+                                            <li><a href="discord.mlserver.xyz">Discord</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="<?php echo $conf["url"]; ?>/api/">API</a>
+                                        <ul>
+                                            <li><a href="<?php echo $conf["url"]; ?>/api/image">画像のやつ</a></li>
+                                            <li><a href="<?php echo $conf["url"]; ?>/api/pdf">サーバー資料</a></li>
+                                            <li><a href="<?php echo $conf["url"]; ?>/api/project-progress">プロジェクト進捗</a></li>
+                                            <li><a href="<?php echo $conf["url"]; ?>/api/comment">コメント</a></li>
+                                            <li><a href="<?php echo $conf["url"]; ?>/api/covid">コロナ情報</a></li>
                                         </ul>
                                     </li>
                                 </ul>
