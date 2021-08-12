@@ -9,7 +9,7 @@ date_default_timezone_set('Asia/Tokyo');
 
 $now = new DateTime();
 
-$res = file_get_contents('./../assets/data/status.json');
+$res = file_get_contents('./../assets/dont-touch-area/status.json');
 $json = mb_convert_encoding($res, 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
 $arr = json_decode($json,true);
 
@@ -65,7 +65,7 @@ if ($temp > 4) {
         $result->close();
     }
 }
-$json = fopen('./../assets/data/status.json', 'w+b');
+$json = fopen('./../assets/dont-touch-area/status.json', 'w+b');
 fwrite($json, json_encode($array, JSON_UNESCAPED_UNICODE));
 fclose($json);
 
@@ -163,6 +163,12 @@ fclose($json);
         </div>
     </body>
     <?php echo $html["common_foot"]; ?>
+    <?php 
+
+        console_log($json2);
+
+
+    ?>
     <script>
         function updateStatus(ip, id) {
             setTimeout(function() {
@@ -218,7 +224,6 @@ fclose($json);
 		}
 
         function updateAllStatus() {
-            updateStatus("play.mlserver.xyz:2408", "bungee");
             <?php 
                 foreach ($array as $item) {
                     $id = strtolower(explode(" ",$item["res"]["name"])[0]);
@@ -227,10 +232,14 @@ fclose($json);
                     $max_player = $item["res"]["max_player"];
                     echo 'updateStatusJson("'.$id.'",'.$status.','.$player.','.$max_player.');'."\n";
                 }
+                $res2 = file_get_contents("https://api.mcsrvstat.us/2/".$conf["ip"]);
+                $json2 = json_decode($res2);
+                $id = "bungee";
+                $status = $json2->online;
+                $player = $json2->players->online;
+                $max_player = $json2->players->max;
+                echo 'updateStatusJson("'.$id.'",'.$status.','.$player.','.$max_player.');'."\n";
             ?>
-            //updateStatus("jp.mlserver.xyz:25566", "lobby");
-            //updateStatus("jp.mlserver.xyz:25566", "skyblock");
-            //updateStatus("jp.mlserver.xyz:25564", "minigame");
             updateStatus("www.mlserver.xyz", "web");
         }
     </script>

@@ -73,9 +73,26 @@ $DESCRIPTION = "MonsterLifeServerの企画一覧ページです。";
                     </div>
                     <!-- パンくずリスト&最終更新日 -->
 
-                    <a href="<?php echo $conf["url"]; ?>/game/aooni">青鬼ゲーム</a>
-                    <a href="<?php echo $conf["url"]; ?>/game/online">青鬼ONLINE in MC</a>
-                    <a href="<?php echo $conf["url"]; ?>/game/hueoni">増え鬼</a>
+                    <div class="game_box">
+                        <a href="<?php echo $conf["url"]; ?>/game/aooni"><h4>青鬼ゲーム</h4></a>
+                        <p>minecraft game</p>
+                        <span class="update"><?php echo date('Y/m/d H時i分', filemtime(basename("./aooni.php"))); ?></span>
+                        <span class="fun_level"></span>
+                    </div>
+
+                    <div class="game_box">
+                        <a href="<?php echo $conf["url"]; ?>/game/online"><h4>青鬼ONLINE in MC</h4></a>
+                        <p>minecraft game</p>
+                        <span class="update"><?php echo date('Y/m/d H時i分', filemtime(basename("./aooni.php"))); ?></span>
+                        <span class="fun_level"></span>
+                    </div>
+
+                    <div class="game_box">
+                        <a href="<?php echo $conf["url"]; ?>/game/hueoni"><h4>増え鬼</h4></a>
+                        <p>minecraft game</p>
+                        <span class="update"><?php echo date('Y/m/d H時i分', filemtime(basename("./aooni.php"))); ?></span>
+                        <span class="fun_level"></span>
+                    </div>
 
                 </div>
             </div>

@@ -721,6 +721,25 @@ table.cmd {
     }
 }
 
+.game_box {
+
+    height: auto;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    border: solid 1px #000;
+
+    &:hover {
+        background-color: rgb(230, 230, 230);
+    }
+    a {
+        display: block;
+        height: 100%;
+        text-decoration: none;
+    }
+}
+
 @media screen and (max-width:1000px) {
     .mainBox {
         max-width: 100%;
