@@ -50,8 +50,8 @@
                     <a class="js-menu__item__link" href="<?php echo $conf["url"]; ?>/form/">Contact</a>
                     <ul class="submenu">
                         <li><a href="<?php echo $conf["url"]; ?>/support/faq">よくある質問</a></li>
-                        <li><a href="<?php echo $conf["url"]; ?>/form/">問い合わせ</a></li>
-                        <li><a href="<?php echo $conf["url"]; ?>/form/staff">役職応募</a></li>
+                        <li><a href="<?php echo $conf["url"]; ?>/support/form/">問い合わせ</a></li>
+                        <li><a href="<?php echo $conf["url"]; ?>/support/form/staff">役職応募</a></li>
                         <li><a href="https://twitter.com/mlserver2408" class="twitter" target="_blank"><i style="color: #1DA1F2;" class="fab fa-twitter"></i> Twitter</a></li>
                         <li><a href="https://discord.gg/gaGB6Mm" class="discord" target="_blank"><i style="font-weight: 100;color: #7289da;" class="fab fa-discord"></i> Discord</a></li>
                         <li><a href="https://www.youtube.com/channel/UCWSz32UUYgAzs_hVqKeqq-Q" class="youtube" target="_blank"><i style="font-weight: 100;color: #c4302b;" class="fab fa-youtube"></i>YouTube</a></li>
