@@ -20,27 +20,6 @@ $DESCRIPTION = "MonsterLifeServerの企画一覧ページです。";
         <div class="wrapper">
             <div class="mainBox">
                 <div class="contents">
-                    <p class="fileupdate right">最終更新日時:<?php echo date('Y/m/d H時i分', filemtime(basename(__FILE__))); ?></p>
-                    <!-- パンくずリスト -->
-                    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-                        <li itemprop="itemListElement" itemscope
-                            itemtype="https://schema.org/ListItem">
-                            <a itemprop="item" href="<?php echo $conf["url"]; ?>/">
-                                <span itemprop="name">ホーム</span>
-                            </a>
-                            <meta itemprop="position" content="1" />
-                        </li>
-
-                        <li itemprop="itemListElement" itemscope
-                            itemtype="https://schema.org/ListItem">
-                            <a itemprop="item" href="<?php echo $conf["url"]; ?>/game/">
-                                <span itemprop="name"><?php echo $TITLE; ?></span>
-                            </a>
-                            <meta itemprop="position" content="2" />
-                        </li>
-                    </ol>
-                    <!-- パンくずリスト -->
-
                     <!-- パンくずリスト&最終更新日 -->
                     <div class="top-label">
                         <div class="item-left">
@@ -74,24 +53,30 @@ $DESCRIPTION = "MonsterLifeServerの企画一覧ページです。";
                     <!-- パンくずリスト&最終更新日 -->
 
                     <div class="game_box">
-                        <a href="<?php echo $conf["url"]; ?>/game/aooni"><h4>青鬼ゲーム</h4></a>
-                        <p>minecraft game</p>
-                        <span class="update"><?php echo date('Y/m/d H時i分', filemtime(basename("./aooni.php"))); ?></span>
-                        <span class="fun_level"></span>
+                        <a href="<?php echo $conf["url"]; ?>/game/aooni">
+                            <h4>青鬼ゲームシリーズ</h4>
+                            <p>minecraft game</p>
+                            <span class="update"><?php echo date('Y/m/d H時i分', filemtime(basename("./aooni.php"))); ?></span>
+                            <span class="fun_level"></span>
+                        </a>
                     </div>
 
                     <div class="game_box">
-                        <a href="<?php echo $conf["url"]; ?>/game/online"><h4>青鬼ONLINE in MC</h4></a>
-                        <p>minecraft game</p>
-                        <span class="update"><?php echo date('Y/m/d H時i分', filemtime(basename("./aooni.php"))); ?></span>
-                        <span class="fun_level"></span>
+                        <a href="<?php echo $conf["url"]; ?>/game/online">
+                            <h4>青鬼ONLINE in MC</h4>
+                            <p>minecraft game</p>
+                            <span class="update"><?php echo date('Y/m/d H時i分', filemtime(basename("./online.php"))); ?></span>
+                            <span class="fun_level"></span>
+                        </a>
                     </div>
 
                     <div class="game_box">
-                        <a href="<?php echo $conf["url"]; ?>/game/hueoni"><h4>増え鬼</h4></a>
-                        <p>minecraft game</p>
-                        <span class="update"><?php echo date('Y/m/d H時i分', filemtime(basename("./aooni.php"))); ?></span>
-                        <span class="fun_level"></span>
+                        <a href="<?php echo $conf["url"]; ?>/game/hueoni">
+                            <h4>増え鬼</h4>
+                            <p>minecraft game</p>
+                            <span class="update"><?php echo date('Y/m/d H時i分', filemtime(basename("./hueoni.php"))); ?></span>
+                            <span class="fun_level"></span>
+                        </a>
                     </div>
 
                 </div>

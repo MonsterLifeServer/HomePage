@@ -70,9 +70,9 @@ $DESCRIPTION = "作業状況を確認できます。";
                         class='fullframe'>
                 インラインフレーム対応のブラウザでご覧下さい。
                 </iframe>
-			</div>
-			<?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/footer.php"); ?>
+            </div>
 		</div>
-		<?php echo $html["common_foot"]; ?>
+        <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/footer.php"); ?>
 	</body>
+    <?php echo $html["common_foot"]; ?>
 </html>

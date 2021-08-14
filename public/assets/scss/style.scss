@@ -725,18 +725,19 @@ table.cmd {
 
     height: auto;
     width: 100%;
-    background-color: #fff;
+    background-color: rgb(230, 230, 230);
     margin-bottom: 30px;
-    border-radius: 20px;
     border: solid 1px #000;
 
     &:hover {
-        background-color: rgb(230, 230, 230);
+        
+        background-color: #fff;
     }
     a {
         display: block;
         height: 100%;
         text-decoration: none;
+        margin: 10px;
     }
 }
 
