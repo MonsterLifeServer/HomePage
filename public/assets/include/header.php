@@ -98,19 +98,20 @@
         }
     }
 ?>
- -->
+-->
 <div class="overlay"></div>
 <!-- 以下，緊急お知らせ用BOX -->
 <?php 
-$sorryMessageVisible = FALSE;
-$sorryMessage = '現在，お問い合わせページ・役職応募ページが正しく機能しておらず，運営にメッセージが届きません。何かお問い合わせのあるかたは Monster2408#8936 に連絡するか<a href="https://discord.gg/gaGB6Mm">公式Discordグループ</a>にてお問い合わせください。';
-if ($sorryMessageVisible === FALSE) echo "<!--";
+    $sorryMessageVisible = FALSE;
+    $sorryMessage = '現在，お問い合わせページ・役職応募ページが正しく機能しておらず，運営にメッセージが届きません。何かお問い合わせのあるかたは Monster2408#8936 に連絡するか<a href="https://discord.gg/gaGB6Mm">公式Discordグループ</a>にてお問い合わせください。';
+    if ($sorryMessageVisible === TRUE) {
+        echo '<div class="sorry">';
+        echo '<div class="contents">';
+        echo '<p>'.$sorryMessage.'</p>';
+        echo '</div>';
+        echo '</div>';
+    }
 ?>
-<div class="sorry">
-    <div class="contents">
-        <p><?php echo $sorryMessage; ?></p>    
-    </div>
-</div>
 <?php if ($sorryMessageVisible === FALSE) echo "-->"; ?>
 <!-- ホームページトップ -->
 <?php 
@@ -118,11 +119,11 @@ if (empty($_GET['debug'])) echo "<!--";
 ?>
 <div class="header-ad-label">
     <ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-1928305720436804"
-     data-ad-slot="8813759985">
+        style="display:block; text-align:center;"
+        data-ad-layout="in-article"
+        data-ad-format="fluid"
+        data-ad-client="ca-pub-1928305720436804"
+        data-ad-slot="8813759985">
     </ins>
     <script> 
         (adsbygoogle = window.adsbygoogle || []).push({}); 
