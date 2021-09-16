@@ -135,7 +135,7 @@ fclose($json);
                         </div>
                         <div class="status" id="skyblock">
                             <div class="left">
-                                <p class="server-name"><!--<a href="<?php echo $conf["url"]; ?>/servers/survival">-->SkyBlock<!--</a>--><span></span></p>
+                                <p class="server-name"><a href="<?php echo $conf["url"]; ?>/servers/skyblock">SkyBlock</a><span></span></p>
                                 <p class="description">SkyBlockサーバーです。</p>
                             </div>
                             <div class="right"><img src="https://i.gyazo.com/b25eb582f5dd767853c60103201b8f63.gif" width="24px"></div>

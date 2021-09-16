@@ -17,8 +17,9 @@
                     <a class="js-menu__item__link" href="<?php echo $conf["url"]; ?>/servers/">サーバー</a>
                     <ul class="submenu">
                         <li><a href="<?php echo $conf["url"]; ?>/servers/lobby">ロビー鯖</a></li>
-                        <li><a href="<?php echo $conf["url"]; ?>/servers/survival">サバイバル鯖</a></li>
+                        <li><a href="<?php echo $conf["url"]; ?>/servers/skyblock">スカイブロック鯖</a></li>
                         <li><a href="<?php echo $conf["url"]; ?>/servers/event">ミニゲーム企画鯖</a></li>
+                        <!--<li><a href="<?php echo $conf["url"]; ?>/servers/survival">サバイバル鯖</a></li>-->
                     </ul>
                 </li>
                 <li>
