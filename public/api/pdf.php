@@ -5,6 +5,9 @@ $TITLE = "サーバー資料";
 $URL = $conf["url"] . '/api/pdf';
 $DESCRIPTION = "過去の運営会議やその他資料を公開しています。";
 
+/// Access-Control-Allow-Originエラーを回避する
+header("Access-Control-Allow-Origin: *");
+
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
@@ -27,6 +30,10 @@ $DESCRIPTION = "過去の運営会議やその他資料を公開しています�
             table.pdf td {
                 padding: 10px 0;
                 text-align: center;
+            }
+
+            table.pdf th {
+                min-width: 150px;
             }
 
             table.pdf tr:nth-child(odd) {
@@ -99,36 +106,45 @@ $DESCRIPTION = "過去の運営会議やその他資料を公開しています�
 					<!-- ↓↓↓↓↓ ここから本文 ↓↓↓↓↓ -->
 					<h1 class="design">サーバー資料</h1>
 					<h2 class="design">運営会議報告書</h2>
-
-                    <table class="pdf" border="1">
-					
                     <?php
-                        $xml = $_SERVER["DOCUMENT_ROOT"] . "/assets/data/pdf.xml";//ファイルを指定
-                        $xmlData = simplexml_load_file($xml);
+                        echo '<table class="pdf" border="1">';
+                        $url_latest = 'https://api.github.com/repos/MonsterLifeServer/public-documents/contents/documents/';
 
-                        $i = 0;
+                        $context = stream_context_create(array('http' => array(
+                            'method' => 'GET',
+                            'header' => 'User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)',
+                        )));
+                        $res = file_get_contents($url_latest, false, $context);
+                        $json = json_decode($res);
+                        $assets = (array) $json;
 
-                        foreach ($xmlData->items->item as $data) {
+                        $temp3 = '';
 
+                        foreach ($assets as $item) {
+                            $name = $item->name; /* Filename */
+                            echo '<tr><th>'.$name.'</th><td>';
+                            $url_latest2 = 'https://api.github.com/repos/MonsterLifeServer/public-documents/contents/documents/'.$name;
 
-                            echo '<tr><th>'.(string)$data->date.'</th><td>';
-
-                            //print_r($x);
+                            $context2 = stream_context_create(array('http' => array(
+                                'method' => 'GET',
+                                'header' => 'User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)',
+                            )));
+                            $res2 = file_get_contents($url_latest2, false, $context2);
+                            $json2 = json_decode($res2);
+                            $assets2 = (array) $json2;
                             $str = '';
-                            $i = 0;
-                            foreach ($data->values->group as $y) {
-                                if ($i < 2) {
-                                    $i++;
-                                    $str = $str . "<a href='".(string)$y->url."' target='_blank'>".(string)$y->title."</a> ";
-                                } else {
-                                    $i = 0;
-                                    $str = $str . "<a href='".(string)$y->url."' target='_blank'>".(string)$y->title."</a><br>";
-                                }
+                            $url = 'https://document.mlserver.jp/?file=https://document.mlserver.jp/';
+                            $num = 0;
+                            foreach ($assets2 as $item2) {
+                                $display_name = $item2->name;
+                                $display_name = str_replace(".pdf","",$display_name);
+                                $str = $str . "<a href='".$url.$item2->path."' target='_blank'>".$display_name."</a> ";
                             }
-                            echo $str.'</td></th>';
+                            echo $str.'</td></tr>';
                         }
+                        echo '</table>';
                     ?>
-                    </tr></table>
+                    </div>
 				</div>
 			</div>
 			<?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/footer.php"); ?>

@@ -95,11 +95,8 @@ $DESCRIPTION = "スマホゲーム「青鬼ONLINE」をマイクラで遊べる�
                             <p>1.12.2</p><hr />
                             <h3>カテゴリ</h3>
                             <span class="category">鬼ごっこ</span><span class="category">PVE</span>
-                            <hr />
-                            <h3>テクスチャ(低スペック向け)</h3>
-                            <p><a href="<?php echo $conf['tex']['aooni']; ?>" download>ダウンロード</a></p>
-                            <h3>3Dテクスチャ</h3>
-                            <p><a href="<?php echo $conf['tex']['aooni3d']; ?>" download>ダウンロード</a></p>
+                            <h3>専用テクスチャパック</h3>
+                            <p><a href="https://packs.mlserver.xyz/" target="_blank">コチラ</a></p>
 
                         </div>
 

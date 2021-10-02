@@ -83,9 +83,8 @@ $DESCRIPTION = "企画「増え鬼」のルール紹介ページです。";
                             <p>1.12.2</p><hr />
                             <h3>カテゴリ</h3>
                             <span class="category">鬼ごっこ</span>
-                            <hr />
-                            <h3>テクスチャ</h3>
-                            <p><a href="<?php echo $conf['tex']['toso']; ?>" download>ダウンロード</a></p>
+                            <h3>専用テクスチャパック</h3>
+                            <p><a href="https://packs.mlserver.xyz/" target="_blank">コチラ</a></p>
 
                         </div>
 
