@@ -138,7 +138,14 @@ header("Access-Control-Allow-Origin: *");
                             foreach ($assets2 as $item2) {
                                 $display_name = $item2->name;
                                 $display_name = str_replace(".pdf","",$display_name);
-                                $str = $str . "<a href='".$url.$item2->path."' target='_blank'>".$display_name."</a> ";
+                                $str = $str . "<a href='".$url.$item2->path."' target='_blank'>".$display_name."</a>";
+                                if ($num > 2) {
+                                    $num = 0;
+                                    echo "<br />";
+                                } else {
+                                    $num .= 1;
+                                    echo " ";
+                                }
                             }
                             echo $str.'</td></tr>';
                         }

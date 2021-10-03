@@ -81,9 +81,9 @@ $DESCRIPTION = "逃走中をマイクラで遊べるようにした企画「逃�
                             <p>1.12.2</p><hr />
                             <h3>カテゴリ</h3>
                             <span class="category">鬼ごっこ</span><span class="category">謎解き</span>
-                            <h3>専用テクスチャパック</h3>
-                            <p><a href="https://packs.mlserver.xyz/" target="_blank">コチラ</a></p>
-
+                            <hr />
+                            <h3>テクスチャ</h3>
+                            <p><a href="<?php echo $conf['tex']['toso']; ?>" download>ダウンロード</a></p>
                         </div>
 
                     </div>
