@@ -133,7 +133,7 @@ header("Access-Control-Allow-Origin: *");
                             $json2 = json_decode($res2);
                             $assets2 = (array) $json2;
                             $str = '';
-                            $url = 'https://document.mlserver.jp/?file=https://document.mlserver.jp/';
+                            $url = 'https://document.mlserver.jp/web/?file=https://document.mlserver.jp/';
                             $num = 0;
                             foreach ($assets2 as $item2) {
                                 $display_name = $item2->name;
@@ -141,10 +141,10 @@ header("Access-Control-Allow-Origin: *");
                                 $str = $str . "<a href='".$url.$item2->path."' target='_blank'>".$display_name."</a>";
                                 if ($num > 2) {
                                     $num = 0;
-                                    echo "<br />";
+                                    $str = $str . "<br />";
                                 } else {
                                     $num .= 1;
-                                    echo " ";
+                                    $str = $str . " ";
                                 }
                             }
                             echo $str.'</td></tr>';
