@@ -113,7 +113,6 @@
         echo '</div>';
     }
 ?>
-<?php if ($sorryMessageVisible === FALSE) echo "-->"; ?>
 <!-- ホームページトップ -->
 <?php 
 if (empty($_GET['debug'])) echo "<!--";
