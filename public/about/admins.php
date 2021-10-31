@@ -80,7 +80,8 @@ $DESCRIPTION = "運営一覧ページです。";
                                 <p class="explanation">運営の一人。サーバーの多くのシステムを開発している。よく企画で叫び苦情が出ている。</p>
                             </div>
                             <div class="sns">
-                                <a href="https://twitter.com/meoto2408"><i class="fab fa-twitter" style="color: #1DA1F2;"></i></a>
+                                <a href="https://twitter.com/monster_2408"><i class="fab fa-twitter" style="color: #1DA1F2;"></i></a>
+                                <a href="https://github.com/Monster2408"><i class="fab fa-github" style="color: #000000;"></i></a>
                             </div>
                         </div>
 
