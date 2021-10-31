@@ -85,16 +85,14 @@ $DESCRIPTION = "運営一覧ページです。";
                         </div>
 
                         <div class="mask-style">
-                            <img src="https://i.gyazo.com/565a67fabae9185c08115aa37526ea9d.png" />
+                            <img src="https://i.gyazo.com/ddd129b38500a643dd5f5a749e6abc89.png" />
                             <div class="mask1"></div>
                             <div class="mask2"></div>
                             <div class="caption">
                                 <span class="name">なぎさ</span>
                                 <p class="explanation">運営の一人。運営陣で唯一Minecraftをやっていない人。主に鯖のお金管理をしている。</p>
                             </div>
-                            <div class="sns">
-                                <a href="https://twitter.com/nagisa2408"><i class="fab fa-twitter" style="color: #1DA1F2;"></i></a>
-                            </div>
+                            <div class="sns"></div>
                         </div>
 
                         <div class="mask-style">
