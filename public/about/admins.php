@@ -25,7 +25,7 @@ $STAFF_DECT = [
     ],
     "1"=>[
         "NAME"=>"ぎんあれ",
-        "DESCRIPTION"=>"運運営の一人。MonsterLifeServerの鯖主。動画編集の長。現在ほぼ休止中。",
+        "DESCRIPTION"=>"運営の一人。MonsterLifeServerの鯖主。動画編集の長。現在ほぼ休止中。",
         "IMG"=>"https://minotar.net/armor/body/95593263edef4f07a6bbefd7a05e2652",
         "SNS"=>[
             "YOUTUBE"=>"https://www.youtube.com/channel/UCfXYSFo-unvTihFOjRiADgA",
