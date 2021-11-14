@@ -2,17 +2,59 @@
 
 $config = include('./../assets/config.php');
 
-$bgi = [
+$bgi = array(
     "https://cdn.pixabay.com/photo/2017/01/11/04/57/minecraft-1970876_960_720.jpg",
     "https://cdn.pixabay.com/photo/2017/02/10/00/03/minecraft-2053882_1280.jpg",
-    "https://i.pinimg.com/originals/62/47/73/6247736609a214bb2fff26f5ed745be5.jpg",
     "https://cdn.pixabay.com/photo/2015/03/01/19/32/minecraft-655163_960_720.jpg",
     "https://cdn.pixabay.com/photo/2014/05/26/12/05/minecraft-354458_960_720.png",
     "https://cdn.pixabay.com/photo/2014/11/13/15/23/minecraft-529459_960_720.jpg"
+);
+
+$WOMAN_IMG = "https://i.gyazo.com/ddd129b38500a643dd5f5a749e6abc89.png";
+$MAN_IMG = "https://i.gyazo.com/a0c7a0ab4655d8b9fd228190b4e813f8.png";
+
+$STAFF_DECT = [
+    "0"=>[
+        "NAME"=>"もんすたぁ",
+        "DESCRIPTION"=>"運営の一人。サーバーの多くのシステムを開発している。よく企画で叫び苦情が出ている。",
+        "IMG"=>"https://minotar.net/armor/body/1c2b6991e8ce4e5db4d8ec3f0cdc5f8e",
+        "SNS"=>[
+            "TWITTER"=>"https://twitter.com/monster_2408",
+            "GITHUB"=>"https://github.com/Monster2408"
+        ]
+    ],
+    "1"=>[
+        "NAME"=>"ぎんあれ",
+        "DESCRIPTION"=>"運運営の一人。MonsterLifeServerの鯖主。動画編集の長。現在ほぼ休止中。",
+        "IMG"=>"https://minotar.net/armor/body/95593263edef4f07a6bbefd7a05e2652",
+        "SNS"=>[
+            "YOUTUBE"=>"https://www.youtube.com/channel/UCfXYSFo-unvTihFOjRiADgA",
+            "TWITTER"=>"https://twitter.com/gingerale10_YT"
+        ]
+    ],
+    "2"=>[
+        "NAME"=>"なぎさ",
+        "DESCRIPTION"=>"運営の一人。運営陣で唯一Minecraftをやっていない人。主に鯖のお金管理をしている。",
+        "IMG"=>"{$WOMAN_IMG}",
+        "SNS"=>[]
+    ],
+    "3"=>[
+        "NAME"=>"メアリー",
+        "DESCRIPTION"=>"開発者の一人。元々Skript専門だったがPluginやシェルスクリプトなどを組んでくれていたりする。",
+        "IMG"=>"{$WOMAN_IMG}",
+        "SNS"=>[]
+    ],
+    "4"=>[
+        "NAME"=>"でこまる",
+        "DESCRIPTION"=>"テクスチャデザイナー。現在ほぼ休止中。",
+        "IMG"=>"{$MAN_IMG}",
+        "SNS"=>[]
+    ]
 ];
+
 $TITLE = "運営一覧";
 $URL = $conf["url"] . '/about/admins';
-$DESCRIPTION = "運営一覧ページです。";
+$DESCRIPTION = "運営やスタッフ一覧ページです。";
 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
@@ -24,11 +66,7 @@ $DESCRIPTION = "運営一覧ページです。";
 		<meta property="og:title" content="<?php echo $TITLE; ?> | MonsterLifeServer" />
 		<meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
         <style>
-            <?php $rand_keys = array_rand($bgi, 1); ?>
-            .mask-style {
-                background-image: url(<?php echo $rand_keys[0]; ?>);
-                background-color: rgba(0,0,0,0.4);
-            }
+
         </style>
     </head>
     <body>
@@ -71,44 +109,27 @@ $DESCRIPTION = "運営一覧ページです。";
 
                     <div class="flex-box1">
 
-                        <div class="mask-style">
-                            <img src="https://minotar.net/armor/body/1c2b6991e8ce4e5db4d8ec3f0cdc5f8e" />
-                            <div class="mask1"></div>
-                            <div class="mask2"></div>
-                            <div class="caption">
-                                <span class="name">もんすたぁ</span>
-                                <p class="explanation">運営の一人。サーバーの多くのシステムを開発している。よく企画で叫び苦情が出ている。</p>
-                            </div>
-                            <div class="sns">
-                                <a href="https://twitter.com/monster_2408"><i class="fab fa-twitter" style="color: #1DA1F2;"></i></a>
-                                <a href="https://github.com/Monster2408"><i class="fab fa-github" style="color: #000000;"></i></a>
-                            </div>
-                        </div>
-
-                        <div class="mask-style">
-                            <img src="https://i.gyazo.com/ddd129b38500a643dd5f5a749e6abc89.png" />
-                            <div class="mask1"></div>
-                            <div class="mask2"></div>
-                            <div class="caption">
-                                <span class="name">なぎさ</span>
-                                <p class="explanation">運営の一人。運営陣で唯一Minecraftをやっていない人。主に鯖のお金管理をしている。</p>
-                            </div>
-                            <div class="sns"></div>
-                        </div>
-
-                        <div class="mask-style">
-                            <img src="https://minotar.net/armor/body/95593263edef4f07a6bbefd7a05e2652" />
-                            <div class="mask1"></div>
-                            <div class="mask2"></div>
-                            <div class="caption">
-                                <span class="name">ぎんあれ</span>
-                                <p class="explanation">運営の一人。MonsterLifeServerの鯖主。動画編集の長。</p>
-                            </div>
-                            <div class="sns">
-                                <a href="https://www.youtube.com/channel/UCfXYSFo-unvTihFOjRiADgA" style="color: #c4302b;"><i class="fab fa-youtube"></i></a>
-                                <a href="https://twitter.com/gingerale10_YT"><i class="fab fa-twitter" style="color: #1DA1F2;"></i></a>
-                            </div>
-                        </div>
+                        <?php
+                            foreach($STAFF_DECT as $item) {
+                                $rand_keys = array_rand($bgi, 2);
+                                $bg_img = $bgi[$rand_keys[0]];
+                                if (isset($before_bg_img) and $before_bg_img == $bg_img) $bg_img = $bgi[$rand_keys[1]];
+                                $before_bg_img = $bg_img;
+                                echo '<div class="mask-style" style="background: url('.$bg_img.');">';
+                                echo '<img src="'.$item["IMG"].'" />';
+                                echo '<div class="mask1"></div><div class="mask2"></div>';
+                                echo '<div class="caption"><span class="name">'.$item["NAME"].'</span>';
+                                echo '<p class="explanation">'.$item["DESCRIPTION"].'</p></div>';
+                                echo '<div class="sns">';
+                                if (!empty($item["SNS"])) {
+                                    if (isset($item["SNS"]["YOUTUBE"])) echo '<a href="'.$item["SNS"]["YOUTUBE"].'" style="color: #c4302b;"><i class="fab fa-youtube"></i></a>';
+                                    if (isset($item["SNS"]["TWITTER"])) echo '<a href="'.$item["SNS"]["TWITTER"].'"><i class="fab fa-twitter" style="color: #1DA1F2;"></i></a>';
+                                    if (isset($item["SNS"]["GITHUB"])) echo '<a href="'.$item["SNS"]["GITHUB"].'"><i class="fab fa-github" style="color: #000000;"></i></a>';
+                                }
+                                echo '</div>';
+                                echo '</div>';
+                            }
+                        ?>
 
                     </div>
 
