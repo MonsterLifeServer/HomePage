@@ -59,39 +59,6 @@ header {
     width: 100%;
     background-color: #fff;
     top: 0;
-    .narrow-google-serch {
-        display: none;
-        margin-right: 5px;
-        width: 100%;
-    }
-    .wide-google-serch {
-        display: inline-block;
-        margin-top: auto;
-        margin-bottom: auto;
-        position: fixed;
-        z-index: 900;
-        top: 10px;
-        right: 10px;
-    }
-    .serch-area {
-        .text-area {
-            height:50px;
-            padding:0 10px; 
-            border-radius:2px;
-            outline:0;
-            background:#eee;
-        }
-        .serch-button {
-            height:50px;
-            background:none;
-            color:#666;
-            border:none;
-            font-size:20px;/*アイコンサイズ*/
-        }
-        .serch-button:hover{
-            color:#7fbfff;
-        }
-    }
 }
 .header-label {
     background: $labelColor;
