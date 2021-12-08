@@ -1,3 +1,27 @@
+<?php
+
+$header_menu = [
+    "HOME" => $conf["url"],
+    "1" => [
+        "TITLE" => 
+        "TOP" => [
+            "LINK" => $conf["url"]."/servers/",
+            "TITLE" => "サーバー",
+            "SUBTITLE" => "サーバー一覧"
+        ],
+        "1" => => [
+            "LINK" => "",
+            "TITLE" => $conf["url"]."/servers/"
+        ],
+        "2" => [
+            "LINK" => "",
+            "TITLE" => $conf["url"]."/servers/"
+        ],
+        "3"
+    ]
+]
+
+?>
 <header id="header">
     <div  id="loading"><img src="https://i.gyazo.com/81483a7a8fc62d20e6ceae534eb5a15d.gif" width="80px" height="80px"/></div>
     <div class="logo-area"><a href="<?php echo $conf["url"]; ?>"><img class="logo-img" src="https://i.gyazo.com/032b17ab7a102b35553a0342887a752c.png"/></a></div>
@@ -12,7 +36,7 @@
         <div class="menu">
             <ul class="nav">
                 <!-- 子要素の文字数は全角で10文字ほど -->
-                <li><a href="<?php echo $conf["url"]; ?>/"><i class="fas fa-home"></i> Home</a></li>
+                <li class="HOME"><a href="<?php echo $conf["url"]; ?>/"><i class="fas fa-home"></i> Home</a></li>
                 <li>
                     <a class="js-menu__item__link" href="<?php echo $conf["url"]; ?>/servers/">サーバー</a>
                     <ul class="submenu">
@@ -27,7 +51,6 @@
                     <ul class="submenu">
                         <li><a href="<?php echo $conf["url"]; ?>/about/admins">運営</a></li>
                         <li><a href="<?php echo $conf["url"]; ?>/about/donation">寄付について</a></li>
-                        <li><a href="<?php echo $conf["url"]; ?>/about/news">ニュース</a></li>
                         <li><a href="<?php echo $conf["url"]; ?>/api/project-progress">プロジェクト進捗</a></li>
                         <li><a href="<?php echo $conf["url"]; ?>/support">サポート</a></li>
                         <li><a href="<?php echo $conf["url"]; ?>/blog/">ブログ</a></li>

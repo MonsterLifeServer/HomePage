@@ -83,7 +83,7 @@ header {
         max-width: 750px;
         margin: 0 auto;
         padding: 0;
-        display: flex;
+        display: flex; // 通常時は横並びにする
         z-index: 100;
         li {
             width: 100%;
@@ -277,9 +277,6 @@ header {
 }
 
 @media screen and (max-width:750px){
-    header .wide-google-serch {
-        display: none;
-    }
     /*----------------------------
     * メニュー開閉ボタン
     *----------------------------*/
@@ -349,9 +346,9 @@ header {
         background: #fff;
         transition: .5s; /* ← 追加 */
         display: block;
-        max-width: 350px;
+        // max-width: 350px;
         ul.nav {
-            max-width: 350px;
+            // max-width: 350px;
             width: 100%;
             display: block;
             right: 0;
@@ -470,7 +467,7 @@ header {
         }
         &.is-active{
             background: #fff;
-            max-width: 350px;
+            // max-width: 350px;
             width: 100%;
             height: 100vh;
             display: block;
