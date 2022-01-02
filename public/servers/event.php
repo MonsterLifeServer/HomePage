@@ -69,14 +69,6 @@ $DESCRIPTION = "ミニゲーム企画を開催するサーバーについて";
                             <li>1.12.2でミニゲームが遊ぶことができる。<br>※他バージョンの場合は開催時に連絡いたします。</li>
 						</ul>
 					</div>
-
-                    <div class="youtube-box">
-                        <a href="https://www.youtube.com/watch?v=hZvyzitiUOo&list=PL_0GzODUwYMA-BibQjLkQAFW4otbFgSE3&index=5" target="_blank">
-                            <img src="https://i.gyazo.com/bdd7d051f9aa14a324306aba76f684ad.png" alt="" />
-                        </a>
-					</div>
-
-
 					<h2 class="design">禁止事項</h2>
 					<div class="box text-left">
 						<ul>
@@ -86,6 +78,16 @@ $DESCRIPTION = "ミニゲーム企画を開催するサーバーについて";
                             <li>企画ごとに細かいルールが存在します。詳細は<a href="<?php echo $conf["url"]; ?>/game/">ミニゲーム企画一覧</a>からご確認ください。</li>
 						</ul>
 					</div>
+                    <h2 class="design">企画の動画</h2>
+                    <div class="aooni_youtube_cm">
+                        <div class="aooni_title_logo"><span class="aooni-logo-style">青鬼ゲーム</span></div>
+                        <div class="aooni_description"><span class="text-blue text-20px">青</span>い化け物が出るという噂の館に来た<ruby><span class="text-20px">ひろし</span><rt>プレイヤー</rt></ruby>たちは，突如広い部屋に集められた。そして謎のカウントダウンが終わると一緒に来た友人が一人消えた。？！さっきまで空っぽだった牢屋に何かがいる...？あれは<span class="text-blue text-20px">青</span>い...化け物か？！果たして<ruby><span class="text-20px">ひろし</span><rt>プレイヤー</rt></ruby>たちは，欠けた鍵を修復して館から脱出できるのか？！<span class="text-blue text-20px">青</span>い化け物から逃げて脱出せよ！！</div>
+                        <div class="aooni_movie">
+                            <a href="https://www.youtube.com/watch?v=hZvyzitiUOo&list=PL_0GzODUwYMA-BibQjLkQAFW4otbFgSE3&index=5" target="_blank">
+                                <img class="aooni_movie_img" src="https://i.gyazo.com/c3d3f38fcd7998574015db187502a2bd.png" alt="" />
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
