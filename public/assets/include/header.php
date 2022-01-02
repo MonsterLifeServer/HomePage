@@ -3,13 +3,13 @@
 $header_menu = [
     "HOME" => $conf["url"],
     "1" => [
-        "TITLE" => 
+        "TITLE" => "",
         "TOP" => [
             "LINK" => $conf["url"]."/servers/",
             "TITLE" => "サーバー",
             "SUBTITLE" => "サーバー一覧"
         ],
-        "1" => => [
+        "1" => [
             "LINK" => "",
             "TITLE" => $conf["url"]."/servers/"
         ],
@@ -17,9 +17,12 @@ $header_menu = [
             "LINK" => "",
             "TITLE" => $conf["url"]."/servers/"
         ],
-        "3"
+        "3" => [
+            "LINK" => "",
+            "TITLE" => $conf["url"]."/servers/"
+        ]
     ]
-]
+];
 
 ?>
 <header id="header">

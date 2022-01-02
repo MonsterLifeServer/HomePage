@@ -99,6 +99,24 @@ body.aooni {
     
 }
 
+.aooni_youtube_cm {
+    background: #fff;
+    .aooni-logo-style {
+        color: #ACB6E5;
+        background: -webkit-linear-gradient(blue, pink); //背景色にグラデーションを指定
+        -webkit-background-clip: text;//テキストでくり抜く
+        -webkit-text-fill-color: transparent;//くり抜いた部分は背景を表示
+        font-size: 15vw;
+    }
+    .aooni_description {
+        margin-bottom: 10px;
+    }
+    .aooni_movie {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
 .text-left {
     text-align: left;
 }
@@ -109,6 +127,14 @@ body.aooni {
 
 .text-right {
     text-align: right;
+}
+
+.text-blue {
+    color: blue;
+}
+
+.text-20px {
+    font-size: 20px;
 }
 
 h1.design {
@@ -453,11 +479,6 @@ span.category {
 
 .color-red {
     color: red;
-}
-
-.youtube-box {
-    width: 100%;
-    max-width: 200px;
 }
 
 .radius-box {
