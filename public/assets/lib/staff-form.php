@@ -52,7 +52,27 @@ $staff_temp = [
         "condition" => [
             "<a href='".$conf['url']."/admin-terms'>運営専用規約を守れる方。</a>"
         ]
-    ]
+    ],
+    "tex-designer3d" => [
+        "display" => "テクスチャデザイナー(3D)",
+        "description" => [
+            "当鯖は、ボランティア活動となり定期的な報酬の見込みがありません。",
+            "基本的に1.12.2のテクスチャ(3D)を作っていただきます。"
+        ],
+        "condition" => [
+            "<a href='".$conf['url']."/admin-terms'>運営専用規約を守れる方。</a>"
+        ]
+    ],
+    "tex-designer2d" => [
+        "display" => "テクスチャデザイナー(2D)",
+        "description" => [
+            "当鯖は、ボランティア活動となり定期的な報酬の見込みがありません。",
+            "基本的に1.12.2のテクスチャ(2D)を作っていただきます。"
+        ],
+        "condition" => [
+            "<a href='".$conf['url']."/admin-terms'>運営専用規約を守れる方。</a>"
+        ]
+    ],
 ];
 function get_html_staff_list() {
     global $staff_temp;
