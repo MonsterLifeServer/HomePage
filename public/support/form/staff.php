@@ -7,7 +7,8 @@
     $URL = $conf["url"] . '/support/form/staff';
     $DESCRIPTION = "スタッフになりたい方はこちらから";
 
-    include_once( $_SERVER["DOCUMENT_ROOT"] . "/assets/lib/staff-form.php");
+    $staff_lib = $_SERVER["DOCUMENT_ROOT"] . "/assets/lib/staff-form.php";
+    include_once($staff_lib);
 
     $post_all_set = (isset($_POST["msg"]) && isset($_POST["username"]) && isset($_POST["mcid"]) && isset($_POST["roles"]) && is_array($_POST["roles"]));
     if ($post_all_set) {
@@ -63,8 +64,13 @@
                             <p class="fileupdate right"><span class="title">最終更新日時: </span>
                             <?php
                                 $filetime = filemtime(basename(__FILE__));
-                                echo '<span class="date">'.date('Y/m/d ', $filetime).'</span>';
-                                echo '<span class="time">'.date('H時i分', $filetime).'</span>'; 
+                                $libtime = filemtime($staff_lib);
+                                $updatetime = $filetime;
+                                if ($filetime < $libtime) {
+                                    $updatetime = $libtime;
+                                }
+                                echo '<span class="date">'.date('Y/m/d ', $updatetime).'</span>';
+                                echo '<span class="time">'.date('H時i分', $updatetime).'</span>'; 
                             ?></p>
                         </div>
                     </div>

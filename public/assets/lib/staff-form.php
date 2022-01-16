@@ -124,7 +124,7 @@ function get_html_staff_role_desc_contents() {
 }
 function display_staff_role_contents() {
     echo '
-    <div class="flex-box staff">
+    <div class="staff-box staff">
         <div id="staff-list">
             '.get_html_staff_list().'
         </div>
