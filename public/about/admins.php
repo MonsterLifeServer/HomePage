@@ -20,7 +20,8 @@ $STAFF_DECT = [
         "IMG"=>"https://minotar.net/armor/body/1c2b6991e8ce4e5db4d8ec3f0cdc5f8e",
         "SNS"=>[
             "TWITTER"=>"https://twitter.com/monster_2408",
-            "GITHUB"=>"https://github.com/Monster2408"
+            "GITHUB"=>"https://github.com/Monster2408",
+            "WEB"=>"https://monster2408.mlserver.jp/"
         ]
     ],
     "1"=>[
@@ -65,9 +66,6 @@ $DESCRIPTION = "運営やスタッフ一覧ページです。";
 		<meta property="og:url" content="<?php echo $URL; ?>/" />
 		<meta property="og:title" content="<?php echo $TITLE; ?> | MonsterLifeServer" />
 		<meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
-        <style>
-
-        </style>
     </head>
     <body>
         <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/header.php"); ?>
@@ -122,9 +120,10 @@ $DESCRIPTION = "運営やスタッフ一覧ページです。";
                                 echo '<p class="explanation">'.$item["DESCRIPTION"].'</p></div>';
                                 echo '<div class="sns">';
                                 if (!empty($item["SNS"])) {
-                                    if (isset($item["SNS"]["YOUTUBE"])) echo '<a href="'.$item["SNS"]["YOUTUBE"].'" style="color: #c4302b;"><i class="fab fa-youtube"></i></a>';
-                                    if (isset($item["SNS"]["TWITTER"])) echo '<a href="'.$item["SNS"]["TWITTER"].'"><i class="fab fa-twitter" style="color: #1DA1F2;"></i></a>';
-                                    if (isset($item["SNS"]["GITHUB"])) echo '<a href="'.$item["SNS"]["GITHUB"].'"><i class="fab fa-github" style="color: #000000;"></i></a>';
+                                    if (isset($item["SNS"]["YOUTUBE"])) echo '<a href="'.$item["SNS"]["YOUTUBE"].'" style="color: #c4302b;"><i class="fa-brands fa-youtube"></i></a>';
+                                    if (isset($item["SNS"]["TWITTER"])) echo '<a href="'.$item["SNS"]["TWITTER"].'"><i class="fa-brands fa-twitter" style="color: #1DA1F2;"></i></a>';
+                                    if (isset($item["SNS"]["GITHUB"])) echo '<a href="'.$item["SNS"]["GITHUB"].'"><i class="fa-brands fa-github" style="color: #000000;"></i></a>';
+                                    if (isset($item["SNS"]["WEB"])) echo '<a href="'.$item["SNS"]["WEB"].'"><i class="fa-solid fa-globe" style="color: #000000;"></i></a>';
                                 }
                                 echo '</div>';
                                 echo '</div>';
