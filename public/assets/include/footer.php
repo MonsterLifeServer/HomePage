@@ -8,9 +8,9 @@
             <a href="https://twitch.mlserver.xyz" target="_blank"><i class="fa-brands fa-twitch" style="color: #9d4bff;"></i></a>
         </div>
         <p class="foot-menu">
-            <a href="<?php echo $conf["url"]; ?>/"> ホーム</a> |
-            <a href="<?php echo $conf["url"]; ?>/"> About</a> |
-            <a href="<?php echo $conf["url"]; ?>/terms"> 利用規約・ガイドライン</a> |
+            <a href="<?php echo $func->getUrl(); ?>/"> ホーム</a> |
+            <a href="<?php echo $func->getUrl(); ?>/"> About</a> |
+            <a href="<?php echo $func->getUrl(); ?>/terms"> 利用規約・ガイドライン</a> |
             <a href="<?php 
                 echo (empty($_SERVER["HTTPS"]) ? "http://" : "https://") . $_SERVER["HTTP_HOST"] . "/privacy_policy";
             ?>"> プライバシーポリシー</a>

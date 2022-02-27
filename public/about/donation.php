@@ -2,7 +2,7 @@
 
 $config = include('./../assets/config.php');
 $TITLE = "寄付について";
-$URL = $conf["url"] . '/about/donation';
+$URL = $func->getUrl() . '/about/donation';
 $DESCRIPTION = "MonsterLifeServerの寄付について";
 
 ?>
@@ -26,7 +26,7 @@ $DESCRIPTION = "MonsterLifeServerの寄付について";
                             <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/">
                                         <span itemprop="name">ホーム</span>
                                     </a>
                                     <meta itemprop="position" content="1" />
@@ -34,7 +34,7 @@ $DESCRIPTION = "MonsterLifeServerの寄付について";
 
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/about/donation">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/about/donation">
                                         <span itemprop="name"><?php echo $TITLE; ?></span>
                                     </a>
                                     <meta itemprop="position" content="2" />
@@ -66,7 +66,7 @@ $DESCRIPTION = "MonsterLifeServerの寄付について";
                     <p>
                         以下のQRコードあてに送金してください。送金時にメッセージなどでMinecraftIDを記入していると迅速に対応可能です。
                     </p>
-                    <img width="90px" src="<?php echo $conf["url"]; ?>/assets/img/web/kyash.png"></img>
+                    <img width="90px" src="<?php echo $func->getUrl(); ?>/assets/img/web/kyash.png"></img>
                     <h3>Amazonギフト券</h3>
                     <p>
                         DiscordのDMで運営である Monster2408#8936 にコードを送ってください。その際にMinecraftIDを記入していると迅速に対応可能です。
@@ -92,7 +92,7 @@ $DESCRIPTION = "MonsterLifeServerの寄付について";
                         <p>ロビーなどで空を飛べたり，表示色を変更できたりします。</p>
                     </div>
                     <h2 class="design">通帳</h2>
-                    <p>寄付された金額などは当鯖の通帳より確認できます。通帳は<a href="<?php echo $conf["url"]; ?>/about/passbook">コチラ</a>です。</p>
+                    <p>寄付された金額などは当鯖の通帳より確認できます。通帳は<a href="<?php echo $func->getUrl(); ?>/about/passbook">コチラ</a>です。</p>
                     <!-- パンくずリスト -->
                 </div>
             </div>

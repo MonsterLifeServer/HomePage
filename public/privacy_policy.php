@@ -20,7 +20,7 @@ $config = include('./assets/config.php');
                             <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/">
                                         <span itemprop="name">ホーム</span>
                                     </a>
                                     <meta itemprop="position" content="1" />
@@ -28,7 +28,7 @@ $config = include('./assets/config.php');
 
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/privacy_policy">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/privacy_policy">
                                         <span itemprop="name">プライバシーポリシー</span>
                                     </a>
                                     <meta itemprop="position" content="2" />

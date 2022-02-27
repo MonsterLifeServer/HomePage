@@ -3,7 +3,7 @@
 $config = include('./../assets/config.php');
 
 $TITLE = "通帳";
-$URL = $conf["url"] . '/about/passbook';
+$URL = $func->getUrl() . '/about/passbook';
 $DESCRIPTION = "MonsterLifeServerの通帳";
 
 setlocale(LC_MONETARY, 'ja_JP');
@@ -45,7 +45,7 @@ if (isset($_GET["sort"]) && intval($_GET["sort"])) {
                             <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/">
                                         <span itemprop="name">ホーム</span>
                                     </a>
                                     <meta itemprop="position" content="1" />
@@ -53,7 +53,7 @@ if (isset($_GET["sort"]) && intval($_GET["sort"])) {
 
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/title">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/title">
                                         <span itemprop="name"><?php echo $TITLE; ?></span>
                                     </a>
                                     <meta itemprop="position" content="2" />

@@ -4,7 +4,7 @@
     $config = include('./../../assets/config.php');
 
     $TITLE = "スタッフ応募フォーム";
-    $URL = $conf["url"] . '/support/form/staff';
+    $URL = $func->getUrl() . '/support/form/staff';
     $DESCRIPTION = "スタッフになりたい方はこちらから";
 
     $staff_lib = $_SERVER["DOCUMENT_ROOT"] . "/assets/lib/staff-form.php";
@@ -24,7 +24,7 @@
         <meta property="og:url" content="<?php echo $URL; ?>/" />
         <meta property="og:title" content="<?php echo $TITLE; ?> | MonsterLifeServer" />
         <meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
-        <link rel="stylesheet" type="text/css" href="<?php echo $conf["url"]; ?>/assets/css/staff-form.min.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo $func->getUrl(); ?>/assets/css/staff-form.min.css">
     </head>
     <body class="form_page">
         <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/header.php"); ?>
@@ -37,7 +37,7 @@
                             <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/">
                                         <span itemprop="name">ホーム</span>
                                     </a>
                                     <meta itemprop="position" content="1" />
@@ -45,7 +45,7 @@
 
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/support/">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/support/">
                                         <span itemprop="name">サポート</span>
                                     </a>
                                     <meta itemprop="position" content="2" />

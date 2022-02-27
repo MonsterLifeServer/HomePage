@@ -2,7 +2,7 @@
 
 $config = include('./../../assets/config.php');
 $TITLE = "リダイレクト→よくある質問";
-$URL = $conf["url"] . '/surpport/faq/mcid';
+$URL = $func->getUrl() . '/surpport/faq/mcid';
 $DESCRIPTION = "MonsterLifeServerではマイクラのプレイヤー名のことをMCID（エムシーアイディー）と言います。";
 
 ?>

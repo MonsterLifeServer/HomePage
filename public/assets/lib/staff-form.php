@@ -8,7 +8,7 @@ $staff_temp = [
             "運営は重要役職との兼業が必須となります。重要役職は 開発者(Plugin/Skript)と動画編集者です。"
         ],
         "condition" => [
-            "<a href='".$conf['url']."/admin-terms'>運営専用規約を守れる方。</a>"
+            "<a href='".$func->getUrl()."/admin-terms'>運営専用規約を守れる方。</a>"
         ],
         "id" => "admin"
     ],
@@ -20,7 +20,7 @@ $staff_temp = [
             ">> サーバーが運営しているサービスなどの管理 etc..."
         ],
         "condition" => [
-            "<a href='".$conf['url']."/admin-terms'>運営専用規約を守れる方。</a>"
+            "<a href='".$func->getUrl()."/admin-terms'>運営専用規約を守れる方。</a>"
         ]
     ],
     "movie-editor" => [
@@ -30,7 +30,7 @@ $staff_temp = [
             "基本的に多視点の動画編集をしてもらいます。編集ソフトはゆっくりムービーメーカー4/Aviutlならサポート可能ですが，それ以外は動画と非公式WIKIを見ながらテロップの色などを設定してください。"
         ],
         "condition" => [
-            "<a href='".$conf['url']."/admin-terms'>運営専用規約を守れる方。</a>"
+            "<a href='".$func->getUrl()."/admin-terms'>運営専用規約を守れる方。</a>"
         ]
     ],
     "dev-pl" => [
@@ -40,7 +40,7 @@ $staff_temp = [
             "基本的に1.12.2を用いたミニゲーム/24H鯖のPlugin開発を依頼した内容でしてもらいます。"
         ],
         "condition" => [
-            "<a href='".$conf['url']."/admin-terms'>運営専用規約を守れる方。</a>"
+            "<a href='".$func->getUrl()."/admin-terms'>運営専用規約を守れる方。</a>"
         ]
     ],
     "dev-sk" => [
@@ -50,7 +50,7 @@ $staff_temp = [
             "基本的に1.12.2を用いたミニゲームのSkript開発を依頼した内容でしてもらいます。"
         ],
         "condition" => [
-            "<a href='".$conf['url']."/admin-terms'>運営専用規約を守れる方。</a>"
+            "<a href='".$func->getUrl()."/admin-terms'>運営専用規約を守れる方。</a>"
         ]
     ],
     "tex-designer3d" => [
@@ -60,7 +60,7 @@ $staff_temp = [
             "基本的に1.12.2のテクスチャ(3D)を作っていただきます。"
         ],
         "condition" => [
-            "<a href='".$conf['url']."/admin-terms'>運営専用規約を守れる方。</a>"
+            "<a href='".$func->getUrl()."/admin-terms'>運営専用規約を守れる方。</a>"
         ]
     ],
     "tex-designer2d" => [
@@ -70,7 +70,7 @@ $staff_temp = [
             "基本的に1.12.2のテクスチャ(2D)を作っていただきます。"
         ],
         "condition" => [
-            "<a href='".$conf['url']."/admin-terms'>運営専用規約を守れる方。</a>"
+            "<a href='".$func->getUrl()."/admin-terms'>運営専用規約を守れる方。</a>"
         ]
     ],
 ];
@@ -273,9 +273,9 @@ function send_system_of_staff_form() {
         foreach ($roles as $role) {
             $role_para .= "&roles[]=".$role;
         }
-        header("Location: ".$conf['url']."/support/form/staff?username=".$username."&mcid=".$mcid.$role_para."&msg=".$msg."&CHECK_FOR=user");
+        header("Location: ".$func->getUrl()."/support/form/staff?username=".$username."&mcid=".$mcid.$role_para."&msg=".$msg."&CHECK_FOR=user");
     } else {
-        header("Location: ".$conf['url']."/support/form/staff?username=".$username."&mcid=".$mcid.$role_para."&msg=".$msg."&CHECK_FOR=FAILED");
+        header("Location: ".$func->getUrl()."/support/form/staff?username=".$username."&mcid=".$mcid.$role_para."&msg=".$msg."&CHECK_FOR=FAILED");
     }
 }
 
@@ -301,7 +301,7 @@ function send_staff_msg_to_discord(string $username, string $mcid, array $roles,
     $denylist = include('./assets/lib/denylist.php');
 
     if (in_array($ip, $denylist['ip'])) {
-        header("Location: ".$conf['url']."/support/form/staff?why=denylist");
+        header("Location: ".$func->getUrl()."/support/form/staff?why=denylist");
         exit;
     }
     // Replace the URL with your own webhook url
@@ -329,7 +329,7 @@ function send_staff_msg_to_discord(string $username, string $mcid, array $roles,
         $role_para .= "&roles[]=".$role;
     }
 
-    $check_url = $conf['url']."/support/form/staff?username=".$username."&mcid=".$mcid.$role_para."&msg=".$msg;
+    $check_url = $func->getUrl()."/support/form/staff?username=".$username."&mcid=".$mcid.$role_para."&msg=".$msg;
 
     $hookObject = json_encode([
         /*

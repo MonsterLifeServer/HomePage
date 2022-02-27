@@ -1,25 +1,25 @@
 <?php
 
 $header_menu = [
-    "HOME" => $conf["url"],
+    "HOME" => $func->getUrl(),
     "1" => [
         "TITLE" => "",
         "TOP" => [
-            "LINK" => $conf["url"]."/servers/",
+            "LINK" => $func->getUrl()."/servers/",
             "TITLE" => "サーバー",
             "SUBTITLE" => "サーバー一覧"
         ],
         "1" => [
             "LINK" => "",
-            "TITLE" => $conf["url"]."/servers/"
+            "TITLE" => $func->getUrl()."/servers/"
         ],
         "2" => [
             "LINK" => "",
-            "TITLE" => $conf["url"]."/servers/"
+            "TITLE" => $func->getUrl()."/servers/"
         ],
         "3" => [
             "LINK" => "",
-            "TITLE" => $conf["url"]."/servers/"
+            "TITLE" => $func->getUrl()."/servers/"
         ]
     ]
 ];
@@ -27,7 +27,7 @@ $header_menu = [
 ?>
 <header id="header">
     <div  id="loading"><img src="https://i.gyazo.com/81483a7a8fc62d20e6ceae534eb5a15d.gif" width="80px" height="80px"/></div>
-    <div class="logo-area"><a href="<?php echo $conf["url"]; ?>"><img class="logo-img" src="https://i.gyazo.com/032b17ab7a102b35553a0342887a752c.png"/></a></div>
+    <div class="logo-area"><a href="<?php echo $func->getUrl(); ?>"><img class="logo-img" src="https://i.gyazo.com/032b17ab7a102b35553a0342887a752c.png"/></a></div>
     <div class="menu-btn">
         <div class="btn-trigger">
             <span></span>
@@ -39,46 +39,46 @@ $header_menu = [
         <div class="menu">
             <ul class="nav">
                 <!-- 子要素の文字数は全角で10文字ほど -->
-                <li class="HOME"><a href="<?php echo $conf["url"]; ?>/"><i class="fas fa-home"></i> Home</a></li>
+                <li class="HOME"><a href="<?php echo $func->getUrl(); ?>/"><i class="fas fa-home"></i> Home</a></li>
                 <li>
-                    <a class="js-menu__item__link" href="<?php echo $conf["url"]; ?>/servers/">サーバー</a>
+                    <a class="js-menu__item__link" href="<?php echo $func->getUrl(); ?>/servers/">サーバー</a>
                     <ul class="submenu">
-                        <li><a href="<?php echo $conf["url"]; ?>/servers/lobby">ロビー鯖</a></li>
-                        <li><a href="<?php echo $conf["url"]; ?>/servers/skyblock">スカイブロック鯖</a></li>
-                        <li><a href="<?php echo $conf["url"]; ?>/servers/event">ミニゲーム企画鯖</a></li>
-                        <!--<li><a href="<?php echo $conf["url"]; ?>/servers/survival">サバイバル鯖</a></li>-->
+                        <li><a href="<?php echo $func->getUrl(); ?>/servers/lobby">ロビー鯖</a></li>
+                        <li><a href="<?php echo $func->getUrl(); ?>/servers/skyblock">スカイブロック鯖</a></li>
+                        <li><a href="<?php echo $func->getUrl(); ?>/servers/event">ミニゲーム企画鯖</a></li>
+                        <!--<li><a href="<?php echo $func->getUrl(); ?>/servers/survival">サバイバル鯖</a></li>-->
                     </ul>
                 </li>
                 <li>
-                    <a class="js-menu__item__link" href="<?php echo $conf["url"]; ?>/#about">About</a>
+                    <a class="js-menu__item__link" href="<?php echo $func->getUrl(); ?>/#about">About</a>
                     <ul class="submenu">
-                        <li><a href="<?php echo $conf["url"]; ?>/about/admins">運営</a></li>
-                        <li><a href="<?php echo $conf["url"]; ?>/about/donation">寄付について</a></li>
-                        <li><a href="<?php echo $conf["url"]; ?>/api/project-progress">プロジェクト進捗</a></li>
-                        <li><a href="<?php echo $conf["url"]; ?>/support">サポート</a></li>
-                        <li><a href="<?php echo $conf["url"]; ?>/blog/">ブログ</a></li>
+                        <li><a href="<?php echo $func->getUrl(); ?>/about/admins">運営</a></li>
+                        <li><a href="<?php echo $func->getUrl(); ?>/about/donation">寄付について</a></li>
+                        <li><a href="<?php echo $func->getUrl(); ?>/api/project-progress">プロジェクト進捗</a></li>
+                        <li><a href="<?php echo $func->getUrl(); ?>/support">サポート</a></li>
+                        <li><a href="<?php echo $func->getUrl(); ?>/blog/">ブログ</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a class="js-menu__item__link" href="<?php echo $conf["url"]; ?>/game/">ミニゲーム</a>
+                    <a class="js-menu__item__link" href="<?php echo $func->getUrl(); ?>/game/">ミニゲーム</a>
                     <ul class="submenu">
-                        <li><a href="<?php echo $conf["url"]; ?>/game/aooni">青鬼ゲーム</a></li>
-                        <li><a href="<?php echo $conf["url"]; ?>/game/online">青鬼ONLINE in MC</a></li>
-                        <li><a href="<?php echo $conf["url"]; ?>/game/hueoni">増え鬼</a></li>
+                        <li><a href="<?php echo $func->getUrl(); ?>/game/aooni">青鬼ゲーム</a></li>
+                        <li><a href="<?php echo $func->getUrl(); ?>/game/online">青鬼ONLINE in MC</a></li>
+                        <li><a href="<?php echo $func->getUrl(); ?>/game/hueoni">増え鬼</a></li>
                         <!-- 将来 -->
                         <!-- 
-                        <li><a href="<?php echo $conf["url"]; ?>/game/cbg">コア破壊ゲーム</a></li>
-                        <li><a href="<?php echo $conf["url"]; ?>/game/toso">逃走中</a></li>
-                        <li><a href="<?php echo $conf["url"]; ?>/game/dbd">DeadbyDaylight</a></li>
+                        <li><a href="<?php echo $func->getUrl(); ?>/game/cbg">コア破壊ゲーム</a></li>
+                        <li><a href="<?php echo $func->getUrl(); ?>/game/toso">逃走中</a></li>
+                        <li><a href="<?php echo $func->getUrl(); ?>/game/dbd">DeadbyDaylight</a></li>
                         -->
                     </ul>
                 </li>
                 <li>
-                    <a class="js-menu__item__link" href="<?php echo $conf["url"]; ?>/form/">Contact</a>
+                    <a class="js-menu__item__link" href="<?php echo $func->getUrl(); ?>/form/">Contact</a>
                     <ul class="submenu">
-                        <li><a href="<?php echo $conf["url"]; ?>/support/faq">よくある質問</a></li>
-                        <li><a href="<?php echo $conf["url"]; ?>/support/form/">問い合わせ</a></li>
-                        <li><a href="<?php echo $conf["url"]; ?>/support/form/staff">役職応募</a></li>
+                        <li><a href="<?php echo $func->getUrl(); ?>/support/faq">よくある質問</a></li>
+                        <li><a href="<?php echo $func->getUrl(); ?>/support/form/">問い合わせ</a></li>
+                        <li><a href="<?php echo $func->getUrl(); ?>/support/form/staff">役職応募</a></li>
                     </ul>
                 </li>
                 <div class="hamburger-ad">

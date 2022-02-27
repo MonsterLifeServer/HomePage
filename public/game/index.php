@@ -2,7 +2,7 @@
 
 $config = include('./../assets/config.php');
 $TITLE = "ミニゲーム企画一覧";
-$URL = $conf["url"] . '/game/';
+$URL = $func->getUrl() . '/game/';
 $DESCRIPTION = "MonsterLifeServerの企画一覧ページです。";
 
 ?>
@@ -26,7 +26,7 @@ $DESCRIPTION = "MonsterLifeServerの企画一覧ページです。";
                             <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/">
                                         <span itemprop="name">ホーム</span>
                                     </a>
                                     <meta itemprop="position" content="1" />
@@ -34,7 +34,7 @@ $DESCRIPTION = "MonsterLifeServerの企画一覧ページです。";
 
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/game/toso">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/game/toso">
                                         <span itemprop="name"><?php echo $TITLE; ?></span>
                                     </a>
                                     <meta itemprop="position" content="2" />
@@ -53,7 +53,7 @@ $DESCRIPTION = "MonsterLifeServerの企画一覧ページです。";
                     <!-- パンくずリスト&最終更新日 -->
 
                     <div class="game_box">
-                        <a href="<?php echo $conf["url"]; ?>/game/aooni">
+                        <a href="<?php echo $func->getUrl(); ?>/game/aooni">
                             <h4>青鬼ゲームシリーズ</h4>
                             <p>minecraft game</p>
                             <span class="update"><?php echo date('Y/m/d H時i分', filemtime(basename("./aooni.php"))); ?></span>
@@ -62,7 +62,7 @@ $DESCRIPTION = "MonsterLifeServerの企画一覧ページです。";
                     </div>
 
                     <div class="game_box">
-                        <a href="<?php echo $conf["url"]; ?>/game/online">
+                        <a href="<?php echo $func->getUrl(); ?>/game/online">
                             <h4>青鬼ONLINE in MC</h4>
                             <p>minecraft game</p>
                             <span class="update"><?php echo date('Y/m/d H時i分', filemtime(basename("./online.php"))); ?></span>
@@ -71,7 +71,7 @@ $DESCRIPTION = "MonsterLifeServerの企画一覧ページです。";
                     </div>
 
                     <div class="game_box">
-                        <a href="<?php echo $conf["url"]; ?>/game/hueoni">
+                        <a href="<?php echo $func->getUrl(); ?>/game/hueoni">
                             <h4>増え鬼</h4>
                             <p>minecraft game</p>
                             <span class="update"><?php echo date('Y/m/d H時i分', filemtime(basename("./hueoni.php"))); ?></span>

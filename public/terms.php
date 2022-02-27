@@ -2,7 +2,7 @@
 
 $config = include('./assets/config.php');
 $TITLE = "利用規約・ガイドライン";
-$URL = $conf["url"] . '/terms';
+$URL = $func->getUrl() . '/terms';
 $DESCRIPTION = "ルールとマナーを守って遊びましょう！！";
 
 ?>
@@ -26,14 +26,14 @@ $DESCRIPTION = "ルールとマナーを守って遊びましょう！！";
                             <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/">
                                         <span itemprop="name">ホーム</span>
                                     </a>
                                     <meta itemprop="position" content="1" />
                                 </li>
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/terms">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/terms">
                                         <span itemprop="name"><?php echo $TITLE; ?></span>
                                     </a>
                                     <meta itemprop="position" content="2" />

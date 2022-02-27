@@ -2,7 +2,7 @@
 
 $config = include('./../assets/config.php');
 $TITLE = "ミニゲーム企画鯖";
-$URL = $conf["url"] . '/servers/event';
+$URL = $func->getUrl() . '/servers/event';
 $DESCRIPTION = "ミニゲーム企画を開催するサーバーについて";
 
 ?>
@@ -27,7 +27,7 @@ $DESCRIPTION = "ミニゲーム企画を開催するサーバーについて";
                             <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/">
                                         <span itemprop="name">ホーム</span>
                                     </a>
                                     <meta itemprop="position" content="1" />
@@ -35,7 +35,7 @@ $DESCRIPTION = "ミニゲーム企画を開催するサーバーについて";
 
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/servers/">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/servers/">
                                         <span itemprop="name">サーバー</span>
                                     </a>
                                     <meta itemprop="position" content="2" />
@@ -43,7 +43,7 @@ $DESCRIPTION = "ミニゲーム企画を開催するサーバーについて";
 
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/servers/event">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/servers/event">
                                         <span itemprop="name"><?php echo $TITLE; ?></span>
                                     </a>
                                     <meta itemprop="position" content="3" />
@@ -65,17 +65,17 @@ $DESCRIPTION = "ミニゲーム企画を開催するサーバーについて";
 					<h2 class="design">できること</h2>
                     <div class="box text-left">
 						<ul>
-                            <li>PCゲーム『青鬼』の館をマイクラで再現した鬼ごっこ型のミニゲームやスマホゲーム『青鬼ONLINE』をマイクラで再現したミニゲーム，増え鬼などあらゆるミニゲーム企画を開催・現在進行形で開発しております。当鯖に参加して遊べるミニゲームは<a href="<?php echo $conf["url"]; ?>/game/" target="_blank">ミニゲーム一覧</a>より確認できます。</li>
+                            <li>PCゲーム『青鬼』の館をマイクラで再現した鬼ごっこ型のミニゲームやスマホゲーム『青鬼ONLINE』をマイクラで再現したミニゲーム，増え鬼などあらゆるミニゲーム企画を開催・現在進行形で開発しております。当鯖に参加して遊べるミニゲームは<a href="<?php echo $func->getUrl(); ?>/game/" target="_blank">ミニゲーム一覧</a>より確認できます。</li>
                             <li>1.12.2でミニゲームが遊ぶことができる。<br>※他バージョンの場合は開催時に連絡いたします。</li>
 						</ul>
 					</div>
 					<h2 class="design">禁止事項</h2>
 					<div class="box text-left">
 						<ul>
-							<li><a href="<?php echo $conf["url"]; ?>/terms">利用規約</a>に反すること。</li>
+							<li><a href="<?php echo $func->getUrl(); ?>/terms">利用規約</a>に反すること。</li>
 							<li>故意に負荷を鯖にかける行為は禁止です。</li>
 							<li>不具合を利用する行為は禁止です。見つけ次第ご報告をお願いします。</li>
-                            <li>企画ごとに細かいルールが存在します。詳細は<a href="<?php echo $conf["url"]; ?>/game/">ミニゲーム企画一覧</a>からご確認ください。</li>
+                            <li>企画ごとに細かいルールが存在します。詳細は<a href="<?php echo $func->getUrl(); ?>/game/">ミニゲーム企画一覧</a>からご確認ください。</li>
 						</ul>
 					</div>
                     <h2 class="design">企画の動画</h2>

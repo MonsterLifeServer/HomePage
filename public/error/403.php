@@ -8,7 +8,7 @@ $config = include('./../assets/config.php');
 	<head>
         <?php echo $html["common_head"]; ?>
         <title>403 Forbidden | MonsterLifeServer</title>
-        <link rel="stylesheet" type="text/css" href="<?php echo $conf["url"]; ?>/assets/css/error.min.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo $func->getUrl(); ?>/assets/css/error.min.css">
     </head>
     <body class="error_403">
         <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/header.php"); ?>
@@ -21,7 +21,7 @@ $config = include('./../assets/config.php');
                         <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
                             <li itemprop="itemListElement" itemscope
                                 itemtype="https://schema.org/ListItem">
-                                <a itemprop="item" href="<?php echo $conf["url"]; ?>/">
+                                <a itemprop="item" href="<?php echo $func->getUrl(); ?>/">
                                     <span itemprop="name">ホーム</span>
                                 </a>
                                 <meta itemprop="position" content="1" />
@@ -61,7 +61,7 @@ $config = include('./../assets/config.php');
                     </svg>
                     <h1>403 Forbidden</h1>
                     <h2>You are not allowed to enter here</h2>
-                    <h2>Go <a href="<?php echo $conf["url"]; ?>">Home!</a></h2>
+                    <h2>Go <a href="<?php echo $func->getUrl(); ?>">Home!</a></h2>
                 </div>
             </div>
         </div>

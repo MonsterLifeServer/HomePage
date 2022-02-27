@@ -2,7 +2,7 @@
 
 $config = include('./../assets/config.php');
 $TITLE = "API一覧";
-$URL = $conf["url"] . '/api/';
+$URL = $func->getUrl() . '/api/';
 $DESCRIPTION = " ";
 
 ?>
@@ -92,7 +92,7 @@ $DESCRIPTION = " ";
                             <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/">
                                         <span itemprop="name">ホーム</span>
                                     </a>
                                     <meta itemprop="position" content="1" />
@@ -101,7 +101,7 @@ $DESCRIPTION = " ";
 
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/api/">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/api/">
                                         <span itemprop="name"><?php echo $TITLE; ?></span>
                                     </a>
                                     <meta itemprop="position" content="2" />
@@ -136,7 +136,7 @@ $DESCRIPTION = " ";
 									<p class="card__text">運営会議の一般向け報告書やその他資料のリンクページです。</p>
 								</div>
 								<div class="card__footer">
-									<p class="card__text"><a href="<?php echo $conf["url"]; ?>/api/pdf" class="button -primary">ページを見る</a></p>
+									<p class="card__text"><a href="<?php echo $func->getUrl(); ?>/api/pdf" class="button -primary">ページを見る</a></p>
 								</div>
 							</article>
 						</div>
@@ -153,7 +153,7 @@ $DESCRIPTION = " ";
 									<p class="card__text">配信時のコメントを表示します。</p>
 								</div>
 								<div class="card__footer">
-									<p class="card__text"><a href="<?php echo $conf["url"]; ?>/api/comment" class="button -primary">ページを見る</a></p>
+									<p class="card__text"><a href="<?php echo $func->getUrl(); ?>/api/comment" class="button -primary">ページを見る</a></p>
 								</div>
 							</article>
 						</div>

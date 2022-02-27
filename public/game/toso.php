@@ -2,7 +2,7 @@
 
 $config = include('./../assets/config.php');
 $TITLE = "逃走中";
-$URL = $conf["url"] . '/game/toso';
+$URL = $func->getUrl() . '/game/toso';
 $DESCRIPTION = "逃走中をマイクラで遊べるようにした企画「逃走中」のルール紹介ページです。";
 
 ?>
@@ -27,7 +27,7 @@ $DESCRIPTION = "逃走中をマイクラで遊べるようにした企画「逃�
                             <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/">
                                         <span itemprop="name">ホーム</span>
                                     </a>
                                     <meta itemprop="position" content="1" />
@@ -35,7 +35,7 @@ $DESCRIPTION = "逃走中をマイクラで遊べるようにした企画「逃�
 
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/game/">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/game/">
                                         <span itemprop="name">ミニゲーム企画</span>
                                     </a>
                                     <meta itemprop="position" content="2" />
@@ -43,7 +43,7 @@ $DESCRIPTION = "逃走中をマイクラで遊べるようにした企画「逃�
 
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/game/toso">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/game/toso">
                                         <span itemprop="name"><?php echo $TITLE; ?></span>
                                     </a>
                                     <meta itemprop="position" content="3" />

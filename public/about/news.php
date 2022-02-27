@@ -2,7 +2,7 @@
 
 $config = include('./../assets/config.php');
 $TITLE = "新着情報";
-$URL = $conf["url"] . '/about/news';
+$URL = $func->getUrl() . '/about/news';
 $DESCRIPTION = "新着情報が見れます。";
 
 ?>
@@ -86,7 +86,7 @@ $DESCRIPTION = "新着情報が見れます。";
                             <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/">
                                         <span itemprop="name">ホーム</span>
                                     </a>
                                     <meta itemprop="position" content="1" />
@@ -94,7 +94,7 @@ $DESCRIPTION = "新着情報が見れます。";
 
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/about/news">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/about/news">
                                         <span itemprop="name"><?php echo $TITLE; ?></span>
                                     </a>
                                     <meta itemprop="position" content="2" />

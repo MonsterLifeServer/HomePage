@@ -2,7 +2,7 @@
 
 $config = include('./../assets/config.php');
 $TITLE = "サーバー資料";
-$URL = $conf["url"] . '/api/pdf';
+$URL = $func->getUrl() . '/api/pdf';
 $DESCRIPTION = "過去の運営会議やその他資料を公開しています。";
 
 /// Access-Control-Allow-Originエラーを回避する
@@ -68,7 +68,7 @@ header("Access-Control-Allow-Origin: *");
                             <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/">
                                         <span itemprop="name">ホーム</span>
                                     </a>
                                     <meta itemprop="position" content="1" />
@@ -77,7 +77,7 @@ header("Access-Control-Allow-Origin: *");
 
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/api/">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/api/">
                                         <span itemprop="name">API</span>
                                     </a>
                                     <meta itemprop="position" content="2" />
@@ -85,7 +85,7 @@ header("Access-Control-Allow-Origin: *");
                                 
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/api/pdf">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/api/pdf">
                                         <span itemprop="name"><?php echo $TITLE; ?></span>
                                     </a>
                                     <meta itemprop="position" content="3" />

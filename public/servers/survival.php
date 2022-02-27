@@ -2,7 +2,7 @@
 
 $config = include('./../assets/config.php');
 $TITLE = "サバイバル鯖";
-$URL = $conf["url"] . '/servers/survival';
+$URL = $func->getUrl() . '/servers/survival';
 $DESCRIPTION = "サバイバルサーバーについて";
 
 ?>
@@ -27,7 +27,7 @@ $DESCRIPTION = "サバイバルサーバーについて";
                             <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/">
                                         <span itemprop="name">ホーム</span>
                                     </a>
                                     <meta itemprop="position" content="1" />
@@ -35,7 +35,7 @@ $DESCRIPTION = "サバイバルサーバーについて";
 
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/servers/">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/servers/">
                                         <span itemprop="name">サーバー</span>
                                     </a>
                                     <meta itemprop="position" content="2" />
@@ -43,7 +43,7 @@ $DESCRIPTION = "サバイバルサーバーについて";
 
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/servers/survival">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/servers/survival">
                                         <span itemprop="name"><?php echo $TITLE; ?></span>
                                     </a>
                                     <meta itemprop="position" content="3" />
@@ -72,7 +72,7 @@ $DESCRIPTION = "サバイバルサーバーについて";
 					<h2 class="design">禁止事項</h2>
 					<div class="box text-left">
 						<ul>
-							<li><a href="<?php echo $conf["url"]; ?>/terms">利用規約</a>に反すること。</li>
+							<li><a href="<?php echo $func->getUrl(); ?>/terms">利用規約</a>に反すること。</li>
 							<li>故意に負荷を鯖にかける行為は禁止です。</li>
 							<li>不具合を利用する行為は禁止です。見つけ次第ご報告をお願いします。</li>
 							<li>他人が作った建築物を破壊しない。</li>

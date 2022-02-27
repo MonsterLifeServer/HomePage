@@ -1,7 +1,7 @@
 <?php
     $config = include('./../assets/config.php');
     $TITLE = "お問い合わせ";
-    $URL = $conf["url"] . '/form/';
+    $URL = $func->getUrl() . '/form/';
     $DESCRIPTION = "MonsterLifeServerへのお問い合わせはこちらから";
     
 ?>
@@ -14,7 +14,7 @@
         <meta property="og:title" content="<?php echo $TITLE; ?> | MonsterLifeServer" />
         <meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
 
-        <meta http-equiv="refresh" content="5;URL=<?php echo $conf["url"]; ?>/support/form/">
+        <meta http-equiv="refresh" content="5;URL=<?php echo $func->getUrl(); ?>/support/form/">
         <style>
             body {
                 background: #fff;
@@ -27,6 +27,6 @@
             本サイトは移転しました。5秒後にジャンプします。<br>
             ジャンプしない場合は、以下のURLをクリックしてください。
         </p>
-        <p><a href="<?php echo $conf["url"]; ?>/support/form/">移転先のページ</a></p>
+        <p><a href="<?php echo $func->getUrl(); ?>/support/form/">移転先のページ</a></p>
     </body>
 </html>

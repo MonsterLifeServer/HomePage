@@ -2,7 +2,7 @@
 
 $config = include('./../assets/config.php');
 $TITLE = "青鬼ONLINE in MC";
-$URL = $conf["url"] . '/game/online';
+$URL = $func->getUrl() . '/game/online';
 $DESCRIPTION = "スマホゲーム「青鬼ONLINE」をマイクラで遊べるようにした企画「青鬼ONLINE in MC」のルール紹介ページです。";
 
 ?>
@@ -27,7 +27,7 @@ $DESCRIPTION = "スマホゲーム「青鬼ONLINE」をマイクラで遊べる�
                             <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/">
                                         <span itemprop="name">ホーム</span>
                                     </a>
                                     <meta itemprop="position" content="1" />
@@ -35,7 +35,7 @@ $DESCRIPTION = "スマホゲーム「青鬼ONLINE」をマイクラで遊べる�
 
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/game/">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/game/">
                                         <span itemprop="name">ミニゲーム企画</span>
                                     </a>
                                     <meta itemprop="position" content="2" />
@@ -43,7 +43,7 @@ $DESCRIPTION = "スマホゲーム「青鬼ONLINE」をマイクラで遊べる�
 
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/game/online">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/game/online">
                                         <span itemprop="name"><?php echo $TITLE; ?></span>
                                     </a>
                                     <meta itemprop="position" content="3" />

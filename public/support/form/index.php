@@ -65,7 +65,7 @@
 		$sendOk = send_to_discord($message, $ip, $hook_id); //処理を実行
     }
     $TITLE = "お問い合わせ";
-    $URL = $conf["url"] . '/support/form/';
+    $URL = $func->getUrl() . '/support/form/';
     $DESCRIPTION = "MonsterLifeServerへのお問い合わせはこちらから";
     
 ?>
@@ -77,7 +77,7 @@
         <meta property="og:url" content="<?php echo $URL; ?>/" />
         <meta property="og:title" content="<?php echo $TITLE; ?> | MonsterLifeServer" />
         <meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
-        <link rel="stylesheet" type="text/css" href="<?php echo $conf["url"]; ?>/assets/css/form.min.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo $func->getUrl(); ?>/assets/css/form.min.css">
     </head>
     <body class="form_page">
         <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/header.php"); ?>
@@ -90,7 +90,7 @@
                             <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/">
                                         <span itemprop="name">ホーム</span>
                                     </a>
                                     <meta itemprop="position" content="1" />
@@ -98,7 +98,7 @@
 
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/support/">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/support/">
                                         <span itemprop="name">サポート</span>
                                     </a>
                                     <meta itemprop="position" content="2" />
@@ -106,7 +106,7 @@
 
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/support/form">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/support/form">
                                         <span itemprop="name"><?php echo $TITLE; ?></span>
                                     </a>
                                     <meta itemprop="position" content="3" />
@@ -171,7 +171,7 @@
                     <div class="element_wrap">
                         <p><?php if ($sendOk === TRUE) {echo "送信が完了しました。";} else {echo "送信に失敗しました。";}?></p>
                     </div>
-                    <a href="<?php echo $conf["url"]; ?>/form" class="form">はじめに戻る</a>
+                    <a href="<?php echo $func->getUrl(); ?>/form" class="form">はじめに戻る</a>
 
                     <?php else: ?>
 

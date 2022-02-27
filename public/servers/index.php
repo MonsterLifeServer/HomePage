@@ -2,7 +2,7 @@
 
 $config = include('./../assets/config.php');
 $TITLE = "サーバー";
-$URL = $conf["url"] . '/servers/';
+$URL = $func->getUrl() . '/servers/';
 $DESCRIPTION = " ";
 
 date_default_timezone_set('Asia/Tokyo');
@@ -78,7 +78,7 @@ fclose($json);
 		<meta property="og:url" content="<?php echo $URL; ?>/" />
 		<meta property="og:title" content="<?php echo $TITLE; ?> | MonsterLifeServer" />
 		<meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
-        <link rel="stylesheet" type="text/css" href="<?php echo $conf["url"]; ?>/assets/css/status.min.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo $func->getUrl(); ?>/assets/css/status.min.css">
     </head>
     <body onload="timer()">
         <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/header.php"); ?>
@@ -92,7 +92,7 @@ fclose($json);
                             <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/">
                                         <span itemprop="name">ホーム</span>
                                     </a>
                                     <meta itemprop="position" content="1" />
@@ -100,7 +100,7 @@ fclose($json);
 
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/servers/">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/servers/">
                                         <span itemprop="name"><?php echo $TITLE; ?></span>
                                     </a>
                                     <meta itemprop="position" content="2" />
@@ -121,35 +121,35 @@ fclose($json);
                     <div class="status-box">
                         <div class="status first" id="bungee">
                             <div class="left">
-                                <p class="server-name"><a href="<?php echo $conf["url"]; ?>/servers/">入口サーバー (BungeeCord)</a><span></span></p>
+                                <p class="server-name"><a href="<?php echo $func->getUrl(); ?>/servers/">入口サーバー (BungeeCord)</a><span></span></p>
                                 <p class="description">このサーバーが落ちているときはサーバーにアクセスできません。</p>
                             </div>
                             <div class="right"><img src="https://i.gyazo.com/b25eb582f5dd767853c60103201b8f63.gif" width="24px"></div>
                         </div>
                         <div class="status" id="lobby">
                             <div class="left">
-                                <p class="server-name"><a href="<?php echo $conf["url"]; ?>/servers/lobby">ロビーサーバー</a><span></span></p>
+                                <p class="server-name"><a href="<?php echo $func->getUrl(); ?>/servers/lobby">ロビーサーバー</a><span></span></p>
                                 <p class="description">ロビーサーバーです。いろいろなサーバーにアクセスしたりミニゲームをしたりできます。</p>
                             </div>
                             <div class="right"><img src="https://i.gyazo.com/b25eb582f5dd767853c60103201b8f63.gif" width="24px"></div>
                         </div>
                         <div class="status" id="skyblock">
                             <div class="left">
-                                <p class="server-name"><a href="<?php echo $conf["url"]; ?>/servers/skyblock">SkyBlock</a><span></span></p>
+                                <p class="server-name"><a href="<?php echo $func->getUrl(); ?>/servers/skyblock">SkyBlock</a><span></span></p>
                                 <p class="description">SkyBlockサーバーです。</p>
                             </div>
                             <div class="right"><img src="https://i.gyazo.com/b25eb582f5dd767853c60103201b8f63.gif" width="24px"></div>
                         </div><!--
                         <div class="status" id="minigame">
                             <div class="left">
-                                <p class="server-name"><a href="<?php echo $conf["url"]; ?>/servers/minigame">ミニゲームサーバー</a><span></span></p>
+                                <p class="server-name"><a href="<?php echo $func->getUrl(); ?>/servers/minigame">ミニゲームサーバー</a><span></span></p>
                                 <p class="description">あらゆるミニゲーム企画を開催するときに利用しているサーバーです。</p>
                             </div>
                             <div class="right"><img src="https://i.gyazo.com/b25eb582f5dd767853c60103201b8f63.gif" width="24px"></div>
                         </div>-->
                         <div class="status last" id="web">
                             <div class="left">
-                                <p class="server-name"><a href="<?php echo $conf["url"]; ?>/">ウェブサーバー</a></p>
+                                <p class="server-name"><a href="<?php echo $func->getUrl(); ?>/">ウェブサーバー</a></p>
                                 <p class="description">もしここが✕だった場合あなたが見ているページはなんなのでしょう...</p>
                             </div>
                             <div class="right"><img src="https://i.gyazo.com/b25eb582f5dd767853c60103201b8f63.gif" width="24px"></div>

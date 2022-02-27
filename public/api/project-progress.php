@@ -2,7 +2,7 @@
 
 $config = include('./../assets/config.php');
 $TITLE = "作業状況";
-$URL = $conf["url"] . '/api/project-progress';
+$URL = $func->getUrl() . '/api/project-progress';
 $DESCRIPTION = "作業状況を確認できます。";
 
 ?>
@@ -25,7 +25,7 @@ $DESCRIPTION = "作業状況を確認できます。";
                         <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
                             <li itemprop="itemListElement" itemscope
                                 itemtype="https://schema.org/ListItem">
-                                <a itemprop="item" href="<?php echo $conf["url"]; ?>/">
+                                <a itemprop="item" href="<?php echo $func->getUrl(); ?>/">
                                     <span itemprop="name">ホーム</span>
                                 </a>
                                 <meta itemprop="position" content="1" />
@@ -34,7 +34,7 @@ $DESCRIPTION = "作業状況を確認できます。";
 
                             <li itemprop="itemListElement" itemscope
                                 itemtype="https://schema.org/ListItem">
-                                <a itemprop="item" href="<?php echo $conf["url"]; ?>/api/">
+                                <a itemprop="item" href="<?php echo $func->getUrl(); ?>/api/">
                                     <span itemprop="name">API</span>
                                 </a>
                                 <meta itemprop="position" content="2" />
@@ -42,7 +42,7 @@ $DESCRIPTION = "作業状況を確認できます。";
                             
                             <li itemprop="itemListElement" itemscope
                                 itemtype="https://schema.org/ListItem">
-                                <a itemprop="item" href="<?php echo $conf["url"]; ?>/api/project-progress">
+                                <a itemprop="item" href="<?php echo $func->getUrl(); ?>/api/project-progress">
                                     <span itemprop="name"><?php echo $TITLE; ?></span>
                                 </a>
                                 <meta itemprop="position" content="3" />

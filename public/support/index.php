@@ -2,7 +2,7 @@
 
 $config = include('./../assets/config.php');
 $TITLE = "サポート";
-$URL = $conf["url"] . '/support/';
+$URL = $func->getUrl() . '/support/';
 $DESCRIPTION = " ";
 
 ?>
@@ -26,7 +26,7 @@ $DESCRIPTION = " ";
                             <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/">
                                         <span itemprop="name">ホーム</span>
                                     </a>
                                     <meta itemprop="position" content="1" />
@@ -34,7 +34,7 @@ $DESCRIPTION = " ";
                                 
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/support/">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/support/">
                                         <span itemprop="name"><?php echo $TITLE; ?></span>
                                     </a>
                                     <meta itemprop="position" content="2" />
@@ -53,9 +53,9 @@ $DESCRIPTION = " ";
                     <!-- パンくずリスト&最終更新日 -->
                     <h1 class="design">サポート</h1>
                     <h2 class="design">FAQ</h2>
-                    <p>よくある質問を掲載しています。アクセスは<a href="<?php echo $conf["url"]; ?>/support/faq">コチラ</a>からどうぞ。</p>
+                    <p>よくある質問を掲載しています。アクセスは<a href="<?php echo $func->getUrl(); ?>/support/faq">コチラ</a>からどうぞ。</p>
                     <h2 class="design">お問い合わせ</h2>
-                    <p>バグ報告やサポートを受けたい方は<a href="<?php echo $conf["url"]; ?>/support/form">コチラ</a>から受けることができます。また，<a href="https://discord.gg/gaGB6Mm">Discordグループ</a>からもお問い合わせすることができ，返信が早い場合がございます。</p>
+                    <p>バグ報告やサポートを受けたい方は<a href="<?php echo $func->getUrl(); ?>/support/form">コチラ</a>から受けることができます。また，<a href="https://discord.gg/gaGB6Mm">Discordグループ</a>からもお問い合わせすることができ，返信が早い場合がございます。</p>
                 </div>
             </div>
         </div>

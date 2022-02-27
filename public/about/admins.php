@@ -54,7 +54,7 @@ $STAFF_DECT = [
 ];
 
 $TITLE = "運営一覧";
-$URL = $conf["url"] . '/about/admins';
+$URL = $func->getUrl() . '/about/admins';
 $DESCRIPTION = "運営やスタッフ一覧ページです。";
 
 ?>
@@ -79,7 +79,7 @@ $DESCRIPTION = "運営やスタッフ一覧ページです。";
                             <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/">
                                         <span itemprop="name">ホーム</span>
                                     </a>
                                     <meta itemprop="position" content="1" />
@@ -87,7 +87,7 @@ $DESCRIPTION = "運営やスタッフ一覧ページです。";
 
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/about/admins">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/about/admins">
                                         <span itemprop="name"><?php echo $TITLE; ?></span>
                                     </a>
                                     <meta itemprop="position" content="2" />

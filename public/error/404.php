@@ -8,7 +8,7 @@ $config = include('./../assets/config.php');
 	<head>
         <?php echo $html["common_head"]; ?>
         <title>404 Not Found | MonsterLifeServer</title>
-        <link rel="stylesheet" type="text/css" href="<?php echo $conf["url"]; ?>/assets/css/error.min.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo $func->getUrl(); ?>/assets/css/error.min.css">
     </head>
     <body class="error_404">
         <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/header.php"); ?>
@@ -21,7 +21,7 @@ $config = include('./../assets/config.php');
                         <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
                             <li itemprop="itemListElement" itemscope
                                 itemtype="https://schema.org/ListItem">
-                                <a itemprop="item" href="<?php echo $conf["url"]; ?>/">
+                                <a itemprop="item" href="<?php echo $func->getUrl(); ?>/">
                                     <span itemprop="name">ホーム</span>
                                 </a>
                                 <meta itemprop="position" content="1" />
@@ -54,10 +54,10 @@ $config = include('./../assets/config.php');
                                             <p>あなたが求めているページは見つかりませんでした...</p>
                                             <?php
                                                 if (!empty($_SERVER['REQUEST_URI'])) {
-                                                    echo "<p>URL: <span>" . $conf["url"] . $_SERVER['REQUEST_URI'] . "</span></p>";
+                                                    echo "<p>URL: <span>" . $func->getUrl() . $_SERVER['REQUEST_URI'] . "</span></p>";
                                                 }
                                             ?>
-                                            <a href="<?php echo $conf["url"]; ?>" class="link_404">ここから戻れます</a>
+                                            <a href="<?php echo $func->getUrl(); ?>" class="link_404">ここから戻れます</a>
                                         </div>
                                     </div>
                                 </div>

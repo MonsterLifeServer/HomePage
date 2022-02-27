@@ -1,30 +1,17 @@
 <?php
 
-$config = include('./assets/config.php');
-
-$TITLE = "MonsterLifeServer";
-$URL = $conf["url"] . '/';
-$DESCRIPTION = "ミニゲーム企画鯖『MonsterLifeServer』のホームページです。";
-
-// カルーセルに使用する画像一覧(推奨サイズ: 1920×1080)
-$images = [
-	"https://i.gyazo.com/d5e3fe57a5718d72f538e2e9690a1abe.png",
-	"https://i.gyazo.com/419a033caf3d2fa57c0dc1558a57e54c.png",
-	"https://i.gyazo.com/2575a25f1ccfbd4c37a0d517e0d211b3.png",
-	"https://i.gyazo.com/b34e6f3356881fc2a3e9a4606c8c0039.png"
-];
+include('./assets/function.php');
+$func = new HomePageFunction('./assets/config.php', 'MonsterLifeServer');
+$func->setPageUrl('/');
+$func->setDescription('ミニゲーム企画鯖『MonsterLifeServer』のホームページです。');
 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
 	<head>
-		<?php echo $html["common_head"]; ?>
-		<title><?php echo $TITLE; ?></title>
-		<meta property="og:url" content="<?php echo $URL; ?>/" />
-		<meta property="og:title" content="<?php echo $TITLE; ?>" />
-		<meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
-		<link rel="stylesheet" href="<?php echo $conf["url"]; ?>/assets/css/carousel.min.css" type="text/css">
-		<script type="text/javascript" src="<?php echo $conf["url"]; ?>/assets/js/rss_reader.js"></script>
+		<?php $func->printMetaData(); ?>
+		<link rel="stylesheet" href="<?php echo $func->getUrl(); ?>/assets/css/carousel.min.css" type="text/css">
+		<script type="text/javascript" src="<?php echo $func->getUrl(); ?>/assets/js/rss_reader.js"></script>
 		<style>
 			#elapsedTime {
 				font-weight: bold;
@@ -41,11 +28,11 @@ $images = [
 		<?php
 			$month = date('m') . '月'; // strpos($month, "4月") 
 			if (strpos($month, "11月") or strpos($month, "12月")) {
-				echo '<script type="text/javascript" src="'.$conf["url"].'/assets/js/winter.js"></script>';
+				echo '<script type="text/javascript" src="'.$func->getUrl().'/assets/js/winter.js"></script>';
 			} elseif (strpos($month, "4月")) {
-				echo '<script type="text/javascript" src="'.$conf["url"].'/assets/js/spring.js"></script>';
+				echo '<script type="text/javascript" src="'.$func->getUrl().'/assets/js/spring.js"></script>';
 			} elseif (strpos($month, "10月")) {
-				echo '<script type="text/javascript" src="'.$conf["url"].'/assets/js/fall.js"></script>';
+				echo '<script type="text/javascript" src="'.$func->getUrl().'/assets/js/fall.js"></script>';
 			}
 		?>
         <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/header.php"); ?>
@@ -58,7 +45,7 @@ $images = [
                             <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/">
                                         <span itemprop="name">ホーム</span>
                                     </a>
                                     <meta itemprop="position" content="1" />
@@ -111,7 +98,7 @@ $images = [
 					-->
                 
 					<h2>新着情報</h2>
-					<div class="read-more"><a href="<?php echo $conf["url"]; ?>/about/news">すべて見る</a></div>
+					<div class="read-more"><a href="<?php echo $func->getUrl(); ?>/about/news">すべて見る</a></div>
 					<?php
 						$xml = "https://raw.githubusercontent.com/MonsterLifeServer/HomePage/master/public/assets/data/news.xml";//ファイルを指定
 						$xmlData = simplexml_load_file($xml);
@@ -127,7 +114,7 @@ $images = [
 						<?php 
 							$_i++;
 							$text = (string)$data->date;
-							if (isNearDate($text)) {
+							if ($func->isNearDate($text)) {
 								$text = "<span class='blinking'><span style='color: red;'>New</span></span>" . $text;
 							}
 							echo $text; 
@@ -151,7 +138,7 @@ $images = [
 						if (empty($_GET['debug'])) echo "-->";
 					?>
 					<h2>ブログ最新記事</h2>
-					<div class="read-more"><a href="<?php echo $conf["url"]; ?>/blog/">すべて見る</a></div>
+					<div class="read-more"><a href="<?php echo $func->getUrl(); ?>/blog/">すべて見る</a></div>
 					<div class="card-box" id="blogs"></div>
 				</div>
             </div>
@@ -184,5 +171,5 @@ $images = [
 			setInterval(Time_exchange,1000);
 		}
 	</script>
-    <?php echo $html["common_foot"]; ?>
+    <?php $func->printFootScript(); ?>
 </html>

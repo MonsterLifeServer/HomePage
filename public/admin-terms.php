@@ -2,7 +2,7 @@
 
 $config = include('./assets/config.php');
 $TITLE = "運営利用規約";
-$URL = $conf["url"] . '/admin-terms';
+$URL = $func->getUrl() . '/admin-terms';
 $DESCRIPTION = "ルールとマナーを守って遊びましょう！！";
 
 ?>
@@ -26,14 +26,14 @@ $DESCRIPTION = "ルールとマナーを守って遊びましょう！！";
                             <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/">
                                         <span itemprop="name">ホーム</span>
                                     </a>
                                     <meta itemprop="position" content="1" />
                                 </li>
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/terms">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/terms">
                                         <span itemprop="name"><?php echo $TITLE; ?></span>
                                     </a>
                                     <meta itemprop="position" content="2" />
@@ -62,7 +62,7 @@ $DESCRIPTION = "ルールとマナーを守って遊びましょう！！";
                     <h2 class="design">禁止事項</h2>
                     <div class="box text-left">
                         <ul>
-                            <li><a href="<?php echo $conf['url']; ?>/terms" target="_blank">利用規約</a>に違反する行為</li>
+                            <li><a href="<?php echo $func->getUrl(); ?>/terms" target="_blank">利用規約</a>に違反する行為</li>
                             <li>無断に運営内で共有されている情報を公開する行為</li>
                             また，利用規約に違反し，処罰された場合の異議申し立ては原則１か月まで有効とし，それ以降は認めないものとする。
                         </ul> 

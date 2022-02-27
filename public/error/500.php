@@ -8,7 +8,7 @@ $config = include('./../assets/config.php');
 	<head>
         <?php echo $html["common_head"]; ?>
         <title>500 Internal Server Error | MonsterLifeServer</title>
-        <link rel="stylesheet" type="text/css" href="<?php echo $conf["url"]; ?>/assets/css/error.min.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo $func->getUrl(); ?>/assets/css/error.min.css">
     </head>
     <body class="error_500">
         <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/header.php"); ?>
@@ -21,7 +21,7 @@ $config = include('./../assets/config.php');
                         <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
                             <li itemprop="itemListElement" itemscope
                                 itemtype="https://schema.org/ListItem">
-                                <a itemprop="item" href="<?php echo $conf["url"]; ?>/">
+                                <a itemprop="item" href="<?php echo $func->getUrl(); ?>/">
                                     <span itemprop="name">ホーム</span>
                                 </a>
                                 <meta itemprop="position" content="1" />
@@ -46,7 +46,7 @@ $config = include('./../assets/config.php');
                     <div class='eye'></div>
 
                     <p class="sub-text">あら？なにかがうまく動かなかったみたい...現在<span class="italic">調査中</span>だからちょっと待ってね...</p>
-                    <a href="<?php echo $conf["url"]; ?>">あ，ここから戻れるよ...</a>
+                    <a href="<?php echo $func->getUrl(); ?>">あ，ここから戻れるよ...</a>
                 </div>
             </div>
         </div>

@@ -2,7 +2,7 @@
 
 $config = include('./../assets/config.php');
 $TITLE = "配信コメント";
-$URL = $conf["url"] . '/api/comment';
+$URL = $func->getUrl() . '/api/comment';
 $DESCRIPTION = "MonsterLifeServerのライブ配信のコメントを見れるページ";
 
 ?>
@@ -33,7 +33,7 @@ $DESCRIPTION = "MonsterLifeServerのライブ配信のコメントを見れる�
                             <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/">
                                         <span itemprop="name">ホーム</span>
                                     </a>
                                     <meta itemprop="position" content="1" />
@@ -42,7 +42,7 @@ $DESCRIPTION = "MonsterLifeServerのライブ配信のコメントを見れる�
 
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/api/">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/api/">
                                         <span itemprop="name">API</span>
                                     </a>
                                     <meta itemprop="position" content="2" />
@@ -50,7 +50,7 @@ $DESCRIPTION = "MonsterLifeServerのライブ配信のコメントを見れる�
                                 
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/api/comment">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/api/comment">
                                         <span itemprop="name"><?php echo $TITLE; ?></span>
                                     </a>
                                     <meta itemprop="position" content="3" />
