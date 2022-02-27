@@ -94,7 +94,7 @@ class HomePageFunction {
 
     public function getUrl() {
         include($this->conf_path);
-        return $func->getUrl();
+        return $conf["url"];
     }
 
     public function getPageUrl() {

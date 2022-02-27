@@ -67,7 +67,7 @@ $config = include('./../assets/config.php');
                 </div>
             </div>
         </div>
-        <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/footer.php"); ?>
+        <?php $func->printFootScript(); ?>
     </body>
     <script>
 

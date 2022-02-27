@@ -142,7 +142,7 @@ $func->setDescription('ミニゲーム企画鯖『MonsterLifeServer』のホー�
 					<div class="card-box" id="blogs"></div>
 				</div>
             </div>
-            <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/footer.php"); ?>
+            <?php $func->printFootScript(); ?>
         </div>
 	</body>
     <script>

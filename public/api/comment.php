@@ -73,7 +73,7 @@ $DESCRIPTION = "MonsterLifeServerのライブ配信のコメントを見れる�
                     <iframe src="https://chat.restream.io/embed?token=1079227b-6d9b-4563-a39f-2a79f4d9ad0b" scrolling="no" frameborder="no" width="100%" height="600px"></iframe>
 				</div>
 			</div>
-			<?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/footer.php"); ?>
+			<?php $func->printFootScript(); ?>
 		</div>
 		<?php echo $html["common_foot"]; ?>
 	</body>

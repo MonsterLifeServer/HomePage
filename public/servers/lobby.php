@@ -94,7 +94,7 @@ $DESCRIPTION = "ロビーサーバーについて";
                 </div>
             </div>
 
-            <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/footer.php"); ?>
+            <?php $func->printFootScript(); ?>
         </div>
     </body>
     <?php echo $html["common_foot"]; ?>

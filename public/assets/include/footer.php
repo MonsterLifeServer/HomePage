@@ -12,7 +12,7 @@
             <a href="<?php echo $func->getUrl(); ?>/"> About</a> |
             <a href="<?php echo $func->getUrl(); ?>/terms"> 利用規約・ガイドライン</a> |
             <a href="<?php 
-                echo (empty($_SERVER["HTTPS"]) ? "http://" : "https://") . $_SERVER["HTTP_HOST"] . "/privacy_policy";
+                echo $func->getUrl() . "/privacy_policy";
             ?>"> プライバシーポリシー</a>
         </p><br/>
     </div>

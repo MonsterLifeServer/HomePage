@@ -1,13 +1,15 @@
 <?php
 
-$config = include('./assets/config.php');
+include('./assets/function.php');
+$func = new HomePageFunction('./assets/config.php', 'プライバシーポリシー | MonsterLifeServer');
+$func->setPageUrl($func->getUrl().'/privacy_policy');
+$func->setDescription('MonsterLifeServerのプライバシーポリシー');
 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
 	<head>
-        <?php echo $html["common_head"]; ?>
-        <title>プライバシーポリシー | MonsterLifeServer</title>
+        <?php $func->printMetaData(); ?>
     </head>
     <body>
         <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/header.php"); ?>
@@ -75,7 +77,7 @@ $config = include('./assets/config.php');
                 </div>
             </div>
         </div>
-        <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/footer.php"); ?>
+        <?php $func->printFootScript(); ?>
     </body>
-    <?php echo $html["common_foot"]; ?>
+    <?php $func->printFootScript(); ?>
 </html>
