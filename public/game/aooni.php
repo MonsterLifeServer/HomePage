@@ -127,14 +127,14 @@ $DESCRIPTION = "フリーゲーム「青鬼」をマイクラで遊べるよう�
 									<p>逃側には役職があり，それぞれの役職によって脱出の力になる能力があります。</p>
 									<iframe 
 										name="ifrm6" 
-										src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTxtRyHPWH3r8O3ER-L6pkZHPNfmksUkmzklCqEsJFbgMgTDhgxERrgebofefJvq0rmsngQsSnvltGV/pubhtml?gid=304694679&range=A1:F7&amp;single=true&amp;widget=true&amp;headers=false" 
+										src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTxtRyHPWH3r8O3ER-L6pkZHPNfmksUkmzklCqEsJFbgMgTDhgxERrgebofefJvq0rmsngQsSnvltGV/pubhtml?gid=1838801207&range=A1:F7&amp;single=true&amp;widget=true&amp;headers=false" 
 										width="100" height="100" 
 										scrolling="no" frameborder="0"
 										align="left"
 										marginwidth="10"
 										marginheight="10"
 										style='margin-right:1em;'
-										class='fullframe'>表示されない方は<a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTxtRyHPWH3r8O3ER-L6pkZHPNfmksUkmzklCqEsJFbgMgTDhgxERrgebofefJvq0rmsngQsSnvltGV/pubhtml?gid=304694679&range=A1:F7&amp;single=true&amp;widget=true&amp;headers=false" target="_blank">コチラ</a>
+										class='fullframe'>表示されない方は<a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTxtRyHPWH3r8O3ER-L6pkZHPNfmksUkmzklCqEsJFbgMgTDhgxERrgebofefJvq0rmsngQsSnvltGV/pubhtml?gid=1838801207&range=A1:F7&amp;single=true&amp;widget=true&amp;headers=false" target="_blank">コチラ</a>
 									</iframe>
 								</div>
 

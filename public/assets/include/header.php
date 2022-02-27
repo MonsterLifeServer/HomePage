@@ -97,37 +97,37 @@ $header_menu = [
         </div>
     </div>
 </header>
-<!-- 将来 -->
-<!-- 
 <?php 
-    if (strpos($_SERVER["HTTP_HOST"], "sub-join") === false) {
-        $month = date('m') . '月';
-        if (strpos($month, "4月")) {
-            $i = "5";
-        } else {
-            $i = "2";
-        }
-    
-        $url = "https://minecraft.jp/servers/5d51f624a9b0bd7e0e00834e";
-        $imageJMS = 'https://minecraft.jp/servers/5d51f624a9b0bd7e0e00834e/banner/'.$i.'/560x95.png';
-        $imageMono = "https://minecraft.jp/servers/5d51f624a9b0bd7e0e00834e/banner/3/560x95.png";
-    
-        if (file_get_contents($imageJMS) || file_get_contents($imageMono)) {
-            echo '<ul class="label"><li><a href="https://minecraft.jp/servers/5d51f624a9b0bd7e0e00834e" target="_blank"><img src="https://minecraft.jp/servers/5d51f624a9b0bd7e0e00834e/banner/'.$i.'/560x95.png" alt="JapanMinecraftServersにアクセスできるバナー"/></a></li>';
-            echo '<li><a href="https://monocraft.net/servers/4o9NgWsXjtrIVtds0Igw/vote" target="_blank"><img src="https://minecraft.jp/servers/5d51f624a9b0bd7e0e00834e/banner/3/560x95.png" alt="Monocraftにアクセスできるバナー"/></a></li></ul>';
-        } else {
-            echo '<ul class="label"><li class="back-white"><a href="https://minecraft.jp/servers/5d51f624a9b0bd7e0e00834e" target="_blank">JapanMinecraftServers</li>';
-            echo '<li class="back-white"><a href="https://monocraft.net/servers/4o9NgWsXjtrIVtds0Igw/vote" target="_blank">Monocraft</a></li></ul>';
+    $jms_banner = false;
+    if ($jms_banner === true) {
+        if (strpos($_SERVER["HTTP_HOST"], "sub-join") === false) {
+            $month = date('m') . '月';
+            if (strpos($month, "4月")) {
+                $i = "5";
+            } else {
+                $i = "2";
+            }
+        
+            $url = "https://minecraft.jp/servers/5d51f624a9b0bd7e0e00834e";
+            $imageJMS = 'https://minecraft.jp/servers/5d51f624a9b0bd7e0e00834e/banner/'.$i.'/560x95.png';
+            $imageMono = "https://minecraft.jp/servers/5d51f624a9b0bd7e0e00834e/banner/3/560x95.png";
+        
+            if (file_get_contents($imageJMS) || file_get_contents($imageMono)) {
+                echo '<ul class="label"><li><a href="https://minecraft.jp/servers/5d51f624a9b0bd7e0e00834e" target="_blank"><img src="https://minecraft.jp/servers/5d51f624a9b0bd7e0e00834e/banner/'.$i.'/560x95.png" alt="JapanMinecraftServersにアクセスできるバナー"/></a></li>';
+                echo '<li><a href="https://monocraft.net/servers/4o9NgWsXjtrIVtds0Igw/vote" target="_blank"><img src="https://minecraft.jp/servers/5d51f624a9b0bd7e0e00834e/banner/3/560x95.png" alt="Monocraftにアクセスできるバナー"/></a></li></ul>';
+            } else {
+                echo '<ul class="label"><li class="back-white"><a href="https://minecraft.jp/servers/5d51f624a9b0bd7e0e00834e" target="_blank">JapanMinecraftServers</li>';
+                echo '<li class="back-white"><a href="https://monocraft.net/servers/4o9NgWsXjtrIVtds0Igw/vote" target="_blank">Monocraft</a></li></ul>';
+            }
         }
     }
 ?>
--->
 <div class="overlay"></div>
-<!-- 以下，緊急お知らせ用BOX -->
 <?php 
     $sorryMessageVisible = FALSE;
     $sorryMessage = '現在，お問い合わせページ・役職応募ページが正しく機能しておらず，運営にメッセージが届きません。何かお問い合わせのあるかたは Monster2408#8936 に連絡するか<a href="https://discord.gg/gaGB6Mm">公式Discordグループ</a>にてお問い合わせください。';
     if ($sorryMessageVisible === TRUE) {
+        echo '<!-- 以下，緊急お知らせ用BOX -->';
         echo '<div class="sorry">';
         echo '<div class="contents">';
         echo '<p>'.$sorryMessage.'</p>';
@@ -136,21 +136,3 @@ $header_menu = [
     }
 ?>
 <!-- ホームページトップ -->
-<?php 
-if (empty($_GET['debug'])) echo "<!--";
-?>
-<div class="header-ad-label">
-    <ins class="adsbygoogle"
-        style="display:block; text-align:center;"
-        data-ad-layout="in-article"
-        data-ad-format="fluid"
-        data-ad-client="ca-pub-1928305720436804"
-        data-ad-slot="8813759985">
-    </ins>
-    <script> 
-        (adsbygoogle = window.adsbygoogle || []).push({}); 
-    </script>
-</div>
-<?php 
-if (empty($_GET['debug'])) echo "-->";
-?>
