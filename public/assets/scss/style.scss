@@ -101,12 +101,15 @@ body.aooni {
 
 .aooni_youtube_cm {
     background: #fff;
+    .aooni_title_logo {
+        text-align: center;
+    }
     .aooni-logo-style {
         color: #ACB6E5;
         background: -webkit-linear-gradient(blue, pink); //背景色にグラデーションを指定
         -webkit-background-clip: text;//テキストでくり抜く
         -webkit-text-fill-color: transparent;//くり抜いた部分は背景を表示
-        font-size: 15vw;
+        font-size: 40px;
     }
     .aooni_description {
         margin-bottom: 10px;
@@ -854,6 +857,18 @@ table.cmd {
     }
 }
 
+@media screen and (max-width:250px) {
+    .aooni_youtube_cm .aooni-logo-style {
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width:215px) {
+    .aooni_youtube_cm .aooni-logo-style {
+        font-size: 30px;
+    }
+}
+
 @media screen and (max-width:200px) {
     .passbook {
         .title {
@@ -868,5 +883,17 @@ table.cmd {
         .description {
             font-size: 6px;
         }
+    }
+}
+
+@media screen and (max-width:190px) {
+    .aooni_youtube_cm .aooni-logo-style {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width:170px) {
+    .aooni_youtube_cm .aooni-logo-style {
+        font-size: 20px;
     }
 }

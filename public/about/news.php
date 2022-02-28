@@ -1,19 +1,15 @@
 <?php
 
-$config = include('./../assets/config.php');
-$TITLE = "新着情報";
-$URL = $func->getUrl() . '/about/news';
-$DESCRIPTION = "新着情報が見れます。";
+include('./../assets/function.php');
+$func = new HomePageFunction('./../assets/config.php', '新着情報');
+$func->setPageUrl($func->getUrl().'/about/news');
+$func->setDescription('新着情報が見れます。');
 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
 	<head>
-		<?php echo $html["common_head"]; ?>
-		<title><?php echo $TITLE; ?> | MonsterLifeServer</title>
-		<meta property="og:url" content="<?php echo $URL; ?>/" />
-		<meta property="og:title" content="<?php echo $TITLE; ?> | MonsterLifeServer" />
-		<meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
+		<?php $func->printMetaData(); ?>
         <script>
             $(function(){
                 
@@ -94,8 +90,8 @@ $DESCRIPTION = "新着情報が見れます。";
 
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/about/news">
-                                        <span itemprop="name"><?php echo $TITLE; ?></span>
+                                    <a itemprop="item" href="<?php echo $func->getPageUrl(); ?>">
+                                        <span itemprop="name"><?php echo $func->getTitle(); ?></span>
                                     </a>
                                     <meta itemprop="position" content="2" />
                                 </li>
@@ -146,7 +142,7 @@ $DESCRIPTION = "新着情報が見れます。";
                 </div>
             </div>
         </div>
-        <?php $func->printFootScript(); ?>
+        <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/footer.php"); ?>
     </body>
-    <?php echo $html["common_foot"]; ?>
+    <?php $func->printFootScript(); ?>
 </html>

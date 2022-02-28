@@ -1,10 +1,9 @@
 <?php
 
-$config = include('./../assets/config.php');
-
-$TITLE = "通帳";
-$URL = $func->getUrl() . '/about/passbook';
-$DESCRIPTION = "MonsterLifeServerの通帳";
+include('./../assets/function.php');
+$func = new HomePageFunction('./../assets/config.php', '通帳');
+$func->setPageUrl($func->getUrl().'/about/passbook');
+$func->setDescription('MonsterLifeServerの通帳');
 
 setlocale(LC_MONETARY, 'ja_JP');
 
@@ -28,11 +27,7 @@ if (isset($_GET["sort"]) && intval($_GET["sort"])) {
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
 	<head>
-        <?php echo $html["common_head"]; ?>
-		<title><?php echo $TITLE; ?></title>
-		<meta property="og:url" content="<?php echo $URL; ?>/" />
-		<meta property="og:title" content="<?php echo $TITLE; ?> | MonsterLifeServer" />
-		<meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
+        <?php $func->printMetaData(); ?>
     </head>
     <body>
         <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/header.php"); ?>
@@ -53,8 +48,8 @@ if (isset($_GET["sort"]) && intval($_GET["sort"])) {
 
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/title">
-                                        <span itemprop="name"><?php echo $TITLE; ?></span>
+                                    <a itemprop="item" href="<?php echo $func->getPageUrl(); ?>">
+                                        <span itemprop="name"><?php echo $func->getTitle(); ?></span>
                                     </a>
                                     <meta itemprop="position" content="2" />
                                 </li>
@@ -127,7 +122,7 @@ if (isset($_GET["sort"]) && intval($_GET["sort"])) {
                 </div>
             </div>
         </div>
-        <?php $func->printFootScript(); ?>
+        <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/footer.php"); ?>
     </body>
-    <?php echo $html["common_foot"]; ?>
+    <?php $func->printFootScript(); ?>
 </html>

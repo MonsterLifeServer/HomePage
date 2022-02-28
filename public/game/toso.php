@@ -1,19 +1,15 @@
 <?php
 
-$config = include('./../assets/config.php');
-$TITLE = "逃走中";
-$URL = $func->getUrl() . '/game/toso';
-$DESCRIPTION = "逃走中をマイクラで遊べるようにした企画「逃走中」のルール紹介ページです。";
+include('./../assets/function.php');
+$func = new HomePageFunction('./../assets/config.php', '逃走中');
+$func->setPageUrl($func->getUrl().'/game/toso');
+$func->setDescription('逃走中をマイクラで遊べるようにした企画「逃走中」のルール紹介ページです。');
 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
 	<head>
-		<?php echo $html["common_head"]; ?>
-		<title><?php echo $TITLE; ?> | MonsterLifeServer</title>
-		<meta property="og:url" content="<?php echo $URL; ?>/" />
-		<meta property="og:title" content="<?php echo $TITLE; ?> | MonsterLifeServer" />
-		<meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
+        <?php $func->printMetaData(); ?>
     </head>
     <body>
         <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/header.php"); ?>
@@ -43,8 +39,8 @@ $DESCRIPTION = "逃走中をマイクラで遊べるようにした企画「逃�
 
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/game/toso">
-                                        <span itemprop="name"><?php echo $TITLE; ?></span>
+                                    <a itemprop="item" href="<?php echo $func->getPageUrl(); ?>">
+                                        <span itemprop="name"><?php echo $func->getTitle(); ?></span>
                                     </a>
                                     <meta itemprop="position" content="3" />
                                 </li>
@@ -90,9 +86,8 @@ $DESCRIPTION = "逃走中をマイクラで遊べるようにした企画「逃�
 
                 </div>
             </div>
-
-            <?php $func->printFootScript(); ?>
         </div>
+        <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/footer.php"); ?>
     </body>
-    <?php echo $html["common_foot"]; ?>
+    <?php $func->printFootScript(); ?>
 </html>

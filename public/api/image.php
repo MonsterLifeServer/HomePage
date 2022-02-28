@@ -1,19 +1,15 @@
 <?php
 
-$config = include('./../assets/config.php');
-$TITLE = "ImageAPI";
-$URL = $func->getUrl() . '/api/image';
-$DESCRIPTION = "Gyazoの画像を表示します";
+include('./../assets/function.php');
+$func = new HomePageFunction('./../assets/config.php', 'ImageAPI');
+$func->setPageUrl($func->getUrl().'/api/image');
+$func->setDescription('Gyazoの画像を表示します');
 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
 	<head>
-		<?php echo $html["common_head"]; ?>
-		<title><?php echo $TITLE; ?> | MonsterLifeServer</title>
-		<meta property="og:url" content="<?php echo $URL; ?>/" />
-		<meta property="og:title" content="<?php echo $TITLE; ?> | MonsterLifeServer" />
-		<meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
+		<?php $func->printMetaData(); ?>
         <style>
             #center {
                 text-align: center;
@@ -78,8 +74,8 @@ $DESCRIPTION = "Gyazoの画像を表示します";
                                 
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/api/image">
-                                        <span itemprop="name"><?php echo $TITLE; ?></span>
+                                    <a itemprop="item" href="<?php echo $func->getPageUrl(); ?>">
+                                        <span itemprop="name"><?php echo $func->getTitle(); ?></span>
                                     </a>
                                     <meta itemprop="position" content="3" />
                                 </li>
@@ -109,7 +105,7 @@ $DESCRIPTION = "Gyazoの画像を表示します";
                 </div>
             </div>
         </div>
-        <?php $func->printFootScript(); ?>
+        <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/footer.php"); ?>
     </body>
-    <?php echo $html["common_foot"]; ?>
+    <?php $func->printFootScript(); ?>
 </html>

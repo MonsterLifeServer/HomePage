@@ -1,7 +1,7 @@
 <?php
 
 include('./assets/function.php');
-$func = new HomePageFunction('./assets/config.php', 'プライバシーポリシー | MonsterLifeServer');
+$func = new HomePageFunction('./assets/config.php', 'プライバシーポリシー');
 $func->setPageUrl($func->getUrl().'/privacy_policy');
 $func->setDescription('MonsterLifeServerのプライバシーポリシー');
 
@@ -30,8 +30,8 @@ $func->setDescription('MonsterLifeServerのプライバシーポリシー');
 
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/privacy_policy">
-                                        <span itemprop="name">プライバシーポリシー</span>
+                                    <a itemprop="item" href="<?php echo $func->getPageUrl(); ?>">
+                                        <span itemprop="name"><?php echo $func->getTitle(); ?></span>
                                     </a>
                                     <meta itemprop="position" content="2" />
                                 </li>
@@ -77,7 +77,7 @@ $func->setDescription('MonsterLifeServerのプライバシーポリシー');
                 </div>
             </div>
         </div>
-        <?php $func->printFootScript(); ?>
+		<?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/footer.php"); ?>
     </body>
     <?php $func->printFootScript(); ?>
 </html>

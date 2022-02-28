@@ -1,50 +1,42 @@
 <?php
 
-$config = include('./../assets/config.php');
-$TITLE = "サバイバル鯖";
-$URL = $func->getUrl() . '/servers/survival';
-$DESCRIPTION = "サバイバルサーバーについて";
+include('./../assets/function.php');
+$func = new HomePageFunction('./../assets/config.php', 'サバイバル鯖');
+$func->setPageUrl($func->getUrl().'/servers/survival');
+$func->setDescription('サバイバルサーバーについて');
 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
 	<head>
-		<?php echo $html["common_head"]; ?>
-		<title><?php echo $TITLE; ?> | MonsterLifeServer</title>
-		<meta property="og:url" content="<?php echo $URL; ?>/" />
-		<meta property="og:title" content="<?php echo $TITLE; ?> | MonsterLifeServer" />
-		<meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
+        <?php $func->printMetaData(); ?>
     </head>
     <body>
         <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/header.php"); ?>
         <div class="wrapper">
-            
             <div class="mainBox">
-				<div class="contents">
+                <div class="contents">
                     <!-- パンくずリスト -->
                     <div class="top-label">
                         <div class="item-left">
                             <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-                                <li itemprop="itemListElement" itemscope
-                                    itemtype="https://schema.org/ListItem">
+                                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                                     <a itemprop="item" href="<?php echo $func->getUrl(); ?>/">
                                         <span itemprop="name">ホーム</span>
                                     </a>
                                     <meta itemprop="position" content="1" />
                                 </li>
 
-                                <li itemprop="itemListElement" itemscope
-                                    itemtype="https://schema.org/ListItem">
+                                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                                     <a itemprop="item" href="<?php echo $func->getUrl(); ?>/servers/">
                                         <span itemprop="name">サーバー</span>
                                     </a>
                                     <meta itemprop="position" content="2" />
                                 </li>
 
-                                <li itemprop="itemListElement" itemscope
-                                    itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/servers/survival">
-                                        <span itemprop="name"><?php echo $TITLE; ?></span>
+                                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                    <a itemprop="item" href="<?php echo $func->getPageUrl(); ?>">
+                                        <span itemprop="name"><?php echo $func->getTitle(); ?></span>
                                     </a>
                                     <meta itemprop="position" content="3" />
                                 </li>
@@ -243,9 +235,8 @@ $DESCRIPTION = "サバイバルサーバーについて";
 					<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTxtRyHPWH3r8O3ER-L6pkZHPNfmksUkmzklCqEsJFbgMgTDhgxERrgebofefJvq0rmsngQsSnvltGV/pubhtml?gid=1770321307&range=A1:B12&amp;single=true&amp;widget=true&amp;headers=false" height="370px"></iframe>
 				</div>
 			</div>
-
-            <?php $func->printFootScript(); ?>
         </div>
+        <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/footer.php"); ?>
     </body>
-    <?php echo $html["common_foot"]; ?>
+    <?php $func->printFootScript(); ?>
 </html>

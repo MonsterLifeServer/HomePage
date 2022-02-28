@@ -9,11 +9,13 @@
         </div>
         <p class="foot-menu">
             <a href="<?php echo $func->getUrl(); ?>/"> ホーム</a> |
-            <a href="<?php echo $func->getUrl(); ?>/"> About</a> |
+            <a href="<?php echo $func->getUrl(); ?>/#about"> About</a> |
             <a href="<?php echo $func->getUrl(); ?>/terms"> 利用規約・ガイドライン</a> |
-            <a href="<?php 
-                echo $func->getUrl() . "/privacy_policy";
-            ?>"> プライバシーポリシー</a>
+            <a href="<?php echo $func->getUrl(); ?>/privacy_policy"> プライバシーポリシー</a>
+        </p><br/>
+        <p class="foot-menu">
+            <a href="<?php echo $func->getUrl(); ?>/sitemap">サイトマップ</a> |
+            <a href="<?php echo $func->getUrl(); ?>/sitemap2"> サイトマップ beta</a>
         </p><br/>
     </div>
     <div class="footer-center" style="border-top: 1px solid #000; margin-top: 10px; padding-top: 20px;">

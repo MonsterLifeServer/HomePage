@@ -1,20 +1,15 @@
 <?php
 
-$config = include('./../assets/config.php');
-
-$TITLE = "テンプレート";
-$URL = $conf["url"] . '/';
-$DESCRIPTION = "テンプレート。テンプレート。テンプレート。";
+include('../assets/function.php');
+$func = new HomePageFunction('../assets/config.php', 'テンプレート');
+$func->setPageUrl($func->getUrl().'/temp');
+$func->setDescription('テンプレート。テンプレート。テンプレート。');
 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
 	<head>
-        <title><?php echo $TITLE; ?> | MonsterLifeServer</title>
-        <?php echo $html["common_head"]; ?>
-		<meta property="og:url" content="<?php echo $URL; ?>/" />
-		<meta property="og:title" content="<?php echo $TITLE; ?>" />
-		<meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
+        <?php $func->printMetaData(); ?>
     </head>
     <body>
         <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/header.php"); ?>
@@ -27,7 +22,7 @@ $DESCRIPTION = "テンプレート。テンプレート。テンプレート。"
                             <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/">
+                                    <a itemprop="item" href="<?php echo $func->getPageUrl(); ?>/">
                                         <span itemprop="name">ホーム</span>
                                     </a>
                                     <meta itemprop="position" content="1" />
@@ -35,8 +30,8 @@ $DESCRIPTION = "テンプレート。テンプレート。テンプレート。"
 
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $conf["url"]; ?>/title">
-                                        <span itemprop="name"><?php echo $TITLE; ?></span>
+                                    <a itemprop="item" href="<?php echo $func->getPageUrl(); ?>">
+                                        <span itemprop="name"><?php echo $func->getTitle(); ?></span>
                                     </a>
                                     <meta itemprop="position" content="2" />
                                 </li>
@@ -56,7 +51,7 @@ $DESCRIPTION = "テンプレート。テンプレート。テンプレート。"
                 </div>
             </div>
         </div>
-        <?php $func->printFootScript(); ?>
+        <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/footer.php"); ?>
     </body>
-    <?php echo $html["common_foot"]; ?>
+    <?php $func->printFootScript(); ?>
 </html>

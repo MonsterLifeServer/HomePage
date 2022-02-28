@@ -1,19 +1,15 @@
 <?php
 
-$config = include('./../assets/config.php');
-$TITLE = "コア破壊ゲーム";
-$URL = $func->getUrl() . '/game/cbg';
-$DESCRIPTION = "コアを守り抜け！！「コア破壊ゲーム」のルール紹介ページです";
+include('./../assets/function.php');
+$func = new HomePageFunction('./../assets/config.php', 'コア破壊ゲーム');
+$func->setPageUrl($func->getUrl().'/game/cbg');
+$func->setDescription('コアを守り抜け！！「コア破壊ゲーム」のルール紹介ページです');
 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
 	<head>
-		<?php echo $html["common_head"]; ?>
-		<title><?php echo $TITLE; ?> | MonsterLifeServer</title>
-		<meta property="og:url" content="<?php echo $URL; ?>/" />
-		<meta property="og:title" content="<?php echo $TITLE; ?> | MonsterLifeServer" />
-		<meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
+        <?php $func->printMetaData(); ?>
     </head>
     <body>
         <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/header.php"); ?>
@@ -43,8 +39,8 @@ $DESCRIPTION = "コアを守り抜け！！「コア破壊ゲーム」のルー�
 
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/game/cbg">
-                                        <span itemprop="name"><?php echo $TITLE; ?></span>
+                                    <a itemprop="item" href="<?php echo $func->getPageUrl(); ?>">
+                                        <span itemprop="name"><?php echo $func->getTitle(); ?></span>
                                     </a>
                                     <meta itemprop="position" content="3" />
                                 </li>
@@ -92,9 +88,8 @@ $DESCRIPTION = "コアを守り抜け！！「コア破壊ゲーム」のルー�
 
                 </div>
             </div>
-
-            <?php $func->printFootScript(); ?>
         </div>
+        <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/footer.php"); ?>
     </body>
-    <?php echo $html["common_foot"]; ?>
+    <?php $func->printFootScript(); ?>
 </html>

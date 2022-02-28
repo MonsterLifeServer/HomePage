@@ -1,20 +1,15 @@
 <?php
 
-$config = include('./assets/config.php');
-
-$TITLE = "サイトマップ";
-$URL = $func->getUrl() . '/sitemap';
-$DESCRIPTION = "MonsterLifeServerのあらゆるリンクを確認できます。";
+include('./assets/function.php');
+$func = new HomePageFunction('./assets/config.php', 'サイトマップ | MonsterLifeServer');
+$func->setPageUrl($func->getUrl().'/sitemap');
+$func->setDescription('MonsterLifeServerのあらゆるリンクを確認できます。');
 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
 	<head>
-        <title><?php echo $TITLE; ?> | MonsterLifeServer</title>
-        <?php echo $html["common_head"]; ?>
-		<meta property="og:url" content="<?php echo $URL; ?>/" />
-		<meta property="og:title" content="<?php echo $TITLE; ?>" />
-		<meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
+        <?php $func->printMetaData(); ?>
         <link rel="stylesheet" type="text/css" href="<?php echo $func->getUrl(); ?>/assets/css/sitemap.min.css">
     </head>
     <body>
@@ -36,8 +31,8 @@ $DESCRIPTION = "MonsterLifeServerのあらゆるリンクを確認できます�
 
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $URL; ?>">
-                                        <span itemprop="name"><?php echo $TITLE; ?></span>
+                                    <a itemprop="item" href="<?php echo $func->getPageUrl(); ?>">
+                                        <span itemprop="name"><?php echo $func->getTitle(); ?></span>
                                     </a>
                                     <meta itemprop="position" content="2" />
                                 </li>
@@ -84,11 +79,7 @@ $DESCRIPTION = "MonsterLifeServerのあらゆるリンクを確認できます�
                                     </li>
                                     <li><a href="<?php echo $func->getUrl(); ?>/support/">サポート</a>
                                         <ul>
-                                            <li><a href="<?php echo $func->getUrl(); ?>/support/faq/">よくある質問</a>
-                                                <ul>
-                                                    <li><a href="<?php echo $func->getUrl(); ?>/support/faq/mcid">MCIDについて</a></li>
-                                                </ul>
-                                            </li>
+                                            <li><a href="<?php echo $func->getUrl(); ?>/support/faq/">よくある質問</a></li>
                                         </ul>
                                     </li>
                                     <li><span>Contact</span>
@@ -105,7 +96,6 @@ $DESCRIPTION = "MonsterLifeServerのあらゆるリンクを確認できます�
                                             <li><a href="<?php echo $func->getUrl(); ?>/api/pdf">サーバー資料</a></li>
                                             <li><a href="<?php echo $func->getUrl(); ?>/api/project-progress">プロジェクト進捗</a></li>
                                             <li><a href="<?php echo $func->getUrl(); ?>/api/comment">コメント</a></li>
-                                            <li><a href="<?php echo $func->getUrl(); ?>/api/covid">コロナ情報</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -116,7 +106,7 @@ $DESCRIPTION = "MonsterLifeServerのあらゆるリンクを確認できます�
                 </div>
             </div>
         </div>
-        <?php $func->printFootScript(); ?>
+		<?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/footer.php"); ?>
     </body>
-    <?php echo $html["common_foot"]; ?>
+    <?php $func->printFootScript(); ?>
 </html>

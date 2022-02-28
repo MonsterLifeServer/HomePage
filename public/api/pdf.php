@@ -1,9 +1,9 @@
 <?php
 
-$config = include('./../assets/config.php');
-$TITLE = "サーバー資料";
-$URL = $func->getUrl() . '/api/pdf';
-$DESCRIPTION = "過去の運営会議やその他資料を公開しています。";
+include('./../assets/function.php');
+$func = new HomePageFunction('./../assets/config.php', 'サーバー資料');
+$func->setPageUrl($func->getUrl().'/api/pdf');
+$func->setDescription('過去の運営会議やその他資料を公開しています。');
 
 /// Access-Control-Allow-Originエラーを回避する
 header("Access-Control-Allow-Origin: *");
@@ -12,11 +12,7 @@ header("Access-Control-Allow-Origin: *");
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
 	<head>
-		<?php echo $html["common_head"]; ?>
-		<title><?php echo $TITLE; ?> | MonsterLifeServer</title>
-		<meta property="og:url" content="<?php echo $URL; ?>/" />
-		<meta property="og:title" content="<?php echo $TITLE; ?> | MonsterLifeServer" />
-		<meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
+		<?php $func->printMetaData(); ?>
 		<style>
             table.pdf {
                 width: 100%;
@@ -85,8 +81,8 @@ header("Access-Control-Allow-Origin: *");
                                 
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/api/pdf">
-                                        <span itemprop="name"><?php echo $TITLE; ?></span>
+                                    <a itemprop="item" href="<?php echo $func->getPageUrl(); ?>">
+                                        <span itemprop="name"><?php echo $func->getTitle(); ?></span>
                                     </a>
                                     <meta itemprop="position" content="3" />
                                 </li>
@@ -154,8 +150,8 @@ header("Access-Control-Allow-Origin: *");
                     </div>
 				</div>
 			</div>
-			<?php $func->printFootScript(); ?>
 		</div>
-		<?php echo $html["common_foot"]; ?>
-	</body>
+		<?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/footer.php"); ?>
+    </body>
+    <?php $func->printFootScript(); ?>
 </html>

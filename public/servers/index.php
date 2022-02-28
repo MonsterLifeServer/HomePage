@@ -1,9 +1,9 @@
 <?php
 
-$config = include('./../assets/config.php');
-$TITLE = "サーバー";
-$URL = $func->getUrl() . '/servers/';
-$DESCRIPTION = " ";
+include('./../assets/function.php');
+$func = new HomePageFunction('./../assets/config.php', 'サーバー');
+$func->setPageUrl($func->getUrl().'/servers/');
+$func->setDescription(' ');
 
 date_default_timezone_set('Asia/Tokyo');
 
@@ -39,7 +39,7 @@ if (isset($date)) {
 if ($temp > 4) {
     $array = array();
     //'Host or IP', 'User', 'Pass', 'DBName'
-    $mysqli_mls = new mysqli($conf["sql"]["host"], $conf["sql"]["user"], $conf["sql"]["password"], $conf["sql"]["db"], $conf["sql"]["port"]);
+    $mysqli_mls = new mysqli($func->getSqlHost(), $func->getSqlUser(), $func->getSqlPassWord(), $func->getSqlDataBase(), $func->getSqlPort());
     if($mysqli_mls->connect_error) {
         echo $mysqli_mls->connect_error;
         exit;
@@ -73,12 +73,7 @@ fclose($json);
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
 	<head>
-		<?php echo $html["common_head"]; ?>
-		<title><?php echo $TITLE; ?> | MonsterLifeServer</title>
-		<meta property="og:url" content="<?php echo $URL; ?>/" />
-		<meta property="og:title" content="<?php echo $TITLE; ?> | MonsterLifeServer" />
-		<meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
-        <link rel="stylesheet" type="text/css" href="<?php echo $func->getUrl(); ?>/assets/css/status.min.css">
+        <?php $func->printMetaData(); ?>
     </head>
     <body onload="timer()">
         <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/header.php"); ?>
@@ -100,8 +95,8 @@ fclose($json);
 
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/servers/">
-                                        <span itemprop="name"><?php echo $TITLE; ?></span>
+                                    <a itemprop="item" href="<?php echo $func->getPageUrl(); ?>">
+                                        <span itemprop="name"><?php echo $func->getTitle(); ?></span>
                                     </a>
                                     <meta itemprop="position" content="2" />
                                 </li>
@@ -232,7 +227,7 @@ fclose($json);
                     $max_player = $item["res"]["max_player"];
                     echo 'updateStatusJson("'.$id.'",'.$status.','.$player.','.$max_player.');'."\n";
                 }
-                $res2 = file_get_contents("https://api.mcsrvstat.us/2/".$conf["ip"]);
+                $res2 = file_get_contents("https://api.mcsrvstat.us/2/".$func->getConf()["ip"]);
                 $json2 = json_decode($res2);
                 $id = "bungee";
                 $status = $json2->online;

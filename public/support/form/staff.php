@@ -1,13 +1,12 @@
 <?php
 	//処理内容を定義
 
-    $config = include('./../../assets/config.php');
+    include('./../../assets/function.php');
+    $func = new HomePageFunction('./../../assets/config.php', 'スタッフ応募フォーム');
+    $func->setPageUrl($func->getUrl().'/support/form/staff');
+    $func->setDescription('MonsterLifeServerのスタッフになりたい方はこちらから');
 
-    $TITLE = "スタッフ応募フォーム";
-    $URL = $func->getUrl() . '/support/form/staff';
-    $DESCRIPTION = "スタッフになりたい方はこちらから";
-
-    $staff_lib = $_SERVER["DOCUMENT_ROOT"] . "/assets/lib/staff-form.php";
+    $staff_lib = "./../../assets/lib/staff-form.php";
     include_once($staff_lib);
 
     $post_all_set = (isset($_POST["msg"]) && isset($_POST["username"]) && isset($_POST["mcid"]) && isset($_POST["roles"]) && is_array($_POST["roles"]));
@@ -19,11 +18,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
     <head>
-        <?php echo $html["common_head"]; ?>
-        <title><?php echo $TITLE; ?> | MonsterLifeServer</title>
-        <meta property="og:url" content="<?php echo $URL; ?>/" />
-        <meta property="og:title" content="<?php echo $TITLE; ?> | MonsterLifeServer" />
-        <meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
+        <?php $func->printMetaData(); ?>
         <link rel="stylesheet" type="text/css" href="<?php echo $func->getUrl(); ?>/assets/css/staff-form.min.css">
     </head>
     <body class="form_page">
@@ -53,8 +48,8 @@
 
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $URL; ?>">
-                                        <span itemprop="name"><?php echo $TITLE; ?></span>
+                                    <a itemprop="item" href="<?php echo $func->getPageUrl(); ?>">
+                                        <span itemprop="name"><?php echo $func->getTitle(); ?></span>
                                     </a>
                                     <meta itemprop="position" content="2" />
                                 </li>
@@ -96,11 +91,11 @@
                     ?>
                 </div>
             </div>
-            <?php $func->printFootScript(); ?>
         </div>
         <?php 
-            echo $html["common_foot"];
             get_script_staff();
         ?>
+        <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/footer.php"); ?>
     </body>
+    <?php $func->printFootScript(); ?>
 </html>

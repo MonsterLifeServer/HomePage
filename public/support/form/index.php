@@ -1,8 +1,9 @@
 <?php
-	//処理内容を定義
 
-    $config = include('./../../assets/config.php');
-    //処理内容を定義
+    include('./../../assets/function.php');
+    $func = new HomePageFunction('./../../assets/config.php', 'お問い合わせ');
+    $func->setPageUrl($func->getUrl().'/support/form/');
+    $func->setDescription('MonsterLifeServerへのお問い合わせはこちらから');
 
     // 変数の初期化
     $page_flag = 0;
@@ -62,21 +63,14 @@
 			'username' => '総合お問い合わせ', 
 			'content' => $text, 
 		);
-		$sendOk = send_to_discord($message, $ip, $hook_id); //処理を実行
+		$sendOk = $func->send_to_discord($message, $ip, $hook_id); //処理を実行
     }
-    $TITLE = "お問い合わせ";
-    $URL = $func->getUrl() . '/support/form/';
-    $DESCRIPTION = "MonsterLifeServerへのお問い合わせはこちらから";
-    
+
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
     <head>
-        <?php echo $html["common_head"]; ?>
-        <title><?php echo $TITLE; ?> | MonsterLifeServer</title>
-        <meta property="og:url" content="<?php echo $URL; ?>/" />
-        <meta property="og:title" content="<?php echo $TITLE; ?> | MonsterLifeServer" />
-        <meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
+        <?php $func->printMetaData(); ?>
         <link rel="stylesheet" type="text/css" href="<?php echo $func->getUrl(); ?>/assets/css/form.min.css">
     </head>
     <body class="form_page">
@@ -106,8 +100,8 @@
 
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/support/form">
-                                        <span itemprop="name"><?php echo $TITLE; ?></span>
+                                    <a itemprop="item" href="<?php echo $func->getPageUrl(); ?>">
+                                        <span itemprop="name"><?php echo $func->getTitle(); ?></span>
                                     </a>
                                     <meta itemprop="position" content="3" />
                                 </li>
@@ -218,9 +212,9 @@
 
                 </div>
             </div>
-            <?php $func->printFootScript(); ?>
         </div>
-        <?php echo $html["common_foot"]; ?>
+        <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/footer.php"); ?>
     </body>
+    <?php $func->printFootScript(); ?>
 </html>
     

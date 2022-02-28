@@ -10,7 +10,8 @@ class HomePageFunction {
         $this->conf_path = $conf_path;
         $this->title = $title;
 
-        // include($this->conf_path);
+        $this->pageUrl = $this->getUrl().'/';
+        $this->description = "ミニゲーム企画鯖『MonsterLifeServer』のホームページです。";
     }
 
     public function setPageUrl($url) {
@@ -25,7 +26,11 @@ class HomePageFunction {
     public function printMetaData() {
         include($this->conf_path);
         echo $html["common_head"];
-        echo '<title>'.$this->getTitle().'</title>';
+        $title = $this->getTitle();
+        if (strpos($title, "MonsterLifeServer") === false) {
+            $title = $title . " | MonsterLifeServer";
+        }
+        echo '<title>'.$title.'</title>';
 		echo '<meta property="og:url" content="'.$this->getPageUrl().'" />';
 		echo '<meta property="og:title" content="'.$this->getTitle().'" />';
 		echo '<meta property="og:description" content="'.$this->getDescription().'" />';
@@ -92,11 +97,6 @@ class HomePageFunction {
         return null;
     }
 
-    public function getUrl() {
-        include($this->conf_path);
-        return $conf["url"];
-    }
-
     public function getPageUrl() {
         return $this->pageUrl;
     }
@@ -108,6 +108,42 @@ class HomePageFunction {
     public function getTitle() {
         return $this->title;
     }
+
+    public function getConf() {
+        include($this->conf_path);
+        return $conf;
+    }
+
+    public function getUrl() {
+        include($this->conf_path);
+        return $conf["url"];
+    }
+
+    public function getSqlHost() {
+        include($this->conf_path);
+        return $conf["sql"]["host"];
+    }
+
+    public function getSqlDataBase() {
+        include($this->conf_path);
+        return $conf["sql"]["db"];
+    }
+
+    public function getSqlPort() {
+        include($this->conf_path);
+        return $conf["sql"]["port"];
+    }
+
+    public function getSqlUser() {
+        include($this->conf_path);
+        return $conf["sql"]["user"];
+    }
+
+    public function getSqlPassWord() {
+        include($this->conf_path);
+        return $conf["sql"]["password"];
+    }
+
 
     public function send_to_discord($message, $ip, $num) {
         $contentsBlocker = [

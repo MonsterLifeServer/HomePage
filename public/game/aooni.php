@@ -1,50 +1,42 @@
 <?php
 
-$config = include('./../assets/config.php');
-$TITLE = "青鬼ゲーム";
-$URL = $func->getUrl() . '/game/aooni';
-$DESCRIPTION = "フリーゲーム「青鬼」をマイクラで遊べるようにした企画「青鬼ゲーム」のルール紹介ページです。";
+include('./../assets/function.php');
+$func = new HomePageFunction('./../assets/config.php', '青鬼ゲーム');
+$func->setPageUrl($func->getUrl().'/game/aooni');
+$func->setDescription('フリーゲーム「青鬼」をマイクラで遊べるようにした企画「青鬼ゲーム」のルール紹介ページです。');
 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
 	<head>
-		<?php echo $html["common_head"]; ?>
-		<title><?php echo $TITLE; ?> | MonsterLifeServer</title>
-		<meta property="og:url" content="<?php echo $URL; ?>/" />
-		<meta property="og:title" content="<?php echo $TITLE; ?> | MonsterLifeServer" />
-		<meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
+        <?php $func->printMetaData(); ?>
     </head>
     <body class="aooni">
         <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/header.php"); ?>
         <div class="wrapper">
-            
             <div class="mainBox">
                 <div class="contents">
                     <!-- パンくずリスト&最終更新日 -->
                     <div class="top-label">
                         <div class="item-left">
                             <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-                                <li itemprop="itemListElement" itemscope
-                                    itemtype="https://schema.org/ListItem">
+                                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                                     <a itemprop="item" href="<?php echo $func->getUrl(); ?>/">
                                         <span itemprop="name">ホーム</span>
                                     </a>
                                     <meta itemprop="position" content="1" />
                                 </li>
 
-                                <li itemprop="itemListElement" itemscope
-                                    itemtype="https://schema.org/ListItem">
+                                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                                     <a itemprop="item" href="<?php echo $func->getUrl(); ?>/game/">
                                         <span itemprop="name">ミニゲーム企画</span>
                                     </a>
                                     <meta itemprop="position" content="2" />
                                 </li>
 
-                                <li itemprop="itemListElement" itemscope
-                                    itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/game/aooni">
-                                        <span itemprop="name"><?php echo $TITLE; ?></span>
+                                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                    <a itemprop="item" href="<?php echo $func->getPageUrl(); ?>">
+                                        <span itemprop="name"><?php echo $func->getTitle(); ?></span>
                                     </a>
                                     <meta itemprop="position" content="3" />
                                 </li>
@@ -163,7 +155,7 @@ $DESCRIPTION = "フリーゲーム「青鬼」をマイクラで遊べるよう�
                 </div>
             </div>
         </div>
-        <?php $func->printFootScript(); ?>
+        <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/footer.php"); ?>
     </body>
-    <?php echo $html["common_foot"]; ?>
+    <?php $func->printFootScript(); ?>
 </html>

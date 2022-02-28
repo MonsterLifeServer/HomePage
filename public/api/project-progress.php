@@ -1,19 +1,15 @@
 <?php
 
-$config = include('./../assets/config.php');
-$TITLE = "作業状況";
-$URL = $func->getUrl() . '/api/project-progress';
-$DESCRIPTION = "作業状況を確認できます。";
+include('./../assets/function.php');
+$func = new HomePageFunction('./../assets/config.php', '作業状況');
+$func->setPageUrl($func->getUrl().'/api/project-progress');
+$func->setDescription('作業状況を確認できます。');
 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
 	<head>
-		<?php echo $html["common_head"]; ?>
-		<title><?php echo $TITLE; ?> | MonsterLifeServer</title>
-		<meta property="og:url" content="<?php echo $URL; ?>/" />
-		<meta property="og:title" content="<?php echo $TITLE; ?> | MonsterLifeServer" />
-		<meta property="og:description" content="<?php echo $DESCRIPTION; ?>" />
+		<?php $func->printMetaData(); ?>
 	</head>
 	<body>
 		<?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/header.php"); ?>
@@ -40,10 +36,9 @@ $DESCRIPTION = "作業状況を確認できます。";
                                 <meta itemprop="position" content="2" />
                             </li>
                             
-                            <li itemprop="itemListElement" itemscope
-                                itemtype="https://schema.org/ListItem">
-                                <a itemprop="item" href="<?php echo $func->getUrl(); ?>/api/project-progress">
-                                    <span itemprop="name"><?php echo $TITLE; ?></span>
+                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                <a itemprop="item" href="<?php echo $func->getPageUrl(); ?>">
+                                    <span itemprop="name"><?php echo $func->getTitle(); ?></span>
                                 </a>
                                 <meta itemprop="position" content="3" />
                             </li>
@@ -72,7 +67,7 @@ $DESCRIPTION = "作業状況を確認できます。";
                 </iframe>
             </div>
 		</div>
-        <?php $func->printFootScript(); ?>
-	</body>
-    <?php echo $html["common_foot"]; ?>
+        <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/footer.php"); ?>
+    </body>
+    <?php $func->printFootScript(); ?>
 </html>

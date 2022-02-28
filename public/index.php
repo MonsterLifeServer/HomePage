@@ -2,8 +2,6 @@
 
 include('./assets/function.php');
 $func = new HomePageFunction('./assets/config.php', 'MonsterLifeServer');
-$func->setPageUrl('/');
-$func->setDescription('ミニゲーム企画鯖『MonsterLifeServer』のホームページです。');
 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
@@ -66,7 +64,7 @@ $func->setDescription('ミニゲーム企画鯖『MonsterLifeServer』のホー�
 					<?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/carousel.php"); ?>
 
 					<h1 class="design" id="about">MonsterLifeServer</h1>
-					<h2>サービス</h2>
+					<h2 id="about">サービス</h2>
 					<div class="server-about-box">
 
 						<div class="server-about first">
@@ -142,9 +140,10 @@ $func->setDescription('ミニゲーム企画鯖『MonsterLifeServer』のホー�
 					<div class="card-box" id="blogs"></div>
 				</div>
             </div>
-            <?php $func->printFootScript(); ?>
-        </div>
-	</body>
+		</div>
+		<?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/footer.php"); ?>
+    </body>
+    <?php $func->printFootScript(); ?>
     <script>
 		var elapsedTime = document.getElementById("elapsedTime");
 
@@ -171,5 +170,4 @@ $func->setDescription('ミニゲーム企画鯖『MonsterLifeServer』のホー�
 			setInterval(Time_exchange,1000);
 		}
 	</script>
-    <?php $func->printFootScript(); ?>
 </html>
