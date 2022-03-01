@@ -97,7 +97,6 @@ $func->setDescription('作業状況を確認できます。');
                     <!-- パンくずリスト&最終更新日 -->
                     <div class="softprogress">
                     <?php
-                        
 
                         foreach ($func->getProgressProjects() as $key => $value) {
                             $ch = curl_init();
