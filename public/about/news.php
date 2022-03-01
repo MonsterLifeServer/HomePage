@@ -127,7 +127,7 @@ $func->setDescription('新着情報が見れます。');
                                     <div class="date">
                                         <?php 
                                             $text = (string)$data->date;
-                                            if (isNearDate($text)) {
+                                            if ($func->isNearDate($text)) {
                                                 $text = "<span class='blinking'><span style='color: red;'>New</span></span>" . $text;
                                             }
                                             echo $text; 

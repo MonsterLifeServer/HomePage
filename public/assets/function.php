@@ -144,6 +144,20 @@ class HomePageFunction {
         return $conf["sql"]["password"];
     }
 
+    public function getProgressToken() {
+        include($this->conf_path);
+        return $conf["github"]["progress_token"];
+    }
+
+    public function getProgressUser() {
+        include($this->conf_path);
+        return $conf["github"]["progress_user"];
+    }
+
+    public function getProgressProjects() {
+        include($this->conf_path);
+        return $github_project;
+    }
 
     public function send_to_discord($message, $ip, $num) {
         $contentsBlocker = [

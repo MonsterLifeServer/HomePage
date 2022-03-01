@@ -152,6 +152,22 @@ $func->setDescription(' ');
 								</div>
 							</article>
 						</div>
+						<div class="l-wrapper">
+							<article class="card">
+								<div class="card__header">
+									<h3 class="card__title">作業進捗</h3>
+									<figure class="card__thumbnail">
+										<img src="https://i.gyazo.com/80001e10965c8303fb7ae0258ca41e72.png" alt="作業進捗を表示します。" class="card__image">
+									</figure>
+								</div>
+								<div class="card__body">
+									<p class="card__text">作業進捗を表示します。</p>
+								</div>
+								<div class="card__footer">
+									<p class="card__text"><a href="<?php echo $func->getUrl(); ?>/api/project-progress" class="button -primary">ページを見る</a></p>
+								</div>
+							</article>
+						</div>
 
 					</div>
 					

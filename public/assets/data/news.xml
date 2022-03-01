@@ -13,6 +13,13 @@
         -->
 
         <item>
+            <title>開発者の作業進捗が見れるようになりました。</title>
+            <link>https://www.mlserver.xyz/api/project-progress</link>
+            <date>2022/03/01</date>
+            <category>MonsterLifeServer</category>
+        </item>
+
+        <item>
             <title>利用規約が改定され禁止事項として「不正に入手した特典・権利を利用する行為」が追加されました。</title>
             <link>https://www.mlserver.xyz/terms</link>
             <date>2022/01/03</date>
