@@ -5,51 +5,43 @@ $func = new HomePageFunction('./../assets/config.php', '作業状況');
 $func->setPageUrl($func->getUrl().'/api/project-progress');
 $func->setDescription('作業状況を確認できます。');
 
+function getGitHubContents($url, $user, $token) {
+    $ch = curl_init();
+    $headers = array(
+        "User-Agent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:26.0) Gecko/20100101 Firefox/26.0",
+        'Content-Type:application/json'
+    );
+    curl_setopt($ch, CURLOPT_URL, $url); // URLを叩くおまじない？
+    curl_setopt($ch, CURLOPT_USERPWD, $user.":".$token); // ユーザー名とトークン
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // 変数に保存する設定
+    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+    $result = curl_exec($ch);
+    curl_close($ch);
+    return $result;
+}
+
+function getProjectPercent($url, $user, $token, $open_issues_count) {
+    $result = getGitHubContents($url, $user, $token);
+    $all = substr_count($result, "- [ ]") + substr_count($result, "- [x] ") + $open_issues_count;
+    $clear = substr_count($result, "- [x]");
+    if ($all > 0) {
+        if ($clear <= 0) {
+            $per = 0;
+        } else {
+            $per = floor ($clear/$all*100);
+        }
+    } else {
+        $per = -1;
+    }
+    return $per;
+}
+
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
 	<head>
 		<?php $func->printMetaData(); ?>
-        <style>
-            /* softprogress bar CSS */
-            .softprogress *:not([code-softprogress]) {
-                margin: 5px 0;
-                font-size: 16px;
-            }
-            .softprogress {
-                width: 100%;
-                padding: 15px;
-                box-sizing: border-box;
-            }
-            .softprogress [code-softprogress] {
-                height: 25px;
-                box-shadow: 0 0 1px 1px rgba(0, 20, 0, 0.35) inset;
-                border-radius: 15px;
-                margin: 5px 0 10px 0;
-                overflow: hidden;
-                background-color: #ddd;
-            }
-            [code-softprogress]::after {
-                content: "";
-                display: flex;
-                justify-content: flex-end;
-                align-items: center;
-                background: #2f8d46;
-                width: 0;
-                height: 100%;
-                box-sizing: border-box;
-                font-size: 16px;
-                color: #fff;
-                border-radius: 15px;
-                padding: 0 3px;
-                transition: 2s;
-            }
-            [code-softprogress].run-softprogress::after {
-                content: attr(code-softprogress) "%";
-                width: var(--run-softprogress);
-            }
-            /* End softprogress bar CSS */
-        </style>
+        <link href="<?php echo $func->getUrl(); ?>/assets/css/project-progress.min.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
 		<?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/header.php"); ?>
@@ -97,26 +89,46 @@ $func->setDescription('作業状況を確認できます。');
                     <!-- パンくずリスト&最終更新日 -->
                     <div class="softprogress">
                     <?php
-
+                        $progress_array = array();
                         foreach ($func->getProgressProjects() as $key => $value) {
-                            $ch = curl_init();
-                            curl_setopt($ch, CURLOPT_URL, $value); // URLを叩くおまじない？
-                            curl_setopt($ch, CURLOPT_USERPWD, $func->getProgressUser().":".$func->getProgressToken()); // ユーザー名とトークン
-                            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // 変数に保存する設定
-                            $result = curl_exec($ch);
-                            curl_close($ch);
-                            $all = substr_count($result, "- [ ]") + substr_count($result, "- [x] ");
-                            $clear = substr_count($result, "- [x]");
-                            if ($all > 0) {
-                                $per = floor ($clear/$all*100);
-                            } else {
-                                $per = 0;
-                            }
+                            $project_name = $value['name'];
+                            $project_owner = $value['owner'];
+                            $data_url = $func->getGitHubAPIUrl() . "repos/" . $project_owner . "/" . $project_name;
                             
-                            echo '<label for="'.$key.'">『'.$key.'』の進捗</label><br/>';
-                            echo '<div id="'.$key.'" code-softprogress="'.$per.'"></div>';
-                        }
+                            $json_string = getGitHubContents($data_url, $func->getProgressUser(), $func->getProgressToken());
+                            $data = json_decode($json_string);
+                            $open_issues_count = $data->open_issues_count;
+                            $updated_at = $data->updated_at;
+                            $pushed_at = $data->pushed_at;
+                            $default_branch = $data->default_branch;
 
+                            $url = $func->getGitHubSorceUrl() . $project_owner . "/" . $project_name . "/" . $default_branch . "/README.md";
+
+                            $per = getProjectPercent($url, $func->getProgressUser(), $func->getProgressToken(), $open_issues_count);
+                            if ($per != -1) {
+                                $time = strtotime($updated_at);
+                                if ($time < strtotime($pushed_at)) {
+                                    $time = strtotime($pushed_at);
+                                }
+                                $text = '<label for="'.$key.'">『'.$key.'』の進捗</label> <span class="updated_at">'.date("Y/m/d H:i:s",$time).' | '.$time.'</span><br/>';
+                                $text = $text . '<div id="'.$key.'" code-softprogress="'.$per.'"></div>';
+                                $temp = [
+                                    (string)$time=>$text,
+                                ];
+                                if (sizeof($progress_array) > 0) {
+                                    $progress_array = $progress_array + $temp;
+                                } else {
+                                    $progress_array = $temp;
+                                }
+                                
+                            }
+                        }
+                        if (sizeof($progress_array) > 0) {
+                            krsort($progress_array);
+                            foreach ($progress_array as $key => $value) {
+                                echo $value;
+                            }
+                        }
                     ?>
                     </div>
                 </div>
@@ -133,13 +145,15 @@ $func->setDescription('作業状況を確認できます。');
                 document
                 .querySelectorAll(".softprogress [code-softprogress]")
                 .forEach((x) => runsoftprogress(x));
-            }};
-            function runsoftprogress(el) {
+            }
+        };
+        function runsoftprogress(el) {
             el.className = "run-softprogress";
             el.setAttribute(
                 "style",
                 `--run-softprogress:${el.getAttribute("code-softprogress")}%;`
-        );}
+            );
+        }
     </script>
     <?php $func->printFootScript(); ?>
 </html>

@@ -154,6 +154,16 @@ class HomePageFunction {
         return $conf["github"]["progress_user"];
     }
 
+    public function getGitHubAPIUrl() {
+        include($this->conf_path);
+        return $conf["github"]["api_url"];
+    }
+
+    public function getGitHubSorceUrl() {
+        include($this->conf_path);
+        return $conf["github"]["sorce_url"];
+    }
+
     public function getProgressProjects() {
         include($this->conf_path);
         return $github_project;

@@ -19,7 +19,8 @@ $func->setDescription('MonsterLifeServerのあらゆるリンクを確認でき�
                 <ul>
                     <li id="home"><a href="<?php echo $func->getUrl(); ?>">ホーム</a></li>
                     <li><a href="<?php echo $func->getUrl(); ?>/terms">利用規約・ガイドライン</a></li>
-                    <li><a href="<?php echo $func->getUrl(); ?>/terms">プライバシーポリシー</a></li>
+                    <li><a href="<?php echo $func->getUrl(); ?>/privacy_policy">プライバシーポリシー</a></li>
+                    <li><a href="<?php echo $func->getUrl(); ?>/admin-terms">運営利用規約</a></li>
                     <li><a href="<?php echo $func->getUrl(); ?>/#about">About</a>
                         <ul>
                             <li><a href="<?php echo $func->getUrl(); ?>/about/admins">運営一覧</a></li>
@@ -38,9 +39,9 @@ $func->setDescription('MonsterLifeServerのあらゆるリンクを確認でき�
                     </li>
                     <li><a href="<?php echo $func->getUrl(); ?>/servers/">サーバー</a>
                         <ul>
-                            <li><a href="<?php echo $func->getUrl(); ?>/game/aooni">青鬼ゲーム</a></li>
-                            <li><a href="<?php echo $func->getUrl(); ?>/game/online">青鬼ONLINE in MC</a></li>
-                            <li><a href="<?php echo $func->getUrl(); ?>/game/hueoni">増え鬼ごっこ</a></li>
+                            <li><a href="<?php echo $func->getUrl(); ?>/servers/lobby">ロビー鯖</a></li>
+                            <li><a href="<?php echo $func->getUrl(); ?>/servers/skyblock">スカイブロック鯖</a></li>
+                            <li><a href="<?php echo $func->getUrl(); ?>/servers/event">ミニゲーム企画鯖</a></li>
                         </ul>
                     </li>
                     <li><a href="<?php echo $func->getUrl(); ?>/support/">サポート</a>
@@ -52,8 +53,8 @@ $func->setDescription('MonsterLifeServerのあらゆるリンクを確認でき�
                         <ul>
                             <li><a href="<?php echo $func->getUrl(); ?>/support/form/">問い合わせフォーム</a></li>
                             <li><a href="<?php echo $func->getUrl(); ?>/support/form/staff">スタッフ応募フォーム</a></li>
-                            <li><a href="twitter.mlserver.xyz">Twitter</a></li>
-                            <li><a href="discord.mlserver.xyz">Discord</a></li>
+                            <li><a href="https://twitter.mlserver.xyz">Twitter</a></li>
+                            <li><a href="https://discord.mlserver.xyz">Discord</a></li>
                         </ul>
                     </li>
                     <li><a href="<?php echo $func->getUrl(); ?>/api/">API</a>
