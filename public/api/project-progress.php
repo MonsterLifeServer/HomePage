@@ -110,7 +110,7 @@ function getProjectPercent($url, $user, $token, $open_issues_count) {
                                 if ($time < strtotime($pushed_at)) {
                                     $time = strtotime($pushed_at);
                                 }
-                                $text = '<label for="'.$key.'">『'.$key.'』の進捗</label> <span class="updated_at">'.date("Y/m/d H:i:s",$time).' | '.$time.'</span><br/>';
+                                $text = '<label for="'.$key.'" class="project-label"><span class="title">『'.$key.'』の進捗</span> <span class="updated_at">最終更新:'.date("Y/m/d H:i:s",$time).'</span></label>';
                                 $text = $text . '<div id="'.$key.'" code-softprogress="'.$per.'"></div>';
                                 $temp = [
                                     (string)$time=>$text,
