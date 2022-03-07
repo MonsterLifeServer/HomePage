@@ -35,7 +35,6 @@ function getProjectPercent($url, $user, $token, $open_issues_count) {
     }
     return $per;
 }
-
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
@@ -88,48 +87,55 @@ function getProjectPercent($url, $user, $token, $open_issues_count) {
                     </div>
                     <!-- パンくずリスト&最終更新日 -->
                     <div class="softprogress">
-                    <?php
-                        $progress_array = array();
-                        foreach ($func->getProgressProjects() as $key => $value) {
-                            $project_name = $value['name'];
-                            $project_owner = $value['owner'];
-                            $data_url = $func->getGitHubAPIUrl() . "repos/" . $project_owner . "/" . $project_name;
-                            
-                            $json_string = getGitHubContents($data_url, $func->getProgressUser(), $func->getProgressToken());
-                            $data = json_decode($json_string);
-                            $open_issues_count = $data->open_issues_count;
-                            $updated_at = $data->updated_at;
-                            $pushed_at = $data->pushed_at;
-                            $default_branch = $data->default_branch;
-
-                            $url = $func->getGitHubSorceUrl() . $project_owner . "/" . $project_name . "/" . $default_branch . "/README.md";
-
-                            $per = getProjectPercent($url, $func->getProgressUser(), $func->getProgressToken(), $open_issues_count);
-                            if ($per != -1) {
-                                $time = strtotime($updated_at);
-                                if ($time < strtotime($pushed_at)) {
-                                    $time = strtotime($pushed_at);
-                                }
-                                $text = '<label for="'.$key.'" class="project-label"><span class="title">『'.$key.'』の進捗</span> <span class="updated_at">最終更新:'.date("Y/m/d H:i:s",$time).'</span></label>';
-                                $text = $text . '<div id="'.$key.'" code-softprogress="'.$per.'"></div>';
-                                $temp = [
-                                    (string)$time=>$text,
-                                ];
-                                if (sizeof($progress_array) > 0) {
-                                    $progress_array = $progress_array + $temp;
-                                } else {
-                                    $progress_array = $temp;
-                                }
+                        <?php
+                            $progress_array = array();
+                            foreach ($func->getProgressProjects() as $key => $value) {
+                                $project_name = $value['name'];
+                                $project_owner = $value['owner'];
+                                $data_url = $func->getGitHubAPIUrl() . "repos/" . $project_owner . "/" . $project_name;
                                 
+                                $json_string = getGitHubContents($data_url, $func->getProgressUser(), $func->getProgressToken());
+                                $data = json_decode($json_string);
+                                $open_issues_count = $data->open_issues_count;
+                                $updated_at = $data->updated_at;
+                                $pushed_at = $data->pushed_at;
+                                $default_branch = $data->default_branch;
+
+                                $json_commits = getGitHubContents($data_url . "/commits", $func->getProgressUser(), $func->getProgressToken());
+                                $data_commits = json_decode($json_commits);
+                                $last_commit_user = $data_commits[0]->commit->author->name;
+
+                                $url = $func->getGitHubSorceUrl() . $project_owner . "/" . $project_name . "/" . $default_branch . "/README.md";
+
+                                $per = getProjectPercent($url, $func->getProgressUser(), $func->getProgressToken(), $open_issues_count);
+                                if ($per != -1) {
+                                    $time = strtotime($updated_at);
+                                    if ($time < strtotime($pushed_at)) {
+                                        $time = strtotime($pushed_at);
+                                    }
+                                    $text = '<label for="'.$key.'" class="project-label"><span class="title">『'.$key.'』の進捗</span>';
+                                    $text = $text . '<div class="data-contents"><span class="updated_at">最終更新:'.date("Y/m/d H:i:s",$time).'</span>';
+                                    $text = $text . '<br /><span class="author">最終更新者:Monster2408</span></div></label>';
+                                    $text = $text . '<div id="'.$key.'" code-softprogress="'.$per.'"></div>';
+                                    // <div class="data-contents"><span class="updated_at">最終更新:2022/02/20 15:52:47</span><br /><span class="author">最終更新者:Monster2408</span></div>
+                                    $temp = [
+                                        (string)$time=>$text,
+                                    ];
+                                    if (sizeof($progress_array) > 0) {
+                                        $progress_array = $progress_array + $temp;
+                                    } else {
+                                        $progress_array = $temp;
+                                    }
+                                    
+                                }
                             }
-                        }
-                        if (sizeof($progress_array) > 0) {
-                            krsort($progress_array);
-                            foreach ($progress_array as $key => $value) {
-                                echo $value;
+                            if (sizeof($progress_array) > 0) {
+                                krsort($progress_array);
+                                foreach ($progress_array as $key => $value) {
+                                    echo $value;
+                                }
                             }
-                        }
-                    ?>
+                        ?>
                     </div>
                 </div>
             </div>

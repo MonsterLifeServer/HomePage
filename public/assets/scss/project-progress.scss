@@ -12,8 +12,11 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-end;
-        .updated_at {
-            font-size: 10px;
+        .data-contents {
+            text-align: right;
+            span {
+                font-size: 8px;
+            }
         }
     }
     [code-softprogress] {
@@ -47,7 +50,7 @@
 }
 
 @media screen and (max-width: 410px) {
-    .softprogress .project-label .updated_at {
+    .softprogress .project-label .data-contents {
         display: none;
     }
     
