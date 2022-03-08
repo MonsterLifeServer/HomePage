@@ -1,0 +1,58 @@
+.aooni_youtube_cm {
+    background: #fff;
+    .aooni_title_logo {
+        text-align: center;
+        .aooni-logo-style {
+            color: #ACB6E5;
+            background: -webkit-linear-gradient(blue, pink); //背景色にグラデーションを指定
+            -webkit-background-clip: text;//テキストでくり抜く
+            -webkit-text-fill-color: transparent;//くり抜いた部分は背景を表示
+            font-size: 40px;
+        }
+    }
+    .flex-box {
+        display: flex;
+        justify-content: center;
+        .aooni_description {
+            margin-bottom: 10px;
+            width: 50%;
+            font-size: 20px;
+        }
+        .aooni_movie {
+            width: 50%;
+            max-width: 400px;
+        }
+    }
+}
+
+@media screen and (max-width:700px) {
+    .aooni_youtube_cm {
+        .flex-box {
+            display: block;
+            justify-content: center;
+            .aooni_description {
+                margin-bottom: 10px;
+                width: 100%;
+            }
+            .aooni_movie {
+                width: 100%;
+                max-width: 400px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:500px) {
+    .aooni_youtube_cm {
+        .flex-box {
+            .aooni_description {
+                font-size: 13px;
+                .text-25px {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

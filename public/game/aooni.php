@@ -10,6 +10,7 @@ $func->setDescription('フリーゲーム「青鬼」をマイクラで遊べる
 <html lang="ja">
 	<head>
         <?php $func->printMetaData(); ?>
+		<link rel="stylesheet" type="text/css" href="<?php echo $func->getUrl(); ?>/assets/css/aooni.min.css">
     </head>
     <body class="aooni">
         <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/header.php"); ?>
