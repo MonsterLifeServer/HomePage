@@ -165,7 +165,7 @@
                     <div class="element_wrap">
                         <p><?php if ($sendOk === TRUE) {echo "送信が完了しました。";} else {echo "送信に失敗しました。";}?></p>
                     </div>
-                    <a href="<?php echo $func->getUrl(); ?>/form" class="form">はじめに戻る</a>
+                    <a href="<?php echo $func->getUrl(); ?>/support/form/" class="form">はじめに戻る</a>
 
                     <?php else: ?>
 

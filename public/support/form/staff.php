@@ -11,7 +11,7 @@
 
     $post_all_set = (isset($_POST["msg"]) && isset($_POST["username"]) && isset($_POST["mcid"]) && isset($_POST["roles"]) && is_array($_POST["roles"]));
     if ($post_all_set) {
-        send_system_of_staff_form();
+        send_system_of_staff_form($func);
     }
     
 ?>

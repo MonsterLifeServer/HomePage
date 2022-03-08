@@ -253,7 +253,7 @@ function display_staff_form_check() { // ?username=j&mcid=j&roles[]=運営&msg=j
     echo '</div></div>';
 }
 
-function send_system_of_staff_form() {
+function send_system_of_staff_form($func) {
     global $conf;
     $username = $_POST["username"];
     $roles = $_POST["roles"];
@@ -267,7 +267,7 @@ function send_system_of_staff_form() {
         $ip = $_SERVER['REMOTE_ADDR'];
     }
     // send_staff_msg_to_discord(string $username, string $mcid, array roles, string $msg, $ip, $num)
-    $sendOk = send_staff_msg_to_discord($username, $mcid, $roles, $msg, $ip, 1); //処理を実行
+    $sendOk = $func->send_to_role_discord($username, $mcid, $roles, $msg, $ip); //処理を実行
     if ($sendOk) {
         $role_para = "";
         foreach ($roles as $role) {

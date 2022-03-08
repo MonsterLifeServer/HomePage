@@ -170,6 +170,7 @@ class HomePageFunction {
     }
 
     public function send_to_discord($message, $ip, $num) {
+        include($this->conf_path);
         $contentsBlocker = [
             "5.188.211.10",
             "5.188.211.9"
@@ -178,11 +179,9 @@ class HomePageFunction {
             return FALSE;
         }
         if ($num === 0) {
-            $webhook_url = "https://discord.com/api/webhooks/806157586037604372/EDqGzCwwYBPK-eibEmIky5LWUrlT1bvWt2rDN16BG1I226F6qSARJeR-0RNLmI2TzBlD";
-        } elseif ($num === 1) {
-            $webhook_url = "https://discord.com/api/webhooks/806157705404350474/eQ5nNFB_h6ugv4UVRn_aQ2F_O2zRa77Ay6LdpxVxjk27Pv6IBbWC7VKh-QP-WdUnLUSR";
-        } elseif ($num === 2) {
-            $webhook_url = "https://discord.com/api/webhooks/809777827146104902/Plt8YECRzMXHyOUHakzpTZrRTcrL0lEao98u--j8_XGzWoD1xxfgGD_Y4L2QBRy_jizh";
+            $webhook_url = $conf["discord"]["webhook"]["contact-form"];
+        } elseif ($num === -1 or strpos($ip, "::1") !== False) {
+            $webhook_url = $conf["discord"]["webhook"]["debug"];
         } else {
             return FALSE;
         }
@@ -211,6 +210,121 @@ class HomePageFunction {
         $body = substr($response, $header_size);
         curl_close($ch);
         return TRUE; //$responseの値がokならtrueを返す
+    }
+
+    function send_to_role_discord(string $username, string $mcid, array $roles, string $msg, $ip) {
+        include($this->conf_path);
+        $denylist = include('./assets/lib/denylist.php');
+
+        if (in_array($ip, $denylist['ip'])) {
+            header("Location: ".$func->getUrl()."/support/form/staff?why=denylist");
+            exit;
+        }
+        $url = $conf["discord"]["webhook"]["staff-form"];
+        if (strpos($ip, "::1") !== False) {
+            $url = $conf["discord"]["webhook"]["debug"];
+        }
+        if (!(isset($msg) && isset($username) && isset($mcid) && isset($roles) && is_array($roles))) {
+            return FALSE;
+        }
+    
+        $role_text = "";
+        $role_para = "";
+        foreach ($roles as $role) {
+            $role_text .= "・".$role."\n";
+            $role_para .= "&roles[]=".$role;
+        }
+    
+        $check_url = $this->getUrl()."/support/form/staff?username=".$username."&mcid=".$mcid.$role_para."&msg=".$msg;
+    
+        $hookObject = json_encode([
+            /*
+            * The general "message" shown above your embeds
+            */
+            "content" => "",
+            /*
+            * The username shown in the message
+            */
+            "username" => "役職応募フォーム",
+            /*
+            * The image location for the senders image
+            */
+            "avatar_url" => $conf["icon_url"]."/assets/img/web/android-touch-icon.png",
+            /*
+            * Whether or not to read the message in Text-to-speech
+            */
+            "tts" => false,
+            /*
+            * File contents to send to upload a file
+            */
+            // "file" => "",
+            /*
+            * An array of Embeds
+            */
+            "embeds" => [
+                /*
+                * Our first embed
+                */
+                [
+                    "title" => "役職応募メッセージが届きました",
+                    "type" => "rich",
+                    "url" => $check_url,
+    
+                    // The integer color to be used on the left side of the embed
+                    "color" => hexdec( "FF0000" ),
+    
+                    // Field array of objects
+                    "fields" => [
+                        // Field 1
+                        [
+                            "name" => "Discord名",
+                            "value" => $username,
+                            "inline" => true
+                        ],
+                        // Field 2
+                        [
+                            "name" => "MCID",
+                            "value" => $mcid,
+                            "inline" => true
+                        ],
+                        // Field 3
+                        [
+                            "name" => "IP",
+                            "value" => $ip,
+                            "inline" => true
+                        ],
+                        // Field 4
+                        [
+                            "name" => "役職",
+                            "value" => $role_text,
+                            "inline" => false
+                        ],
+                        // Field 5
+                        [
+                            "name" => "自由記入欄",
+                            "value" => $msg,
+                            "inline" => false
+                        ]
+                    ]
+                ]
+            ]
+    
+        ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE );
+    
+        $ch = curl_init();
+    
+        curl_setopt_array( $ch, [
+            CURLOPT_URL => $url,
+            CURLOPT_POST => true,
+            CURLOPT_POSTFIELDS => $hookObject,
+            CURLOPT_HTTPHEADER => [
+                "Content-Type: application/json"
+            ]
+        ]);
+    
+        $response = curl_exec( $ch );
+        curl_close( $ch );
+        return TRUE;
     }
 
 }
