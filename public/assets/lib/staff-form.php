@@ -254,7 +254,6 @@ function display_staff_form_check() { // ?username=j&mcid=j&roles[]=運営&msg=j
 }
 
 function send_system_of_staff_form($func) {
-    global $conf;
     $username = $_POST["username"];
     $roles = $_POST["roles"];
     $msg = $_POST["msg"];

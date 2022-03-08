@@ -14,8 +14,14 @@ class HomePageFunction {
         $this->description = "ミニゲーム企画鯖『MonsterLifeServer』のホームページです。";
     }
 
+    public function startsWith($haystack, $needle) {
+        return (strpos($haystack, $needle) === 0);
+    }
+
     public function setPageUrl($url) {
-        $url = $this->getUrl() . $url;
+        if ($this->startsWith($url, $this->getUrl()) === FALSE) {
+            $url = $this->getUrl() . $url;
+        }
         $this->pageUrl = $url;
     }
 
@@ -212,7 +218,7 @@ class HomePageFunction {
         return TRUE; //$responseの値がokならtrueを返す
     }
 
-    function send_to_role_discord(string $username, string $mcid, array $roles, string $msg, $ip) {
+    public function send_to_role_discord(string $username, string $mcid, array $roles, string $msg, $ip) {
         include($this->conf_path);
         $denylist = include('./assets/lib/denylist.php');
 
