@@ -104,7 +104,7 @@ header("Access-Control-Allow-Origin: *");
 					<h2 class="design">運営会議報告書</h2>
                     <?php
                         echo '<table class="pdf" border="1">';
-                        $url_latest = 'https://api.github.com/repos/MonsterLifeServer/public-documents/contents/documents/';
+                        $url_latest = 'https://api.github.com/repos/MonsterLifeServer/public-documents/contents/docs/pdf/documents/';
 
                         $context = stream_context_create(array('http' => array(
                             'method' => 'GET',
@@ -119,7 +119,7 @@ header("Access-Control-Allow-Origin: *");
                         foreach ($assets as $item) {
                             $name = $item->name; /* Filename */
                             echo '<tr><th>'.$name.'</th><td>';
-                            $url_latest2 = 'https://api.github.com/repos/MonsterLifeServer/public-documents/contents/documents/'.$name;
+                            $url_latest2 = 'https://api.github.com/repos/MonsterLifeServer/public-documents/contents/docs/pdf/documents/'.$name;
 
                             $context2 = stream_context_create(array('http' => array(
                                 'method' => 'GET',
@@ -129,12 +129,14 @@ header("Access-Control-Allow-Origin: *");
                             $json2 = json_decode($res2);
                             $assets2 = (array) $json2;
                             $str = '';
-                            $url = 'https://document.mlserver.jp/web/?file=https://document.mlserver.jp/';
+                            $url = 'https://document.mlserver.jp/viewer.html?file=';
                             $num = 0;
                             foreach ($assets2 as $item2) {
                                 $display_name = $item2->name;
                                 $display_name = str_replace(".pdf","",$display_name);
-                                $str = $str . "<a href='".$url.$item2->path."' target='_blank'>".$display_name."</a>";
+                                $path = $item2->path;
+                                $path = str_replace("docs/","",$path);
+                                $str = $str . "<a href='".$url.$path."' target='_blank'>".$display_name."</a>";
                                 if ($num > 2) {
                                     $num = 0;
                                     $str = $str . "<br />";
