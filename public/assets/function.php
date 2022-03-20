@@ -125,6 +125,11 @@ class HomePageFunction {
         return $conf["url"];
     }
 
+    public function getTexture($key = "default") {
+        include($this->conf_path);
+        return $conf['tex'][$key];
+    }
+
     public function getSqlHost() {
         include($this->conf_path);
         return $conf["sql"]["host"];

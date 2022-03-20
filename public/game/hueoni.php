@@ -81,7 +81,7 @@ $func->setDescription('企画「増え鬼」のルール紹介ページです。
                             <span class="category">鬼ごっこ</span>
                             <hr />
                             <h3>テクスチャ</h3>
-                            <p><a href="<?php echo $conf['tex']['toso']; ?>" download>ダウンロード</a></p>
+                            <p><a href="<?php echo $func->getTexture('aooni'); ?>" download>ダウンロード</a></p>
                         </div>
 
                     </div>

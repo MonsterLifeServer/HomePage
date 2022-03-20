@@ -95,9 +95,9 @@ $func->setDescription('フリーゲーム「青鬼」をマイクラで遊べる
 									<span class="category">鬼ごっこ</span>
 									<hr />
 									<h3>テクスチャ(低スペック向け)</h3>
-									<p><a href="<?php echo $conf['tex']['aooni']; ?>" download>ダウンロード</a></p>
+									<p><a href="<?php echo $func->getTexture('aooni'); ?>" download>ダウンロード</a></p>
 									<h3>3Dテクスチャ</h3>
-									<p><a href="<?php echo $conf['tex']['aooni3d']; ?>" download>ダウンロード</a></p>
+									<p><a href="<?php echo $func->getTexture('aooni3d'); ?>" download>ダウンロード</a></p>
 								</div>
 
 							</div>
@@ -144,9 +144,9 @@ $func->setDescription('フリーゲーム「青鬼」をマイクラで遊べる
 									<span class="category">鬼ごっこ</span>
 									<hr />
 									<h3>テクスチャ(低スペック向け)</h3>
-									<p><a href="<?php echo $conf['tex']['aooni']; ?>" download>ダウンロード</a></p>
+									<p><a href="<?php echo $func->getTexture('aooni'); ?>" download>ダウンロード</a></p>
 									<h3>3Dテクスチャ</h3>
-									<p><a href="<?php echo $conf['tex']['aooni3d']; ?>" download>ダウンロード</a></p>
+									<p><a href="<?php echo $func->getTexture('aooni3d'); ?>" download>ダウンロード</a></p>
 								</div>
 
 							</div>

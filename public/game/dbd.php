@@ -82,7 +82,7 @@ $func->setDescription('DeadByDaylightをマイクラで遊べるようにした�
                             <span class="category">鬼ごっこ</span>
                             <hr />
                             <h3>テクスチャ</h3>
-                            <p><a href="<?php echo $conf['tex']['dbd']; ?>" download>ダウンロード</a></p>
+                            <p><a href="<?php echo $func->getTexture('dbd'); ?>" download>ダウンロード</a></p>
 
                         </div>
 

@@ -79,7 +79,7 @@ $func->setDescription('逃走中をマイクラで遊べるようにした企画
                             <span class="category">鬼ごっこ</span><span class="category">謎解き</span>
                             <hr />
                             <h3>テクスチャ</h3>
-                            <p><a href="<?php echo $conf['tex']['toso']; ?>" download>ダウンロード</a></p>
+                            <p><a href="<?php echo $func->getTexture('toso'); ?>" download>ダウンロード</a></p>
                         </div>
 
                     </div>

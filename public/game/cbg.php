@@ -80,7 +80,7 @@ $func->setDescription('コアを守り抜け！！「コア破壊ゲーム」の
                             <span class="category">PVP</span>
                             <hr />
                             <h3>テクスチャ</h3>
-                            <p><a href="<?php echo $conf['tex']['aooni']; ?>" download>ダウンロード</a></p>
+                            <p><a href="<?php echo $func->getTexture('aooni'); ?>" download>ダウンロード</a></p>
 
                         </div>
 
