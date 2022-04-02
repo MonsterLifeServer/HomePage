@@ -1,5 +1,5 @@
 jQuery(document).snowfall({
-    image : 'https://incloop.com/blog_neta/JQuery-Snowfall-master/hanabira.png',
+    image : 'https://i.gyazo.com/0c871d26ec81f98aabbe3a100728f33f.png',
     flakeColor : '#F6CEF5',
     maxSize : 20,				// 要素の最大サイズ
     flakeCount : 100,			// 要素の数
