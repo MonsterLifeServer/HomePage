@@ -185,7 +185,8 @@ class HomePageFunction {
         $contentsBlocker = [
             "5.188.211.10",
             "5.188.211.9",
-            "49.250.233.40"
+            "49.250.233.40",
+            "153.226.133.219"
         ];
         if (in_array($ip, (array)$contentsBlocker, true)) {
             return FALSE;
