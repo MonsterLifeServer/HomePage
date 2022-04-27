@@ -184,7 +184,8 @@ class HomePageFunction {
         include($this->conf_path);
         $contentsBlocker = [
             "5.188.211.10",
-            "5.188.211.9"
+            "5.188.211.9",
+            "49.250.233.40"
         ];
         if (in_array($ip, (array)$contentsBlocker, true)) {
             return FALSE;
