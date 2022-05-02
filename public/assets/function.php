@@ -180,6 +180,20 @@ class HomePageFunction {
         return $github_project;
     }
 
+    public function getDiscordOAuth2_ID() {
+        include($this->conf_path);
+        return $discord_oauth2["CLIENT_ID"];
+    }
+
+    public function getDiscordOAuth2_Secret() {
+        include($this->conf_path);
+        return $discord_oauth2["CLIENT_SECRET"];
+    }
+
+    public function isLocal() {
+        return strpos($_SERVER["HTTP_HOST"], "localhost:8090");
+    }
+
     public function send_to_discord($message, $ip, $num) {
         include($this->conf_path);
         $contentsBlocker = [
