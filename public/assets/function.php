@@ -2,16 +2,22 @@
 class HomePageFunction {
 
     public $conf_path;
+    public $assets_path;
     public $title;
     public $pageUrl;
     public $description;
 
-    public function __construct($conf_path = "", $title = "MonsterLifeServer") {
+    public function __construct($conf_path = "./assets/config.php", $title = "MonsterLifeServer") {
         $this->conf_path = $conf_path;
+        $this->assets_path = str_replace("/config.php", "", $conf_path);
         $this->title = $title;
 
         $this->pageUrl = $this->getUrl().'/';
         $this->description = "ミニゲーム企画鯖『MonsterLifeServer』のホームページです。";
+    }
+
+    public function getDiscordLibPath() {
+        return $this->assets_path . "/lib/discord-lib.php";
     }
 
     public function startsWith($haystack, $needle) {
@@ -123,6 +129,16 @@ class HomePageFunction {
     public function getUrl() {
         include($this->conf_path);
         return $conf["url"];
+    }
+
+    public function getAdminUser() {
+        include($this->conf_path);
+        return $admin_user;
+    }
+
+    public function isAdmin($id) {
+        include($this->conf_path);
+        return in_array($id, $admin_user);
     }
 
     public function getTexture($key = "default") {

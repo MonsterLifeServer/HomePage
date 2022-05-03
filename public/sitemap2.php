@@ -5,6 +5,11 @@ $func = new HomePageFunction('./assets/config.php', 'サイトマップ2 | Monst
 $func->setPageUrl($func->getUrl().'/sitemap2');
 $func->setDescription('MonsterLifeServerのあらゆるリンクを確認できます。');
 
+include($func->getDiscordLibPath());
+$disLib = new DiscordLib($func->getPageUrl(), $func->getDiscordOAuth2_ID(), $func->getDiscordOAuth2_Secret());
+
+$disLib->initDiscordOAuth();
+
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
@@ -63,10 +68,25 @@ $func->setDescription('MonsterLifeServerのあらゆるリンクを確認でき�
                             <li><a href="<?php echo $func->getUrl(); ?>/api/pdf">サーバー資料</a></li>
                             <li><a href="<?php echo $func->getUrl(); ?>/api/project-progress">プロジェクト進捗</a></li>
                             <li><a href="<?php echo $func->getUrl(); ?>/api/comment">コメント</a></li>
+                            <?php
+                                if($disLib->isLogin()) {
+                                    $user = $disLib->apiRequest($disLib->apiURLBase);
+                                    if (property_exists($user, "username") === TRUE) {
+                                        if (property_exists($user, "id") === TRUE) {
+                                            if ($func->isAdmin($user->id)) {
+                                                echo '<li><a href="' . $func->getUrl() . '/api/ban-user">証拠保管箱</a></li>';
+                                            }
+                                        }
+                                    }
+                                }
+                            ?>
                         </ul>
                     </li>
                 </ul>
             </div>
+            <?php
+                echo $disLib->loginButton();
+            ?>
         </div>
 		<?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/footer.php"); ?>
     </body>
