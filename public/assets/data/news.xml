@@ -13,17 +13,24 @@
         -->
 
         <item>
+            <title>一部ページ(サイトマップ)にてDiscordAPIを使用したシステムが追加されたためプライバシーポリシーが改定されました。</title>
+            <link>https://www.mlserver.xyz/privacy_policy</link>
+            <date>2022/05/03</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
             <title>開発者の作業進捗が見れるようになりました。</title>
             <link>https://www.mlserver.xyz/api/project-progress</link>
             <date>2022/03/01</date>
-            <category>MonsterLifeServer</category>
+            <category>ホームページ</category>
         </item>
 
         <item>
             <title>利用規約が改定され禁止事項として「不正に入手した特典・権利を利用する行為」が追加されました。</title>
             <link>https://www.mlserver.xyz/terms</link>
             <date>2022/01/03</date>
-            <category>MonsterLifeServer</category>
+            <category>ホームページ</category>
         </item>
 
         <item>
@@ -37,6 +44,13 @@
             <title>トップページの最下部に設置されているブログカードにサムネイルが表示されるようになりました。</title>
             <link>https://www.mlserver.xyz/</link>
             <date>2021/07/28</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>プライバシーポリシーの策定</title>
+            <link>https://www.mlserver.xyz/privacy_policy</link>
+            <date>2021/07/09</date>
             <category>ホームページ</category>
         </item>
         
