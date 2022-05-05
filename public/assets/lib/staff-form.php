@@ -122,7 +122,7 @@ function get_html_staff_role_desc_contents() {
         .'</div>';
     return $html;
 }
-function display_staff_role_contents() {
+function display_staff_role_contents($discord_name = "", $discord_button = "") {
     echo '
     <div class="staff-box staff">
         <div id="staff-list">
@@ -177,7 +177,7 @@ function get_html_form_selecter() {
     return $html;
 }
 
-function display_staff_form_contents() {
+function display_staff_form_contents($discord_name = "", $discord_button = "") {
     $username = "";
     if (isset($_GET["username"])) {
         $username = $_GET["username"];
@@ -202,9 +202,11 @@ function display_staff_form_contents() {
                 <h2>スタッフ募集</h2>
             </div>
             <div class="Form-Item">
-                <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>Discord名</p>
-                <input type="text" class="Form-Item-Input" name="username" value="'.$username.'" placeholder="例）Monster2408#8936" required>
-            </div>
+                <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>Discord名 ' . $discord_button . '</p>';
+    if ($discord_name === "") echo '<input type="text" class="Form-Item-Input" name="username" value="'.$username.'" placeholder="例）Monster2408#8936" required>';
+    else echo '<input type="text" class="Form-Item-Input" name="username" value="'.$discord_name.'" placeholder="例）Monster2408#8936" readonly>';
+
+    echo '</div>
             <div class="Form-Item">
                 <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>MCID</p>
                 <input type="text" class="Form-Item-Input" name="mcid" value="'.$mcid.'" placeholder="例）Monster2408" required>

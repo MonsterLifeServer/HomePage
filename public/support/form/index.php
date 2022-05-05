@@ -5,6 +5,11 @@
     $func->setPageUrl($func->getUrl().'/support/form/');
     $func->setDescription('MonsterLifeServerへのお問い合わせはこちらから');
 
+    include($func->getDiscordLibPath());
+    $disLib = new DiscordLib($func->getPageUrl(), $func->getDiscordOAuth2_ID(), $func->getDiscordOAuth2_Secret());
+    
+    $disLib->initDiscordOAuth();
+
     // 変数の初期化
     $page_flag = 0;
     if( !empty($_POST['btn_confirm']) ) {
@@ -168,19 +173,32 @@
                     <a href="<?php echo $func->getUrl(); ?>/support/form/" class="form">はじめに戻る</a>
 
                     <?php else: ?>
-
                     <form method="post" action="">
                         <div class="element_wrap">
                             <?php 
                                 if( !empty($_POST['genre']) && $_POST['genre'] === "8" ) {
-                                    echo '<label>ラジオネーム<p class="optional">- 任意</p></label>';
+                                    echo '<label>ラジオネーム<p class="optional">- 任意</p> ' . $disLib->loginButton() . '</label>';
                                     echo '<p class="help">記入がないと「名無しさん」として読まれます。</p>';
                                 } else {
-                                    echo '<label>連絡先<p class="optional">- 任意</p></label>';
+                                    echo '<label>連絡先<p class="optional">- 任意</p> ' . $disLib->loginButton() . '</label>';
                                     echo '<p class="help">返信が必須の方はTwitterかDiscordのIDを記述してください。</p>';
                                 }
+
+                                if($disLib->isLogin()) {
+                                    $user = $disLib->apiRequest($disLib->apiURLBase);
+                                    if (property_exists($user, "username") and property_exists($user, "id") and property_exists($user, "discriminator")) {
+                                        echo '<input name="email" type="text" value="' . $user->username . '#' . $user->discriminator . ' | (' . $user->id . ')" readonly>';
+                                    } else {
+                                        echo '<input name="email" type="text" value="';
+                                        if( !empty($_POST['email']) ){ echo $_POST['email']; }
+                                        echo '">';
+                                    }
+                                } else {
+                                    echo '<input name="email" type="text" value="';
+                                    if( !empty($_POST['email']) ){ echo $_POST['email']; }
+                                    echo '">';
+                                }
                             ?>
-                            <input name="email" type="text" value="<?php if( !empty($_POST['email']) ){ echo $_POST['email']; } ?>">
                         </div>
 
                         <div class="element_wrap">

@@ -6,6 +6,11 @@
     $func->setPageUrl($func->getUrl().'/support/form/staff');
     $func->setDescription('MonsterLifeServerのスタッフになりたい方はこちらから');
 
+    include($func->getDiscordLibPath());
+    $disLib = new DiscordLib($func->getPageUrl(), $func->getDiscordOAuth2_ID(), $func->getDiscordOAuth2_Secret());
+    
+    $disLib->initDiscordOAuth();
+
     $staff_lib = "./../../assets/lib/staff-form.php";
     include_once($staff_lib);
 
@@ -86,7 +91,14 @@
                         } else {
                             display_staff_role_contents();
                             echo '<hr />';
-                            display_staff_form_contents(); 
+                            $discord_name = "";
+                            if($disLib->isLogin()) {
+                                $user = $disLib->apiRequest($disLib->apiURLBase);
+                                if (property_exists($user, "username") and property_exists($user, "id") and property_exists($user, "discriminator")) {
+                                    $discord_name = $user->username . '#' . $user->discriminator . ' | (' . $user->id . ')';
+                                }
+                            }
+                            display_staff_form_contents($discord_name, $disLib->loginButton()); 
                         }  
                     ?>
                 </div>

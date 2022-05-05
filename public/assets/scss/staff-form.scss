@@ -24,7 +24,7 @@
                 color: red;
                 &:not(.active)::before {
                     position: absolute;
-                    top: 2px;
+                    top: 5px;
                     left: -3px;
                     color: #000;
                     font-family: "Font Awesome 5 Free";
@@ -36,7 +36,7 @@
                 font-weight: bold;
                 &:before {
                     position: absolute;
-                    top: 2px;
+                    top: 5px;
                     left: -3px;
                     color: #ff6b6b;
                     font-family: "Font Awesome 5 Free";

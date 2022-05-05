@@ -1,7 +1,5 @@
 <?php
 
-header("Access-Control-Allow-Origin: *");
-
 include('./assets/function.php');
 $func = new HomePageFunction('./assets/config.php', 'サイトマップ | MonsterLifeServer');
 $func->setPageUrl($func->getUrl().'/sitemap');

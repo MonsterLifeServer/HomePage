@@ -121,9 +121,9 @@ class DiscordLib {
 
     public function loginButton() {
         if($this->isLogin()) {
-            return '<a href="?action=logout"><button type="button" class="discord-btn discord-btn-primary">ログアウト</button></a>';
+            return '<a href="?action=logout"><button type="button" class="discord-btn discord-btn-primary"><i class="fa-brands fa-discord"></i> ログアウト</button></a>';
         } else {
-            return '<a href="?action=login"><button type="button" class="discord-btn discord-btn-primary">ログイン</button></a>';
+            return '<a href="?action=login"><button type="button" class="discord-btn discord-btn-primary"><i class="fa-brands fa-discord"></i> ログイン</button></a>';
         }
     }
 
