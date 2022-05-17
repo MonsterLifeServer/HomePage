@@ -1,3 +1,23 @@
+function FooterNavUpdate() {
+    var footerNav = $('.footer_nav');
+
+    var scroll = $(window).scrollTop(); //スクロール値を取得
+    var wH = window.innerHeight; //画面の高さを取得
+    var footerPos =  $('.footer').offset().top; //footerの位置を取得
+    console.log("scroll   : " + scroll);
+    console.log("wH       : " + wH);
+    console.log("footerPos: " + footerPos);
+    console.log(" ");
+    if(scroll+wH >= (footerPos)) {
+        var pos = (scroll+wH) - footerPos //スクロールの値＋画面の高さからfooterの位置＋10pxを引いた場所を取得し
+        footerNav.css('bottom',pos); //.footer_navに上記の値をCSSのbottomに直接指定してフッター手前で止まるようにする
+        //footerNav.css('position', "static");
+    }else{//それ以外は
+        footerNav.css('bottom','0');// 下から10pxの位置にページリンクを指定
+        //footerNav.css('position', "fixed");
+    }
+}
+
 $(function() {
     $('.menu-btn').on('click', function(){
         $('.menu').toggleClass('is-active');
@@ -57,19 +77,20 @@ $(function() {
     var $ftr = $('.footer');
     
     if( window.innerHeight > $ftr.offset().top + $ftr.outerHeight() ){
-        $ftr.attr({'style': 'position:fixed; top:' + (window.innerHeight - $ftr.outerHeight()) +'px;' });
+        $ftr.attr({'style': 'position:fixed; top:' + (window.innerHeight - $ftr.outerHeight() - $('.footer_nav').outerHeight() - 0.1) +'px;' });
     }
-    var pagetop = $('#page_top');
-    // ボタン非表示
-    pagetop.hide();
-  
+    var pagetop = $('.top-mk');
+
+    FooterNavUpdate()
+
     // 100px スクロールしたらボタン表示
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
-            pagetop.fadeIn();
+            $('.footer_nav').fadeIn();
         } else {
-            pagetop.fadeOut();
+            $('.footer_nav').fadeOut();
         }
+        FooterNavUpdate()
     });
     pagetop.click(function () {
         $('body, html').animate({ scrollTop: 0 }, 500);

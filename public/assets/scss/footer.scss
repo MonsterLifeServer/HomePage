@@ -6,10 +6,8 @@ $labelColor: #4f4f4f;
     font-family: sans-serif;
     font-weight: bold;
     font-size: 16px;
-    margin-top: 50px;
     margin-left: 0;
     margin-right: 0;
-    padding-top: 50px;
     padding-bottom: 50px;
     z-index: 100;
     .footer-center {
@@ -65,6 +63,64 @@ $labelColor: #4f4f4f;
         margin: 0;
     }
 }
+
+.footer_nav {
+    width: 100%;
+    background-color: #414141;
+    margin-top: 50px;
+    position: fixed;
+    bottom: 0;
+    font-size: 14px;
+    z-index: 101;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    #share-chk, #top-chk {
+        display: none;
+    }
+    .menu-mk {
+        text-align: center;
+        line-height: 1;
+        color: #d1d1d1;
+        width: 60px;
+        font-size: .8rem;
+        padding: 5px 0;
+        margin: 0 10px;
+        border: 2px solid hsla(0,0%,100%,0);
+        cursor: pointer;
+        &:before {
+            display: block;
+            margin-bottom: 3px;
+        }
+    }
+    .menu-chk {
+        font-size: 100%;
+        margin: 0;
+        vertical-align: baseline;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .footer_nav {
+        .menu-mk:before {
+            font-size: 30px;
+        }
+        .share-mk:before {
+            content: "\f1e0";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+        }
+        .top-mk:before {
+            content: "\f0aa"; /*アイコン*/
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+        }
+    }
+}
+
 
 /*PAGE TOPボタン追加*/
 #page_top{

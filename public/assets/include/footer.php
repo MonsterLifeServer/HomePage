@@ -1,4 +1,10 @@
 <div id="page_top"><a href="#"></a></div>
+<div class="footer_nav">
+    <input id="share-chk" class="menu-chk" type="checkbox">
+    <label class="menu-mk share-mk" for="share-chk">シェア</label>
+    <input id="top-chk" class="menu-chk" type="checkbox">
+    <label class="menu-mk top-mk" for="top-chk">トップ</label>
+</div>
 <footer class="footer">
     <div class="footer-center col-md-10 col-sm-6">
         <div class="icons">
