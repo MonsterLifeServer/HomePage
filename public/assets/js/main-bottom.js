@@ -77,23 +77,38 @@ $(function() {
     var $ftr = $('.footer');
     
     if( window.innerHeight > $ftr.offset().top + $ftr.outerHeight() ){
-        $ftr.attr({'style': 'position:fixed; top:' + (window.innerHeight - $ftr.outerHeight() - $('.footer_nav').outerHeight() - 0.1) +'px;' });
+        var temp = $(".wrapper").offset();
+        $ftr.attr({'style': 'position:fixed; top:' + ( temp.bottom + 20 + $('.footer').offset().outerHeight() ) +'px;' });
     }
-    var pagetop = $('.top-mk');
 
     FooterNavUpdate()
 
     // 100px スクロールしたらボタン表示
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
-            $('.footer_nav').fadeIn();
-        } else {
-            $('.footer_nav').fadeOut();
-        }
         FooterNavUpdate()
     });
-    pagetop.click(function () {
+    $(window).resize(function () {
+        FooterNavUpdate()
+    });
+    $('.top-mk').click(function () {
         $('body, html').animate({ scrollTop: 0 }, 500);
+        return false;
+    });
+    $('.share-mk').click(function () {
+        if ($('.sns-share-menu').hasClass("is-active")) {
+            $('.sns-share-menu').removeClass("is-active");
+            $('.footer_nav').css("z-index", 101);
+        } else {
+            $('.sns-share-menu').addClass("is-active");
+            $('.footer_nav').css("z-index", 0);
+        }
+        return false;
+    });
+    $('.sns-share-close').click(function () {
+        if ($('.sns-share-menu').hasClass("is-active")) {
+            $('.sns-share-menu').removeClass("is-active");
+            $('.footer_nav').css("z-index", 101);
+        }
         return false;
     });
 });

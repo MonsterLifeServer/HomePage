@@ -1,5 +1,5 @@
-<div id="page_top"><a href="#"></a></div>
-<div class="footer_nav">
+<!-- <div id="page_top"><a href="#"></a></div> -->
+<div class="footer_nav" id="footer_nav">
     <input id="share-chk" class="menu-chk" type="checkbox">
     <label class="menu-mk share-mk" for="share-chk">シェア</label>
     <input id="top-chk" class="menu-chk" type="checkbox">

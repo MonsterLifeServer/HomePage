@@ -35,6 +35,37 @@ $header_menu = [
             <span></span>
         </div>
     </div>
+    <div class="sns-share-menu">
+        <ul class="sns-share-nav">
+            <li class="twitter">
+                <div class="sns-share-content">
+                    <i class="fa-brands fa-twitter"></i>
+                    <a class="sns-share" href="" rel="nofollow">
+                        ツイート
+                    </a>
+                </div>
+            </li>
+            <li class="facebook">
+                <div class="sns-share-content">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <a class="sns-share" href="" rel="nofollow">
+                        シェア
+                    </a>
+                </div>
+            </li>
+            <li class="line">
+                <div class="sns-share-content">
+                    <i class="fa-brands fa-line"></i>
+                    <a class="sns-share" href="" rel="nofollow">
+                        LINEで送る
+                    </a>
+                </div>
+            </li>
+        </ul>
+        <div class="sns-share-close">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+    </div>
     <div class="header-label">
         <div class="menu">
             <ul class="nav">
