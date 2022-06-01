@@ -7,7 +7,6 @@
 
     include($func->getDiscordLibPath());
     $disLib = new DiscordLib($func->getPageUrl(), $func->getDiscordOAuth2_ID(), $func->getDiscordOAuth2_Secret());
-    
     $disLib->initDiscordOAuth();
 
     // 変数の初期化

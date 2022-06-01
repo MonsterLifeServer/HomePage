@@ -5,6 +5,10 @@ $func = new HomePageFunction('./../assets/config.php', '青鬼ONLINE in MC');
 $func->setPageUrl($func->getUrl().'/game/online');
 $func->setDescription('スマホゲーム「青鬼ONLINE」をマイクラで遊べるようにした企画「青鬼ONLINE in MC」のルール紹介ページです。');
 
+include($func->getDiscordLibPath());
+$disLib = new DiscordLib($func->getPageUrl(), $func->getDiscordOAuth2_ID(), $func->getDiscordOAuth2_Secret());
+$disLib->initDiscordOAuth();
+
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">

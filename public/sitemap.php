@@ -7,7 +7,6 @@ $func->setDescription('MonsterLifeServerのあらゆるリンクを確認でき�
 
 include($func->getDiscordLibPath());
 $disLib = new DiscordLib($func->getPageUrl(), $func->getDiscordOAuth2_ID(), $func->getDiscordOAuth2_Secret());
-
 $disLib->initDiscordOAuth();
 
 ?>
@@ -133,9 +132,6 @@ $disLib->initDiscordOAuth();
                             </li>
                         </ul>
                     </div>
-                    <?php
-                        echo $disLib->loginButton();
-                    ?>
                 </div>
             </div>
         </div>

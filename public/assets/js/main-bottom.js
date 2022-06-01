@@ -4,10 +4,10 @@ function FooterNavUpdate() {
     var scroll = $(window).scrollTop(); //スクロール値を取得
     var wH = window.innerHeight; //画面の高さを取得
     var footerPos =  $('.footer').offset().top; //footerの位置を取得
-    console.log("scroll   : " + scroll);
-    console.log("wH       : " + wH);
-    console.log("footerPos: " + footerPos);
-    console.log(" ");
+    // console.log("scroll   : " + scroll);
+    // console.log("wH       : " + wH);
+    // console.log("footerPos: " + footerPos);
+    // console.log(" ");
     if(scroll+wH >= (footerPos)) {
         var pos = (scroll+wH) - footerPos //スクロールの値＋画面の高さからfooterの位置＋10pxを引いた場所を取得し
         footerNav.css('bottom',pos); //.footer_navに上記の値をCSSのbottomに直接指定してフッター手前で止まるようにする
@@ -104,11 +104,28 @@ $(function() {
         }
         return false;
     });
+    $('.discord-mk').click(function () {
+        if ($('#home-uri').length) {
+            if ($('#login-span').length) {
+                window.location = $('#home-uri').attr('href') + 'discord-oauth2?action=login&redirect=' + encodeURI(location.href);
+            } else if ($('#logout-span').length) {
+                window.location = $('#home-uri').attr('href') + 'discord-oauth2?action=logout&redirect=' + encodeURI(location.href);
+            }
+        }
+        return false;
+    });
     $('.sns-share-close').click(function () {
         if ($('.sns-share-menu').hasClass("is-active")) {
             $('.sns-share-menu').removeClass("is-active");
             $('.footer_nav').css("z-index", 101);
         }
         return false;
+    });
+    var clipboard = new Clipboard('.copy-uri');
+    $(function(){
+        $('.copy-uri').click(function(){
+          // $(this).addClass('copied');    //ボタンの色などを変更するためにクラスを追加
+          // $(".copy-text").text('コピーしました');    //テキストの書き換え
+        });
     });
 });

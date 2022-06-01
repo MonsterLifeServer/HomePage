@@ -5,6 +5,10 @@ $func = new HomePageFunction('./../assets/config.php', 'コア破壊ゲーム');
 $func->setPageUrl($func->getUrl().'/game/cbg');
 $func->setDescription('コアを守り抜け！！「コア破壊ゲーム」のルール紹介ページです');
 
+include($func->getDiscordLibPath());
+$disLib = new DiscordLib($func->getPageUrl(), $func->getDiscordOAuth2_ID(), $func->getDiscordOAuth2_Secret());
+$disLib->initDiscordOAuth();
+
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">

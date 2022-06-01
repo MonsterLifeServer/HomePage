@@ -5,6 +5,10 @@ $func = new HomePageFunction('./../assets/config.php', '逃走中');
 $func->setPageUrl($func->getUrl().'/game/toso');
 $func->setDescription('逃走中をマイクラで遊べるようにした企画「逃走中」のルール紹介ページです。');
 
+include($func->getDiscordLibPath());
+$disLib = new DiscordLib($func->getPageUrl(), $func->getDiscordOAuth2_ID(), $func->getDiscordOAuth2_Secret());
+$disLib->initDiscordOAuth();
+
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">

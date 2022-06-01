@@ -5,6 +5,10 @@ $func = new HomePageFunction('./../assets/config.php', '通帳');
 $func->setPageUrl($func->getUrl().'/about/passbook');
 $func->setDescription('MonsterLifeServerの通帳');
 
+include($func->getDiscordLibPath());
+$disLib = new DiscordLib($func->getPageUrl(), $func->getDiscordOAuth2_ID(), $func->getDiscordOAuth2_Secret());
+$disLib->initDiscordOAuth();
+
 setlocale(LC_MONETARY, 'ja_JP');
 
 function sortByKey($key_name, $sort_order, $array_temp) {

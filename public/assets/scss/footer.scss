@@ -1,3 +1,4 @@
+@import url("https://use.fontawesome.com/releases/v6.0.0/css/all.css");
 $labelColor: #4f4f4f;
 .footer {
     background-color: #414141;
@@ -78,7 +79,7 @@ $labelColor: #4f4f4f;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    #share-chk, #top-chk {
+    #share-chk, #top-chk, #discord-chk {
         display: none;
     }
     .menu-mk {
@@ -110,13 +111,18 @@ $labelColor: #4f4f4f;
         }
         .share-mk:before {
             content: "\f1e0";
-            font-family: "Font Awesome 5 Free";
+            font-family: "Font Awesome 6 Free";
             font-weight: 900;
         }
         .top-mk:before {
             content: "\f0aa"; /*アイコン*/
-            font-family: "Font Awesome 5 Free";
+            font-family: "Font Awesome 6 Free";
             font-weight: 900;
+        }
+        .discord-mk:before {
+            font-family: "Font Awesome 6 Free";
+            content: "\f392";
+            
         }
     }
 }
@@ -143,6 +149,10 @@ $labelColor: #4f4f4f;
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
         li {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -154,13 +164,16 @@ $labelColor: #4f4f4f;
             -webkit-box-align: center;
             -ms-flex-align: center;
             align-items: center;
-            height: 100%;
             position: relative;
             border-radius: 10px;
             width: 120px;
             padding: .7rem .5rem .5rem;
-            border-radius: 10px;
             margin: 1rem;
+            cursor: pointer;
+            i {
+                font-size: 2rem;
+                margin-bottom: 12px;
+            }
             &.twitter {
                 background: #00aced;
             }
@@ -168,12 +181,16 @@ $labelColor: #4f4f4f;
                 background: #1877f2;
             }
             &.line {
-                background: #1dcd00;
+                background: #00b900;
+                img {
+                    width: 44px;
+                    height: 44px;
+                }
             }
-            i {
-                font-size: 2rem;
-                margin-bottom: 12px;
+            &.copy-uri {
+                background: rgb(104, 104, 104);
             }
+
             .sns-share-content {
                 margin: 15px;
                 display: -webkit-box;
@@ -190,32 +207,24 @@ $labelColor: #4f4f4f;
                 position: relative;
                 text-decoration: none;
                 color: #fff;
-                a {
-                    text-decoration: none;
-                    color: #fff;
-                }
             }
         }
     }
     &.is-active{
         background: #fff;
-        // max-width: 350px;
         width: 100%;
         height: 100vh;
         display: block;
-        .hamburger-ad {
-            display: block;
-            margin-top: 30px;
-            margin-bottom: 40px;
-        }
-        .narrow-google-serch {
-            display: inline-block;
-            z-index: 1000;
+        text-decoration: none;
+        .sns-share-nav a {
+            text-decoration: none;
+            color: #fff;
         }
     }
     .sns-share-close {
         width: 100%;
         background: #414141;
+        color: #fff;
         height: 50px;
         text-align: center;
         font-size: 40px;
@@ -224,6 +233,7 @@ $labelColor: #4f4f4f;
         position: fixed;
         border-radius: 10px;
         bottom: 0;
+        cursor: pointer;
     }
 }
 

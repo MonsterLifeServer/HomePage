@@ -5,6 +5,10 @@ $func = new HomePageFunction('./../assets/config.php', 'サーバー資料');
 $func->setPageUrl($func->getUrl().'/api/pdf');
 $func->setDescription('過去の運営会議やその他資料を公開しています。');
 
+include($func->getDiscordLibPath());
+$disLib = new DiscordLib($func->getPageUrl(), $func->getDiscordOAuth2_ID(), $func->getDiscordOAuth2_Secret());
+$disLib->initDiscordOAuth();
+
 /// Access-Control-Allow-Originエラーを回避する
 header("Access-Control-Allow-Origin: *");
 

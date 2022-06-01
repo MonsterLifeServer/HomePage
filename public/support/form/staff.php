@@ -8,7 +8,6 @@
 
     include($func->getDiscordLibPath());
     $disLib = new DiscordLib($func->getPageUrl(), $func->getDiscordOAuth2_ID(), $func->getDiscordOAuth2_Secret());
-    
     $disLib->initDiscordOAuth();
 
     $staff_lib = "./../../assets/lib/staff-form.php";

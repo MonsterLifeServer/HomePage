@@ -5,6 +5,10 @@ $func = new HomePageFunction('./../assets/config.php', '青鬼ゲーム');
 $func->setPageUrl($func->getUrl().'/game/aooni');
 $func->setDescription('フリーゲーム「青鬼」をマイクラで遊べるようにした企画「青鬼ゲーム」のルール紹介ページです。');
 
+include($func->getDiscordLibPath());
+$disLib = new DiscordLib($func->getPageUrl(), $func->getDiscordOAuth2_ID(), $func->getDiscordOAuth2_Secret());
+$disLib->initDiscordOAuth();
+
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">

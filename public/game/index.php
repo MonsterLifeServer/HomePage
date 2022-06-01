@@ -1,9 +1,14 @@
 <?php
 
-$config = include('./../assets/config.php');
-$TITLE = "ミニゲーム企画一覧";
-$URL = $func->getUrl() . '/game/';
-$DESCRIPTION = "MonsterLifeServerの企画一覧ページです。";
+include('./../assets/function.php');
+$func = new HomePageFunction('./../assets/config.php', 'ミニゲーム企画一覧');
+$func->setPageUrl($func->getUrl().'/game/');
+$func->setDescription('MonsterLifeServerの企画一覧ページです。');
+
+include($func->getDiscordLibPath());
+$disLib = new DiscordLib($func->getPageUrl(), $func->getDiscordOAuth2_ID(), $func->getDiscordOAuth2_Secret());
+$disLib->initDiscordOAuth();
+
 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">

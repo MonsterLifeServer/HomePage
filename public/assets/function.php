@@ -50,6 +50,7 @@ class HomePageFunction {
 
     public function printFootScript() {
         include($this->conf_path);
+        echo '<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.13/clipboard.min.js"></script>';
         echo '<script src="'.$this->getUrl().'/assets/js/main-bottom.js"></script>';
     }
 

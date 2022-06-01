@@ -5,6 +5,10 @@ $func = new HomePageFunction('./../assets/config.php', 'サーバー');
 $func->setPageUrl($func->getUrl().'/servers/');
 $func->setDescription(' ');
 
+include($func->getDiscordLibPath());
+$disLib = new DiscordLib($func->getPageUrl(), $func->getDiscordOAuth2_ID(), $func->getDiscordOAuth2_Secret());
+$disLib->initDiscordOAuth();
+
 date_default_timezone_set('Asia/Tokyo');
 
 $now = new DateTime();
