@@ -108,6 +108,9 @@ $labelColor: #4f4f4f;
     .footer_nav {
         .menu-mk:before {
             font-size: 30px;
+            i {
+                font-weight: 900;
+            }
         }
         .share-mk:before {
             content: "\f1e0";
@@ -120,9 +123,9 @@ $labelColor: #4f4f4f;
             font-weight: 900;
         }
         .discord-mk:before {
+            content: "\f09b";
             font-family: "Font Awesome 6 Free";
-            content: "\f392";
-            
+            font-weight: 900;
         }
     }
 }

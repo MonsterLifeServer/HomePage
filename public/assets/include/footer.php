@@ -9,6 +9,7 @@
         if (isset($disLib) and $future !== TRUE) {
             echo '<input id="discord-chk" class="menu-chk" type="checkbox">';
             echo '<label class="menu-mk discord-mk" for="discord-chk">';
+            // echo '<i class="fa-brands fa-github" style="color: #ffffff;" for="discord-chk"></i>';
             if ($disLib->isLogin()) { 
                 echo "<span id='logout-span'>ログアウト</span>"; 
             } else { 

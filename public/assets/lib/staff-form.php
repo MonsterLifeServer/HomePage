@@ -1,5 +1,5 @@
 <?php
-include_once( $_SERVER["DOCUMENT_ROOT"] . "/assets/config.php");
+
 $staff_temp = [
     "admin" => [
         "display" => "運営",

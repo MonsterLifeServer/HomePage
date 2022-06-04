@@ -258,7 +258,7 @@ class HomePageFunction {
 
     public function send_to_role_discord(string $username, string $mcid, array $roles, string $msg, $ip) {
         include($this->conf_path);
-        $denylist = include('./assets/lib/denylist.php');
+        $denylist = include($this->assets_path . '/lib/denylist.php');
 
         if (in_array($ip, $denylist['ip'])) {
             header("Location: ".$func->getUrl()."/support/form/staff?why=denylist");
