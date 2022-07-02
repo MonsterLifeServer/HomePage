@@ -85,6 +85,8 @@ $disLib->initDiscordOAuth();
                         <tr><th>/jp on</th><td>ローマ字変換機能をONにする。</td></tr>
                         <tr><th>/jp off</th><td>ローマ字変換機能をOFFにする。</td></tr>
                         <tr><th>/jp toggle</th><td>ローマ字変換機能を切り替える。</td></tr>
+                        <tr><th>/lobby</th><td>ロビーへ戻れます(一部エリアでは制限されています)</td></tr>
+                        <tr><th>/spawn</th><td>スポーンポイントへ戻れます(一部エリアでは制限されています)</td></tr>
                     </table>
 
                 </div>

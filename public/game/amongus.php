@@ -23,7 +23,7 @@ $disLib->initDiscordOAuth();
                 <div class="contents">
                     <!-- パンくずリスト&最終更新日 -->
                     <div class="top-label">
-                        <div class="item-left">
+                    <div class="item-left">
                             <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
