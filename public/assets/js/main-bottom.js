@@ -106,10 +106,11 @@ $(function() {
     });
     $('.discord-mk').click(function () {
         if ($('#home-uri').length) {
+            document.cookie = 'discord-redirect-uri=' + encodeURI(location.href) + '; Max-Age=600'; // 10分でリダイレクト用URLを削除する
             if ($('#login-span').length) {
-                window.location = $('#home-uri').attr('href') + 'discord-oauth2?action=login&redirect=' + encodeURI(location.href);
+                window.location = $('#home-uri').attr('href') + 'discord-oauth2?system=login';
             } else if ($('#logout-span').length) {
-                window.location = $('#home-uri').attr('href') + 'discord-oauth2?action=logout&redirect=' + encodeURI(location.href);
+                window.location = $('#home-uri').attr('href') + 'discord-oauth2?system=logout';
             }
         }
         return false;

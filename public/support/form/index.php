@@ -176,10 +176,10 @@
                         <div class="element_wrap">
                             <?php 
                                 if( !empty($_POST['genre']) && $_POST['genre'] === "8" ) {
-                                    echo '<label>ラジオネーム<p class="optional">- 任意</p> ' . $disLib->loginButton() . '</label>';
+                                    echo '<label>ラジオネーム<p class="optional">- 任意</p></label>';
                                     echo '<p class="help">記入がないと「名無しさん」として読まれます。</p>';
                                 } else {
-                                    echo '<label>連絡先<p class="optional">- 任意</p> ' . $disLib->loginButton() . '</label>';
+                                    echo '<label>連絡先<p class="optional">- 任意</p></label>';
                                     echo '<p class="help">返信が必須の方はTwitterかDiscordのIDを記述してください。</p>';
                                 }
 

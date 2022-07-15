@@ -9,9 +9,8 @@ if (isset($_GET['redirect'])) {
     $url = $func->getUrl();
 }
 
-$func->setPageUrl($func->getUrl().'/discord-oauth2?redirect=' . urlencode($url));
+$func->setPageUrl($func->getUrl().'/discord-oauth2');
 $func->setDescription('Discordログインシステム');
-
 
 
 include($func->getDiscordLibPath());
@@ -19,11 +18,7 @@ $disLib = new DiscordLib($func->getPageUrl(), $func->getDiscordOAuth2_ID(), $fun
 $disLib->initDiscordOAuth();
 
 if (isset($_GET['system']) and ($_GET['system'] === 'login' or $_GET['system'] === 'logout')) {
-    if (isset($_GET['redirect'])) {
-        header($func->getUrl() . 'discord-oauth2?action=' . $_GET['system']);
-    } else {
-        header($func->getUrl() . 'discord-oauth2?action=' . $_GET['system']);
-    }
+    header($func->getUrl() . '/discord-oauth2?action=' . $_GET['system']);
 }
 
 ?>

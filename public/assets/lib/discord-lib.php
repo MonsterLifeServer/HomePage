@@ -12,7 +12,8 @@ class DiscordLib {
 
 
     public function __construct($redirect_uri, $oauth_id, $oauth_secret) {
-        $this->redirect_uri = $redirect_uri;
+        // $this->redirect_uri = $redirect_uri;
+        $this->redirect_uri = "https://www.mlserver.xyz/";
         $this->oauth_id = $oauth_id;
         $this->oauth_secret = $oauth_secret;
     }
@@ -43,7 +44,12 @@ class DiscordLib {
                 'client_secret' => OAUTH2_CLIENT_SECRET,
             ));
             unset($_SESSION['access_token']);
-            header('Location: ' . $this->redirect_uri);
+            $redirect_final_uri = $this->redirect_uri;
+            if (isset($_COOKIE["discord-redirect-uri"])) {
+                $redirect_final_uri = $_COOKIE["discord-redirect-uri"];
+                setcookie("discord-redirect-uri", "", time() - 30);
+            }
+            header('Location: ' . $redirect_final_uri);
             die();
         }
 
@@ -77,8 +83,12 @@ class DiscordLib {
             ));
             $logout_token = $token->access_token;
             $_SESSION['access_token'] = $token->access_token;
-
-            header('Location: ' . $this->redirect_uri);
+            $redirect_final_uri = $this->redirect_uri;
+            if (isset($_COOKIE["discord-redirect-uri"])) {
+                $redirect_final_uri = $_COOKIE["discord-redirect-uri"];
+                setcookie("discord-redirect-uri", "", time() - 30);
+            }
+            header('Location: ' . $redirect_final_uri);
         }
 
         if(get('action') == 'logout') {
@@ -90,7 +100,12 @@ class DiscordLib {
                 'client_secret' => OAUTH2_CLIENT_SECRET,
             ));
             unset($_SESSION['access_token']);
-            header('Location: ' . $this->redirect_uri);
+            $redirect_final_uri = $this->redirect_uri;
+            if (isset($_COOKIE["discord-redirect-uri"])) {
+                $redirect_final_uri = $_COOKIE["discord-redirect-uri"];
+                setcookie("discord-redirect-uri", "", time() - 30);
+            }
+            header('Location: ' . $redirect_final_uri);
             die();
         }
     }

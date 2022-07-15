@@ -97,7 +97,7 @@
                                     $discord_name = $user->username . '#' . $user->discriminator . ' | (' . $user->id . ')';
                                 }
                             }
-                            display_staff_form_contents($discord_name, $disLib->loginButton()); 
+                            display_staff_form_contents($discord_name, ""); 
                         }  
                     ?>
                 </div>

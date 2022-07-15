@@ -4,20 +4,16 @@
     <label class="menu-mk share-mk" for="share-chk">シェア</label>
     <input id="top-chk" class="menu-chk" type="checkbox">
     <label class="menu-mk top-mk" for="top-chk">トップ</label>
+    <input id="discord-chk" class="menu-chk" type="checkbox">
+    <label class="menu-mk discord-mk" for="discord-chk">
     <?php 
-        $future = FALSE;
-        if (isset($disLib) and $future !== TRUE) {
-            echo '<input id="discord-chk" class="menu-chk" type="checkbox">';
-            echo '<label class="menu-mk discord-mk" for="discord-chk">';
-            // echo '<i class="fa-brands fa-github" style="color: #ffffff;" for="discord-chk"></i>';
-            if ($disLib->isLogin()) { 
-                echo "<span id='logout-span'>ログアウト</span>"; 
-            } else { 
-                echo "<span id='login-span'>ログイン</span>"; 
-            } 
-            echo '</label>';
-        }
+        if ($disLib->isLogin()) { 
+            echo "<span id='logout-span'>ログアウト</span>"; 
+        } else { 
+            echo "<span id='login-span'>ログイン</span>"; 
+        } 
     ?>
+    </label>
 </div>
 <footer class="footer">
     <div class="footer-center col-md-10 col-sm-6">
