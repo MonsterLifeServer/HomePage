@@ -8,7 +8,6 @@
 
     include($func->getDiscordLibPath());
     $disLib = new DiscordLib($func->getPageUrl(), $func->getDiscordOAuth2_ID(), $func->getDiscordOAuth2_Secret());
-    
     $disLib->initDiscordOAuth();
 
     $staff_lib = "./../../assets/lib/staff-form.php";
@@ -98,7 +97,7 @@
                                     $discord_name = $user->username . '#' . $user->discriminator . ' | (' . $user->id . ')';
                                 }
                             }
-                            display_staff_form_contents($discord_name, $disLib->loginButton()); 
+                            display_staff_form_contents($discord_name, ""); 
                         }  
                     ?>
                 </div>

@@ -5,6 +5,10 @@ $func = new HomePageFunction('./../assets/config.php', 'ミニゲーム企画鯖
 $func->setPageUrl($func->getUrl().'/servers/event');
 $func->setDescription('ミニゲーム企画を開催するサーバーについて');
 
+include($func->getDiscordLibPath());
+$disLib = new DiscordLib($func->getPageUrl(), $func->getDiscordOAuth2_ID(), $func->getDiscordOAuth2_Secret());
+$disLib->initDiscordOAuth();
+
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">

@@ -50,6 +50,7 @@ class HomePageFunction {
 
     public function printFootScript() {
         include($this->conf_path);
+        echo '<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.13/clipboard.min.js"></script>';
         echo '<script src="'.$this->getUrl().'/assets/js/main-bottom.js"></script>';
     }
 
@@ -257,7 +258,7 @@ class HomePageFunction {
 
     public function send_to_role_discord(string $username, string $mcid, array $roles, string $msg, $ip) {
         include($this->conf_path);
-        $denylist = include('./assets/lib/denylist.php');
+        $denylist = include($this->assets_path . '/lib/denylist.php');
 
         if (in_array($ip, $denylist['ip'])) {
             header("Location: ".$func->getUrl()."/support/form/staff?why=denylist");

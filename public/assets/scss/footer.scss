@@ -1,3 +1,4 @@
+@import url("https://use.fontawesome.com/releases/v6.0.0/css/all.css");
 $labelColor: #4f4f4f;
 .footer {
     background-color: #414141;
@@ -6,10 +7,8 @@ $labelColor: #4f4f4f;
     font-family: sans-serif;
     font-weight: bold;
     font-size: 16px;
-    margin-top: 50px;
     margin-left: 0;
     margin-right: 0;
-    padding-top: 50px;
     padding-bottom: 50px;
     z-index: 100;
     .footer-center {
@@ -65,6 +64,185 @@ $labelColor: #4f4f4f;
         margin: 0;
     }
 }
+
+.footer_nav {
+    width: 100%;
+    background-color: #414141;
+    margin-top: 50px;
+    position: fixed;
+    bottom: 0;
+    font-size: 14px;
+    z-index: 101;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    #share-chk, #top-chk, #discord-chk {
+        display: none;
+    }
+    .menu-mk {
+        text-align: center;
+        line-height: 1;
+        color: #d1d1d1;
+        width: 60px;
+        font-size: .8rem;
+        padding: 5px 0;
+        margin: 0 10px;
+        border: 2px solid hsla(0,0%,100%,0);
+        cursor: pointer;
+        &:before {
+            display: block;
+            margin-bottom: 3px;
+        }
+    }
+    .menu-chk {
+        font-size: 100%;
+        margin: 0;
+        vertical-align: baseline;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .footer_nav {
+        .menu-mk:before {
+            font-size: 30px;
+            i {
+                font-weight: 900;
+            }
+        }
+        .share-mk:before {
+            content: "\f1e0";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+        }
+        .top-mk:before {
+            content: "\f0aa"; /*アイコン*/
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+        }
+        .discord-mk:before {
+            font-family: fontawesome;
+            content: "\f392";
+            // margin-right: .5em;
+            // display: inline-block;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    }
+}
+/* アニメーション前のメニューの状態 */
+.sns-share-menu {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    overflow-x: hidden;
+    text-align: center;
+    width: 0; /* ←100%から 0 に変更 */
+    height: 0;
+    height: 100vh;
+    background: #fff;
+    transition: .5s; /* ← 追加 */
+    display: block;
+    // max-width: 350px;
+    .sns-share-nav {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-flow: wrap;
+        flex-flow: wrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+        li {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-flow: column;
+            flex-flow: column;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            position: relative;
+            border-radius: 10px;
+            width: 120px;
+            padding: .7rem .5rem .5rem;
+            margin: 1rem;
+            cursor: pointer;
+            i {
+                font-size: 2rem;
+                margin-bottom: 12px;
+            }
+            &.twitter {
+                background: #00aced;
+            }
+            &.facebook {
+                background: #1877f2;
+            }
+            &.line {
+                background: #00b900;
+                img {
+                    width: 44px;
+                    height: 44px;
+                }
+            }
+            &.copy-uri {
+                background: rgb(104, 104, 104);
+            }
+
+            .sns-share-content {
+                margin: 15px;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-flow: column;
+                flex-flow: column;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                height: 100%;
+                position: relative;
+                text-decoration: none;
+                color: #fff;
+            }
+        }
+    }
+    &.is-active{
+        background: #fff;
+        width: 100%;
+        height: 100vh;
+        display: block;
+        text-decoration: none;
+        .sns-share-nav a {
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+    .sns-share-close {
+        width: 100%;
+        background: #414141;
+        color: #fff;
+        height: 50px;
+        text-align: center;
+        font-size: 40px;
+        margin-top: auto;
+        margin-bottom: auto;
+        position: fixed;
+        border-radius: 10px;
+        bottom: 0;
+        cursor: pointer;
+    }
+}
+
 
 /*PAGE TOPボタン追加*/
 #page_top{

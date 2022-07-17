@@ -24,7 +24,7 @@ $STAFF_DECT = [
     ],
     "1"=>[
         "NAME"=>"ぎんあれ",
-        "DESCRIPTION"=>"運営の一人。MonsterLifeServerの鯖主。動画編集の長。現在ほぼ休止中。",
+        "DESCRIPTION"=>"運営の一人。MonsterLifeServerの鯖主。動画編集の長。",
         "IMG"=>"https://minotar.net/armor/body/95593263edef4f07a6bbefd7a05e2652",
         "SNS"=>[
             "YOUTUBE"=>"https://www.youtube.com/channel/UCfXYSFo-unvTihFOjRiADgA",
@@ -32,14 +32,14 @@ $STAFF_DECT = [
         ]
     ],
     "2"=>[
-        "NAME"=>"なぎさ",
-        "DESCRIPTION"=>"運営の一人。運営陣で唯一Minecraftをやっていない人。主に鯖のお金管理をしている。",
-        "IMG"=>"{$WOMAN_IMG}",
+        "NAME"=>"すとら",
+        "DESCRIPTION"=>"開発者の一人。Skript専門で応募。将来的にPluginの開発者になる予定。",
+        "IMG"=>"{$MAN_IMG}",
         "SNS"=>[]
     ],
     "3"=>[
         "NAME"=>"メアリー",
-        "DESCRIPTION"=>"開発者の一人。元々Skript専門だったがPluginやシェルスクリプトなどを組んでくれていたりする。",
+        "DESCRIPTION"=>"開発者の一人。元々Skript専門だったがPluginやシェルスクリプトなどを組んでくれていたりする。現在活動率低下中。",
         "IMG"=>"{$WOMAN_IMG}",
         "SNS"=>[]
     ],
@@ -48,13 +48,23 @@ $STAFF_DECT = [
         "DESCRIPTION"=>"テクスチャデザイナー。現在ほぼ休止中。",
         "IMG"=>"{$MAN_IMG}",
         "SNS"=>[]
-    ]
+    ],
+    "5"=>[
+        "NAME"=>"なぎさ",
+        "DESCRIPTION"=>"運営の一人。運営陣で唯一Minecraftをやっていない人。主に鯖のお金管理をしている。現在休止中。",
+        "IMG"=>"{$WOMAN_IMG}",
+        "SNS"=>[]
+    ],
 ];
 
 include('./../assets/function.php');
 $func = new HomePageFunction('./../assets/config.php', '運営一覧');
 $func->setPageUrl($func->getUrl().'/about/admins');
 $func->setDescription('運営やスタッフ一覧ページです。');
+
+include($func->getDiscordLibPath());
+$disLib = new DiscordLib($func->getPageUrl(), $func->getDiscordOAuth2_ID(), $func->getDiscordOAuth2_Secret());
+$disLib->initDiscordOAuth();
 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">

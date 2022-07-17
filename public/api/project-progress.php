@@ -5,6 +5,10 @@ $func = new HomePageFunction('./../assets/config.php', '作業状況');
 $func->setPageUrl($func->getUrl().'/api/project-progress');
 $func->setDescription('作業状況を確認できます。');
 
+include($func->getDiscordLibPath());
+$disLib = new DiscordLib($func->getPageUrl(), $func->getDiscordOAuth2_ID(), $func->getDiscordOAuth2_Secret());
+$disLib->initDiscordOAuth();
+
 function getGitHubContents($url, $user, $token) {
     $ch = curl_init();
     $headers = array(

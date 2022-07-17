@@ -24,6 +24,9 @@ $header_menu = [
     ]
 ];
 
+$twitter_share_uri = "http://twitter.com/share?text=" . $func->getTitle() . "&url=" . $func->getPageUrl() . "&hashtags=MonsterLifeServer,マイクラ,Minecraft,マインクラフト";
+$facebook_share_uri = "https://www.facebook.com/sharer/sharer.php?u=" . $func->getPageUrl();
+$line_share_uri = "https://line.me/R/msg/text/?" . $func->getTitle() . "%20" . $func->getPageUrl();
 ?>
 <header id="header">
     <div  id="loading"><img src="https://i.gyazo.com/81483a7a8fc62d20e6ceae534eb5a15d.gif" width="80px" height="80px"/></div>
@@ -33,6 +36,43 @@ $header_menu = [
             <span></span>
             <span></span>
             <span></span>
+        </div>
+    </div>
+    <div class="sns-share-menu">
+        <ul class="sns-share-nav">
+            <a class="sns-share" target="_blank" href="<?php echo $twitter_share_uri; ?>" rel="nofollow">
+                <li class="twitter">
+                    <div class="sns-share-content">
+                        <i class="fa-brands fa-twitter"></i>
+                        <span>ツイート</span>
+                    </div>
+                </li>
+            </a>
+            <a class="sns-share" target="_blank" href="<?php echo $facebook_share_uri; ?>" rel="nofollow">
+                <li class="facebook">
+                    <div class="sns-share-content">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <span>シェア</span>
+                    </div>
+                </li>
+            </a>
+            <a class="sns-share" target="_blank" href="<?php echo $line_share_uri; ?>" rel="nofollow">
+                <li class="line">
+                    <div class="sns-share-content">
+                        <img src="https://i.gyazo.com/f1e91231313a225d0003713715eca1a6.png">
+                        <span>LINEで送る</span>
+                    </div>
+                </li>
+            </a>
+            <li class="copy-uri" data-clipboard-text="<?php echo $func->getPageUrl(); ?>">
+                <div class="sns-share-content">
+                    <i class="fa-solid fa-copy"></i>
+                    <span class="copy-text">コピー</span>
+                </div>
+            </li>
+        </ul>
+        <div class="sns-share-close">
+            <i class="fa-solid fa-xmark"></i>
         </div>
     </div>
     <div class="header-label">

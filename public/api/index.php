@@ -5,6 +5,10 @@ $func = new HomePageFunction('./../assets/config.php', 'API一覧');
 $func->setPageUrl($func->getUrl().'/api/');
 $func->setDescription(' ');
 
+include($func->getDiscordLibPath());
+$disLib = new DiscordLib($func->getPageUrl(), $func->getDiscordOAuth2_ID(), $func->getDiscordOAuth2_Secret());
+$disLib->initDiscordOAuth();
+
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">

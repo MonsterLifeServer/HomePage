@@ -84,9 +84,6 @@ $disLib->initDiscordOAuth();
                     </li>
                 </ul>
             </div>
-            <?php
-                echo $disLib->loginButton();
-            ?>
         </div>
 		<?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/footer.php"); ?>
     </body>

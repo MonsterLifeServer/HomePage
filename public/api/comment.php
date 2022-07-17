@@ -5,6 +5,10 @@ $func = new HomePageFunction('./../assets/config.php', '配信コメント');
 $func->setPageUrl($func->getUrl().'/api/comment');
 $func->setDescription('MonsterLifeServerのライブ配信のコメントを見れるページ');
 
+include($func->getDiscordLibPath());
+$disLib = new DiscordLib($func->getPageUrl(), $func->getDiscordOAuth2_ID(), $func->getDiscordOAuth2_Secret());
+$disLib->initDiscordOAuth();
+
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">

@@ -1,3 +1,23 @@
+function FooterNavUpdate() {
+    var footerNav = $('.footer_nav');
+
+    var scroll = $(window).scrollTop(); //スクロール値を取得
+    var wH = window.innerHeight; //画面の高さを取得
+    var footerPos =  $('.footer').offset().top; //footerの位置を取得
+    // console.log("scroll   : " + scroll);
+    // console.log("wH       : " + wH);
+    // console.log("footerPos: " + footerPos);
+    // console.log(" ");
+    if(scroll+wH >= (footerPos)) {
+        var pos = (scroll+wH) - footerPos //スクロールの値＋画面の高さからfooterの位置＋10pxを引いた場所を取得し
+        footerNav.css('bottom',pos); //.footer_navに上記の値をCSSのbottomに直接指定してフッター手前で止まるようにする
+        //footerNav.css('position', "static");
+    }else{//それ以外は
+        footerNav.css('bottom','0');// 下から10pxの位置にページリンクを指定
+        //footerNav.css('position', "fixed");
+    }
+}
+
 $(function() {
     $('.menu-btn').on('click', function(){
         $('.menu').toggleClass('is-active');
@@ -57,22 +77,55 @@ $(function() {
     var $ftr = $('.footer');
     
     if( window.innerHeight > $ftr.offset().top + $ftr.outerHeight() ){
-        $ftr.attr({'style': 'position:fixed; top:' + (window.innerHeight - $ftr.outerHeight()) +'px;' });
+        var temp = $(".wrapper").offset();
+        $ftr.attr({'style': 'position:fixed; top:' + ( temp.bottom + 20 + $('.footer').offset().outerHeight() ) +'px;' });
     }
-    var pagetop = $('#page_top');
-    // ボタン非表示
-    pagetop.hide();
-  
+
+    FooterNavUpdate()
+
     // 100px スクロールしたらボタン表示
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
-            pagetop.fadeIn();
-        } else {
-            pagetop.fadeOut();
-        }
+        FooterNavUpdate()
     });
-    pagetop.click(function () {
+    $(window).resize(function () {
+        FooterNavUpdate()
+    });
+    $('.top-mk').click(function () {
         $('body, html').animate({ scrollTop: 0 }, 500);
         return false;
+    });
+    $('.share-mk').click(function () {
+        if ($('.sns-share-menu').hasClass("is-active")) {
+            $('.sns-share-menu').removeClass("is-active");
+            $('.footer_nav').css("z-index", 101);
+        } else {
+            $('.sns-share-menu').addClass("is-active");
+            $('.footer_nav').css("z-index", 0);
+        }
+        return false;
+    });
+    $('.discord-mk').click(function () {
+        if ($('#home-uri').length) {
+            if ($('#login-span').length) {
+                window.location = 'https://www.mlserver.xyz/?action=login';
+            } else if ($('#logout-span').length) {
+                window.location = 'https://www.mlserver.xyz/?action=logout';
+            }
+        }
+        return false;
+    });
+    $('.sns-share-close').click(function () {
+        if ($('.sns-share-menu').hasClass("is-active")) {
+            $('.sns-share-menu').removeClass("is-active");
+            $('.footer_nav').css("z-index", 101);
+        }
+        return false;
+    });
+    var clipboard = new Clipboard('.copy-uri');
+    $(function(){
+        $('.copy-uri').click(function(){
+          // $(this).addClass('copied');    //ボタンの色などを変更するためにクラスを追加
+          // $(".copy-text").text('コピーしました');    //テキストの書き換え
+        });
     });
 });

@@ -5,6 +5,10 @@ $func = new HomePageFunction('./../assets/config.php', 'ミニゲーム企画鯖
 $func->setPageUrl($func->getUrl().'/servers/event');
 $func->setDescription('ミニゲーム企画を開催するサーバーについて');
 
+include($func->getDiscordLibPath());
+$disLib = new DiscordLib($func->getPageUrl(), $func->getDiscordOAuth2_ID(), $func->getDiscordOAuth2_Secret());
+$disLib->initDiscordOAuth();
+
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
@@ -81,6 +85,8 @@ $func->setDescription('ミニゲーム企画を開催するサーバーについ
                         <tr><th>/jp on</th><td>ローマ字変換機能をONにする。</td></tr>
                         <tr><th>/jp off</th><td>ローマ字変換機能をOFFにする。</td></tr>
                         <tr><th>/jp toggle</th><td>ローマ字変換機能を切り替える。</td></tr>
+                        <tr><th>/lobby</th><td>ロビーへ戻れます(一部エリアでは制限されています)</td></tr>
+                        <tr><th>/spawn</th><td>スポーンポイントへ戻れます(一部エリアでは制限されています)</td></tr>
                     </table>
 
                 </div>

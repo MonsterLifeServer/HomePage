@@ -5,6 +5,10 @@ $func = new HomePageFunction('./../assets/config.php', '新着情報');
 $func->setPageUrl($func->getUrl().'/about/news');
 $func->setDescription('新着情報が見れます。');
 
+include($func->getDiscordLibPath());
+$disLib = new DiscordLib($func->getPageUrl(), $func->getDiscordOAuth2_ID(), $func->getDiscordOAuth2_Secret());
+$disLib->initDiscordOAuth();
+
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">

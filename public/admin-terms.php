@@ -5,6 +5,10 @@ $func = new HomePageFunction('./assets/config.php', '運営利用規約');
 $func->setPageUrl($func->getUrl().'/admin-terms');
 $func->setDescription('ルールとマナーを守って遊びましょう！！');
 
+include($func->getDiscordLibPath());
+$disLib = new DiscordLib($func->getPageUrl(), $func->getDiscordOAuth2_ID(), $func->getDiscordOAuth2_Secret());
+$disLib->initDiscordOAuth();
+
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">

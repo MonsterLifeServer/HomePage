@@ -5,6 +5,10 @@ $func = new HomePageFunction('./../assets/config.php', '増え鬼');
 $func->setPageUrl($func->getUrl().'/game/hueoni');
 $func->setDescription('企画「増え鬼」のルール紹介ページです。');
 
+include($func->getDiscordLibPath());
+$disLib = new DiscordLib($func->getPageUrl(), $func->getDiscordOAuth2_ID(), $func->getDiscordOAuth2_Secret());
+$disLib->initDiscordOAuth();
+
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">

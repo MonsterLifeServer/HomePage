@@ -1,5 +1,5 @@
 <?php
-include_once( $_SERVER["DOCUMENT_ROOT"] . "/assets/config.php");
+
 $staff_temp = [
     "admin" => [
         "display" => "運営",
@@ -202,7 +202,7 @@ function display_staff_form_contents($discord_name = "", $discord_button = "") {
                 <h2>スタッフ募集</h2>
             </div>
             <div class="Form-Item">
-                <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>Discord名 ' . $discord_button . '</p>';
+                <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>Discord名' . $discord_button . '</p>';
     if ($discord_name === "") echo '<input type="text" class="Form-Item-Input" name="username" value="'.$username.'" placeholder="例）Monster2408#8936" required>';
     else echo '<input type="text" class="Form-Item-Input" name="username" value="'.$discord_name.'" placeholder="例）Monster2408#8936" readonly>';
 
