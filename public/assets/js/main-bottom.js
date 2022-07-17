@@ -106,11 +106,10 @@ $(function() {
     });
     $('.discord-mk').click(function () {
         if ($('#home-uri').length) {
-            document.cookie = 'discord-redirect-uri=' + encodeURI(location.href) + '; Max-Age=600'; // 10分でリダイレクト用URLを削除する
             if ($('#login-span').length) {
-                window.location = $('#home-uri').attr('href') + 'discord-oauth2?system=login';
+                window.location = 'https://www.mlserver.xyz/?action=login';
             } else if ($('#logout-span').length) {
-                window.location = $('#home-uri').attr('href') + 'discord-oauth2?system=logout';
+                window.location = 'https://www.mlserver.xyz/?action=logout';
             }
         }
         return false;
