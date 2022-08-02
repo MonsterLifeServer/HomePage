@@ -64,6 +64,7 @@ $disLib->initDiscordOAuth();
 							<div class="flex-box2">
 
 								<div class="sub-box">
+									<img class="logo" src="https://i.gyazo.com/86fc0ce2f5a0f5e523ae4465d7f85d14.png" alt="">
 									<h2>ルール</h2>
 									<p>青鬼6.23の館に閉じ込められたひろしたちが青色の化け物，青鬼から逃げ，脱出するゲーム。</p>
 									<p>チェストの中にはお肉とは別にランダムで石の感圧板と木の感圧板が入っています。それぞれの感圧板は次の館への鉄扉を開放することができます。</p>
@@ -111,6 +112,7 @@ $disLib->initDiscordOAuth();
 							<div class="flex-box2">
 
 								<div class="sub-box">
+									<img class="logo" src="https://i.gyazo.com/bb2045c3ed658b7c08e72f439842f589.png" alt="">
 									<h2>ルール</h2>
 									<p>青鬼3.0の館に閉じ込められたひろしたちが青色の化け物，青鬼から逃げ，脱出するゲーム。</p>
 									<p>チェストの中にはお肉が入っています。空腹になったら食べましょう。</p>

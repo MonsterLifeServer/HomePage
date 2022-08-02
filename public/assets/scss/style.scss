@@ -33,6 +33,28 @@ div.top-label {
     }
 }
 
+@media screen and (max-width:500px) {
+    div.top-label {
+        display: block;
+        div.item-right {
+            margin: 10px;
+            padding: 0;
+            text-align: right;
+        }
+        div {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width:300px) {
+    .fileupdate {
+        span {
+            width: 100%;
+        }
+    }
+}
+
 iframe.fullframe {
     width: 100%;
     height: 100;
@@ -88,6 +110,23 @@ h2.design {
     margin-bottom: 10px;
 }
 
+@media screen and (max-width:500px) {
+    div.top-label {
+        display: block;
+        div.item-right {
+            margin: 10px;
+            padding: 0;
+            text-align: right;
+        }
+        div {
+            width: 100%;
+        }
+    }
+    h2.design {
+        text-align: center;
+    }
+}
+
 .wrapper {
     left: 0;
     right: 0;
@@ -97,26 +136,7 @@ h2.design {
     padding-bottom: 100px;
 }
 
-.flex-box1 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    .contents {
-        width: 300px;
-        position: relative;
-    }
-}
 
-.flex-box2 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    .contents {
-        width: 300px;
-        position: relative;
-    }
-}
 
 .design-box {
     margin: 2em 0;
@@ -213,6 +233,70 @@ h2.design {
                 }
             }
         }
+    }
+}
+
+.side-description {
+    display: flex;
+    .img {
+        width: 50%;
+    }
+    .description {
+        margin-left: 5px;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .side-description {
+        display: block;
+        .img {
+            width: 100%;
+        }
+        .description {
+            margin-left: 0;
+        }
+    }
+}
+
+
+
+code {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 4px;
+}
+
+blockquote.design {
+    position: relative;
+    padding: 30px 15px 8px 15px;
+    box-sizing: border-box;
+    font-style: italic;
+    background: #efefef;
+    color: #555;
+    &:before{
+        display: inline-block;
+        position: absolute;
+        top: 13px;
+        left: 15px;
+        content: "\f10d";
+        font-family: FontAwesome;
+        color: #cfcfcf;
+        font-size: 28px;
+        line-height: 1;
+        font-weight: 900;
+    }
+    p {
+        padding: 0;
+        margin: 10px 0;
+        line-height: 1.7;
+    }
+    cite {
+        display: block;
+        text-align: right;
+        color: #888888;
+        font-size: 0.9em;
     }
 }
 
@@ -333,6 +417,12 @@ h2.design {
     }
 }
 
+@media screen and (max-width:300px) {
+    .mask-style {
+        width: 95%;
+    }
+}
+
 canvas {
     border: 1px solid black;
 }
@@ -392,21 +482,59 @@ span.category {
     }
 }
 
+@media screen and (max-width:1000px) {
+    .mainBox {
+        max-width: 100%;
+        width: 100%;
+        border: none;
+    }
+}
+
+.flex-box1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .contents {
+        width: 300px;
+        position: relative;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .flex-box1 .contents {
+        display: block;
+        width: 95%;
+    }
+}
+
+.flex-box2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    .contents {
+        width: 300px;
+        position: relative;
+    }
+}
+
 .sub-box {
     padding: 10px;
     margin: 5px;
     width: 60%;
+    .logo {
+        max-width: 100%;
+    }
     p {
         margin: 10px 0;
     }
 }
 
-.color-green {
-    color: #00cc5b;
-}
-
-.color-red {
-    color: red;
+@media screen and (max-width:1000px) {
+    .sub-box {
+        display: block;
+        width: 95%;
+    }
 }
 
 .radius-box {
@@ -450,6 +578,23 @@ span.category {
         }
     }
 }
+
+@media screen and (max-width:1000px) {
+    .radius-box {
+        display: block;
+        width: 95%;
+    }
+}
+
+.color-green {
+    color: #00cc5b;
+}
+
+.color-red {
+    color: red;
+}
+
+
 
 .card-box {
     display: flex;
@@ -581,6 +726,18 @@ span.category {
     }
 }
 
+@media screen and (max-width:800px) {
+    .server-about-box {
+        display: block;
+        .server-about {
+            background: #fff;
+            width: 100%;
+            max-width: 770px;
+            margin: 5px 0;
+        }
+    }
+}
+
 iframe {
     height:500px;
     width:100%;
@@ -634,6 +791,23 @@ table.cmd {
     }
 }
 
+
+@media screen and (max-width:750px) {
+    table.cmd {
+        width: 100%;
+        th {
+            width:100%;
+            display:block;
+            background-color: #eee;
+        }
+        td {
+            width:100%;
+            display:block;
+            background-color: #fff;
+        }
+    }
+}
+
 .passbook {
     width: 100%;
     background-color: #fff;
@@ -684,6 +858,29 @@ table.cmd {
     }
 }
 
+@media screen and (max-width:300px) {
+    .passbook .money {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:200px) {
+    .passbook {
+        .title {
+            font-size: 6px;
+        }
+        .money {
+            font-size: 6px;
+        }
+        .date {
+            font-size: 6px;
+        }
+        .description {
+            font-size: 6px;
+        }
+    }
+}
+
 .game_box {
 
     height: auto;
@@ -704,87 +901,6 @@ table.cmd {
     }
 }
 
-@media screen and (max-width:1000px) {
-    .mainBox {
-        max-width: 100%;
-        width: 100%;
-        border: none;
-    }
-    .radius-box {
-        display: block;
-        width: 95%;
-    }
-    .flex-box1 .contents {
-        display: block;
-        width: 95%;
-    }
-    .sub-box {
-        display: block;
-        width: 95%;
-    }
-}
-
-@media screen and (max-width:800px) {
-    .server-about-box {
-        display: block;
-        .server-about {
-            background: #fff;
-            width: 100%;
-            max-width: 770px;
-            margin: 5px 0;
-        }
-    }
-}
-
-@media screen and (max-width:750px) {
-    table.cmd {
-        width: 100%;
-        th {
-            width:100%;
-            display:block;
-            background-color: #eee;
-        }
-        td {
-            width:100%;
-            display:block;
-            background-color: #fff;
-        }
-    }
-}
-
-@media screen and (max-width:500px) {
-    div.top-label {
-        display: block;
-        div.item-right {
-            margin: 10px;
-            padding: 0;
-            text-align: right;
-        }
-        div {
-            width: 100%;
-        }
-    }
-    h2.design {
-        text-align: center;
-    }
-}
-
-@media screen and (max-width:300px) {
-    .mask-style {
-        width: 95%;
-    }
-
-    .fileupdate {
-        span {
-            width: 100%;
-        }
-    }
-
-    .passbook .money {
-        font-size: 12px;
-    }
-}
-
 @media screen and (max-width:250px) {
     .aooni_youtube_cm .aooni-logo-style {
         font-size: 35px;
@@ -794,23 +910,6 @@ table.cmd {
 @media screen and (max-width:215px) {
     .aooni_youtube_cm .aooni-logo-style {
         font-size: 30px;
-    }
-}
-
-@media screen and (max-width:200px) {
-    .passbook {
-        .title {
-            font-size: 6px;
-        }
-        .money {
-            font-size: 6px;
-        }
-        .date {
-            font-size: 6px;
-        }
-        .description {
-            font-size: 6px;
-        }
     }
 }
 
