@@ -11,9 +11,8 @@ $bgi = array(
 $WOMAN_IMG = "https://i.gyazo.com/ddd129b38500a643dd5f5a749e6abc89.png";
 $MAN_IMG = "https://i.gyazo.com/a0c7a0ab4655d8b9fd228190b4e813f8.png";
 
-$STAFF_DECT = [
-    "0"=>[
-        "NAME"=>"もんすたぁ",
+$STAFF_LIST = [
+    "もんすたぁ" => [
         "DESCRIPTION"=>"運営の一人。サーバーの多くのシステムを開発している。よく企画で叫び苦情が出ている。",
         "IMG"=>"https://minotar.net/armor/body/1c2b6991e8ce4e5db4d8ec3f0cdc5f8e",
         "SNS"=>[
@@ -22,39 +21,39 @@ $STAFF_DECT = [
             "WEB"=>"https://monster2408.mlserver.jp/"
         ]
     ],
-    "1"=>[
-        "NAME"=>"ぎんあれ",
-        "DESCRIPTION"=>"運営の一人。MonsterLifeServerの鯖主。動画編集の長。",
+    "ぎんあれ" => [
+        "DESCRIPTION"=>"運営の一人。MonsterLifeServerの元鯖主。動画編集の長。",
         "IMG"=>"https://minotar.net/armor/body/95593263edef4f07a6bbefd7a05e2652",
         "SNS"=>[
             "YOUTUBE"=>"https://www.youtube.com/channel/UCfXYSFo-unvTihFOjRiADgA",
             "TWITTER"=>"https://twitter.com/gingerale10_YT"
         ]
     ],
-    "2"=>[
-        "NAME"=>"すとら",
+    "かいじ" => [
+        "DESCRIPTION"=>"運営の一人。撮影メンバー。",
+        "IMG"=>"https://minotar.net/armor/body/bf72eed1c52249c4ace3975eb806471b",
+        "SNS"=>[]
+    ],
+    "すとら" => [
         "DESCRIPTION"=>"開発者の一人。Skript専門で応募。将来的にPluginの開発者になる予定。",
         "IMG"=>"{$MAN_IMG}",
         "SNS"=>[]
     ],
-    "3"=>[
-        "NAME"=>"メアリー",
+    "メアリー" => [
         "DESCRIPTION"=>"開発者の一人。元々Skript専門だったがPluginやシェルスクリプトなどを組んでくれていたりする。現在活動率低下中。",
         "IMG"=>"{$WOMAN_IMG}",
         "SNS"=>[]
     ],
-    "4"=>[
-        "NAME"=>"でこまる",
+    "でこまる" => [
         "DESCRIPTION"=>"テクスチャデザイナー。現在ほぼ休止中。",
         "IMG"=>"{$MAN_IMG}",
         "SNS"=>[]
     ],
-    "5"=>[
-        "NAME"=>"なぎさ",
+    "なぎさ" => [
         "DESCRIPTION"=>"運営の一人。運営陣で唯一Minecraftをやっていない人。主に鯖のお金管理をしている。現在休止中。",
         "IMG"=>"{$WOMAN_IMG}",
         "SNS"=>[]
-    ],
+    ]
 ];
 
 include('./../assets/function.php');
@@ -113,22 +112,22 @@ $disLib->initDiscordOAuth();
                     <div class="flex-box1">
 
                         <?php
-                            foreach($STAFF_DECT as $item) {
+                            foreach($STAFF_LIST as $key => $value) {
                                 $rand_keys = array_rand($bgi, 2);
                                 $bg_img = $bgi[$rand_keys[0]];
                                 if (isset($before_bg_img) and $before_bg_img == $bg_img) $bg_img = $bgi[$rand_keys[1]];
                                 $before_bg_img = $bg_img;
                                 echo '<div class="mask-style" style="background: url('.$bg_img.');">';
-                                echo '<img src="'.$item["IMG"].'" />';
+                                echo '<img src="'.$value["IMG"].'" />';
                                 echo '<div class="mask1"></div><div class="mask2"></div>';
-                                echo '<div class="caption"><span class="name">'.$item["NAME"].'</span>';
-                                echo '<p class="explanation">'.$item["DESCRIPTION"].'</p></div>';
+                                echo '<div class="caption"><span class="name">'.$key.'</span>';
+                                echo '<p class="explanation">'.$value["DESCRIPTION"].'</p></div>';
                                 echo '<div class="sns">';
-                                if (!empty($item["SNS"])) {
-                                    if (isset($item["SNS"]["YOUTUBE"])) echo '<a href="'.$item["SNS"]["YOUTUBE"].'" style="color: #c4302b;"><i class="fa-brands fa-youtube"></i></a>';
-                                    if (isset($item["SNS"]["TWITTER"])) echo '<a href="'.$item["SNS"]["TWITTER"].'"><i class="fa-brands fa-twitter" style="color: #1DA1F2;"></i></a>';
-                                    if (isset($item["SNS"]["GITHUB"])) echo '<a href="'.$item["SNS"]["GITHUB"].'"><i class="fa-brands fa-github" style="color: #000000;"></i></a>';
-                                    if (isset($item["SNS"]["WEB"])) echo '<a href="'.$item["SNS"]["WEB"].'"><i class="fa-solid fa-globe" style="color: #000000;"></i></a>';
+                                if (!empty($value["SNS"])) {
+                                    if (isset($value["SNS"]["YOUTUBE"])) echo '<a href="'.$value["SNS"]["YOUTUBE"].'" style="color: #c4302b;"><i class="fa-brands fa-youtube"></i></a>';
+                                    if (isset($value["SNS"]["TWITTER"])) echo '<a href="'.$value["SNS"]["TWITTER"].'"><i class="fa-brands fa-twitter" style="color: #1DA1F2;"></i></a>';
+                                    if (isset($value["SNS"]["GITHUB"])) echo '<a href="'.$value["SNS"]["GITHUB"].'"><i class="fa-brands fa-github" style="color: #000000;"></i></a>';
+                                    if (isset($value["SNS"]["WEB"])) echo '<a href="'.$value["SNS"]["WEB"].'"><i class="fa-solid fa-globe" style="color: #000000;"></i></a>';
                                 }
                                 echo '</div>';
                                 echo '</div>';

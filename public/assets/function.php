@@ -132,6 +132,12 @@ class HomePageFunction {
         return $conf["url"];
     }
 
+    public function getServer() {
+        include($this->conf_path);
+        return $conf["server"];
+    }
+
+
     public function getAdminUser() {
         include($this->conf_path);
         return $admin_user;
