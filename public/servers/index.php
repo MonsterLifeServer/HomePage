@@ -98,8 +98,7 @@ $disable_icon = "https://i.gyazo.com/673453bc3f73389e0205afbfa79fc4a6.png";
                                 $name = "ロビーサーバー";
                                 $description = "ロビーサーバーです。いろいろなサーバーにアクセスしたりミニゲームをしたりできます。";
                                 try {
-                                    $query = new MinecraftPing( $ip );
-                                    // $query = new MinecraftPing( $ip, $port );
+                                    $query = new MinecraftPing( $ip, $port );
                                     $icon = $enable_icon;
                                     $players = $query->Query()["players"];
                                     $players_text = " " . $players["online"] . "/" . $players["max"];
@@ -126,8 +125,7 @@ $disable_icon = "https://i.gyazo.com/673453bc3f73389e0205afbfa79fc4a6.png";
                                 $name = "SkyBlock";
                                 $description = "SkyBlockサーバーです。";
                                 try {
-                                    $query = new MinecraftPing( $ip );
-                                    // $query = new MinecraftPing( $ip, $port );
+                                    $query = new MinecraftPing( $ip, $port );
                                     $icon = $enable_icon;
                                     $players = $query->Query()["players"];
                                     $players_text = " " . $players["online"] . "/" . $players["max"];
