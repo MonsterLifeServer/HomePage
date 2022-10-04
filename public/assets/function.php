@@ -214,7 +214,7 @@ class HomePageFunction {
     }
 
     public function isLocal() {
-        return strpos($_SERVER["HTTP_HOST"], "localhost:8090");
+        return strpos($_SERVER["HTTP_HOST"], "localhost");
     }
 
     public function send_to_discord($message, $ip, $num) {

@@ -76,6 +76,19 @@ $disLib->initDiscordOAuth();
                                             <li><a href="<?php echo $func->getUrl(); ?>/about/news">ニュース</a></li>
                                         </ul>
                                     </li>
+                                    <?php
+                                        if($disLib->isLogin()) {
+                                            $user = $disLib->apiRequest($disLib->apiURLBase);
+                                            if (property_exists($user, "username") === TRUE) { if (property_exists($user, "id") === TRUE) { if ($func->isAdmin($user->id)):?>
+                                                <li><a href="<?php echo $func->getUrl(); ?>/admin/">運営専用ページ</a>
+                                                    <ul>
+                                                        <li><a href="<?php echo $func->getUrl(); ?>/admin/ban-user">証拠保管箱</a></li>
+                                                        <li><a href="<?php echo $func->getUrl(); ?>/admin/server-panel">サーバー管理</a></li>
+                                                    </ul>
+                                                </li>
+                                            <?php endif;} }
+                                        }
+                                    ?>
                                     <li>
                                         <a href="<?php echo $func->getUrl(); ?>/game/">ミニゲーム企画</a>
                                         <ul>
