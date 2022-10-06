@@ -154,6 +154,7 @@ function is_utf8($str) {
                             if (!$ssh->login($username, $key)) {
                                 exit('Login Failed');
                             }
+                            $text = $ssh->read('username@username:~$');
                         
                             $ssh->write("cd /home/servers/bungeecord/\n");
                             $ssh->write("sh bc_script.sh status\n");
@@ -165,7 +166,12 @@ function is_utf8($str) {
                                 echo $text;
                             }
                             echo "</pre>";
-                            $func->console_log($text);
+
+                            if (strpos($text, ".jar is already running!") !== false) {
+                                echo "サーバーは起動済みです。";
+                            } else {
+                                echo "サーバーを起動します。";
+                            }
                         } catch (Exception $e) {
                             echo "エラー発生\r\n";
                             echo $e->getMessage() . "\r\n";
