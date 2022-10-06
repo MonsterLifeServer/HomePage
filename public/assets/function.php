@@ -217,6 +217,21 @@ class HomePageFunction {
         return strpos($_SERVER["HTTP_HOST"], "localhost");
     }
 
+    public function getSSHIp() {
+        include($this->conf_path);
+        return $conf["ssh"]["ip"];
+    }
+
+    public function getSSHUser() {
+        include($this->conf_path);
+        return $conf["ssh"]["user"];
+    }
+
+    public function getSSHPassWord() {
+        include($this->conf_path);
+        return $conf["ssh"]["password"];
+    }
+
     public function send_to_discord($message, $ip, $num) {
         include($this->conf_path);
         $contentsBlocker = [
