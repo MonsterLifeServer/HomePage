@@ -59,7 +59,14 @@ $disLib->initDiscordOAuth();
                     <!-- パンくずリスト&最終更新日 -->
 					
                     <div class="tab-wrap">
-						<input id="TAB-01" type="radio" name="TAB" class="tab-switch" checked="checked" /><label class="tab-label" for="TAB-01">青鬼ゲーム6.23</label>
+						<input id="TAB-01" type="radio" name="TAB" class="tab-switch"<?php 
+							if (isset($_GET['game']) && $_GET['game'] === '30') {
+								echo " ";
+							} else {
+								echo ' checked="checked"';
+							}
+						?>/>
+						<label class="tab-label" for="TAB-01">青鬼ゲーム6.23</label>
 						<div class="tab-content">
 							<div class="flex-box2">
 
@@ -107,7 +114,14 @@ $disLib->initDiscordOAuth();
 
 							</div>
 						</div>
-						<input id="TAB-02" type="radio" name="TAB" class="tab-switch" /><label class="tab-label" for="TAB-02">青鬼ゲーム3.0</label>
+						<input id="TAB-02" type="radio" name="TAB" class="tab-switch"<?php 
+							if (isset($_GET['game']) && $_GET['game'] === '30') {
+								echo ' checked="checked"';
+							} else {
+								echo " ";
+							}
+						?>/>
+						<label class="tab-label" for="TAB-02">青鬼ゲーム3.0</label>
 						<div class="tab-content">
 							<div class="flex-box2">
 

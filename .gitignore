@@ -20,3 +20,5 @@ config.php
 phpseclib/
 
 *.lnk
+
+.editorconfig
