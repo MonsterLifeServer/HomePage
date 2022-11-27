@@ -67,6 +67,11 @@ $disLib->initDiscordOAuth();
                         以下のQRコードあてに送金してください。送金時にメッセージなどでMinecraftIDを記入していると迅速に対応可能です。
                     </p>
                     <img width="90px" src="<?php echo $func->getUrl(); ?>/assets/img/web/kyash.png"></img>
+                    <h3>pring(ぷりん)</h3>
+                    <p>
+                        以下のQRコードあてに送金してください。送金時にメッセージなどでMinecraftIDを記入していると迅速に対応可能です。
+                    </p>
+                    <img width="90px" src="https://i.gyazo.com/df70640cc27a986e40360d6dc64eab6f.png" alt=""/>
                     <h3>Amazonギフト券</h3>
                     <p>
                         DiscordのDMで運営である Monster2408#8936 にコードを送ってください。その際にMinecraftIDを記入していると迅速に対応可能です。
