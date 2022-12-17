@@ -67,7 +67,11 @@ $disLib->initDiscordOAuth();
 
 					<?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/carousel.php"); ?>
 
-					<h1 class="design" id="about">MonsterLifeServer</h1>
+					<h1 class="design">MonsterLifeServer</h1>
+                    <h2 id="4649">ご利用の参加者様へ</h2>
+                    <p>現在運営・開発・動画編集をほぼ一人で行っているので，新企画の開発まで手が回っていない状況にあります。</p>
+                    <p>動画編集を無償(有償の場合は要相談)で行ってくれる方を募集しています。</p>
+                    <p>スタッフ応募は<a href="<?php echo $func->getUrl(); ?>/support/form/staff">コチラ</a>から可能です。</p>
 					<h2 id="about">サービス</h2>
 					<div class="server-about-box">
 
@@ -86,18 +90,6 @@ $disLib->initDiscordOAuth();
 						</div>
 
 					</div>
-					
-					<!--
-					<h2>IP公開に向けて</h2>
-					<div class="no-border-box">
-						<p>現在MonsterLifeServerでは，IPを公開することを禁止としていますが，今年度それを公開できるようにする予定です。(現在は禁止です)</p>
-						<p>それにおいてなぜ今まで公開が禁止だったのか，そしてなぜ公開できるようになるのかという話ですが，前者に関しては単純にDDOS対策並びにDOS対策が不完全だったからです。</p>
-						<p>DDOS/DOSというのはサイバー攻撃の一種で攻撃されるとサービスの提供が難しくなるといった問題が発生します。</p>
-						<p>それを解決するのが<a href="https://my.ddps.jp/aff.php?aff=26" target="_blank">DDPS.jpさんのDDOS対策サービス</a>です。</p>
-						<p>DDOS/DOS攻撃を防ぐサービスとして前々から検討していてこの度導入が決定しました。</p>
-						<p>導入したら再度ご連絡いたします。</p>
-					</div>
-					-->
                 
 					<h2>新着情報</h2>
 					<div class="read-more"><a href="<?php echo $func->getUrl(); ?>/about/news">すべて見る</a></div>
