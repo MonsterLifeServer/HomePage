@@ -1,0 +1,52 @@
+body.dbd {
+    background: #0e1217;
+}
+header {
+    background-color: #000;
+}
+.header-label {
+    background: #000;
+    ul.nav li {
+        a {
+            background: #000;
+        }
+        ul li a {
+            background: #000;
+        }
+    }
+    .nav > li:hover > a {/*layer-1*/
+        background: #0e1217;
+    }
+    .nav > li li:hover > a {/*layer-2*/
+        background: #0e1217;
+    }
+}
+.footer {
+    background-color: #000;
+}
+.footer_nav {
+    background-color: #000;
+}
+.sns-share-menu {
+    .sns-share-close {
+        background-color: #000;
+    }
+    &.is-active {
+        background-color: #0e1217;
+    }
+}
+.mainBox {
+    background-color: rgb(35 35 35 / 90%);
+}
+div.top-label {
+    background: #3f3f3f;
+    color: #fff;
+    .breadcrumb li {
+        a {
+            color: #ffffffa5;
+        }
+        &:first-child a:before {
+            color: #ffffffa5;
+        }
+    }
+}

@@ -104,12 +104,12 @@ $line_share_uri = "https://line.me/R/msg/text/?" . $func->getTitle() . "%20" . $
                     <ul class="submenu">
                         <li><a href="<?php echo $func->getUrl(); ?>/game/aooni">青鬼ゲーム</a></li>
                         <li><a href="<?php echo $func->getUrl(); ?>/game/online">青鬼ONLINE in MC</a></li>
-                        <li><a href="<?php echo $func->getUrl(); ?>/game/hueoni">増え鬼</a></li>
+                        <!-- <li><a href="<?php echo $func->getUrl(); ?>/game/dbd">DeadbyDaylight</a></li>-->
                         <!-- 将来 -->
                         <!-- 
                         <li><a href="<?php echo $func->getUrl(); ?>/game/cbg">コア破壊ゲーム</a></li>
                         <li><a href="<?php echo $func->getUrl(); ?>/game/toso">逃走中</a></li>
-                        <li><a href="<?php echo $func->getUrl(); ?>/game/dbd">DeadbyDaylight</a></li>
+                        <li><a href="<?php echo $func->getUrl(); ?>/game/hueoni">増え鬼</a></li>
                         -->
                     </ul>
                 </li>

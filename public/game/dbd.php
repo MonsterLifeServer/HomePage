@@ -14,8 +14,9 @@ $disLib->initDiscordOAuth();
 <html lang="ja">
 	<head>
         <?php $func->printMetaData(); ?>
+		<link rel="stylesheet" type="text/css" href="<?php echo $func->getUrl(); ?>/assets/css/dbd.min.css">
     </head>
-    <body>
+    <body class="dbd">
         <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/header.php"); ?>
         <div class="wrapper">
             
@@ -61,36 +62,7 @@ $disLib->initDiscordOAuth();
                     </div>
                     <!-- パンくずリスト&最終更新日 -->
 
-                    <h1 class="design">DeadbyDaylight in MC</h1>
-
-                    <div class="flex-box2">
-
-                        <div class="sub-box">
-                            <h2>ルール</h2>
-                            <p>DeadbyDaylightがマイクラで遊べるミニゲーム企画。</p>
-                            <p></code>/report ＜テキスト＞</code>で運営にメッセージを送信。</code>/global ＜テキスト＞</code>でチーム関係なくメッセージを送信。</code>/oni</code>で青鬼抽選期間中なら青鬼抽選に参加/離脱。</p>
-                        </div>
-
-                        <div class="radius-box">
-                            <h2>企画詳細</h2>
-
-                            <h3>現在中止中</h3>
-                            <p>バグ発生のため</p><hr />
-                            <h3>ゲーム時間</h3>
-                            <p>10分</p><hr />
-                            <h3>最低参加人数</h3>
-                            <p>4人</p><hr />
-                            <h3>バージョン</h3>
-                            <p>1.12.2</p><hr />
-                            <h3>カテゴリ</h3>
-                            <span class="category">鬼ごっこ</span>
-                            <hr />
-                            <h3>テクスチャ</h3>
-                            <p><a href="<?php echo $func->getTexture('dbd'); ?>" download>ダウンロード</a></p>
-
-                        </div>
-
-                    </div>
+                    
 
                 </div>
             </div>
