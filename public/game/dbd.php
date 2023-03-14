@@ -18,56 +18,19 @@ $disLib->initDiscordOAuth();
     </head>
     <body class="dbd">
         <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/header.php"); ?>
-        <div class="wrapper">
-            
-            <div class="mainBox">
-                <div class="contents">
-                    <!-- パンくずリスト&最終更新日 -->
-                    <div class="top-label">
-                        <div class="item-left">
-                            <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-                                <li itemprop="itemListElement" itemscope
-                                    itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/">
-                                        <span itemprop="name">ホーム</span>
-                                    </a>
-                                    <meta itemprop="position" content="1" />
-                                </li>
+        <main>
+            <div class="top-background">
+                <video src="<?php echo $func->getUrl(); ?>/assets/img/dbd/dbd-background.mp4" poster="<?php echo $func->getUrl(); ?>/assets/img/dbd/dbd-samune.jpg" autoplay muted loop></video>
 
-                                <li itemprop="itemListElement" itemscope
-                                    itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/game/">
-                                        <span itemprop="name">ミニゲーム企画</span>
-                                    </a>
-                                    <meta itemprop="position" content="2" />
-                                </li>
-
-                                <li itemprop="itemListElement" itemscope
-                                    itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $func->getPageUrl(); ?>">
-                                        <span itemprop="name"><?php echo $func->getTitle(); ?></span>
-                                    </a>
-                                    <meta itemprop="position" content="3" />
-                                </li>
-                            </ol>
-                        </div>
-                        <div class="item-right">
-                            <p class="fileupdate right"><span class="title">最終更新日時: </span>
-                            <?php
-                                $filetime = filemtime(basename(__FILE__));
-                                echo '<span class="date">'.date('Y/m/d ', $filetime).'</span>';
-                                echo '<span class="time">'.date('H時i分', $filetime).'</span>'; 
-                            ?></p>
-                        </div>
+                <div class="main-contents">
+                    <div class="check">
+                        aaa
                     </div>
-                    <!-- パンくずリスト&最終更新日 -->
-
-                    
-
+                    <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/footer.php"); ?>
                 </div>
+                
             </div>
-        </div>
-        <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/footer.php"); ?>
+        </main>
     </body>
     <?php $func->printFootScript(); ?>
 </html>
