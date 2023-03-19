@@ -13,13 +13,13 @@ killer-parks:
     desc: |-
       サバイバーをワンパン可
 
-      条件: ゲート通電後
+      条件：ゲート通電後
     type: キラーパーク(特殊)
     url: https://raw.githubusercontent.com/MonsterLifeServer/resoucepacks/master/MLServerDbD/assets/minecraft/textures/items/parks/unknown.png
   '2':
     name: 興奮
     desc: |-
-      条件: サバイバーを担いでいるときの
+      条件：サバイバーを担いでいるときの
       足のスピードが速くなる
     type: キラーパーク(特殊)
     url: https://raw.githubusercontent.com/MonsterLifeServer/resoucepacks/master/MLServerDbD/assets/minecraft/textures/items/parks/unknown.png

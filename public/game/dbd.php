@@ -9,6 +9,8 @@ include($func->getDiscordLibPath());
 $disLib = new DiscordLib($func->getPageUrl(), $func->getDiscordOAuth2_ID(), $func->getDiscordOAuth2_Secret());
 $disLib->initDiscordOAuth();
 
+
+
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
@@ -61,7 +63,23 @@ $disLib->initDiscordOAuth();
                         </div>
                     </div>
                     <!-- パンくずリスト&最終更新日 -->
-                    
+                    <section>
+                        
+                    </section>
+                    <section class="park-section">
+                        <span class="park-title">サバイバーパーク</span>
+                        <div class="park-wrap">
+                            <?php
+                                require_once "../assets/lib/spyc.php";
+                                $yaml = spyc_load_file("../assets/data/park.yml");
+                            ?>
+                            <p><img src="" alt="下筌ダム" id="SurvivorParkMainPhoto"></p>
+                            <ul>
+                                <li><img src="img/01.jpg" width="72" alt="下筌ダム" class="SurvivorParkChangePhoto"></li>
+                            </ul>
+                            <!-- 参考 <https://klutche.org/archives/460/> -->
+                        </div>
+                    </section>  
                 </div>
             </div>
         </div>
