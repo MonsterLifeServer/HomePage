@@ -54,48 +54,74 @@ div.top-label {
 main {
     height: 100%;
 }
-.top-background {
-    video {
-        height: 100%;
-        inset: 0;
-        margin: 0;
-        max-width: none;
-        -o-object-fit: cover;
-        object-fit: cover;
-        padding: 0;
-        position: absolute;
-        width: 100%;
-        object-position: top;
-        margin-top: 115px;
+.relative {
+    position: relative;
+}
+.absolute {
+    position: absolute;
+}
+.mainBox {
+    width: 100%;
+    box-sizing:border-box;
+}
+.top-hero {
+    .top-hero-contents {
+        video {
+            height: 100%;
+            inset: 0;
+            margin: 0;
+            max-width: none;
+            -o-object-fit: cover;
+            object-fit: cover;
+            padding: 0;
+            position: absolute;
+            width: 100%;
+            object-position: top;
+            margin-top: 115px;
+        }
     }
     .main-contents {
         position: absolute;
         bottom: 0; //下寄せ
         left: 0; //左寄せ
         width: 100%; //横幅を100%に
-        .check {
-            background-color: rgba(255, 255, 255, 0.7); //適宜
+        .dummy_video {
+            padding-bottom: 5000px;
+        }
+        .main-contents-flex {
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column;
+            .main-contents-item {
+                justify-content: space-between;
+                flex-direction: column;
+                position: relative;
+                background-color: rgba(255, 255, 255, 0.7); //適宜
+            }
+        }
+        .footer {
+            position: absolute;
         }
     }
 }
 
 @media screen and (max-width:1220px) {
-    .top-background video {
+    .top-hero video {
         height: 700px;
     }
 }
 @media screen and (max-width:620px) {
-    .top-background video {
+    .top-hero video {
         height: 500px;
     }
 }
 @media screen and (max-width:450px) {
-    .top-background video {
+    .top-hero video {
         height: 320px;
     }
 }
 @media screen and (max-width:280px) {
-    .top-background video {
+    .top-hero video {
         height: 200px;
     }
 }
