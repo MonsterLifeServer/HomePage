@@ -1,8 +1,8 @@
 <?php
 
-include('./../assets/function.php');
-$func = new HomePageFunction('./../assets/config.php', 'DeadByDaylight in MC');
-$func->setPageUrl($func->getUrl().'/game/dbd');
+include('./../../assets/function.php');
+$func = new HomePageFunction('./../../assets/config.php', 'DeadByDaylight in MC');
+$func->setPageUrl($func->getUrl().'/game/dbd/');
 $func->setDescription('DeadByDaylightをマイクラで遊べるようにした企画「DeadByDaylight in MC」のルール紹介ページです。');
 
 include($func->getDiscordLibPath());
@@ -63,27 +63,59 @@ $disLib->initDiscordOAuth();
                         </div>
                     </div>
                     <!-- パンくずリスト&最終更新日 -->
-                    <section>
-                        
-                    </section>
-                    <section class="park-section">
-                        <span class="park-title">サバイバーパーク</span>
-                        <div class="park-wrap">
-                            <?php
-                                require_once "../assets/lib/spyc.php";
-                                $yaml = spyc_load_file("../assets/data/park.yml");
-                            ?>
-                            <p><img src="" alt="下筌ダム" id="SurvivorParkMainPhoto"></p>
-                            <ul>
-                                <li><img src="img/01.jpg" width="72" alt="下筌ダム" class="SurvivorParkChangePhoto"></li>
-                            </ul>
-                            <!-- 参考 <https://klutche.org/archives/460/> -->
+                    <section class="first-section text-center">
+                        <span class="title-level color-white">『死と隣り合わせのかくれんぼ』をMinecraftで...</span>
+                        <div class="title-description">
+                            <span class="color-white">忍び寄った獲物に襲いかかり、贄として捧げる怪物のごとき殺人鬼。団結して脱出を図る、手練れの生存者4人。『DeadByDaylight in MC』の世界で殺人鬼または生存者になりましょう。</span>
                         </div>
-                    </section>  
+                    </section>
+                    <section class="next-section team-section">
+                        <div class="killer-field">
+                            <div class="img-field">
+                                <img src="../../assets/img/dbd/dbd-trapper-image.png" alt="">
+                            </div>
+                            <div class="text-field">
+                                <h2>キラー</h2>
+                                <p>ソロプレイ</p>
+                            </div>
+                        </div>
+                        <div class="survivor-field">
+                            <div class="img-field">
+                                <img src="../../assets/img/dbd/dbd-survivor-image.png" alt="">
+                            </div>
+                            <div class="text-field">
+                                <h2>サバイバー</h2>
+                                <p>協力プレイ</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="next-section team-description">
+                        <div class="pt-16">
+                            
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>
         <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/footer.php"); ?>
     </body>
+    <script>
+        $('.killer-field').hover(
+            function() {
+                $(".survivor-field img").addClass("gray-scale");
+            },
+            function() {
+                $(".survivor-field img").removeClass("gray-scale");
+            }
+        );
+        $('.survivor-field').hover(
+            function() {
+                $(".killer-field img").addClass("gray-scale");
+            },
+            function() {
+                $(".killer-field img").removeClass("gray-scale");
+            }
+        );
+    </script>
     <?php $func->printFootScript(); ?>
 </html>
