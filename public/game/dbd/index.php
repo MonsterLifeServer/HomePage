@@ -63,20 +63,20 @@ $disLib->initDiscordOAuth();
                         </div>
                     </div>
                     <!-- パンくずリスト&最終更新日 -->
-                    <section class="first-section text-center">
+                    <section class="first-section text-center px-10">
                         <span class="title-level color-white">『死と隣り合わせのかくれんぼ』をMinecraftで...</span>
                         <div class="title-description">
-                            <span class="color-white">忍び寄った獲物に襲いかかり、贄として捧げる怪物のごとき殺人鬼。団結して脱出を図る、手練れの生存者4人。『DeadByDaylight in MC』の世界で殺人鬼または生存者になりましょう。</span>
+                            <span class="color-white">忍び寄った獲物に襲いかかり、贄として捧げる怪物のごとき殺人鬼。団結して脱出を図る、手練れの生存者達。『DeadByDaylight in MC』の世界で殺人鬼または生存者になりましょう。</span>
                         </div>
                     </section>
-                    <section class="next-section team-section">
+                    <section class="next-section team-section px-10">
                         <div class="killer-field">
                             <div class="img-field">
                                 <img src="../../assets/img/dbd/dbd-trapper-image.png" alt="">
                             </div>
                             <div class="text-field">
-                                <h2>キラー</h2>
-                                <p>ソロプレイ</p>
+                                <h2>殺人鬼としてプレイする</h2>
+                                <p>(ソロ)</p>
                             </div>
                         </div>
                         <div class="survivor-field">
@@ -84,14 +84,27 @@ $disLib->initDiscordOAuth();
                                 <img src="../../assets/img/dbd/dbd-survivor-image.png" alt="">
                             </div>
                             <div class="text-field">
-                                <h2>サバイバー</h2>
-                                <p>協力プレイ</p>
+                                <h2>生存者としてプレイする</h2>
+                                <p>(協力プレイ)</p>
                             </div>
                         </div>
                     </section>
-                    <section class="next-section team-description">
-                        <div class="pt-16">
-                            
+                    <section class="next-section team-description px-10">
+                        <div class="pt-16 text-center">
+                            <div class="team-switch">
+                                <div class="team-switch-content margin-center">
+                                    <button class="killer-button" value="killer">殺人鬼</button>
+                                    <button class="survivor-button" value="survivor">生存者</button>
+                                </div>
+                            </div>
+                            <div class="killer-description text-center color-white">
+                                <h2>殺人鬼の基本プレイ</h2>
+                                <p>それぞれの個性がある殺人鬼たちですが、目指すところは皆同じ。生存者を一人ずつ狙い撃ちして、エンティティに捧げることです。まずは基本を抑えておきましょう。</p>
+                            </div>
+                            <div class="survivor-description text-center color-white">
+                                <h2>生存者の基本プレイ</h2>
+                                <p>生存者たちがチームの中で果たす役割はそれぞれ異なるかもしれませんが、共通の目標が変わることは決してありません。それは殺人鬼を回避し、儀式から脱出すること。まずは基本を抑えておきましょう。</p>
+                            </div>
                         </div>
                     </section>
                 </div>
