@@ -93,15 +93,15 @@ $disLib->initDiscordOAuth();
                         <div class="pt-16 text-center">
                             <div class="team-switch">
                                 <div class="team-switch-content margin-center">
-                                    <button class="killer-button" value="killer">殺人鬼</button>
-                                    <button class="survivor-button" value="survivor">生存者</button>
+                                    <button class="killer-button active-button" value="killer" id="killer-button">殺人鬼</button>
+                                    <button class="survivor-button" value="survivor" id="survivor-button">生存者</button>
                                 </div>
                             </div>
-                            <div class="killer-description text-center color-white">
+                            <div class="killer-description text-center margin-center color-white" id="killer-description">
                                 <h2>殺人鬼の基本プレイ</h2>
                                 <p>それぞれの個性がある殺人鬼たちですが、目指すところは皆同じ。生存者を一人ずつ狙い撃ちして、エンティティに捧げることです。まずは基本を抑えておきましょう。</p>
                             </div>
-                            <div class="survivor-description text-center color-white">
+                            <div class="survivor-description text-center margin-center color-white inactive" id="survivor-description">
                                 <h2>生存者の基本プレイ</h2>
                                 <p>生存者たちがチームの中で果たす役割はそれぞれ異なるかもしれませんが、共通の目標が変わることは決してありません。それは殺人鬼を回避し、儀式から脱出すること。まずは基本を抑えておきましょう。</p>
                             </div>
@@ -129,6 +129,57 @@ $disLib->initDiscordOAuth();
                 $(".killer-field img").removeClass("gray-scale");
             }
         );
+        $('.killer-field').click(
+            function() {
+                ClickKillerButton();
+            }
+        );
+        $('.survivor-field').click(
+            function() {
+                ClickSurvivorButton();
+            }
+        );
+        $('#killer-button').click(
+            function() {
+                ClickKillerButton();
+            }
+        );
+        $('#survivor-button').click(
+            function() {
+                ClickSurvivorButton();
+            }
+        );
+        function ClickKillerButton(){
+            if (!$("#survivor-description").hasClass("inactive")) {
+                $("#survivor-description").addClass("inactive");
+            }
+            $("#killer-description").removeClass("inactive");
+
+            if (!$("#killer-button").hasClass("active-button")) {
+                $("#killer-button").addClass("active-button");
+            }
+            $("#survivor-button").removeClass("active-button");
+        }
+        function ClickSurvivorButton(){
+            if (!$("#killer-description").hasClass("inactive")) {
+                $("#killer-description").addClass("inactive");
+            }
+            $("#survivor-description").removeClass("inactive");
+            
+            if (!$("#survivor-button").hasClass("active-button")) {
+                $("#survivor-button").addClass("active-button");
+            }
+            $("#killer-button").removeClass("active-button");
+        }
+        // // id属性で要素を取得
+        // var textbox_element = document.getElementById('textbox');
+
+        // // 新しいHTML要素を作成
+        // var new_element = document.createElement('p');
+        // new_element.textContent = '追加テキスト';
+
+        // // 指定した要素の中の末尾に挿入
+        // textbox_element.appendChild(new_element);
     </script>
     <?php $func->printFootScript(); ?>
 </html>

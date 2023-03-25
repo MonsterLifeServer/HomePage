@@ -88,6 +88,7 @@ main {
 .next-section {
     margin-top: 30px;
 }
+// メインページ用
 .team-section {
     display: flex;
     justify-content: space-around;
@@ -145,10 +146,6 @@ main {
             button {
                 cursor: pointer;
             }
-            .killer-button {
-            }
-            .survivor-button {
-            }
             .killer-button,
             .survivor-button {
                 font-size: 2.2rem;
@@ -158,8 +155,17 @@ main {
                 box-sizing: border-box;
                 background-color: rgba(35,35,35,.9);
                 color: #fff;
+                transition: .2s;
+                &.active-button {
+                    background: #646464;
+                }
             }
         }
+    }
+    .killer-description,
+    .survivor-description {
+        width: 100%;
+        max-width: 775px;
     }
 }
 .pt-16 {
@@ -168,6 +174,9 @@ main {
 .px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
+}
+.inactive {
+    display: none;
 }
 @media screen and (max-width:900px) {
     .team-section {
@@ -241,4 +250,51 @@ main {
     .top-hero video {
         height: 200px;
     }
+}
+
+// パーク専用ページ用
+.park-section {
+    .park-title {
+        color: #fff;
+        font-weight: bold;
+    }
+    .filter-button-3 {
+        background: #3a3a3a;
+        color: #fff;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        .filter-buttons {
+            input{
+                display: none;
+            }
+            label{
+                display: block;
+                float: left;
+                cursor: pointer;
+                width: 80px;
+                margin: 0;
+                padding: 12px 5px;
+                border-right: 1px solid #abb2b7;
+                background: #bdc3c7;
+                color: #555e64;
+                font-size: 14px;
+                text-align: center;
+                line-height: 1;
+                transition: .2s;
+                &:first-of-type{
+                    border-radius: 3px 0 0 3px;
+                }
+                &:last-of-type{
+                    border-right: 0px;
+                    border-radius: 0 3px 3px 0;
+                }
+            }
+            input[type="radio"]:checked + label {
+                background-color: #a1b91d;
+                color: #fff;
+            }
+        }
+    }
+
 }
