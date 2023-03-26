@@ -1,33 +1,39 @@
 killer-parks:
   '0':
     name: 不安の元凶
-    desc: |-
-      脅威範囲内のサバイバーに適応
-
-      スキルチェック発動率を10％上昇
-      スキルチェック成功率が60%減少する。
     type: キラーパーク(常時)
     url: https://raw.githubusercontent.com/MonsterLifeServer/resoucepacks/master/MLServerDbD/assets/minecraft/textures/items/parks/killer/huann.png
+    desc:
+      '0': 発動条件：常時
+      '1': 脅威範囲内のサバイバーに適応
+      '2': ・スキルチェック発動率を10％上昇
+      '3': ・スキルチェック成功率が60%減少
   '1':
     name: 呪術:誰も死から逃れられない
-    desc: |-
-      サバイバーをワンパン可
-
-      条件：ゲート通電後
     type: キラーパーク(特殊)
     url: https://raw.githubusercontent.com/MonsterLifeServer/resoucepacks/master/MLServerDbD/assets/minecraft/textures/items/parks/unknown.png
+    desc:
+      '0': 発動条件：ゲートが通電すること
+      '1': サバイバーをワンパン可
   '2':
     name: 興奮
-    desc: |-
-      条件：サバイバーを担いでいるときの
-      足のスピードが速くなる
     type: キラーパーク(特殊)
     url: https://raw.githubusercontent.com/MonsterLifeServer/resoucepacks/master/MLServerDbD/assets/minecraft/textures/items/parks/unknown.png
+    desc:
+      '0': 発動条件：サバイバーを担いでいるとき
+      '1': 足のスピードが速くなる
 survivor-parks:
-  '3':
+  '0':
     name: 闇の感覚
-    desc: |-
-      発電機修理完了時
-      キラーの位置が数秒間表示
     type: サバイバーパーク(常時)
     url: https://raw.githubusercontent.com/MonsterLifeServer/resoucepacks/master/MLServerDbD/assets/minecraft/textures/items/parks/unknown.png
+    desc:
+      '0': 発動条件：発電機修理完了時
+      '1': キラーの位置が数秒間表示
+  '1':
+    name: セルフケア
+    type: サバイバーパーク(使用)
+    url: https://raw.githubusercontent.com/MonsterLifeServer/resoucepacks/master/MLServerDbD/assets/minecraft/textures/items/parks/unknown.png
+    desc:
+      '0': 発動条件：手に持ってスニーク
+      '1': 回復アイテムを使わずに、通常の30%の速度で自己治療ができるようになる。

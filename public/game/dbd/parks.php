@@ -1,7 +1,7 @@
 <?php
 
 include('./../../assets/function.php');
-$func = new HomePageFunction('./../../assets/config.php', 'パーク | DeadByDaylight in MC');
+$func = new HomePageFunction('./../../assets/config.php', 'DeadByDaylight in MC | パーク一覧');
 $func->setPageUrl($func->getUrl().'/game/dbd/parks');
 $func->setDescription('DeadByDaylightをマイクラで遊べるようにした企画「DeadByDaylight in MC」のルール紹介ページです。');
 
@@ -9,14 +9,13 @@ include($func->getDiscordLibPath());
 $disLib = new DiscordLib($func->getPageUrl(), $func->getDiscordOAuth2_ID(), $func->getDiscordOAuth2_Secret());
 $disLib->initDiscordOAuth();
 
-
-
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
 	<head>
         <?php $func->printMetaData(); ?>
 		<link rel="stylesheet" type="text/css" href="<?php echo $func->getUrl(); ?>/assets/css/dbd.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/yamljs@0.3.0/dist/yaml.min.js"></script>
     </head>
     <body class="dbd">
         <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/header.php"); ?>
@@ -46,7 +45,7 @@ $disLib->initDiscordOAuth();
 
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/game/">
+                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/game/dbd/">
                                         <span itemprop="name">DeadByDaylight in MC</span>
                                     </a>
                                     <meta itemprop="position" content="3" />
@@ -55,7 +54,7 @@ $disLib->initDiscordOAuth();
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
                                     <a itemprop="item" href="<?php echo $func->getPageUrl(); ?>">
-                                        <span itemprop="name"><?php echo $func->getTitle(); ?></span>
+                                        <span itemprop="name">パーク一覧</span>
                                     </a>
                                     <meta itemprop="position" content="4" />
                                 </li>
@@ -71,27 +70,129 @@ $disLib->initDiscordOAuth();
                         </div>
                     </div>
                     <!-- パンくずリスト&最終更新日 -->
-                    <section>
-                        
-                    </section>
                     <section class="park-section">
-                        <span class="park-title">サバイバーパーク</span>
-                        <div class="park-wrap">
-                            <?php
-                                require_once "../assets/lib/spyc.php";
-                                $yaml = spyc_load_file("../assets/data/park.yml");
-                            ?>
-                            <p><img src="" alt="下筌ダム" id="SurvivorParkMainPhoto"></p>
-                            <ul>
-                                <li><img src="img/01.jpg" width="72" alt="下筌ダム" class="SurvivorParkChangePhoto"></li>
-                            </ul>
-                            <!-- 参考 <https://klutche.org/archives/460/> -->
+                        <span class="park-title">全パーク一覧</span>
+                        <div class="filter-wrap">
+                            <div class="filter-controls">
+                                <div class="filter-control color-white">
+                                    <div class="filter-description">所持分類</div>
+                                    <div class="filter-button-3 text-center">
+                                        <div class="filter-buttons">
+                                            <input type="radio" name="park-type" id="select1" value="all" checked="">
+                                            <label for="select1">全て</label>
+                                            <input type="radio" name="park-type" id="select2" value="survivor">
+                                            <label for="select2">サバイバー</label>
+                                            <input type="radio" name="park-type" id="select3" value="killer">
+                                            <label for="select3">キラー</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="park-wrap color-white">
+                            <span id="park-size"></span>
+                            <table class="margin-center" style="border-collapse: collapse">
+                                <thead>
+                                    <tr>
+                                        <th class="park-th text-center">パーク</th>
+                                        <th class="text-center">詳細</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="park-table">
+                                    
+                                </tbody>
+                            </table>
                         </div>
                     </section>  
                 </div>
             </div>
         </div>
         <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/footer.php"); ?>
+        <script>
+
+            // type: 
+            //   1: サバイバー
+            //   2: キラー
+            //   その他: すべて
+            function DisplayFilter(type) {
+                if (type != 1 && type != 2) type = 3;
+                console.log("type: " + type);
+                // 親要素
+                const park_table = document.getElementById('park-table');
+                
+                // 子要素を全て削除
+                while (park_table.firstChild) {
+                    park_table.removeChild(park_table.firstChild);
+                }
+                nativeObject = YAML.load("../../assets/data/park.yml");
+
+                // id属性で要素を取得
+                var element = document.getElementById('park-table');
+                var name = null;
+                var url = null;
+                var desc = null;
+                var text = null;
+                var size = 0;
+                // 新しいHTML要素を作成
+                var itemObject;
+                for (let s = 1; s < 3; s++) {
+                    console.log("s" + s);
+                    if (type == 2 && s == 1) {
+                        console.log("aaa");
+                        continue;
+                    }
+                    if (type == 1 && s == 2) {
+                        console.log("bbb");
+                        break;
+                    }
+                    
+                    if (s == 1) itemObject = nativeObject["survivor-parks"];
+                    else itemObject = nativeObject["killer-parks"];
+                    nLoop: for (let n = 0; n < 100; n++) {
+                        text = "";
+                        desc = "";
+                        if (n in itemObject) {
+                            console.log("n" + n + ": " + itemObject[n]);
+                            name = itemObject[n]["name"];
+                            img = itemObject[n]["url"];
+                            text = text + '<tr><td class="text-center p-10px"><span class="icon_tiny"><img src="' + img + '" alt="" srcset="" /><br />' + name + '</span></td><td class="p-10px"><p>';
+                            mLoop : for (let m = 0; m < 100; m++) {
+                                if (m in itemObject[n]["desc"]) {
+                                    if (desc.length > 0) desc = desc + '<br />';
+                                    desc = desc + itemObject[n]["desc"][m];
+                                } else {
+                                    break mLoop;
+                                }
+                            }
+                            text = text + desc + '</p></td></tr>';
+                        } else {
+                            break nLoop;
+                        }
+                        element.insertAdjacentHTML('beforeend', text);
+                        size = size +1;
+                    }
+                }
+                document.getElementById('park-size').textContent = size + ' 件';
+            }
+            DisplayFilter(3);
+
+            $(function () {
+                // ラジオボタンを選択変更したら実行
+                $('input[name="park-type"]').change(function () {
+                    var val = $(this).val();
+                    console.log(val);
+                    if (val == "survivor") {
+                        DisplayFilter(1);
+                    } else if (val == "killer") {
+                        DisplayFilter(2);
+                    } else if (val == "all") {
+                        DisplayFilter(3);
+                    } 
+                });
+            });
+
+
+        </script>
     </body>
     <?php $func->printFootScript(); ?>
 </html>
