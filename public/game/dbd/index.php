@@ -107,6 +107,11 @@ $disLib->initDiscordOAuth();
                             </div>
                         </div>
                     </section>
+                    <section class="next-section team-description px-10">
+                        <div class="pt-16 text-center">
+                            <span class="title-level color-white">パーク一覧</span>
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>
