@@ -1,23 +1,23 @@
 killer-parks:
   '0':
+    name: 呪術:誰も死から逃れられない
+    type: キラーパーク
+    url: https://raw.githubusercontent.com/MonsterLifeServer/resoucepacks/master/MLServerDbD/assets/minecraft/textures/items/parks/killer/noone.png
+    desc:
+      '0': 発動条件：ゲートが通電すること
+      '1': サバイバーをワンパン可
+  '1':
     name: 不安の元凶
-    type: キラーパーク(常時)
+    type: キラーパーク
     url: https://raw.githubusercontent.com/MonsterLifeServer/resoucepacks/master/MLServerDbD/assets/minecraft/textures/items/parks/killer/huann.png
     desc:
       '0': 発動条件：常時
       '1': 脅威範囲内のサバイバーに適応
       '2': ・スキルチェック発動率を10.0％上昇
       '3': ・スキルチェック成功率が60%減少
-  '1':
-    name: 呪術:誰も死から逃れられない
-    type: キラーパーク(特殊)
-    url: https://raw.githubusercontent.com/MonsterLifeServer/resoucepacks/master/MLServerDbD/assets/minecraft/textures/items/parks/killer/noone.png
-    desc:
-      '0': 発動条件：ゲートが通電すること
-      '1': サバイバーをワンパン可
   '2':
     name: 興奮
-    type: キラーパーク(特殊)
+    type: キラーパーク
     url: https://raw.githubusercontent.com/MonsterLifeServer/resoucepacks/master/MLServerDbD/assets/minecraft/textures/items/parks/killer/agitation.png
     desc:
       '0': 発動条件：サバイバーを担いでいるとき
@@ -25,23 +25,34 @@ killer-parks:
 survivor-parks:
   '0':
     name: 闇の感覚
-    type: サバイバーパーク(常時)
-    url: https://raw.githubusercontent.com/MonsterLifeServer/resoucepacks/master/MLServerDbD/assets/minecraft/textures/items/parks/killer/huann.png
+    type: サバイバーパーク
+    url: https://raw.githubusercontent.com/MonsterLifeServer/resoucepacks/master/MLServerDbD/assets/minecraft/textures/items/parks/survivar/yamikannkaku.png
     desc:
       '0': 発動条件：発電機修理完了時
       '1': キラーの位置が数秒間表示
   '1':
-    name: 執着心
-    type: サバイバーパーク(常時)
-    url: https://raw.githubusercontent.com/MonsterLifeServer/resoucepacks/master/MLServerDbD/assets/minecraft/textures/items/parks/survivar/fixated.png
-    desc:
-      '0': 発動条件：常時
-      '1': ・自分の足跡を常に見ることができるようになる
-      '2': ・無傷状態のとき、歩行速度が(10/15/20)%上昇する・
-  '2':
     name: セルフケア
-    type: サバイバーパーク(使用)
+    type: サバイバーパーク
     url: https://raw.githubusercontent.com/MonsterLifeServer/resoucepacks/master/MLServerDbD/assets/minecraft/textures/items/parks/survivar/selfcare.png
     desc:
       '0': 発動条件：手に持ってスニーク
       '1': 回復アイテムを使わずに、通常の(25/30/35)%の速度で自己治療ができるようになる。
+  '2':
+    name: 執着心
+    type: サバイバーパーク
+    url: https://raw.githubusercontent.com/MonsterLifeServer/resoucepacks/master/MLServerDbD/assets/minecraft/textures/items/parks/survivar/fixated.png
+    desc:
+      '0': 発動条件：常時
+      '1': ・自分の足跡を常に見ることができるようになる
+      '2': ・無傷状態のとき、歩行速度が(10/15/20)%上昇する
+  '3':
+    name: スマートな着地
+    type: サバイバーパーク
+    url: https://raw.githubusercontent.com/MonsterLifeServer/resoucepacks/master/MLServerDbD/assets/minecraft/textures/items/parks/unknown.png
+    desc:
+      '0': 発動条件：高所から落ちた後
+      '1': 猫のような反射神経により落下時のよろめく時間が75%減少し、うめき声の大きさが100%低下する。
+      '2': 通常の150%の速さで、最大3秒間走ることができる。
+      '3': (60/50/40)秒間の疲労を発生させる。
+      '4': 疲労中はスマートな着地を使うことが出来ない。
+      '5': 走っている間、疲労は回復しない。
