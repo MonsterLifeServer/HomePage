@@ -109,7 +109,42 @@ $disLib->initDiscordOAuth();
                     </section>
                     <section class="next-section team-description px-10">
                         <div class="pt-16 text-center">
-                            <span class="title-level color-white">パーク一覧</span>
+                            <span class="title-level color-white">参考ページ</span>
+                            <div class="flex-box1">
+
+                                <div class="l-wrapper">
+                                    <article class="card">
+                                        <div class="card__header">
+                                            <h3 class="card__title">パーク一覧</h3>
+                                            <figure class="card__thumbnail">
+                                                <img src="https://i.gyazo.com/01268330411abec72eabfd0e35b5b34c.png" alt="DeadbyDaylightをマイクラで遊べるようにしたミニゲーム企画「DeadbyDaylight in MC」のパーク一覧ページです。" class="card__image">
+                                            </figure>
+                                        </div>
+                                        <div class="card__body">
+                                            <p class="card__text">DeadbyDaylightをマイクラで遊べるようにしたミニゲーム企画「DeadbyDaylight in MC」のパーク一覧ページです。</p>
+                                        </div>
+                                        <div class="card__footer">
+                                            <p class="card__text"><a href="<?php echo $func->getUrl(); ?>/game/dbd/parks" class="button -primary">ページを見る</a></p>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="l-wrapper">
+                                    <article class="card">
+                                        <div class="card__header">
+                                            <h3 class="card__title">非公式WIKI</h3>
+                                            <figure class="card__thumbnail">
+                                                <img src="https://i.gyazo.com/6859da6fc26b248d9de816fe2ba4c871.png" alt="DeadbyDaylightをマイクラで遊べるようにしたミニゲーム企画「DeadbyDaylight in MC」の情報ページです。" class="card__image">
+                                            </figure>
+                                        </div>
+                                        <div class="card__body">
+                                            <p class="card__text">DeadbyDaylightをマイクラで遊べるようにしたミニゲーム企画「DeadbyDaylight in MC」の情報ページです。</p>
+                                        </div>
+                                        <div class="card__footer">
+                                            <p class="card__text"><a href="https://wiki.mlserver.xyz/?p=97" class="button -primary">ページを見る</a></p>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
                         </div>
                     </section>
                 </div>

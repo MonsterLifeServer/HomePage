@@ -185,6 +185,120 @@ main {
 .inactive {
     display: none;
 }
+// カード
+.l-wrapper {
+    width: 320px;
+    margin: 3rem auto;
+    .card {
+        text-decoration: none;
+        background-color: #fff;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.16);
+        color: #212121;
+        .card__header {
+            .card__title {
+                padding: 1rem 1rem 0;
+                font-size: 1.25rem;
+            }
+            
+            .card__thumbnail {
+                margin: 0;
+            }
+
+            .card__image {
+                width: 100%;
+                max-width: 100%;
+                vertical-align: bottom;
+            }
+        }
+        .card__body {
+            padding: 1rem;
+        }
+        .card__text {
+            font-size: .75rem;
+            &+ .card__text {
+                margin-top: .5rem;
+            }
+        }
+        .card__footer {
+            border-top: 1px solid #ddd;
+            padding: 1rem;
+        }
+        .button {
+            display: inline-block;
+            text-decoration: none;
+            transition: background-color .3s ease-in-out;
+        }
+        
+        .button.-primary {
+            background-color: #26a69a;
+            padding: .5rem 1rem;
+            border-radius: .25rem;
+            color: #fff;
+            font-weight: bold;
+        }
+        
+        .button.-primary:hover,
+        .button.-primary:focus {
+            background-color: #80cbc4;
+        }
+    }
+}
+
+.card {
+    text-decoration: none;
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.16);
+    color: #212121;
+    height: 100%;
+    .card__header {
+        .card__title {
+            padding: 1rem 1rem 0;
+            font-size: 1.25rem;
+        }
+        
+        .card__thumbnail {
+            margin: 0;
+        }
+
+        .card__image {
+            width: 100%;
+            max-width: 100%;
+            vertical-align: bottom;
+        }
+    }
+    .card__body {
+        padding: 1rem;
+    }
+    .card__text {
+        font-size: .75rem;
+        &+ .card__text {
+            margin-top: .5rem;
+        }
+    }
+    .card__footer {
+        border-top: 1px solid #ddd;
+        padding: 1rem;
+    }
+    .button {
+        display: inline-block;
+        text-decoration: none;
+        transition: background-color .3s ease-in-out;
+    }
+    
+    .button.-primary {
+        background-color: #26a69a;
+        padding: .5rem 1rem;
+        border-radius: .25rem;
+        color: #fff;
+        font-weight: bold;
+    }
+    
+    .button.-primary:hover,
+    .button.-primary:focus {
+        background-color: #80cbc4;
+    }
+}
+
 @media screen and (max-width: 850px) {
     .team-description .team-switch .team-switch-content {
         .killer-button,

@@ -48,7 +48,7 @@ survivor-parks:
   '3':
     name: スマートな着地
     type: サバイバーパーク
-    url: https://raw.githubusercontent.com/MonsterLifeServer/resoucepacks/master/MLServerDbD/assets/minecraft/textures/items/parks/unknown.png
+    url: https://raw.githubusercontent.com/MonsterLifeServer/resoucepacks/master/MLServerDbD/assets/minecraft/textures/items/parks/survivar/smart.png
     desc:
       '0': 発動条件：高所から落ちた後
       '1': 猫のような反射神経により落下時のよろめく時間が75%減少し、うめき声の大きさが100%低下する。
