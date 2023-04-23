@@ -5,6 +5,8 @@ $func = new HomePageFunction('./../../assets/config.php', 'リダイレクト→
 $func->setPageUrl($func->getUrl().'/surpport/faq/mcid');
 $func->setDescription('MonsterLifeServerではマイクラのプレイヤー名のことをMCID（エムシーアイディー）と言います。');
 
+header('Location: https://wiki.mlserver.xyz/?p=81');
+
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="ja">
