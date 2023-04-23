@@ -35,7 +35,7 @@ function getProjectPercent($url, $user, $token, $open_issues_count) {
 }
 
 $progress_array = array();
-$json_text = "{'data':[";
+$json_text = '{"data":[';
 $is_first = true;
 foreach ($func->getProgressProjects() as $key => $value) {
     $project_name = $value['name'];
@@ -63,11 +63,11 @@ foreach ($func->getProgressProjects() as $key => $value) {
         }
 
         if ($is_first === false) {
-            $json_text = $json_text . ",";
+            $json_text = $json_text . ',';
         }
-        $json_text = $json_text . "{'key':'".$key."','date':'".date("Y/m/d H:i:s",$time)."','author':'" . "Monster2408" ."','per':'".$per."'}";
+        $json_text = $json_text . '{"key":"'.$key.'","date":"'.date("Y/m/d H:i:s",$time).'","author":"' . 'Monster2408' .'","per":"'.$per.'"}';
         
         $is_first = false;
     }
 }
-echo $json_text . "]}";
+echo $json_text . ']}';
