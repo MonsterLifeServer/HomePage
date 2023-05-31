@@ -472,8 +472,18 @@ main {
                 width: 25%;
             }
             .icon_tiny {
-                img {
-                    max-width: 100px;
+                .icon_relative {
+                    position: relative;
+                    .icon_park {
+                        max-width: 100px;
+                    }
+                    .new_icon {
+                        position: absolute;    
+                        max-width: 40px;
+                        width: 100%;
+                        margin-left: -37px;
+                        margin-top: 10px;
+                    }
                 }
             }
         }

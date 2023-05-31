@@ -110,6 +110,8 @@ $disLib->initDiscordOAuth();
         <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/footer.php"); ?>
         <script>
 
+            // 
+
             // type: 
             //   1: サバイバー
             //   2: キラー
@@ -135,6 +137,24 @@ $disLib->initDiscordOAuth();
                 var size = 0;
                 // 新しいHTML要素を作成
                 var itemObject;
+                var keyId;
+                var temp;
+
+                var url = new URL(window.location.href);
+                var params = url.searchParams;
+
+                var id = null;
+                var newId = null;
+
+                if (params.has('id[]')) {
+                    id = params.getAll('id[]');
+                    console.log(id);
+                }
+
+                if (params.has('new[]')) {
+                    newId = params.getAll('new[]');
+                    console.log(newId);
+                }
                 for (let s = 1; s < 3; s++) {
                     console.log("s" + s);
                     if (type == 2 && s == 1) {
@@ -146,16 +166,33 @@ $disLib->initDiscordOAuth();
                         break;
                     }
                     
-                    if (s == 1) itemObject = nativeObject["survivor-parks"];
-                    else itemObject = nativeObject["killer-parks"];
-                    nLoop: for (let n = 0; n < 100; n++) {
+                    if (s == 1) {
+                        itemObject = nativeObject["survivor-parks"];
+                        keyId = "s";
+                    }
+                    else {
+                        itemObject = nativeObject["killer-parks"];
+                        keyId = "k";
+                    }
+
+                    nLoop: for (let n = 0; n < 300; n++) {
                         text = "";
                         desc = "";
                         if (n in itemObject) {
+                            temp = keyId + n;
+                            if (id != null && id.indexOf(temp) === -1) {
+                                console.log("temp: " + temp);
+                                continue nLoop;
+                            }
                             console.log("n" + n + ": " + itemObject[n]);
                             name = itemObject[n]["name"];
                             img = itemObject[n]["url"];
-                            text = text + '<tr><td class="text-center p-10px"><span class="icon_tiny"><img src="' + img + '" alt="" srcset="" /><br />' + name + '</span></td><td class="p-10px"><p>';
+                            text = text + '<tr><td class="text-center p-10px"><span class="icon_tiny">';
+                            text = text + '<div class="icon_relative">';
+                            text = text + '<img src="' + img + '" alt="" srcset="" class="icon_park"/>';
+                            if (newId != null && newId.indexOf(temp) !== -1) text = text + '<img src="https://3.bp.blogspot.com/-UlDXAyWmT9U/WD_cWO3xMNI/AAAAAAABAD0/fFIbC4x0Pq8iE3-PzPCPYoChZinGELPpQCLcB/s800/pop_new.png" alt="" srcset="" class="new_icon"/>';
+                            text = text + '</div>';
+                            text = text + '<br />' + name + '</span></td><td class="p-10px"><p>';
                             mLoop : for (let m = 0; m < 100; m++) {
                                 if (m in itemObject[n]["desc"]) {
                                     if (desc.length > 0) desc = desc + '<br />';

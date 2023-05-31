@@ -22,3 +22,4 @@ phpseclib/
 *.lnk
 
 .editorconfig
+*.bat
