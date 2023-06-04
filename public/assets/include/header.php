@@ -84,7 +84,7 @@ $line_share_uri = "https://line.me/R/msg/text/?" . $func->getTitle() . "%20" . $
                     <a class="js-menu__item__link" href="<?php echo $func->getUrl(); ?>/servers/">サーバー</a>
                     <ul class="submenu">
                         <li><a href="<?php echo $func->getUrl(); ?>/servers/lobby">ロビー鯖</a></li>
-                        <li><a href="<?php echo $func->getUrl(); ?>/servers/skyblock">スカイブロック鯖</a></li>
+                        <!-- <li><a href="<?php echo $func->getUrl(); ?>/servers/skyblock">スカイブロック鯖</a></li> -->
                         <li><a href="<?php echo $func->getUrl(); ?>/servers/event">ミニゲーム企画鯖</a></li>
                         <!--<li><a href="<?php echo $func->getUrl(); ?>/servers/survival">サバイバル鯖</a></li>-->
                     </ul>

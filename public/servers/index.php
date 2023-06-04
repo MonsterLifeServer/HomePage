@@ -117,7 +117,7 @@ $disable_icon = "https://i.gyazo.com/673453bc3f73389e0205afbfa79fc4a6.png";
                                 echo '<div class="right"><img src="' . $icon . '" width="24px"></div>';
                             ?>
                         </div>
-                        <div class="status" id="skyblock">
+                        <!-- <div class="status" id="skyblock">
                             <?php 
                                 $ip = $func->getServer()["skyblock"]["ip"];
                                 $port = $func->getServer()["skyblock"]["port"];
@@ -143,7 +143,7 @@ $disable_icon = "https://i.gyazo.com/673453bc3f73389e0205afbfa79fc4a6.png";
                                 echo '<p class="description">'.$description.'</p></div>';
                                 echo '<div class="right"><img src="' . $icon . '" width="24px"></div>';
                             ?>
-                        </div>
+                        </div> -->
                         <div class="status last" id="web">
                             <div class="left">
                                 <p class="server-name"><a href="<?php echo $func->getUrl(); ?>/">ウェブサーバー</a></p>
