@@ -78,8 +78,15 @@ $disLib->initDiscordOAuth();
                             </div>
                         </div>
                         <div id="ip_show_box">
-                            <p>Java版: <?php echo $func->getJavaIp(); ?></p>
-                            <p>統合版: <?php echo $func->getBeIp(); ?></p>
+                            <p>
+                                <h5>Java版</h5>
+                                IPアドレス: <?php echo $func->getJavaIp(); ?><br />ポート: 25565
+                            </p>
+                            <p>
+                                <h5>統合版</h5>
+                                IPアドレス: <?php echo $func->getBeIp(); ?><br />ポート: 19132
+                            </p>
+                            <p>※ポートを入力しないといけない場合のみポート番号を入力してください。</p>
                         </div>
                         <script>
                             $('#ip_show_check').click(function() {
