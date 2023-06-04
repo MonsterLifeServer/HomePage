@@ -132,6 +132,16 @@ class HomePageFunction {
         return $conf["url"];
     }
 
+    public function getJavaIp() {
+        include($this->conf_path);
+        return $conf["ip"]["java"];
+    }
+
+    public function getBeIp() {
+        include($this->conf_path);
+        return $conf["ip"]["be"];
+    }
+
     public function getServer() {
         include($this->conf_path);
         return $conf["server"];
