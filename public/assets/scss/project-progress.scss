@@ -49,6 +49,12 @@
     }
 }
 
+.loading_text {
+    font-size: 25px;
+    margin-bottom: 70px;
+    text-align: center;
+}
+
 @media screen and (max-width: 410px) {
     .softprogress .project-label .data-contents {
         display: none;

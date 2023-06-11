@@ -1,4 +1,9 @@
 <?php
+//特定のドメインからのリクエストを許可
+header("Access-Control-Allow-Origin: *");
+
+//すべてのドメインからのリクエストを許可
+header("Access-Control-Allow-Origin: *");
 
 include('./../assets/function.php');
 $func = new HomePageFunction('./../assets/config.php', '作業状況');
@@ -16,22 +21,6 @@ function getGitHubContents($url, $user, $token) {
     $result = curl_exec($ch);
     curl_close($ch);
     return $result;
-}
-
-function getProjectPercent($url, $user, $token, $open_issues_count) {
-    $result = getGitHubContents($url, $user, $token);
-    $all = substr_count($result, "- [ ]") + substr_count($result, "- [x] ") + $open_issues_count;
-    $clear = substr_count($result, "- [x]");
-    if ($all > 0) {
-        if ($clear <= 0) {
-            $per = 0;
-        } else {
-            $per = floor ($clear/$all*100);
-        }
-    } else {
-        $per = -1;
-    }
-    return $per;
 }
 
 $progress_array = array();
@@ -55,7 +44,19 @@ foreach ($func->getProgressProjects() as $key => $value) {
 
     $url = $func->getGitHubSorceUrl() . $project_owner . "/" . $project_name . "/" . $default_branch . "/README.md";
 
-    $per = getProjectPercent($url, $func->getProgressUser(), $func->getProgressToken(), $open_issues_count);
+    $result = getGitHubContents($url, $func->getProgressUser(), $func->getProgressToken());
+    $all = substr_count($result, "- [ ]") + substr_count($result, "- [x] ") + $open_issues_count;
+    $checked = substr_count($result, "- [x]");
+    if ($all > 0) {
+        if ($checked <= 0) {
+            $per = 0;
+        } else {
+            $per = floor ($checked/$all*100);
+        }
+    } else {
+        $per = -1;
+    }
+
     if ($per != -1) {
         $time = strtotime($updated_at);
         if ($time < strtotime($pushed_at)) {
@@ -65,7 +66,7 @@ foreach ($func->getProgressProjects() as $key => $value) {
         if ($is_first === false) {
             $json_text = $json_text . ',';
         }
-        $json_text = $json_text . '{"key":"'.$key.'","date":"'.date("Y/m/d H:i:s",$time).'","author":"' . 'Monster2408' .'","per":"'.$per.'"}';
+        $json_text = $json_text . '{"key":"'.$key.'","date":"'.date("Y/m/d H:i:s",$time).'","time":"'.$time.'","author":"' .$last_commit_user.'","per":"'.$per.'", "all":"' . $all . '", "checked":"' . $checked . '"}';
         
         $is_first = false;
     }

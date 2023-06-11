@@ -14,6 +14,13 @@
         
 
         <item>
+            <title>開発進捗ページの読み込みが速くなりました。</title>
+            <link>https://www.mlserver.xyz/api/project-progress</link>
+            <date>2023/06/12</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
             <title>IPアドレスの表示ページを追加しました。</title>
             <link>https://www.mlserver.xyz/ip</link>
             <date>2023/06/04</date>
