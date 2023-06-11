@@ -95,7 +95,7 @@ function getGitHubContents($url, $user, $token) {
 
             var xhr = new XMLHttpRequest();
 
-            xhr.open('GET', "<?php echo $func->getUrl(); ?>/api/github-progress.php");
+            xhr.open('GET', "<?php echo $func->getUrl(); ?>/api/v1/github-progress.php");
             xhr.send();
 
             xhr.onreadystatechange = function() {

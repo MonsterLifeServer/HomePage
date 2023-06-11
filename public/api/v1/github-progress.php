@@ -5,8 +5,8 @@ header("Access-Control-Allow-Origin: *");
 //すべてのドメインからのリクエストを許可
 header("Access-Control-Allow-Origin: *");
 
-include('./../assets/function.php');
-$func = new HomePageFunction('./../assets/config.php', '作業状況');
+include('./../../assets/function.php');
+$func = new HomePageFunction('./../../assets/config.php', '作業状況');
 
 function getGitHubContents($url, $user, $token) {
     $ch = curl_init();
@@ -45,7 +45,7 @@ foreach ($func->getProgressProjects() as $key => $value) {
     $url = $func->getGitHubSorceUrl() . $project_owner . "/" . $project_name . "/" . $default_branch . "/README.md";
 
     $result = getGitHubContents($url, $func->getProgressUser(), $func->getProgressToken());
-    $all = substr_count($result, "- [ ]") + substr_count($result, "- [x] ") + $open_issues_count;
+    $all = substr_count($result, "- [ ] ") + substr_count($result, "- [x] ") + $open_issues_count;
     $checked = substr_count($result, "- [x]");
     if ($all > 0) {
         if ($checked <= 0) {
