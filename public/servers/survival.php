@@ -57,24 +57,17 @@ $disLib->initDiscordOAuth();
                     </div>
                     <!-- パンくずリスト&最終更新日 -->
 					<h1 class="design">サバイバル鯖</h1>
-					<h2 class="design">できること</h2>
-					<div class="box text-left">
-						<ul>
-							<li>1.16.2のサバイバルが楽しめる</li>
-							<li>独自経済システム等で買い物や土地の保護などができる</li>
-							<li>建築ワールドにてクリエイティブ建築ができる(一部のユーザーのみ)</li>
-						</ul>
-					</div>
+					<p>1.20.xのサバイバルを遊ぶだけのサーバーです。プラグインなどは最低限の荒らし対策や投票サービスの通知など大きくプレイに影響の出ないものとなっており99%バニラ鯖となっています。</p>
 					<h2 class="design">禁止事項</h2>
 					<div class="box text-left">
 						<ul>
 							<li><a href="<?php echo $func->getUrl(); ?>/terms">利用規約</a>に反すること。</li>
 							<li>故意に負荷を鯖にかける行為は禁止です。</li>
 							<li>不具合を利用する行為は禁止です。見つけ次第ご報告をお願いします。</li>
-							<li>他人が作った建築物を破壊しない。</li>
+							<li>他人が作った建築物を破壊する行為</li>
 							<li>他人の設置したチェストを操作する行為</li>
-							<li>通常プレイで再現不可能なチート行為は禁止です。<br>
-								建築物やチェスト等は荒らされないように保護することをおススメします。</li>
+							<li>通常プレイで再現不可能なチート行為</li>
+							<li>人の建築物やチェストを勝手に壊したり開けたりする行為</li>
 						</ul>
 					</div>
 					<h2 class="design">その他，ルールや特徴</h2>
@@ -83,26 +76,6 @@ $disLib->initDiscordOAuth();
 						<ul>
 							<li>Optifine</li>
 							<li>InventoryTweaks</li>
-						</ul>
-					</div>
-					<h2 class="design">サバイバルワールドでのルールや説明</h2>
-					<div class="box text-left">
-						<ul>
-							<li>採掘は禁止です。作物の栽培は自由ですが広大な畑などは限度を守っていただけるとありがたいです。</li>
-							<li>人の建築物やチェストを勝手に壊したり開けたりしないでください。</li>
-							<li>一日１回サーバーログインするとガチャチケットが手に入ります</li>
-							<li>ガチャチケットを持ってガチャブロックに対して右クリックするとガチャを引くことができます。</li>
-							<li>ドット絵や文字などの建物でない建築物の建設は禁止です</li>
-							<li>ロックしたいものやその上などに看板を設置するとそれを自分のものにできます。<br>
-								※自分のものでもないのにロックしたりする行為は荒らしとして対応します。</li>
-							<li>BANされた人，鯖から抜けて戻ってこないと判断された方のロックされたチェストなどはロックを解除します。</li>
-						</ul>
-					</div>
-					<h2 class="design">資源ワールドでのルールや説明</h2>
-					<div class="box text-left">
-						<ul>
-							<li>採掘や伐採は好き放題にしてもらって構いません。</li>
-							<li>建築や作物の栽培をしても定期的にワールドがリセットされます。チェストなどを設置してアイテムを保管していてもアイテムの保証はできませんのでお気を付けください。</li>
 						</ul>
 					</div>
 					<h2 class="design">コマンド</h2>
@@ -147,98 +120,12 @@ $disLib->initDiscordOAuth();
                         data-strip-group-options="loop: false, maxWidth: 500">
 						<img src="https://i.gyazo.com/6fc5de6e4fd637ca243680ceb4e69f6f.png">
 					</a>
-					<h2 class="design">ロックの使用例</h2>
-					<p>チェストや扉に看板をつけるとロックすることができます。また，扉においては真上のブロックに設置することでもロックできます。</p>
-					<a href="https://i.gyazo.com/e998cc16b8c8d1f4e5f9cc664f3f6bbe.png"
-						class="strip"
-                        data-strip-group-options="loop: false, maxWidth: 500">
-						<img src="https://i.gyazo.com/e998cc16b8c8d1f4e5f9cc664f3f6bbe.png">
-					</a>
-					<h2 class="design">ショップ使用方法（QuickShopPlugin）</h2>
-					<a href="https://i.gyazo.com/b3418272b3e72d46900e98e5587b3423.png"
-						class="strip"
-						data-strip-group="shop"
-                        data-strip-group-options="loop: false, maxWidth: 500">
-						<img src="https://i.gyazo.com/b3418272b3e72d46900e98e5587b3423.png">
-					</a>
-					<a href="https://i.gyazo.com/a36682d869cdd66762f0cec68228b101.png"
-						class="strip"
-						data-strip-group="shop"
-                        data-strip-group-options="loop: false, maxWidth: 500">
-						<img src="https://i.gyazo.com/a36682d869cdd66762f0cec68228b101.png">
-					</a>
-					<a href="https://i.gyazo.com/b210031da822b7f6fd17e6bb2bc9ced3.png"
-						class="strip"
-						data-strip-group="shop"
-                        data-strip-group-options="loop: false, maxWidth: 500">
-						<img src="https://i.gyazo.com/b210031da822b7f6fd17e6bb2bc9ced3.png">
-					</a>
-					<a href="https://i.gyazo.com/eee00105a03bf20c6597b36639657631.png"
-						class="strip"
-						data-strip-group="shop"
-                        data-strip-group-options="loop: false, maxWidth: 500">
-						<img src="https://i.gyazo.com/eee00105a03bf20c6597b36639657631.png">
-					</a>
-					<a href="https://i.gyazo.com/4f4d54a25a3fb0e11e669c388d914829.png"
-						class="strip"
-						data-strip-group="shop"
-                        data-strip-group-options="loop: false, maxWidth: 500">
-						<img src="https://i.gyazo.com/4f4d54a25a3fb0e11e669c388d914829.png">
-					</a>
-					<a href="https://i.gyazo.com/e50d26af2e737c84764f771e58709dbb.png"
-						class="strip"
-						data-strip-group="shop"
-                        data-strip-group-options="loop: false, maxWidth: 500">
-						<img src="https://i.gyazo.com/e50d26af2e737c84764f771e58709dbb.png">
-					</a>
-					<a href="https://i.gyazo.com/5075fac3bf4de5067883b858066c6f73.png"
-						class="strip"
-						data-strip-group="shop"
-                        data-strip-group-options="loop: false, maxWidth: 500">
-						<img src="https://i.gyazo.com/5075fac3bf4de5067883b858066c6f73.png">
-					</a>
-					<h2 class="design">ガチャガチャ</h2>
-					<a href="https://i.gyazo.com/3d8193cee6c878393e263a175aac4b5c.png"
-						class="strip"
-						data-strip-group="gatya"
-                        data-strip-group-options="loop: false, maxWidth: 500">
-						<img src="https://i.gyazo.com/3d8193cee6c878393e263a175aac4b5c.png">
-					</a>
-					<a href="https://i.gyazo.com/6811b6a214d889fa83f68be9a93836bd.png"
-						class="strip"
-						data-strip-group="gatya"
-                        data-strip-group-options="loop: false, maxWidth: 500">
-						<img src="https://i.gyazo.com/6811b6a214d889fa83f68be9a93836bd.png">
-					</a>
-					<a href="https://i.gyazo.com/eb13897101c0192c3f231296ff69fe91.png"
-						class="strip"
-						data-strip-group="gatya"
-                        data-strip-group-options="loop: false, maxWidth: 500">
-						<img src="https://i.gyazo.com/eb13897101c0192c3f231296ff69fe91.png">
-					</a>
-					<a href="https://i.gyazo.com/145c2221c7f61a5afec6dfeb95221729.png"
-						class="strip"
-						data-strip-group="gatya"
-                        data-strip-group-options="loop: false, maxWidth: 500">
-						<img src="https://i.gyazo.com/145c2221c7f61a5afec6dfeb95221729.png">
-					</a>
-					<a href="https://i.gyazo.com/d331c934a4ce4aec0bc81d38e5bffa18.png"
-						class="strip"
-						data-strip-group="gatya"
-                        data-strip-group-options="loop: false, maxWidth: 500">
-						<img src="https://i.gyazo.com/d331c934a4ce4aec0bc81d38e5bffa18.png">
-					</a>
-					<a href="https://i.gyazo.com/620f28f3ffd55b2c74ece3f970b21522.png"
-						class="strip"
-						data-strip-group="gatya"
-                        data-strip-group-options="loop: false, maxWidth: 500">
-						<img src="https://i.gyazo.com/620f28f3ffd55b2c74ece3f970b21522.png">
-					</a>
-					<h2 class="design">保護フラグ一覧</h2>
-					<p>/hogo create <土地の名前>で土地を保護することができます。その後，/hogo flag <FLAG> <土地の名前>で土地の設定をすることができます。</p>
-					<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTxtRyHPWH3r8O3ER-L6pkZHPNfmksUkmzklCqEsJFbgMgTDhgxERrgebofefJvq0rmsngQsSnvltGV/pubhtml?gid=1770321307&range=A1:B12&amp;single=true&amp;widget=true&amp;headers=false" height="370px"></iframe>
+					<h2 class="design">ロックについて</h2>
+					<p>チェストや竈門などインベントを持つブロックを設置するとそのブロックは自動的に保護されます。</p>
+					<p>扉などは設置してもロックできないため<code>/lock</code>とコマンドを実行した後扉を右クリックすることで扉をロックできます。これはあらゆるブロックに対してできますが第三者の所有物や共有財産に対して行うと処罰対象です。(詳細はサバイバル鯖ルールへ)</p>
+					<p>ロックの解除は<code>/unlock</code>実行後対象ブロックを右クリックで可能です。</p>
 				</div>
-			</div>
+            </div>
         </div>
         <?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/footer.php"); ?>
     </body>
