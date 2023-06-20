@@ -57,11 +57,14 @@ $disLib->initDiscordOAuth();
                     </div>
                     <!-- パンくずリスト&最終更新日 -->
 					<h1 class="design">サバイバル鯖</h1>
-					<p>1.20.xのサバイバルを遊ぶだけのサーバーです。プラグインなどは最低限の荒らし対策や投票サービスの通知など大きくプレイに影響の出ないものとなっており99%バニラ鯖となっています。</p>
+					<h2 class="design">概要</h2>
+                    <p>1.20.xのサバイバルを遊ぶだけのサーバーです。プラグインなどは最低限の荒らし対策や投票サービスの通知など大きくプレイに影響の出ないものとなっており99%バニラ鯖となっています。</p>
+					<h2 class="design">バージョン</h2>
+                    <h4>1.20～1.20.1</h4>
 					<h2 class="design">禁止事項</h2>
 					<div class="box text-left">
 						<ul>
-							<li><a href="<?php echo $func->getUrl(); ?>/terms">利用規約</a>に反すること。</li>
+							<li><a href="<?php echo $func->getUrl(); ?>/terms">利用規約・ガイドライン</a>に反すること。</li>
 							<li>故意に負荷を鯖にかける行為は禁止です。</li>
 							<li>不具合を利用する行為は禁止です。見つけ次第ご報告をお願いします。</li>
 							<li>他人が作った建築物を破壊する行為</li>
@@ -88,6 +91,7 @@ $disLib->initDiscordOAuth();
                         <tr><th>/jp toggle</th><td>ローマ字変換機能を切り替える。</td></tr>
                     </table>
 					<h2 class="design">通報方法</h2>
+					<p>自身の作った建造物を破壊された場合ログを取得し，スクリーンショットをDiscordグループの「報告」フォーラム>>「サバイバルサーバー報告」フォームに投稿することで運営が建造物を復元可能です。ログは以下の方法で取得可能です。</p>
 					<p>/co inspect（または/co i）と入力し，インスペクターモードを有効にします。</p>
 					<a href="https://i.gyazo.com/9254dc4261cbe436a8c2e8afde0f6948.png"
                         class="strip"
@@ -111,14 +115,6 @@ $disLib->initDiscordOAuth();
                         data-strip-group="coreprotect"
                         data-strip-group-options="loop: false, maxWidth: 500">
 						<img src="https://i.gyazo.com/b400179dbaf242c8a4934cd500f09be6.png">
-					</a>
-					<p>/report 通報内容で通報できます。<br>
-						※もし証拠の提出を要求されたときに提出できるように画像などでデータを残しておいてください。</p>
-					<a href="https://i.gyazo.com/6fc5de6e4fd637ca243680ceb4e69f6f.png"
-                        class="strip"
-                        data-strip-group="coreprotect"
-                        data-strip-group-options="loop: false, maxWidth: 500">
-						<img src="https://i.gyazo.com/6fc5de6e4fd637ca243680ceb4e69f6f.png">
 					</a>
 					<h2 class="design">ロックについて</h2>
 					<p>チェストや竈門などインベントを持つブロックを設置するとそのブロックは自動的に保護されます。</p>
