@@ -140,7 +140,7 @@ $disLib->initDiscordOAuth();
                                             <p class="card__text">DeadbyDaylightをマイクラで遊べるようにしたミニゲーム企画「DeadbyDaylight in MC」の情報ページです。</p>
                                         </div>
                                         <div class="card__footer">
-                                            <p class="card__text"><a href="https://wiki.mlserver.xyz/?p=97" class="button -primary">ページを見る</a></p>
+                                            <p class="card__text"><a href="http://s-wiki.mlserver.xyz/d/DeadByDaylight%20in%20MC" class="button -primary">ページを見る</a></p>
                                         </div>
                                     </article>
                                 </div>
