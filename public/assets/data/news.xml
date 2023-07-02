@@ -14,6 +14,14 @@
         
 
         <item>
+            <title>スマホでメニューをすべて開いたとき一番下のメニューが隠れてしまう問題を修正</title>
+            <link>https://www.mlserver.xyz/</link>
+            <date>2023/07/02</date>
+            <category>ホームページ</category>
+        </item>
+        
+
+        <item>
             <title>開発進捗ページの読み込みが速くなりました。</title>
             <link>https://www.mlserver.xyz/api/project-progress</link>
             <date>2023/06/12</date>
