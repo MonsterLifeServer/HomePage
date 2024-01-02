@@ -10,7 +10,7 @@ $staff_temp = [
         "condition" => [
             "<a href='".$func->getUrl()."/admin-terms'>運営専用規約を守れる方。</a>"
         ],
-        "id" => "admin"
+        "status" => FALSE
     ],
     "movie-editor" => [
         "display" => "動画編集者",
@@ -20,9 +20,10 @@ $staff_temp = [
         ],
         "condition" => [
             "<a href='".$func->getUrl()."/admin-terms'>運営専用規約を守れる方。</a>"
-        ]
+        ],
+        "status" => TRUE
     ],
-    "movie-editor" => [
+    "samune-editor" => [
         "display" => "サムネ作成",
         "description" => [
             "当鯖は、ボランティア活動となり定期的な報酬の見込みがありません。",
@@ -30,7 +31,8 @@ $staff_temp = [
         ],
         "condition" => [
             "<a href='".$func->getUrl()."/admin-terms'>運営専用規約を守れる方。</a>"
-        ]
+        ],
+        "status" => TRUE
     ],
     "dev-pl" => [
         "display" => "デベロッパー(Plugin)",
@@ -40,7 +42,8 @@ $staff_temp = [
         ],
         "condition" => [
             "<a href='".$func->getUrl()."/admin-terms'>運営専用規約を守れる方。</a>"
-        ]
+        ],
+        "status" => TRUE
     ],
     "dev-sk" => [
         "display" => "デベロッパー(データパック)",
@@ -50,7 +53,8 @@ $staff_temp = [
         ],
         "condition" => [
             "<a href='".$func->getUrl()."/admin-terms'>運営専用規約を守れる方。</a>"
-        ]
+        ],
+        "status" => FALSE
     ],
     "tex-designer3d" => [
         "display" => "テクスチャデザイナー(3D)",
@@ -60,7 +64,8 @@ $staff_temp = [
         ],
         "condition" => [
             "<a href='".$func->getUrl()."/admin-terms'>運営専用規約を守れる方。</a>"
-        ]
+        ],
+        "status" => TRUE
     ],
     "tex-designer2d" => [
         "display" => "テクスチャデザイナー(2D)",
@@ -70,16 +75,20 @@ $staff_temp = [
         ],
         "condition" => [
             "<a href='".$func->getUrl()."/admin-terms'>運営専用規約を守れる方。</a>"
-        ]
+        ],
+        "status" => TRUE
     ],
 ];
 function get_html_staff_list() {
     global $staff_temp;
+    $first = TRUE;
     $html = '<ul id="staff-ul">';
     foreach($staff_temp as $vals=>$key){
+        if ($key["status"] == FALSE) continue;
         $class='soc';
-        if ($vals == "admin") {
+        if ($first) {
             $class.=' active';
+            $first = FALSE;
         }
         $html.='<li class="'.$class.'" id="'.$vals.'">'.$key["display"].'</li>';
     }
@@ -91,10 +100,13 @@ function get_html_staff_role_desc_contents() {
 
     $desc_item = '';
     $cond_item = '';
+    $first = TRUE;
     foreach($staff_temp as $vals=>$key){
+        if ($key["status"] == FALSE) continue;
         $class='';
-        if ($vals == "admin") {
+        if ($first) {
             $class='active';
+            $first = FALSE;
         }
         $desc_item.='<div class="'.$class.'" id="'.$vals.'">';
         foreach($key["description"] as $item) {
@@ -163,6 +175,7 @@ function get_html_form_selecter() {
     global $staff_temp;
     $html = '';
     foreach($staff_temp as $vals=>$key){
+        if ($key["status"] == FALSE) continue;
         $checked = "";
         
         if (isset($_GET["roles"]) && is_array($_GET["roles"]) && in_array($key["display"], $_GET["roles"])) {
@@ -189,7 +202,7 @@ function display_staff_form_contents($discord_name = "", $discord_button = "") {
     if (isset($_GET["msg"])) {
         $msg = $_GET["msg"];
     }
-    $active = "";
+    $active = "active";
     if (isset($_GET["CHECK_FOR"]) && $_GET["CHECK_FOR"] == "FAILED") {
         $active = " class='active'";
     }
