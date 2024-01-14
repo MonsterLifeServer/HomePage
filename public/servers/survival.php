@@ -74,13 +74,7 @@ $disLib->initDiscordOAuth();
 						</ul>
 					</div>
 					<h2 class="design">その他，ルールや特徴</h2>
-					<p>24H鯖ではMODの使用が禁止されています。ですが，以下のMODは使用許可が出ています。また，これらのMODを使用する前提では鯖は開発されていません。これらに関するバグはサポート外です。</p>
-					<div class="box text-left">
-						<ul>
-							<li>Optifine</li>
-							<li>InventoryTweaks</li>
-						</ul>
-					</div>
+                    <p>当鯖では使用できるMODとできないMODが存在します。詳細は<a href="https://wiki.mlserver.xyz/?p=20" target="_blank">非公式WIKI</a>をご覧ください。</p>
 					<h2 class="design">コマンド</h2>
                     <table class="cmd">
                         <tr><th>/discordlink</th><td>マインクラフトアカウントをDiscordアカウントと連携ができる。</td></tr>

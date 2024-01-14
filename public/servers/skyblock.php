@@ -93,6 +93,9 @@ $disLib->initDiscordOAuth();
 							<li>不具合を利用する行為は禁止です。見つけ次第ご報告をお願いします。</li>
 						</ul>
 					</div>
+                    
+					<h2 class="design">その他，ルールや特徴</h2>
+                    <p>当鯖では使用できるMODとできないMODが存在します。詳細は<a href="https://wiki.mlserver.xyz/?p=20" target="_blank">非公式WIKI</a>をご覧ください。</p>
 
                     <h2 class="design">コマンド</h2>
                     <table class="cmd">
