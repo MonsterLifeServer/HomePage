@@ -124,7 +124,7 @@ $disLib->initDiscordOAuth();
                                             <p class="card__text">DeadbyDaylightをマイクラで遊べるようにしたミニゲーム企画「DeadbyDaylight in MC」のパーク一覧ページです。</p>
                                         </div>
                                         <div class="card__footer">
-                                            <p class="card__text"><a href="<?php echo $func->getUrl(); ?>/game/dbd/parks" class="button -primary">ページを見る</a></p>
+                                            <p class="card__text"><a href="https://wiki.mlserver.xyz/dbd.php" class="button -primary">ページを見る</a></p>
                                         </div>
                                     </article>
                                 </div>
