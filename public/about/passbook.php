@@ -113,7 +113,7 @@ if (isset($_GET["sort"]) && intval($_GET["sort"])) {
                                 }
                                 echo '<tr class="passbook-label">';
                                 echo '<td class="date">'.date('m/d',  strtotime($item[0])).'</td>';
-                                echo '<td class="description">'.$item[2].'</td>';
+                                echo '<td class="description" value="'.$item[2].'">'.$item[2].'</td>';
                                 if ($item[5] < 0) {
                                     echo '<td class="money minus">'.number_format($item[5]).'円</td>';
                                 } else {

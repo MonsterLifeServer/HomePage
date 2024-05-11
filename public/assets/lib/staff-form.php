@@ -10,18 +10,7 @@ $staff_temp = [
         "condition" => [
             "<a href='".$func->getUrl()."/admin-terms'>運営専用規約を守れる方。</a>"
         ],
-        "id" => "admin"
-    ],
-    "admin-helper" => [
-        "display" => "運営補佐",
-        "description" => [
-            "当鯖は、ボランティア活動となり定期的な報酬の見込みがありません。",
-            "運営補佐にはその名の通り運営の補佐となるような仕事をしてもらいます。",
-            ">> サーバーが運営しているサービスなどの管理 etc..."
-        ],
-        "condition" => [
-            "<a href='".$func->getUrl()."/admin-terms'>運営専用規約を守れる方。</a>"
-        ]
+        "status" => FALSE
     ],
     "movie-editor" => [
         "display" => "動画編集者",
@@ -31,7 +20,19 @@ $staff_temp = [
         ],
         "condition" => [
             "<a href='".$func->getUrl()."/admin-terms'>運営専用規約を守れる方。</a>"
-        ]
+        ],
+        "status" => TRUE
+    ],
+    "samune-editor" => [
+        "display" => "サムネ作成",
+        "description" => [
+            "当鯖は、ボランティア活動となり定期的な報酬の見込みがありません。",
+            "動画内容をもとにサムネイルを作成する役職です。"
+        ],
+        "condition" => [
+            "<a href='".$func->getUrl()."/admin-terms'>運営専用規約を守れる方。</a>"
+        ],
+        "status" => TRUE
     ],
     "dev-pl" => [
         "display" => "デベロッパー(Plugin)",
@@ -41,17 +42,19 @@ $staff_temp = [
         ],
         "condition" => [
             "<a href='".$func->getUrl()."/admin-terms'>運営専用規約を守れる方。</a>"
-        ]
+        ],
+        "status" => TRUE
     ],
     "dev-sk" => [
-        "display" => "デベロッパー(Skript)",
+        "display" => "デベロッパー(データパック)",
         "description" => [
             "当鯖は、ボランティア活動となり定期的な報酬の見込みがありません。",
-            "基本的に1.12.2を用いたミニゲームのSkript開発を依頼した内容でしてもらいます。"
+            "動画用のデータパックを作っていただくことになります。動画公開後の配布に関しては要相談です。"
         ],
         "condition" => [
             "<a href='".$func->getUrl()."/admin-terms'>運営専用規約を守れる方。</a>"
-        ]
+        ],
+        "status" => FALSE
     ],
     "tex-designer3d" => [
         "display" => "テクスチャデザイナー(3D)",
@@ -61,7 +64,8 @@ $staff_temp = [
         ],
         "condition" => [
             "<a href='".$func->getUrl()."/admin-terms'>運営専用規約を守れる方。</a>"
-        ]
+        ],
+        "status" => TRUE
     ],
     "tex-designer2d" => [
         "display" => "テクスチャデザイナー(2D)",
@@ -71,16 +75,20 @@ $staff_temp = [
         ],
         "condition" => [
             "<a href='".$func->getUrl()."/admin-terms'>運営専用規約を守れる方。</a>"
-        ]
+        ],
+        "status" => TRUE
     ],
 ];
 function get_html_staff_list() {
     global $staff_temp;
+    $first = TRUE;
     $html = '<ul id="staff-ul">';
     foreach($staff_temp as $vals=>$key){
+        if ($key["status"] == FALSE) continue;
         $class='soc';
-        if ($vals == "admin") {
+        if ($first) {
             $class.=' active';
+            $first = FALSE;
         }
         $html.='<li class="'.$class.'" id="'.$vals.'">'.$key["display"].'</li>';
     }
@@ -92,10 +100,13 @@ function get_html_staff_role_desc_contents() {
 
     $desc_item = '';
     $cond_item = '';
+    $first = TRUE;
     foreach($staff_temp as $vals=>$key){
+        if ($key["status"] == FALSE) continue;
         $class='';
-        if ($vals == "admin") {
+        if ($first) {
             $class='active';
+            $first = FALSE;
         }
         $desc_item.='<div class="'.$class.'" id="'.$vals.'">';
         foreach($key["description"] as $item) {
@@ -164,6 +175,7 @@ function get_html_form_selecter() {
     global $staff_temp;
     $html = '';
     foreach($staff_temp as $vals=>$key){
+        if ($key["status"] == FALSE) continue;
         $checked = "";
         
         if (isset($_GET["roles"]) && is_array($_GET["roles"]) && in_array($key["display"], $_GET["roles"])) {
@@ -190,7 +202,7 @@ function display_staff_form_contents($discord_name = "", $discord_button = "") {
     if (isset($_GET["msg"])) {
         $msg = $_GET["msg"];
     }
-    $active = "";
+    $active = "active";
     if (isset($_GET["CHECK_FOR"]) && $_GET["CHECK_FOR"] == "FAILED") {
         $active = " class='active'";
     }
@@ -202,7 +214,7 @@ function display_staff_form_contents($discord_name = "", $discord_button = "") {
                 <h2>スタッフ募集</h2>
             </div>
             <div class="Form-Item">
-                <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>Discord名 ' . $discord_button . '</p>';
+                <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>Discord名' . $discord_button . '</p>';
     if ($discord_name === "") echo '<input type="text" class="Form-Item-Input" name="username" value="'.$username.'" placeholder="例）Monster2408#8936" required>';
     else echo '<input type="text" class="Form-Item-Input" name="username" value="'.$discord_name.'" placeholder="例）Monster2408#8936" readonly>';
 

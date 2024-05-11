@@ -66,6 +66,7 @@ $disLib->initDiscordOAuth();
                     <div class="flex-box2">
 
                         <div class="sub-box">
+                            <img class="logo" src="https://i.gyazo.com/9bb3c6637643ef18b76931d8fa789856.png" alt="">
                             <div class="text-center">
                                 <h2>ルール</h2>
                                 <p>「史上最恐の鬼ごっこ」，</p>

@@ -12,7 +12,8 @@ class DiscordLib {
 
 
     public function __construct($redirect_uri, $oauth_id, $oauth_secret) {
-        $this->redirect_uri = $redirect_uri;
+        // $this->redirect_uri = $redirect_uri;
+        $this->redirect_uri = "https://www.mlserver.xyz/";
         $this->oauth_id = $oauth_id;
         $this->oauth_secret = $oauth_secret;
     }
@@ -35,7 +36,7 @@ class DiscordLib {
 
         session_start();
 
-        if(get('action') == 'logout') {
+        if(get('action') == 'logout' or get('system') == 'logout') {
             logout($this->revokeURL, array(
                 'token' => session('access_token'),
                 'token_type_hint' => 'access_token',
@@ -43,13 +44,18 @@ class DiscordLib {
                 'client_secret' => OAUTH2_CLIENT_SECRET,
             ));
             unset($_SESSION['access_token']);
-            header('Location: ' . $this->redirect_uri);
+            $redirect_final_uri = $this->redirect_uri;
+            // if (isset($_COOKIE["discord-redirect-uri"])) {
+            //     $redirect_final_uri = $_COOKIE["discord-redirect-uri"];
+            //     setcookie("discord-redirect-uri", "", time() - 30);
+            // }
+            header('Location: ' . $redirect_final_uri);
             die();
         }
 
 
         // Start the login process by sending the user to Discord's authorization page
-        if(get('action') == 'login') {
+        if(get('action') == 'login' or get('system') == 'login') {
 
             $params = array(
                 'client_id' => OAUTH2_CLIENT_ID,
@@ -77,11 +83,15 @@ class DiscordLib {
             ));
             $logout_token = $token->access_token;
             $_SESSION['access_token'] = $token->access_token;
-
-            header('Location: ' . $this->redirect_uri);
+            $redirect_final_uri = $this->redirect_uri;
+            // if (isset($_COOKIE["discord-redirect-uri"])) {
+            //     $redirect_final_uri = $_COOKIE["discord-redirect-uri"];
+            //     setcookie("discord-redirect-uri", "", time() - 30);
+            // }
+            header('Location: ' . $redirect_final_uri);
         }
 
-        if(get('action') == 'logout') {
+        if(get('action') == 'logout' or get('system') == 'logout') {
             // This should logout you
             logout($this->revokeURL, array(
                 'token' => session('access_token'),
@@ -90,7 +100,12 @@ class DiscordLib {
                 'client_secret' => OAUTH2_CLIENT_SECRET,
             ));
             unset($_SESSION['access_token']);
-            header('Location: ' . $this->redirect_uri);
+            $redirect_final_uri = $this->redirect_uri;
+            // if (isset($_COOKIE["discord-redirect-uri"])) {
+            //     $redirect_final_uri = $_COOKIE["discord-redirect-uri"];
+            //     setcookie("discord-redirect-uri", "", time() - 30);
+            // }
+            header('Location: ' . $redirect_final_uri);
             die();
         }
     }

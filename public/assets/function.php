@@ -132,6 +132,22 @@ class HomePageFunction {
         return $conf["url"];
     }
 
+    public function getJavaIp() {
+        include($this->conf_path);
+        return $conf["ip"]["java"];
+    }
+
+    public function getBeIp() {
+        include($this->conf_path);
+        return $conf["ip"]["be"];
+    }
+
+    public function getServer() {
+        include($this->conf_path);
+        return $conf["server"];
+    }
+
+
     public function getAdminUser() {
         include($this->conf_path);
         return $admin_user;
@@ -208,7 +224,22 @@ class HomePageFunction {
     }
 
     public function isLocal() {
-        return strpos($_SERVER["HTTP_HOST"], "localhost:8090");
+        return strpos($_SERVER["HTTP_HOST"], "localhost");
+    }
+
+    public function getSSHIp() {
+        include($this->conf_path);
+        return $conf["ssh"]["ip"];
+    }
+
+    public function getSSHUser() {
+        include($this->conf_path);
+        return $conf["ssh"]["user"];
+    }
+
+    public function getSSHPassWord() {
+        include($this->conf_path);
+        return $conf["ssh"]["password"];
     }
 
     public function send_to_discord($message, $ip, $num) {

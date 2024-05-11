@@ -123,9 +123,12 @@ $labelColor: #4f4f4f;
             font-weight: 900;
         }
         .discord-mk:before {
-            content: "\f09b";
-            font-family: "Font Awesome 6 Free";
-            font-weight: 900;
+            font-family: fontawesome;
+            content: "\f392";
+            // margin-right: .5em;
+            // display: inline-block;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
     }
 }

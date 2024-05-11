@@ -107,9 +107,9 @@ $(function() {
     $('.discord-mk').click(function () {
         if ($('#home-uri').length) {
             if ($('#login-span').length) {
-                window.location = $('#home-uri').attr('href') + 'discord-oauth2?action=login&redirect=' + encodeURI(location.href);
+                window.location = 'https://www.mlserver.xyz/?action=login';
             } else if ($('#logout-span').length) {
-                window.location = $('#home-uri').attr('href') + 'discord-oauth2?action=logout&redirect=' + encodeURI(location.href);
+                window.location = 'https://www.mlserver.xyz/?action=logout';
             }
         }
         return false;

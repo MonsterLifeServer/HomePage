@@ -84,9 +84,9 @@ $line_share_uri = "https://line.me/R/msg/text/?" . $func->getTitle() . "%20" . $
                     <a class="js-menu__item__link" href="<?php echo $func->getUrl(); ?>/servers/">サーバー</a>
                     <ul class="submenu">
                         <li><a href="<?php echo $func->getUrl(); ?>/servers/lobby">ロビー鯖</a></li>
-                        <li><a href="<?php echo $func->getUrl(); ?>/servers/skyblock">スカイブロック鯖</a></li>
+                        <!-- <li><a href="<?php echo $func->getUrl(); ?>/servers/skyblock">スカイブロック鯖</a></li> -->
                         <li><a href="<?php echo $func->getUrl(); ?>/servers/event">ミニゲーム企画鯖</a></li>
-                        <!--<li><a href="<?php echo $func->getUrl(); ?>/servers/survival">サバイバル鯖</a></li>-->
+                        <li><a href="<?php echo $func->getUrl(); ?>/servers/survival">サバイバル鯖</a></li>
                     </ul>
                 </li>
                 <li>
@@ -104,19 +104,19 @@ $line_share_uri = "https://line.me/R/msg/text/?" . $func->getTitle() . "%20" . $
                     <ul class="submenu">
                         <li><a href="<?php echo $func->getUrl(); ?>/game/aooni">青鬼ゲーム</a></li>
                         <li><a href="<?php echo $func->getUrl(); ?>/game/online">青鬼ONLINE in MC</a></li>
-                        <li><a href="<?php echo $func->getUrl(); ?>/game/hueoni">増え鬼</a></li>
+                        <li><a href="<?php echo $func->getUrl(); ?>/game/dbd/">DeadbyDaylight</a></li>
                         <!-- 将来 -->
                         <!-- 
                         <li><a href="<?php echo $func->getUrl(); ?>/game/cbg">コア破壊ゲーム</a></li>
                         <li><a href="<?php echo $func->getUrl(); ?>/game/toso">逃走中</a></li>
-                        <li><a href="<?php echo $func->getUrl(); ?>/game/dbd">DeadbyDaylight</a></li>
+                        <li><a href="<?php echo $func->getUrl(); ?>/game/hueoni">増え鬼</a></li>
                         -->
                     </ul>
                 </li>
                 <li>
                     <a class="js-menu__item__link" href="<?php echo $func->getUrl(); ?>/form/">Contact</a>
                     <ul class="submenu">
-                        <li><a href="<?php echo $func->getUrl(); ?>/support/faq">よくある質問</a></li>
+                        <li><a href="https://wiki.mlserver.xyz/?p=8">よくある質問</a></li>
                         <li><a href="<?php echo $func->getUrl(); ?>/support/form/">問い合わせ</a></li>
                         <li><a href="<?php echo $func->getUrl(); ?>/support/form/staff">役職応募</a></li>
                     </ul>

@@ -75,6 +75,8 @@ $disLib->initDiscordOAuth();
                             <li>企画ごとに細かいルールが存在します。詳細は<a href="<?php echo $func->getUrl(); ?>/game/">ミニゲーム企画一覧</a>からご確認ください。</li>
 						</ul>
 					</div>
+					<h2 class="design">その他，ルールや特徴</h2>
+                    <p>当鯖では使用できるMODとできないMODが存在します。詳細は<a href="https://wiki.mlserver.xyz/?p=20" target="_blank">非公式WIKI</a>をご覧ください。</p>
                     <h2 class="design">企画の動画</h2>
                     <div class="aooni_youtube_cm">
                         <div class="aooni_title_logo"><span class="aooni-logo-style">青鬼ゲーム</span></div>

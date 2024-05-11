@@ -11,6 +11,52 @@
             <img>null</img>
         </item>
         -->
+        
+
+        <item>
+            <title>ロビー鯖やサバイバル鯖のページの使用禁止MOD一覧を非公式WIKiへ移動した</title>
+            <link>https://www.mlserver.xyz/servers/lobby</link>
+            <date>2024/01/14</date>
+            <category>ホームページ</category>
+        </item>
+        
+
+        <item>
+            <title>スマホでメニューをすべて開いたとき一番下のメニューが隠れてしまう問題を修正</title>
+            <link>https://www.mlserver.xyz/</link>
+            <date>2023/07/02</date>
+            <category>ホームページ</category>
+        </item>
+        
+
+        <item>
+            <title>開発進捗ページの読み込みが速くなりました。</title>
+            <link>https://www.mlserver.xyz/api/project-progress</link>
+            <date>2023/06/12</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>IPアドレスの表示ページを追加しました。</title>
+            <link>https://www.mlserver.xyz/ip</link>
+            <date>2023/06/04</date>
+            <category>ホームページ</category>
+        </item>
+        
+
+        <item>
+            <title>利用規約を改訂しました。内容の改訂としては詳細の追加・Discordに書かれているルールの追加，その他誤字の修正です。</title>
+            <link>https://www.mlserver.xyz/</link>
+            <date>2022/10/03</date>
+            <category>ホームページ</category>
+        </item>
+
+        <item>
+            <title>全てのページでDiscordログイン機能が実装されました。問い合わせなどの場面で連絡先入力を省略できます。今後Minecraftサーバーとの連携なども検討しております。</title>
+            <link>https://www.mlserver.xyz/</link>
+            <date>2022/07/17</date>
+            <category>ホームページ</category>
+        </item>
 
         <item>
             <title>一部ページ(サイトマップ)にてDiscordAPIを使用したシステムが追加されたためプライバシーポリシーが改定されました。</title>

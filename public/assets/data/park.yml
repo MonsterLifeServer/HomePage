@@ -1,0 +1,91 @@
+killer-parks:
+  '0':
+    name: 呪術:誰も死から逃れられない
+    type: キラーパーク
+    url: https://raw.githubusercontent.com/MonsterLifeServer/resoucepacks/master/MLServerDbD/assets/minecraft/textures/items/dbd/parks/killer/no-one-escapes-death.png
+    desc:
+      '0': 発動条件：ゲートが通電すること
+      '1': ''
+      '2': 脱出ゲートが通電したとき、もし無力なトーテムがマップ上に残っていれば、この呪いが適用される。
+      '3': この呪いが発動中生存者が無防備効果に苦しみ，キラーの移動速度が(2/3/4)%上昇する
+      '4': 呪いの効果が生存者に明かされると、その呪いのトーテムのオーラが4メートルの範囲で生存者に表示されるようになる。
+      '5': このオーラ可視範囲は、30秒で徐々に24メートル範囲まで拡大する。
+      '6': 呪いの効果は、紐付けられた呪いのトーテムが残っているかぎり持続する。
+  '1':
+    name: 不安の元凶
+    type: キラーパーク
+    url: https://raw.githubusercontent.com/MonsterLifeServer/resoucepacks/master/MLServerDbD/assets/minecraft/textures/items/dbd/parks/killer/unnerving_presence.png
+    desc:
+      '0': 発動条件：常時
+      '1': ''
+      '2': 脅威範囲内のサバイバーに適応
+      '3': ・スキルチェック発動率を10.0％上昇
+      '4': ・スキルチェック成功率が(40/50/60)％上昇
+  '2':
+    name: 興奮
+    type: キラーパーク
+    url: https://raw.githubusercontent.com/MonsterLifeServer/resoucepacks/master/MLServerDbD/assets/minecraft/textures/items/dbd/parks/killer/agitation.png
+    desc:
+      '0': 発動条件：サバイバーを担いでいるとき
+      '1': ''
+      '2': ・移動速度が(6/12/18)%上昇する。
+      '3': ・生存者を運んでいる間、脅威範囲が 12メートル増加する。
+survivor-parks:
+  '0':
+    name: 闇の感覚
+    type: サバイバーパーク
+    url: https://raw.githubusercontent.com/MonsterLifeServer/resoucepacks/master/MLServerDbD/assets/minecraft/textures/items/dbd/parks/survivar/dark-sense.png
+    desc:
+      '0': 発電機の修理が完了する度、闇の感覚が発動する。
+      '1': 闇の感覚が発動中、殺人鬼が24メートル範囲内に接近すると(5/7/10)秒間そのオーラが視える。
+      '2': オーラの可視効果が時間切れになると、闇の感覚は解除される。
+  '1':
+    name: セルフケア
+    type: サバイバーパーク
+    url: https://raw.githubusercontent.com/MonsterLifeServer/resoucepacks/master/MLServerDbD/assets/minecraft/textures/items/dbd/parks/survivar/selfcare.png
+    desc:
+      '0': 発動条件：手に持ってスニーク
+      '1': ''
+      '2': 回復アイテムを使わずに、通常の(25/30/35)%の速度で自己治療ができるようになる。
+  '2':
+    name: 執着心
+    type: サバイバーパーク
+    url: https://raw.githubusercontent.com/MonsterLifeServer/resoucepacks/master/MLServerDbD/assets/minecraft/textures/items/dbd/parks/survivar/fixated.png
+    desc:
+      '0': 発動条件：常時
+      '1': ''
+      '2': ・自分の足跡を常に見ることができるようになる
+      '3': ・無傷状態のとき、歩行速度が(10/15/20)%上昇する
+  '3':
+    name: スマートな着地
+    type: サバイバーパーク
+    url: https://raw.githubusercontent.com/MonsterLifeServer/resoucepacks/master/MLServerDbD/assets/minecraft/textures/items/dbd/parks/survivar/smart.png
+    desc:
+      '0': 発動条件：高所から落ちた後
+      '1': ''
+      '2': 猫のような反射神経により落下時のよろめく時間が75%減少し、うめき声の大きさが100%低下する。
+      '3': 通常の150%の速さで、最大3秒間走ることができる。
+      '4': (60/50/40)秒間の疲労を発生させる。
+      '5': 疲労中はスマートな着地を使うことが出来ない。
+      '6': 走っている間、疲労は回復しない。
+  '4':
+    name: 全力疾走
+    type: サバイバーパーク
+    url: https://raw.githubusercontent.com/MonsterLifeServer/resoucepacks/master/MLServerDbD/assets/minecraft/textures/items/dbd/parks/survivar/sprint_burst.png
+    desc:
+      '0': 発動条件：走り始めたとき
+      '1': ''
+      '2': 通常の150%の速度で最大3秒間全力で走る。
+      '3': 疲労時に使用できない。
+      '4': (60/50/40)秒間の疲労を発生させる。
+  '5':
+    name: アドレナリン
+    type: サバイバーパーク
+    url: https://raw.githubusercontent.com/MonsterLifeServer/resoucepacks/master/MLServerDbD/assets/minecraft/textures/items/dbd/parks/survivar/adrenaline.png
+    desc:
+      '0': 脱出ゲートが通電すると、健康状態が即座に1段階回復し、5秒間通常の150%の速さで走ることができる。
+      '1': 発動時に行動不能だった場合、このパークの効果は保留され、解放されたときに発動する。
+      '2': 生存者がまどろみ状態、夢見状態の場合、解除する。
+      '3': 疲労状態でも発動が可能。
+      '4': スキル使用後(60/50/40)秒間の疲労を発生させる。
+      '5': 走っている間、疲労は回復しない。

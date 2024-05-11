@@ -1,0 +1,9 @@
+{
+    "liveSassCompile.settings.formats": [ //Sassの出力内容の設定
+        {
+            "format": "compressed", //nested、compact、compressedのどれかを選ぶ
+            "extensionName": ".min.css", //style.cssとして出力
+            "savePath": "/public/assets/css" //cssフォルダの中にstyle.cssを出力
+        }
+    ],
+}
