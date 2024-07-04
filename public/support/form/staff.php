@@ -83,11 +83,9 @@
                             if (isset($_GET["CHECK_FOR"]) && $_GET["CHECK_FOR"] == "FAILED") { // 失敗したため時間をおいてから送信してねというメッセージ
                                 display_staff_form_failed();
                             } else { // 送信後に送った内容を保存したい人向け(できるならtinyurlとかで短くしたものをコピーできるシステムを...)
-                                $func->console_log("tyekku me");
                                 display_staff_form_check();
                             }
                         } elseif (isset($_GET["why"]) && $_GET["why"] == "denylist") { 
-                            $func->console_log("deny list");
                             display_staff_form_error("denylist");
                         } else {
                             display_staff_role_contents();

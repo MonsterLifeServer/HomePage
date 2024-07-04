@@ -59,7 +59,28 @@ $disLib->initDiscordOAuth();
                                 echo '<h4>Welcome, ' . $user->username . "#" . $user->discriminator . '</h4>';
                                 if (property_exists($user, "id") === TRUE) {
                                     if ($func->isAdmin($user->id)) {
-                                        
+                                        foreach ($ban_user_data["mc"] as $uuid => $value) {
+                                            echo "BAN時刻: " . $ban_user_data["mc"][$uuid]["date"];
+                                            echo '<br />';
+                                            if (isset($ban_user_data["mc"][$uuid]["mcid"])) 
+                                            echo "BAN時, MCID: " . $ban_user_data["mc"][$uuid]["mcid"] . '<br />';
+                                            echo "MCIDs: <a href='./mc-api?uuid=" . $uuid . "' target='_blank'>コチラ</a>";
+                                            echo '<br />';
+                                            echo "理由: ";
+                                            echo "<p>" . $ban_user_data["mc"][$uuid]["reason"] . "</p>";
+                                            if (is_array($ban_user_data["mc"][$uuid]["imgs"])) {
+                                                foreach ($ban_user_data["mc"][$uuid]["imgs"] as $key => $img) {
+                                                    echo '<img src="' . $img . '"></img>';
+                                                }
+                                            }
+                                            echo "<hr />";
+                                        }
+                                        foreach ($ban_user_data["discord"] as $key => $value) {
+                                            echo $key; // 
+                                            echo '<br />';
+                                            echo $value;
+                                            echo '<br />';
+                                        }
                                     }
                                 } else {
                                     echo '<p>あなたには閲覧権限がありません。</p>';
