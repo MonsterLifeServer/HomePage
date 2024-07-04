@@ -7,12 +7,12 @@ class HomePageFunction {
     public $pageUrl;
     public $description;
 
-    public function __construct($conf_path = "./assets/config.php", $title = "MonsterLifeServer") {
+    public function __construct($conf_path = "./assets/config.php") {
         $this->conf_path = $conf_path;
         $this->assets_path = str_replace("/config.php", "", $conf_path);
-        $this->title = $title;
 
         $this->pageUrl = $this->getUrl().'/';
+        $this->title = "MonsterLifeServer";
         $this->description = "ミニゲーム企画鯖『MonsterLifeServer』のホームページです。";
     }
 
@@ -33,6 +33,10 @@ class HomePageFunction {
 
     public function setDescription($description) {
         $this->description = $description;
+    }
+
+    public function setTitle($title) {
+        $this->title = $title;
     }
 
     public function printMetaData() {
