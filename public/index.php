@@ -20,7 +20,7 @@ $images = [
 		<?php $func->printMetaData(); ?>
     </head>
     <body>
-        <?php include('./assets/header.php'); ?>
+        <?php include('./assets/include/header.php'); ?>
         <div class="contents">
             <div class="main">
                 <div class="carousel">
@@ -40,6 +40,6 @@ $images = [
                 </div>
             </div>
         </div>
-        <?php include('./assets/footer.php'); ?>
+        <?php include('./assets/include/footer.php'); ?>
     </body>
 </html>
