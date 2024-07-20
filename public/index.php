@@ -13,7 +13,6 @@ $disLib->initDiscordOAuth();
 	<head>
 		<?php $func->printMetaData(); ?>
 		<link rel="stylesheet" href="<?php echo $func->getUrl(); ?>/assets/css/carousel.min.css" type="text/css">
-		<script type="text/javascript" src="<?php echo $func->getUrl(); ?>/assets/js/rss_reader.js"></script>
 		<style>
 			#elapsedTime {
 				font-weight: bold;
@@ -68,13 +67,10 @@ $disLib->initDiscordOAuth();
 					<?php include( $_SERVER["DOCUMENT_ROOT"] . "/assets/include/carousel.php"); ?>
 
 					<h1 class="design">MonsterLifeServer</h1>
-                    <h2 class="design" id="4649">ご利用の参加者様へ</h2>
-                    <p>現在運営・開発・動画編集をほぼ一人で行っているので，新企画の開発まで手が回っていない状況にあります。</p>
-                    <p>動画編集を無償(有償の場合は要相談)で行ってくれる方を募集しています。</p>
-                    <p>スタッフ応募は<a href="<?php echo $func->getUrl(); ?>/support/form/staff">コチラ</a>から可能です。</p>
+                    <h2 class="design">IPアドレスについて</h2>
+                    <p>IPアドレスは<a href="<?php echo $func->getUrl(); ?>/ip">コチラ</a>のページから取得できます。取得の際には利用規約・ガイドラインへの同意が求められます。</p>
 					<h2 class="design" id="about">サービス</h2>
 					<div class="server-about-box">
-
 						<div class="server-about first">
 							<h3>ミニゲーム企画</h3>
 							<p>週に一度以上のペースで鬼ごっこやPvPなどの企画を開催しています。最近は企画がバグっちゃって減っていますが，現在も新企画を開発中です！！</p>
@@ -88,10 +84,7 @@ $disLib->initDiscordOAuth();
 							<h3>システム</h3>
 							<p>サーバーの多くのシステムが当鯖の開発者が作り，所有権は当鯖に帰属しております。企画を参考にしたい場合は事前にご連絡をいただいたうえでこのシステム参考にしたいなどあればしっかりとご連絡ください。無断の利用は固く禁止しております。</p>
 						</div>
-
 					</div>
-                    <h2 class="design">IPアドレスについて</h2>
-                    <p>IPアドレスは<a href="<?php echo $func->getUrl(); ?>/ip">コチラ</a>のページから取得できます。取得の際には利用規約・ガイドラインへの同意が求められます。</p>
                 
 					<h2 class="design">新着情報</h2>
 					<div class="read-more"><a href="<?php echo $func->getUrl(); ?>/about/news">すべて見る</a></div>
@@ -133,9 +126,6 @@ $disLib->initDiscordOAuth();
 					<?php 
 						if (empty($_GET['debug'])) echo "-->";
 					?>
-					<h2 class="design">ブログ最新記事</h2>
-					<div class="read-more"><a href="<?php echo $func->getUrl(); ?>/blog/">すべて見る</a></div>
-					<div class="card-box" id="blogs"></div>
 				</div>
             </div>
 		</div>

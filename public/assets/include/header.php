@@ -96,7 +96,7 @@ $line_share_uri = "https://line.me/R/msg/text/?" . $func->getTitle() . "%20" . $
                         <li><a href="<?php echo $func->getUrl(); ?>/about/donation">寄付について</a></li>
                         <li><a href="<?php echo $func->getUrl(); ?>/api/project-progress">プロジェクト進捗</a></li>
                         <li><a href="<?php echo $func->getUrl(); ?>/support">サポート</a></li>
-                        <li><a href="<?php echo $func->getUrl(); ?>/blog/">ブログ</a></li>
+                        <!-- <li><a href="<?php echo $func->getUrl(); ?>/blog/">ブログ</a></li> -->
                     </ul>
                 </li>
                 <li>
