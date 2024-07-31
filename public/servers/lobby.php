@@ -61,7 +61,7 @@ $disLib->initDiscordOAuth();
 					<h2 class="design">できること</h2>
                     <div class="box text-left">
 						<ul>
-							<li>1.8-1.20.xでサーバーにアクセスできる。</li>
+							<li>1.8-1.21でサーバーにアクセスできる。</li>
 							<li>MLSのいろいろの鯖に移動できる。</li>
 							<li>あらゆるアスレチックで遊ぶことができる。</li>
                             <li>あなたがボッチじゃなければミニゲームができる。</li>
