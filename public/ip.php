@@ -84,7 +84,7 @@ $disLib->initDiscordOAuth();
                             </p>
                             <p>
                                 <h5>統合版</h5>
-                                IPアドレス: <?php echo $func->getBeIp(); ?><br />ポート: 19132
+                                IPアドレス: <?php echo $func->getBeIp(); ?><br />ポート: 40012
                             </p>
                             <p>※ポートを入力しないといけない場合のみポート番号を入力してください。</p>
                         </div>
