@@ -16,9 +16,9 @@ $STAFF_LIST = [
         "DESCRIPTION"=>"運営の一人。サーバーの多くのシステムを開発している。よく企画で叫び苦情が出ている。",
         "IMG"=>"https://minotar.net/armor/body/1c2b6991e8ce4e5db4d8ec3f0cdc5f8e",
         "SNS"=>[
-            "TWITTER"=>"https://twitter.com/monster_2408",
+            "TWITTER"=>"https://x.com/monster_2408",
             "GITHUB"=>"https://github.com/Monster2408",
-            "WEB"=>"https://monster2408.mlserver.jp/"
+            "WEB"=>"https://monster2408.com/"
         ]
     ],
     "ぎんあれ" => [
@@ -26,7 +26,7 @@ $STAFF_LIST = [
         "IMG"=>"https://minotar.net/armor/body/95593263edef4f07a6bbefd7a05e2652",
         "SNS"=>[
             "YOUTUBE"=>"https://www.youtube.com/channel/UCfXYSFo-unvTihFOjRiADgA",
-            "TWITTER"=>"https://twitter.com/gingerale10_YT"
+            "TWITTER"=>"https://x.com/gingerale10_YT"
         ]
     ],
     "かいじ" => [
@@ -34,9 +34,9 @@ $STAFF_LIST = [
         "IMG"=>"https://minotar.net/armor/body/bf72eed1c52249c4ace3975eb806471b",
         "SNS"=>[]
     ],
-    "すとら" => [
-        "DESCRIPTION"=>"開発者の一人。Skript専門で応募。将来的にPluginの開発者になる予定。",
-        "IMG"=>"{$MAN_IMG}",
+    "番人" => [
+        "DESCRIPTION"=>"運営の一人。動画編集やテクスチャ作成をしている。",
+        "IMG"=>"https://minotar.net/armor/body/52fd9d3ed9f542c1b883867dfbd76b0e",
         "SNS"=>[]
     ],
     "メアリー" => [
@@ -44,16 +44,6 @@ $STAFF_LIST = [
         "IMG"=>"{$WOMAN_IMG}",
         "SNS"=>[]
     ],
-    "でこまる" => [
-        "DESCRIPTION"=>"テクスチャデザイナー。現在ほぼ休止中。",
-        "IMG"=>"{$MAN_IMG}",
-        "SNS"=>[]
-    ],
-    "なぎさ" => [
-        "DESCRIPTION"=>"運営の一人。運営陣で唯一Minecraftをやっていない人。主に鯖のお金管理をしている。現在休止中。",
-        "IMG"=>"{$WOMAN_IMG}",
-        "SNS"=>[]
-    ]
 ];
 
 include('./../assets/function.php');
