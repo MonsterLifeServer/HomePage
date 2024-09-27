@@ -81,7 +81,7 @@ $line_share_uri = "https://line.me/R/msg/text/?" . $func->getTitle() . "%20" . $
                 <!-- 子要素の文字数は全角で10文字ほど -->
                 <li class="HOME"><a href="<?php echo $func->getUrl(); ?>/"><i class="fas fa-home"></i> Home</a></li>
                 <li>
-                    <a class="js-menu__item__link" href="<?php echo $func->getUrl(); ?>/servers/">サーバー</a>
+                    <a class="js-menu__item__link" href="https://wiki.mlserver.xyz/server-status.php">サーバー</a>
                     <ul class="submenu">
                         <li><a href="https://wiki.mlserver.xyz/?p=6">ロビー鯖</a></li>
                         <li><a href="<?php echo $func->getUrl(); ?>/servers/event">ミニゲーム企画鯖</a></li>

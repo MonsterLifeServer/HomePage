@@ -55,7 +55,7 @@ $disLib->initDiscordOAuth();
                             <li><a href="<?php echo $func->getUrl(); ?>/game/hueoni">増え鬼ごっこ</a></li>
                         </ul>
                     </li>
-                    <li><a href="<?php echo $func->getUrl(); ?>/servers/">サーバー</a>
+                    <li><a href="https://wiki.mlserver.xyz/server-status.php">サーバー</a>
                         <ul>
                             <li><a href="https://wiki.mlserver.xyz/?p=6">ロビー鯖</a></li>
                             <li><a href="https://wiki.mlserver.xyz/?p=29">サバイバル鯖</a></li>
