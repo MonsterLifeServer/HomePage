@@ -113,11 +113,10 @@ $line_share_uri = "https://line.me/R/msg/text/?" . $func->getTitle() . "%20" . $
                     </ul>
                 </li>
                 <li>
-                    <a class="js-menu__item__link" href="<?php echo $func->getUrl(); ?>/form/">Contact</a>
+                    <a class="js-menu__item__link" href="#">Contact</a>
                     <ul class="submenu">
                         <li><a href="https://wiki.mlserver.xyz/?p=8">よくある質問</a></li>
-                        <li><a href="<?php echo $func->getUrl(); ?>/support/form/">問い合わせ</a></li>
-                        <li><a href="<?php echo $func->getUrl(); ?>/support/form/staff">役職応募</a></li>
+                        <li><a href="https://wiki.mlserver.xyz/?p=42">サポート</a></li>
                     </ul>
                 </li>
                 <div class="hamburger-ad">

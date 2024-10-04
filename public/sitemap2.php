@@ -62,15 +62,13 @@ $disLib->initDiscordOAuth();
                             <li><a href="<?php echo $func->getUrl(); ?>/servers/event">ミニゲーム企画鯖</a></li>
                         </ul>
                     </li>
-                    <li><a href="<?php echo $func->getUrl(); ?>/support/">サポート</a>
+                    <li><a href="https://wiki.mlserver.xyz/?p=42">サポート</a>
                         <ul>
-                            <li><a href="<?php echo $func->getUrl(); ?>/support/faq/">よくある質問</a></li>
+                            <li><a href="https://wiki.mlserver.xyz/?p=8">よくある質問</a></li>
                         </ul>
                     </li>
                     <li><a href="#">Contact</a>
                         <ul>
-                            <li><a href="<?php echo $func->getUrl(); ?>/support/form/">問い合わせフォーム</a></li>
-                            <li><a href="<?php echo $func->getUrl(); ?>/support/form/staff">スタッフ応募フォーム</a></li>
                             <li><a href="https://twitter.mlserver.xyz">Twitter</a></li>
                             <li><a href="https://discord.mlserver.xyz">Discord</a></li>
                         </ul>
