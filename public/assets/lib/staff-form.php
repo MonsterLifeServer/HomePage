@@ -78,6 +78,17 @@ $staff_temp = [
         ],
         "status" => TRUE
     ],
+    "map-creator" => [
+        "display" => "マップ製作者",
+        "description" => [
+            "当鯖は、ボランティア活動となり定期的な報酬の見込みがありません。",
+            "企画のマップを作っていただきます。"
+        ],
+        "condition" => [
+            "<a href='".$func->getUrl()."/admin-terms'>運営専用規約を守れる方。</a>"
+        ],
+        "status" => TRUE
+    ],
 ];
 function get_html_staff_list() {
     global $staff_temp;

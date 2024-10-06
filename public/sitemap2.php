@@ -65,6 +65,7 @@ $disLib->initDiscordOAuth();
                     <li><a href="https://wiki.mlserver.xyz/?p=42">サポート</a>
                         <ul>
                             <li><a href="https://wiki.mlserver.xyz/?p=8">よくある質問</a></li>
+                            <li><a href="https://www.mlserver.xyz/support/form/staff">スタッフ応募フォーム</a></li>
                         </ul>
                     </li>
                     <li><a href="#">Contact</a>

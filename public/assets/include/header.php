@@ -117,6 +117,7 @@ $line_share_uri = "https://line.me/R/msg/text/?" . $func->getTitle() . "%20" . $
                     <ul class="submenu">
                         <li><a href="https://wiki.mlserver.xyz/?p=8">よくある質問</a></li>
                         <li><a href="https://wiki.mlserver.xyz/?p=42">サポート</a></li>
+                        <li><a href="https://www.mlserver.xyz/support/form/staff">ｽﾀｯﾌ応募ﾌｫｰﾑ</a></li>
                     </ul>
                 </li>
                 <div class="hamburger-ad">

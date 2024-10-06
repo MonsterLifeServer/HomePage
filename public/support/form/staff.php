@@ -44,7 +44,7 @@
 
                                 <li itemprop="itemListElement" itemscope
                                     itemtype="https://schema.org/ListItem">
-                                    <a itemprop="item" href="<?php echo $func->getUrl(); ?>/support/">
+                                    <a itemprop="item" href="https://wiki.mlserver.xyz/?p=42">
                                         <span itemprop="name">サポート</span>
                                     </a>
                                     <meta itemprop="position" content="2" />
