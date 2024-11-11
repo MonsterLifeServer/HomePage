@@ -59,7 +59,7 @@ $disLib->initDiscordOAuth();
                                 <a href="<?php echo $func->getUrl(); ?>">ホーム</a>
                                 <ul>
                                     <li>
-                                        <a href="<?php echo $func->getUrl(); ?>/terms">利用規約・ガイドライン</a>
+                                        <a href="https://wiki.mlserver.xyz/?p=51">利用規約・ガイドライン</a>
                                     </li>
                                     <li>
                                         <a href="<?php echo $func->getUrl(); ?>/privacy_policy">プライバシーポリシー</a>

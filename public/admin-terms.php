@@ -61,7 +61,7 @@ $disLib->initDiscordOAuth();
                     <h2 class="design">禁止事項</h2>
                     <div class="box text-left">
                         <ul>
-                            <li><a href="<?php echo $func->getUrl(); ?>/terms" target="_blank">利用規約</a>に違反する行為</li>
+                            <li><a href="https://wiki.mlserver.xyz/?p=51" target="_blank">利用規約</a>に違反する行為</li>
                             <li>無断に運営内で共有されている情報を公開する行為</li>
                             また，利用規約に違反し，処罰された場合の異議申し立ては原則１か月まで有効とし，それ以降は認めないものとする。
                         </ul> 

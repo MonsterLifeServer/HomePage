@@ -71,7 +71,7 @@ $disLib->initDiscordOAuth();
 					<h2 class="design">禁止事項</h2>
 					<div class="box text-left">
 						<ul>
-							<li><a href="<?php echo $func->getUrl(); ?>/terms">利用規約</a>に反すること。</li>
+							<li><a href="https://wiki.mlserver.xyz/?p=51">利用規約</a>に反すること。</li>
 							<li>故意に負荷を鯖にかける行為は禁止です。</li>
 							<li>不具合を利用する行為は禁止です。見つけ次第ご報告をお願いします。</li>
 						</ul>

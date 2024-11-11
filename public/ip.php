@@ -55,7 +55,7 @@ $disLib->initDiscordOAuth();
                     <h1 class="design">IPアドレス</h1>
 					<h2 class="design">利用規約・ガイドライン</h2>
                     <p>
-                        サーバーIPを取得した時点で，<a href="<?php echo $func->getUrl(); ?>/terms">利用規約・ガイドライン</a>に同意したものとみなします。これは第三者から禁止されている順序でIPアドレスを取得していても同様です。
+                        サーバーIPを取得した時点で，<a href="https://wiki.mlserver.xyz/?p=51">利用規約・ガイドライン</a>に同意したものとみなします。これは第三者から禁止されている順序でIPアドレスを取得していても同様です。
                     </p>
                     <p>
                         サーバーに参加する際場合によっては<a href="https://discord.mlserver.xyz/" target="_blank">Discordサーバー</a>へ参加を必要とされる場合があり，これはDiscordアカウントとMinecraftアカウントを連携するためです。

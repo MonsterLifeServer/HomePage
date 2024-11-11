@@ -23,7 +23,7 @@ $disLib->initDiscordOAuth();
             <div class="primaryNav">
                 <ul>
                     <li id="home"><a href="<?php echo $func->getUrl(); ?>">ホーム</a></li>
-                    <li><a href="<?php echo $func->getUrl(); ?>/terms">利用規約・ガイドライン</a></li>
+                    <li><a href="https://wiki.mlserver.xyz/?p=51">利用規約・ガイドライン</a></li>
                     <li><a href="<?php echo $func->getUrl(); ?>/privacy_policy">プライバシーポリシー</a></li>
                     <li><a href="<?php echo $func->getUrl(); ?>/admin-terms">運営利用規約</a></li>
                     <li><a href="<?php echo $func->getUrl(); ?>/#about">About</a>

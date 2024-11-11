@@ -26,7 +26,7 @@
         <p class="foot-menu">
             <a id='home-uri' href="<?php echo $func->getUrl(); ?>/"> ホーム</a> |
             <a href="<?php echo $func->getUrl(); ?>/#about"> About</a> |
-            <a href="<?php echo $func->getUrl(); ?>/terms"> 利用規約・ガイドライン</a> |
+            <a href="https://wiki.mlserver.xyz/?p=51"> 利用規約・ガイドライン</a> |
             <a href="<?php echo $func->getUrl(); ?>/privacy_policy"> プライバシーポリシー</a>
         </p><br/>
         <p class="foot-menu">
