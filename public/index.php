@@ -68,7 +68,7 @@ $disLib->initDiscordOAuth();
 
 					<h1 class="design">MonsterLifeServer</h1>
                     <h2 class="design">IPアドレスについて</h2>
-                    <p>IPアドレスは<a href="<?php echo $func->getUrl(); ?>/ip">コチラ</a>のページから取得できます。取得の際には利用規約・ガイドラインへの同意が求められます。</p>
+                    <p>IPアドレスは<a href="https://wiki.mlserver.xyz/?p=52">コチラ</a>のページから取得できます。取得の際には利用規約・ガイドラインへの同意が求められます。</p>
 					<h2 class="design" id="about">サービス</h2>
 					<div class="server-about-box">
 						<div class="server-about first">
