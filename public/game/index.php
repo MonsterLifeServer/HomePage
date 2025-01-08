@@ -1,5 +1,9 @@
 <?php
 
+// https://wiki.mlserver.xyz/?p=39へ移管
+header('Location: https://wiki.mlserver.xyz/?p=39');
+return
+
 include('./../assets/function.php');
 $func = new HomePageFunction('./../assets/config.php', 'ミニゲーム企画一覧');
 $func->setPageUrl($func->getUrl().'/game/');

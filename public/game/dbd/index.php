@@ -1,5 +1,8 @@
 <?php
 
+header('Location: https://wiki.mlserver.xyz/?p=9');
+return
+
 include('./../../assets/function.php');
 $func = new HomePageFunction('./../../assets/config.php', 'DeadByDaylight in MC');
 $func->setPageUrl($func->getUrl().'/game/dbd/');

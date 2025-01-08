@@ -101,9 +101,10 @@ $line_share_uri = "https://line.me/R/msg/text/?" . $func->getTitle() . "%20" . $
                 <li>
                     <a class="js-menu__item__link" href="<?php echo $func->getUrl(); ?>/game/">ミニゲーム</a>
                     <ul class="submenu">
-                        <li><a href="<?php echo $func->getUrl(); ?>/game/aooni">青鬼ゲーム</a></li>
-                        <li><a href="<?php echo $func->getUrl(); ?>/game/online">青鬼ONLINE in MC</a></li>
-                        <li><a href="<?php echo $func->getUrl(); ?>/game/dbd/">DeadbyDaylight</a></li>
+                        <li><a href="https://wiki.mlserver.xyz/?p=53">青鬼ゲーム6.23</a></li>
+                        <li><a href="https://wiki.mlserver.xyz/?p=54">青鬼ゲーム3.0</a></li>
+                        <li><a href="https://wiki.mlserver.xyz/?p=55">青鬼ONLINE in MC</a></li>
+                        <li><a href="https://wiki.mlserver.xyz/?p=9">DeadbyDaylight</a></li>
                         <!-- 将来 -->
                         <!-- 
                         <li><a href="<?php echo $func->getUrl(); ?>/game/cbg">コア破壊ゲーム</a></li>

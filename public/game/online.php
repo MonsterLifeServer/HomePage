@@ -1,5 +1,8 @@
 <?php
 
+header('Location: https://wiki.mlserver.xyz/?p=55');
+return
+
 include('./../assets/function.php');
 $func = new HomePageFunction('./../assets/config.php', '青鬼ONLINE in MC');
 $func->setPageUrl($func->getUrl().'/game/online');
