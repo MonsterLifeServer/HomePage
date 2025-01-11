@@ -6,4 +6,7 @@
             "savePath": "/public/assets/css" //cssフォルダの中にstyle.cssを出力
         }
     ],
+    "cSpell.words": [
+        "Deadby"
+    ],
 }

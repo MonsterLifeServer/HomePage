@@ -1,6 +1,9 @@
 <?php
 	//処理内容を定義
 
+    header('Location: https://wiki.mlserver.xyz/staff-form/');
+    return;
+
     include('./../../assets/function.php');
     $func = new HomePageFunction('./../../assets/config.php', 'スタッフ応募フォーム');
     $func->setPageUrl($func->getUrl().'/support/form/staff');
